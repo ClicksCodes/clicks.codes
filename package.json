@@ -7,12 +7,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "astroturf": "^0.9.2",
+    "@zeit/next-css": "latest",
+    "astroturf": "latest",
     "next": "latest",
-    "postcss-nested": "^4.1.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "postcss-nested": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
   "license": "MIT"
 }
