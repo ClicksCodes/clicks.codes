@@ -1,5 +1,10 @@
 import { Component } from 'react';
-import Expansions from "../../data/expansions.json";
+
+const speeds = {
+    type: 70,
+    untype: 50,
+}
+
 
 class Typed extends Component {
     constructor(props) {
@@ -8,40 +13,40 @@ class Typed extends Component {
             text: "_",
         }
         this.task = null;
-        this.untype = false;
     }
-    type(state, props) {
-        if ((props.children + "_") === state.text) {
-            clearInterval(this.task);
-            this.task = null;
-            return {};
-        }
-        return { text: props.children.slice(0, state.text.length) + "_" };
-    }
-    componentDidMount() {
+    type() {
         this.task = setInterval(() => {
             this.setState((state, props) => {
-                return this.type(state, props);
+                if ((props.children + "_") === state.text) {
+                    clearInterval(this.task);
+                    this.task = null;
+                    return {};
+                }
+                return { text: props.children.slice(0, state.text.length) + "_" };
             });
-        }, 100);
+        }, speeds.type);
+    }
+    componentDidMount() {
+        this.type();
     }
     componentDidUpdate(prevProps, prevState) {
+        if (prevProps === this.props || prevProps.children == this.props.children) {
+            return;
+        }
         if (this.task) {
             clearInterval(this.task);
         }
-        this.untype = true;
         this.task = setInterval(() => {
             this.setState((state, props) => {
-                if (this.untype) {
-                    if (state.text.length === 1) { 
-                        this.untype = false;
-                    } else {
-                        return { text: state.text.slice(0, -1) };
-                    }
+                if (state.text === "_") {
+                    clearInterval(this.task);
+                    this.type();
+                    return {};
+                } else {
+                    return { text: state.text.slice(0, -2) + "_" };
                 }
-                return this.type(state, props);
             });
-        }, 100);
+        }, speeds.untype);
     }
     render() {
         return <span>{this.state.text}</span>
