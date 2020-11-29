@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 const speeds = {
     type: 70,
-    untype: 50,
+    untype: 40,
 }
 
 
