@@ -10,16 +10,16 @@ class NavBar extends Component {
             <>
                 <div className={styles.Container}>
                     <div className={styles.navLeft}>
-                        <img src="/mouse.svg" height="100%"/>
-                        <h1 className={styles.navTitle}>
+                        <img src="/mousemono.svg" height="75%" className={styles.mousemono}/>
+                        <span href="../index"><h1 className={styles.navTitle}>
                             ClicksMinutePer
-                        </h1>
+                        </h1></span>
                     </div>
                     <div className={styles.navRight}>
-                        <a>Projects</a>
-                        <a>About us</a>
-                        <a>FAQ</a>
-                        <a>Contact Us</a>
+                        <a href="#projects">Projects</a>
+                        <a href="./about">About us</a>
+                        <a href="./faq">FAQ</a>
+                        <a href="./contact">Contact Us</a>
                     </div>
                 </div>
             </>

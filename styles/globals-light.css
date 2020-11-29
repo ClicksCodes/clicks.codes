@@ -13,3 +13,10 @@ a {
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
 } 
+button {
+  border: none;
+  display: inline-block;
+}
+button:hover {
+  background-color: transparent;
+}
