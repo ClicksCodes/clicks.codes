@@ -43,7 +43,7 @@ class HeaderImage extends Component {
                 <div className={styles.headerImage}/>
                 <div className={styles.headerImageContent}>
                     <h2 className={styles.headerImageTitle}>Clicks Minute Per</h2>
-                    <hr/>
+                    <hr className={styles.hrAnim}/>
                     {
                         clicks >= 11 ? 
                             (() => {window.location.href = "../newphrase"; return null})() :

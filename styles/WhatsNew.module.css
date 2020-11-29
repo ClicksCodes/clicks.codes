@@ -1,0 +1,9 @@
+.header {
+    font-size: 72px;
+    color: #775EBF;
+}
+.all {
+    height: 100%;
+    width: 100%;
+    display: block;
+}

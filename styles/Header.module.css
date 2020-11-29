@@ -1,4 +1,15 @@
+@keyframes grow {
+  from {width:0}
+  to {width:850px}
+}
+
+.hrAnim {
+  animation-name: grow;
+  animation-duration: 2s;
+}
+
 .header {
+  grid-area: 1 / 1 / 5 / 12;
   position: relative;
   justify-content: center;
   width: 100%;
@@ -12,6 +23,8 @@
   position: absolute; 
   object-fit: cover;
   background-image: url("/background.png");
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 
 .headerImageContent {
@@ -24,10 +37,10 @@
 }
 
 .headerImageContent hr {
-  width: 40%;
+  width: 850px;
   max-width: 60vw;
   justify-self: center;
-  border: solid #000 2px;
+  border: solid #000 1px;
 }
 
 .headerImageTitle {
