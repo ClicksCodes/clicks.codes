@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Typed from '../components/effects/Typed'
-import styles from '../styles/Header.module.css';
+import styles from '../styles/Header.module.scss';
 import exts from '../public/expansions.json';
 
 var clicks = 1;

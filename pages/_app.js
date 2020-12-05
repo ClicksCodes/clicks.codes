@@ -1,7 +1,7 @@
 import Cookies from 'cookies'
 import cookieCutter from 'cookie-cutter';
 
-require('../styles/globals-light.css');  
+require('../styles/globals.scss');  
 
 
 function App({ Component, pageProps }) {  

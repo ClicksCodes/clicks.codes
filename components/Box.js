@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Link from 'next/link';
-import Styles from '../styles/Box.module.css';
+import Styles from '../styles/Box.module.scss';
 
 
 const Box = (props) => {
@@ -23,20 +23,18 @@ const Box = (props) => {
                 {props.title}
             </div>
             <hr className={Styles.hr + " " + color} />
-            <div className={Styles.description}>
-                {(() => {
-                    let desc = props.children;
-                    if (desc.length < 3) return null;
-                    if (desc[1].type !== "br") return null;
-                    return (
-                        <>
-                            <span className={Styles.strapline}>{desc[0]}</span><br/>
-                            {desc.slice(2)}
-                        </>
-                    )
-                })()}<br/>
-                <Link href={props.more ?? ""}>More &gt;</Link>
-            </div>
+            {(() => {
+                let desc = props.children;
+                if (desc.length < 3) return null;
+                if (desc[1].type !== "br") return null;
+                return (
+                    <>
+                        <div className={Styles.strapline}>{desc[0]}</div>
+                        <div className={Styles.description}>{desc.slice(2)}</div>
+                    </>
+                )
+            })()}<br/>
+            <Link href={props.more ?? ""}>More &gt;</Link>
         </div>
     );
 };

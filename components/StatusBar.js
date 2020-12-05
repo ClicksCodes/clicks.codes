@@ -17,7 +17,7 @@ class StatusBar extends Component {
                 <rect width="24" height="134" rx="12" fill={col}/>
             </svg>
         }
-        
+
         return (
             <>
                 <div>
