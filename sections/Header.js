@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Typed from './effects/Typed'
+import Typed from '../components/effects/Typed'
 import styles from '../styles/Header.module.css';
 import exts from '../public/expansions.json';
 

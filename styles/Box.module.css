@@ -1,0 +1,54 @@
+.BoxContainer {
+    padding: 20px;
+    background-color: #F6F6F6;
+    width: 20vw;
+    height: 17.5vw;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000050;
+    transition: box-shadow 0.3s;
+}
+.BoxContainer:hover {
+    box-shadow: 1px 1px 5px #000000a0;
+}
+.BoxContainer.red {
+    border: 2px solid #F27878;  
+}
+.BoxContainer.green {
+    border: 2px solid #65CC76;  
+}
+.BoxContainer.blue {
+    border: 2px solid #6576CC;  
+}
+.hr {
+    width: 100%;
+}
+.hr.red {
+    color: #F27878;
+}
+.hr.green {
+    color: #65CC76;
+}
+.hr.blue {
+    color: #6576CC;
+}
+.title {
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 2em;
+    min-width: 0;
+    min-height: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 20%;
+}
+.strapline {
+    font-weight: bold;
+    font-style: italic;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.description {
+    height: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

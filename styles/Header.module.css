@@ -1,4 +1,4 @@
-@keyframes grow {
+/*@keyframes grow {
   from {width:0}
   to {width:850px}
 }
@@ -6,7 +6,7 @@
 .hrAnim {
   animation-name: grow;
   animation-duration: 1.7s;
-}
+}*/ /* */
 
 .header {
   grid-area: 1 / 1 / 5 / 12;
