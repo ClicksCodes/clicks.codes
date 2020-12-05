@@ -1,0 +1,22 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #6576CC;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+} 
+button {
+  border: none;
+  display: inline-block;
+}
+button:hover {
+  background-color: transparent;
+}

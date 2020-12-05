@@ -1,0 +1,47 @@
+.SocialsTitle {
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.column {
+    float: left;
+    width: auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.image {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.hr {
+    width: 100%;
+    border-color: #F27878;
+}
+
+.BoxContainer {
+    padding: 10px;
+    background-color: #F6F6F6;
+    width: 475px;
+    height: auto;
+    min-height: 150px;
+    min-width: 175px;
+    border-radius: 10px;
+    border-color: #F27878;
+    border-width: 50px;
+    box-shadow: 1px 1px 5px #00000050;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.BoxContainer:hover {
+    box-shadow: 1px 1px 5px #000000a0;
+}

@@ -1,0 +1,60 @@
+/*@keyframes grow {
+  from {width:0}
+  to {width:850px}
+}
+
+.hrAnim {
+  animation-name: grow;
+  animation-duration: 1.7s;
+}*/ /* */
+
+.header {
+  grid-area: 1 / 1 / 5 / 12;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  min-height: 50vh;
+  max-height: 75vh;
+}
+
+.headerImage {
+  width: 100%;
+  height: 100%;
+  position: absolute; 
+  object-fit: cover;
+  background-image: url("/background.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.headerImageContent {
+  filter: blur(0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 33%;
+}
+
+.headerImageContent hr {
+  width: 850px;
+  max-width: 60vw;
+  justify-self: center;
+  border: solid #000 1px;
+}
+
+.headerImageTitle {
+  color: #000;
+  text-align: center;
+  font-size: 99px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.headerImageTagline {
+  color: #000;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 77px;
+  margin-top: 0
+}

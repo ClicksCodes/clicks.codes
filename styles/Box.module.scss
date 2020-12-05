@@ -1,0 +1,64 @@
+.BoxContainer {
+    padding: 10px;
+    background-color: #F6F6F6;
+    width: 17.5vw;
+    height: 15vw;
+    min-height: 150px;
+    min-width: 175px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000050;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.BoxContainer:hover {
+    box-shadow: 1px 1px 5px #000000a0;
+}
+.BoxContainer.red {
+    border: 2px solid #F27878;  
+}
+.BoxContainer.green {
+    border: 2px solid #65CC76;  
+}
+.BoxContainer.blue {
+    border: 2px solid #6576CC;  
+}
+.hr {
+    width: 100%;
+    &--red {
+        @extend .hr;
+        border-color: #F27878;
+    }
+}
+.hr.red {
+    border-color: #F27878;
+}
+.hr.green {
+    border-color: #65CC76;
+}
+.hr.blue {
+    border-color: #6576CC;
+}
+.title {
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 1.3em;
+    text-overflow: "";
+    overflow: hidden;
+}
+.strapline {
+    font-weight: bold;
+    font-style: italic;
+    text-overflow: "";
+    overflow: hidden;
+}
+.description {
+    text-overflow: "";
+    overflow: hidden;
+    flex-basis: 0;
+    flex-grow: 1;
+    @if x {
+        display: none;
+    }
+}
