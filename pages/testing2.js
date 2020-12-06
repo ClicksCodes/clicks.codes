@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Socials from '../sections/Socials';
+import Footer from '../sections/Footer'
 
 const Testing  = props => {
     return (

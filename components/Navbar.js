@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import styles from '../styles/Navbar.module.scss';
 
-class NavBar extends Component {
+class Navbar extends Component {
     constructor(props) {
         super(props);
     }
@@ -27,4 +27,4 @@ class NavBar extends Component {
     }
 }
 
-export { NavBar };
+export default Navbar;

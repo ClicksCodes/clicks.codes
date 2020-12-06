@@ -7,7 +7,6 @@ class Page extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <NavBar/> 
         <HeaderImage/>
       </div>
     );
