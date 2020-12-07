@@ -5,10 +5,19 @@ body {
 padding: 0;
 padding-top: 20px;
 margin: 0;
+scroll-behavior: smooth;
 }
 
+code {
+    background-color: #CCCCCC;
+}
 
 @if $light-mode {
+
+    html,
+    body {
+        background-color: #e4e4e4;
+    }
 
     a {
     color: #6576CC;

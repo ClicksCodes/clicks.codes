@@ -6,11 +6,9 @@ class Footer extends Component {
 
     render() {
         return (
-            <>
-                <svg className={Styles.blackbar}>
-                    <rect className={Styles.blackbar}></rect>
-                </svg>
-                <div className={Styles.blackblock}>
+            <div>
+                <div className={Styles.bar}/>
+                <div className={Styles.block}>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>Projects</h1>
                         <Link href=""className={Styles.aColor}>RSM</Link>
@@ -34,7 +32,7 @@ class Footer extends Component {
                         <br />
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 

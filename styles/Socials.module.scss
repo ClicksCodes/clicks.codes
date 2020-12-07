@@ -16,9 +16,9 @@
 }
 
 .image {
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 25%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .hr {
@@ -29,19 +29,24 @@
 .BoxContainer {
     padding: 10px;
     background-color: #F6F6F6;
-    width: 475px;
+    width: 50%;
     height: auto;
     min-height: 150px;
-    min-width: 175px;
+    min-width: 550px;
     border-radius: 10px;
-    border-color: #F27878;
     border-width: 50px;
     box-shadow: 1px 1px 5px #00000050;
     transition: box-shadow 0.3s;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: 1px solid #F27878;
 }
 .BoxContainer:hover {
     box-shadow: 1px 1px 5px #000000a0;
+}
+.row {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
 }

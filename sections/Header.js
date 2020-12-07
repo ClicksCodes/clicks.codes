@@ -39,20 +39,17 @@ class HeaderImage extends Component {
     }
     render() {
         return (
-            <>
-                <div className={styles.headerImage}/>
-                <div className={styles.headerImageContent}>
-                    <h2 className={styles.headerImageTitle}>Clicks Minute Per</h2>
-                    <hr className={styles.hrAnim}/>
+            <div className={styles.headerImage}>
+                <h2 className={styles.headerImageTitle}>Clicks Minute Per</h2>
+                    <hr/>
                     {
                         clicks >= 11 ? 
                             (() => {window.location.href = "../newphrase"; return null})() :
                             <h2 onClick={() => this.setState({phrase: randomExps(this)})} className={styles.headerImageTagline}><Typed>{this.state.phrase}</Typed></h2>
                     }
-                </div>
-            </>
+            </div>
         );
     }
 }
 
-export { HeaderImage };
+export default HeaderImage;
