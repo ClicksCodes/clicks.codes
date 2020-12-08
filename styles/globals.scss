@@ -6,10 +6,16 @@ padding: 0;
 padding-top: 20px;
 margin: 0;
 scroll-behavior: smooth;
+overflow-y: scroll;
 }
 
 code {
     background-color: #CCCCCC;
+}
+
+::-webkit-scrollbar {
+    width: 7.5px;
+    background: transparent;
 }
 
 @if $light-mode {
@@ -35,14 +41,15 @@ code {
     button:hover {
     background-color: transparent;
     }
+
+    ::-webkit-scrollbar-thumb {
+        background: #71AEF566;
+    }
+
 } @else {
     html,
     body {
     color: #424242;
-    }
-    html::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
     }
 
     a {

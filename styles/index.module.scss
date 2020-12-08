@@ -5,11 +5,23 @@
 }
 
 .block {
-    justify-content: center;
+    overflow-x: scroll;
+    justify-content: left;
     width: 100%;
     display: flex;
     flex-direction: row;
     padding-bottom: 50px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+.block::-webkit-scrollbar {
+    display: none;
+}
+
+.soc {
+    justify-content: center;
 }
 
 .column {

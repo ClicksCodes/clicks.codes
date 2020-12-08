@@ -77,7 +77,7 @@ Tweaks:<br/>
         <div className={Styles.content}>
           <span className={Styles.purpleText}>Find out yourself</span>
         </div>
-        <div className={Styles.block}>
+        <div className={Styles.block+" "+Styles.soc}>
           <Socials/>
         </div>
       </>
