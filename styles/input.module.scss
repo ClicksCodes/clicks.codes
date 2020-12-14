@@ -1,0 +1,48 @@
+.form {
+    width: 50vw;
+    position: relative;
+    height: 50px;
+    background: transparent;
+}
+
+.form input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    color: #4d4d4d;
+    padding-top: 20px;
+    border: none;
+}
+
+.form label {
+    position: absolute;
+    color: #4d4d4d;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid black
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #71aef2;
+    transform: translateX(-100%);
+}
+
+.contentName {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .labelName .contentName {
+    transform: translateY(-150%);
+}
