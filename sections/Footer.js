@@ -6,7 +6,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <div>
+            <div className={Styles.Container}>
                 <div className={Styles.bar}/>
                 <div className={Styles.block}>
                     <div className={Styles.column}>

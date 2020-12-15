@@ -1,0 +1,80 @@
+.container {
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.ServerHeader {
+    width: 50%;
+    left: 25%;
+    position: relative;
+}
+
+.BottomText {
+    width: 30%;
+    left: 35%;
+    position: relative;
+}
+
+.ServerHeader * {
+    width: 100%;
+    float: center;
+    justify-self: center;
+}
+
+.ServerHeaderCenter {
+    text-align:center;
+    height:auto;
+    width:100%;
+}
+
+.ServerHeaderImage {
+    border-radius: 100%;
+    width: 128px;
+    height: auto;
+}
+
+.ServerHeaderCenter h3 {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.ServerHeaderCenter h1 {
+    margin-bottom: 0;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.buttonContainer {
+    width: 100%;
+    align-content: right;
+    margin-top: 50px;
+}
+.form button {
+    color: #6576CC;
+    border-radius: 5px;
+    border: solid #6576CC 4px;
+    padding: 5px;
+    font-size: 20px;
+    float: right;
+    :hover {
+        border: solid #7e8ddd 4px;
+        background-color: #000; /* odd */
+    }
+}
+
+.BottomText p {
+    margin-top: 50px;
+    font-size: 20px;
+}
+.BottomText p highlight {
+    color: #6576CC;
+}

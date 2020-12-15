@@ -5,8 +5,7 @@ require('../styles/globals.scss');
 
 
 function App({ Component, pageProps }) {  
-  return (<>\
-  <div style={{"height":"25px"}}/>
+  return (<>
   <Head>
     <title>ClicksMinutePer</title>
     <link rel="icon" href="/mouse.svg" />
