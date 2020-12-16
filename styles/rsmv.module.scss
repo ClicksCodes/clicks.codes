@@ -58,7 +58,7 @@
     align-content: right;
     margin-top: 50px;
 }
-.form button {
+.button {
     color: #6576CC;
     border-radius: 5px;
     border: solid #6576CC 4px;
@@ -77,4 +77,10 @@
 }
 .BottomText p highlight {
     color: #6576CC;
+}
+
+.ServerHeader h4 {
+    font-weight: 350;
+    font-size: 25px;
+    text-align: center;
 }

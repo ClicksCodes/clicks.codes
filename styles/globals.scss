@@ -18,13 +18,23 @@ code {
 ::-webkit-scrollbar {
     width: 7.5px;
     background: transparent;
+    padding:0;
+    margin:0;
+}
+::-webkit-scrollbar-track {
+    border-radius: 7.5px;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
 }
 
 @if $light-mode {
 
     html,
     body {
-        background-color: #e4e4e4;
+        background-color: #fff;
     }
 
     a {
@@ -45,7 +55,8 @@ code {
     }
 
     ::-webkit-scrollbar-thumb {
-        background: #71AEF566;
+        background-color: #8D8D8D;/*#71AEF566;*/
+        border-radius: 20px;
     }
 
 } @else {

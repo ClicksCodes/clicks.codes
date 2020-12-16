@@ -41,7 +41,7 @@ class HeaderImage extends Component {
         return (
             <div className={styles.headerImage}>
                 <h2 className={styles.headerImageTitle}>Clicks Minute Per</h2>
-                    <hr/>
+                    <hr className={styles.hr} />
                     {
                         clicks >= 11 ? 
                             (() => {window.location.href = "../newphrase"; return null})() :

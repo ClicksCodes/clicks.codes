@@ -1,12 +1,13 @@
 .bar {
-    background-color: #C4C4C4;
+    margin-top: 50px;
+    background-color: #bbb;
     width: 100%;
     height: 40px;
 }
 
 .block {
     justify-content: center;
-    background-color: #D3D3D3;
+    background-color: #ddd;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -24,6 +25,34 @@
 }
 
 .h1Title {
-    font-weight: 600;
-    color: #222222;
+    font-weight: 400;
+    color: #000;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    align-self: center;
+
+    left: 37.45%;
+    right: 37.45%;
+    top: 80.44%;
+    bottom: 4.17%;
+}
+
+.social {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left:  50px;
+    margin-right: 50px;
+
+    position: static;
+    left: 31.4%;
+    right: 61.96%;
+    top: 22.41%;
+    bottom: 22.41%;
 }

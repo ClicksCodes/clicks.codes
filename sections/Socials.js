@@ -10,30 +10,22 @@ class SocialsBlock extends Component {
         
             <>
                 <div className={Styles.BoxContainer}>
-                    <div className={Styles.SocialsTitle}>Socials</div>
-                    <hr className={Styles.hr} />
-                    <div id="socials" className={Styles.row}>
-                        <div className={Styles.column}>
-                        <Link href='https://twitter.com/clicksminuteper'><img className={Styles.image} width="150px" src="/socials/twitter.svg" ></img></Link>
-                        </div>
-                        <div className={Styles.column}>
-                        <Link href='https://discord.gg/bPaNnxe'><img className={Styles.image} width="150px" src="/socials/discord.svg" ></img></Link>
-                        </div>
-                        <div className={Styles.column}>
-                        <Link href='https://www.instagram.com/clicksminuteper/'><img className={Styles.image} width="150px" src="/socials/insta.svg" ></img></Link>
+                    <div className={Styles.SocialsTitle}>
+                        <h1 className={Styles.title}>Socials</h1>
+                        <hr className={Styles.hr} />
+                        <div className={Styles.AutoLayout}>
+                            <div className={Styles.AutoItem}><a href="https://discord.gg/bPaNnxe"><img src="/socials/Discord.svg"   /><br /><p>discord.gg/bPaNnxe</p></a></div>
+                            <div className={Styles.AutoItem}><a href="https://twitter.com/clicksminuteper"><img src="/socials/Twitter.svg"   /><br /><p>@ClicksMinutePer</p></a></div>
+                            <div className={Styles.AutoItem}><a href="https://www.instagram.com/clicksminuteper/"><img src="/socials/Instagram.svg" /><br /><p>@ClicksMinutePer</p></a></div>
                         </div>
                     </div>
-                    <div className={Styles.SocialsTitle}>Code</div>
-                    <hr className={Styles.hr} />
-                    <div id="code" className={Styles.row}>
-                        <div className={Styles.column}>
-                        <Link href='https://github.com/clicksminuteper'><img className={Styles.image} width="150px" src="/socials/github.svg" ></img></Link>
-                        </div>
-                        <div className={Styles.column}>
-                        <Link href=''><img className={Styles.image} width="150px" src="/socials/pypi.svg" ></img></Link>
-                        </div>
-                        <div className={Styles.column}>
-                        <Link href='https://www.npmjs.com/org/clickminuteper'><img className={Styles.image} width="150px" src="/socials/npm.svg" ></img></Link>
+                    <div className={Styles.SocialsTitle}>
+                        <h1 className={Styles.title}>Code</h1>
+                        <hr className={Styles.hr} />
+                        <div className={Styles.AutoLayout}>
+                            <div className={Styles.AutoItem}><a href="https://github.com/ClicksMinutePer"><img src="/socials/Git.svg"   /><br /><p>GitHub</p></a></div>
+                            <div className={Styles.AutoItem}><a href=""><img src="/socials/pypi.svg"   /><br /><p>/user/WeNeedALink</p></a></div>
+                            <div className={Styles.AutoItem}><a href="https://www.npmjs.com/org/clickminuteper"><img src="/socials/npm.svg" /><br /><p>/org/clicksminuteper</p></a></div>
                         </div>
                     </div>
                 </div>
