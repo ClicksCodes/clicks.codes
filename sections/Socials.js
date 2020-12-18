@@ -14,18 +14,48 @@ class SocialsBlock extends Component {
                         <h1 className={Styles.title}>Socials</h1>
                         <hr className={Styles.hr} />
                         <div className={Styles.AutoLayout}>
-                            <div className={Styles.AutoItem}><a href="https://discord.gg/bPaNnxe"><img src="/socials/Discord.svg"   /><br /><p>discord.gg/bPaNnxe</p></a></div>
-                            <div className={Styles.AutoItem}><a href="https://twitter.com/clicksminuteper"><img src="/socials/Twitter.svg"   /><br /><p>@ClicksMinutePer</p></a></div>
-                            <div className={Styles.AutoItem}><a href="https://www.instagram.com/clicksminuteper/"><img src="/socials/Instagram.svg" /><br /><p>@ClicksMinutePer</p></a></div>
+                            <a href="https://discord.gg/bPaNnxe" className={Styles.AutoItem}>
+                                <div>
+                                    <img src="/socials/colour/Discord.svg"/><br />
+                                    <p>discord.gg/bPaNnxe</p>
+                                </div>
+                            </a>
+                            <a href="https://twitter.com/clicksminuteper" className={Styles.AutoItem}>
+                                <div>
+                                    <img src="/socials/colour/Twitter.svg"/><br />
+                                    <p>@ClicksMinutePer</p>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/clicksminuteper/" className={Styles.AutoItem}>
+                                <div>
+                                    <img src="/socials/colour/insta.svg" /><br />
+                                    <p>@ClicksMinutePer</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className={Styles.SocialsTitle}>
                         <h1 className={Styles.title}>Code</h1>
                         <hr className={Styles.hr} />
                         <div className={Styles.AutoLayout}>
-                            <div className={Styles.AutoItem}><a href="https://github.com/ClicksMinutePer"><img src="/socials/Git.svg"   /><br /><p>GitHub</p></a></div>
-                            <div className={Styles.AutoItem}><a href=""><img src="/socials/pypi.svg"   /><br /><p>/user/WeNeedALink</p></a></div>
-                            <div className={Styles.AutoItem}><a href="https://www.npmjs.com/org/clickminuteper"><img src="/socials/npm.svg" /><br /><p>/org/clicksminuteper</p></a></div>
+                            <a href="https://github.com/ClicksMinutePer" className={Styles.AutoItem}>
+                                <div>
+                                    <img src="/socials/colour/github.svg"   /><br />
+                                    <p>/ClicksMinutePer</p>
+                                </div>
+                            </a>
+                            <a href="" className={Styles.AutoItem}>
+                                <div>
+                                    <img src="/socials/colour/pypi.svg"   /><br />
+                                    <p>/user/WeNeedALink</p>
+                                </div>
+                            </a>
+                            <a href="https://www.npmjs.com/org/clickminuteper" className={Styles.AutoItem}>
+                                <div>
+                                    <img src="/socials/colour/npm.svg" /><br />
+                                    <p>/org/clicksminuteper</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

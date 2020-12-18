@@ -34,17 +34,25 @@
     margin-right: 50px;
     text-align: center;
     width: 300px;
+    height: 150px;
+    margin-top: 20px;
 }
 
-.AutoItem a img {
+.AutoItem div {
+    height: 100%;
+    background-color: #f00;
+}
+
+.AutoItem div img {
     margin-left: auto;
     margin-right: auto;
     width: 75px;
     height: auto;
-    align-self: baseline;
+    top: 0;
 }
 
-.AutoItem a p {
+.AutoItem div p {
     color: #000;
     font-size: 20px;
+    position: relative;
 }

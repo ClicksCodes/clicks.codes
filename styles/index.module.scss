@@ -21,6 +21,7 @@
   display: none;
 }
 
+
 .WNFlex {
   display: flex;
   flex-direction: row;
@@ -39,7 +40,7 @@
 
 .new {
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.07));
-
+  
   float: center;
 
   flex: none;
@@ -107,3 +108,4 @@
   margin: 0;
   margin-top: 20px;
 }
+

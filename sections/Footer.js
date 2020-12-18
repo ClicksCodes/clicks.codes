@@ -34,10 +34,10 @@ class Footer extends Component {
                 </div>
                 <div className={Styles.block}>
                     <div className={Styles.socials}>
-                        <a href="https://discord.gg/bPaNnxe"><img src="/socials/Discord.svg" height="75%" className={Styles.social}/></a>
-                        <a href="https://github.com/ClicksMinutePer"><img src="/socials/Git.svg" height="75%" className={Styles.social}/></a>
-                        <a href="https://twitter.com/clicksminuteper"><img src="/socials/Twitter.svg" height="75%" className={Styles.social}/></a>
-                        <a href="https://www.instagram.com/clicksminuteper/"><img src="/socials/Insta.svg" height="75%" className={Styles.social}/></a>
+                        <a href="https://discord.gg/bPaNnxe"><img src="/socials/mono/Discord.svg" height="75%" className={Styles.social}/></a>
+                        <a href="https://github.com/ClicksMinutePer"><img src="/socials/mono/Git.svg" height="75%" className={Styles.social}/></a>
+                        <a href="https://twitter.com/clicksminuteper"><img src="/socials/mono/Twitter.svg" height="75%" className={Styles.social}/></a>
+                        <a href="https://www.instagram.com/clicksminuteper/"><img src="/socials/mono/Insta.svg" height="75%" className={Styles.social}/></a>
                     </div>
                 </div>
             </div>
