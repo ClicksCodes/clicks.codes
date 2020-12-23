@@ -9,7 +9,7 @@ export default async function(req, res) {
         if(chk) {
             return res.send(400).send('exists')
         } else {
-            await kvdb.set(req.body.code,req.body.ids)
+            await kvdb.set(req.body.code,req.body.ids,1800000)
             return res.status(200).send('created')
         }
     } else {

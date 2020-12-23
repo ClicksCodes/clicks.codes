@@ -1,38 +1,43 @@
 import { Component } from 'react';
-import Styles from '../styles/rsmv.module.scss'
+import Styles from '../../styles/rsmv.module.scss'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import Axios from 'axios';
+import Router from 'next/router'
 
-class Page extends Component {
+class RSMV extends Component {    
 
     constructor(props) {
-        super(props)
-        this.state = {
-            v: false
-        }
+        super(props);
+        this.v = false;
     }
 
-    async handleVerificationSuccess(token) {
-        const chk = await Axios.put('https://192.168.1.22:3000/api/verifyTkn', { tkn: token.toString() })
-
+    async handleVerificationSuccess(cls, token) {
+        const chk = await Axios.put('https://beta.clicksminuteper.net/api/verifyTkn', { tkn: token.toString() })
+        console.log(chk)
         if(chk.data.success == true) {
-            return this.setState({v: true})
+            return cls.v = true;
         } else {
             return;
         }
 
     }
 
-    async submitForm() {
-        if(!this.state.v) return;
-        return await Axios.post('https://192.168.1.22:3001/verify', {
-            gid: this.props.serverInfo.id,
-            uid: this.props.userid
+    async submitForm(cls) {
+        if(!cls.v) return;
+
+        const vfy = await Axios.post('https://api.beta.clicksminuteper.net/verify', {
+            gid: cls.props.serverInfo.id,
+            uid: cls.props.userid
         }).catch(function(error) {
             if (!error.status) {
                 console.log(error)
             }
         });
+        if(vfy.status === 200) {
+            return Router.push('/rsmv/success','/rsmv')
+        } else if(vfy.status === 500) {
+            return Router.push('/rsmv/failure','/rsmv')
+        }
     }
 
     render() { 
@@ -58,10 +63,10 @@ class Page extends Component {
                     <HCaptcha
                         id="Captchas mitigate problems"
                         sitekey="85074411-fa13-4d9b-b901-53095c6d1fc6"
-                        onVerify={token => this.handleVerificationSuccess(token)}
+                        onVerify={token => this.handleVerificationSuccess(this, token)}
                     />
                     <div className={Styles.buttonContainer}>
-                        <button className={Styles.button} onClick={this.submitForm()}>Proceed</button>
+                        <button type="button" className={Styles.button} onClick={(success) => this.submitForm(this)}>Proceed</button>
                     </div>
                 </div>
                 <div className={Styles.BottomText}>
@@ -77,7 +82,7 @@ class Page extends Component {
     }
 }
 
-export default Page;
+export default RSMV;
 export async function getServerSideProps(ctx) {
     const req = ctx.query
     const ids = await Axios.put('https://beta.clicksminuteper.net/api/validate', {code: req.code})

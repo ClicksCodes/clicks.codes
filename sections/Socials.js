@@ -2,6 +2,15 @@ import { Component } from 'react';
 import Styles from '../styles/Socials.module.scss'
 import Link from 'next/link'
 
+const Social = (props) => {
+    return (
+        <a href={props.url} className={Styles.Item}>
+            <div><img src={props.image}/></div>
+            <p>{props.title}</p>
+        </a>
+    );
+}
+
 class SocialsBlock extends Component {
 
     render() {
@@ -10,52 +19,22 @@ class SocialsBlock extends Component {
         
             <>
                 <div className={Styles.BoxContainer}>
-                    <div className={Styles.SocialsTitle}>
+                    <div>
                         <h1 className={Styles.title}>Socials</h1>
                         <hr className={Styles.hr} />
                         <div className={Styles.AutoLayout}>
-                            <a href="https://discord.gg/bPaNnxe" className={Styles.AutoItem}>
-                                <div>
-                                    <img src="/socials/colour/Discord.svg"/><br />
-                                    <p>discord.gg/bPaNnxe</p>
-                                </div>
-                            </a>
-                            <a href="https://twitter.com/clicksminuteper" className={Styles.AutoItem}>
-                                <div>
-                                    <img src="/socials/colour/Twitter.svg"/><br />
-                                    <p>@ClicksMinutePer</p>
-                                </div>
-                            </a>
-                            <a href="https://www.instagram.com/clicksminuteper/" className={Styles.AutoItem}>
-                                <div>
-                                    <img src="/socials/colour/insta.svg" /><br />
-                                    <p>@ClicksMinutePer</p>
-                                </div>
-                            </a>
+                            <Social title="discord.gg/bPaNnxe" url="https://discord.gg/bPaNnxe" image="/socials/colour/Discord.svg"/>
+                            <Social title="@ClicksMinutePer" url="https://twitter.com/clicksminuteper" image="/socials/colour/Twitter.svg"/>
+                            <Social title="@ClicksMinutePer" url="https://www.instagram.com/clicksminuteper/" image="/socials/colour/insta.svg"/>
                         </div>
                     </div>
-                    <div className={Styles.SocialsTitle}>
+                    <div>
                         <h1 className={Styles.title}>Code</h1>
                         <hr className={Styles.hr} />
                         <div className={Styles.AutoLayout}>
-                            <a href="https://github.com/ClicksMinutePer" className={Styles.AutoItem}>
-                                <div>
-                                    <img src="/socials/colour/github.svg"   /><br />
-                                    <p>/ClicksMinutePer</p>
-                                </div>
-                            </a>
-                            <a href="" className={Styles.AutoItem}>
-                                <div>
-                                    <img src="/socials/colour/pypi.svg"   /><br />
-                                    <p>/user/WeNeedALink</p>
-                                </div>
-                            </a>
-                            <a href="https://www.npmjs.com/org/clickminuteper" className={Styles.AutoItem}>
-                                <div>
-                                    <img src="/socials/colour/npm.svg" /><br />
-                                    <p>/org/clicksminuteper</p>
-                                </div>
-                            </a>
+                            <Social title="/ClicksMinutePer" url="https://github.com/ClicksMinutePer" image="/socials/colour/github.svg"/>
+                            <Social title="/user/ClicksMinutePer" url="https://pypi.org/user/ClicksMinutePer/" image="/socials/colour/pypi.svg"/>
+                            <Social title="/org/ClickMinutePer" url="https://www.npmjs.com/org/clickminuteper/" image="/socials/colour/npm.svg"/>
                         </div>
                     </div>
                 </div>
@@ -63,7 +42,7 @@ class SocialsBlock extends Component {
             
         )
     }
-
 }
 
 export default SocialsBlock
+export { Social }

@@ -9,12 +9,12 @@ class Navbar extends Component {
     render() {
         return (
             <>
-                <div className={styles.Container}>
+                <div role="navigation" aria-label="navigation bar" className={styles.Container}>
                     <Link href="/">
                         <a className={styles.navLeft}>
                             <img src="/mousemono.svg" height="75%" className={styles.mousemono}/>
                             <span><h1 className={styles.navTitle}>
-                                ClicksMinutePer
+                                Clicks Minute Per
                             </h1></span>
                         </a>
                     </Link>

@@ -58,6 +58,7 @@
     align-content: right;
     margin-top: 50px;
 }
+
 .button {
     color: #6576CC;
     border-radius: 5px;
@@ -65,11 +66,14 @@
     padding: 5px;
     font-size: 20px;
     float: right;
-    :hover {
-        border: solid #7e8ddd 4px;
-        background-color: #000; /* odd */
-    }
+    background-color: #fff;
 }
+.button:hover {
+    border-color: #4B5899 !important;
+    background-color: #eee !important;
+    color: #4B5899 !important;
+}
+
 
 .BottomText p {
     margin-top: 50px;

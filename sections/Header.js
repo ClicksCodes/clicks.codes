@@ -39,7 +39,7 @@ class HeaderImage extends Component {
     }
     render() {
         return (
-            <div className={styles.headerImage}>
+            <div role="banner" aria-label="main image banner" className={styles.headerImage}>
                 <h2 className={styles.headerImageTitle}>Clicks Minute Per</h2>
                     <hr className={styles.hr} />
                     {
