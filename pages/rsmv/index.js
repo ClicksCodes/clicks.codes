@@ -12,7 +12,7 @@ class RSMV extends Component {
     }
 
     async handleVerificationSuccess(cls, token) {
-        const chk = await Axios.put('https://beta.clicksminuteper.net/api/verifyTkn', { tkn: token.toString() })
+        const chk = await Axios.put('https://clicksminuteper.net/api/verifyTkn', { tkn: token.toString() })
         console.log(chk)
         if(chk.data.success == true) {
             return cls.v = true;
@@ -25,7 +25,7 @@ class RSMV extends Component {
     async submitForm(cls) {
         if(!cls.v) return;
 
-        const vfy = await Axios.post('https://api.beta.clicksminuteper.net/verify', {
+        const vfy = await Axios.post('https://api.clicksminuteper.net/verify', {
             gid: cls.props.serverInfo.id,
             uid: cls.props.userid,
             rid: cls.props.role.id
@@ -86,7 +86,7 @@ class RSMV extends Component {
 export default RSMV;
 export async function getServerSideProps(ctx) {
     const req = ctx.query
-    const ids = await Axios.put('https://beta.clicksminuteper.net/api/validate', {code: req.code})
+    const ids = await Axios.put('https://clicksminuteper.net/api/validate', {code: req.code})
     const guild = await Axios(`http://localhost:3001/guilds/${ids.data["guild"]}`)
     const role = await Axios(`http://localhost:3001/roles/${ids.data["guild"]}/${ids.data["role"]}`)
     return {

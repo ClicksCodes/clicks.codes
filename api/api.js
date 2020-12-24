@@ -10,8 +10,12 @@ const kvdb = new kv('mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.1.30
 
 const allowedOrigins = ['https://beta.clicksminuteper.net',
                         'https://clicksminuteper.net',
+<<<<<<< HEAD
                         'http://192.168.1.28',
 			'https://192.168.1.28'
+=======
+                        'http://192.168.1.24'
+>>>>>>> bc57b78e549b7039c885eb50466990d8b04f5762
 ]
 
 app.use(express.json())
