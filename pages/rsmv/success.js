@@ -14,7 +14,8 @@ class Success extends Component {
         <div className={Styles.container}>
             <div className={Styles.ServerHeader}>
                 <h4>
-                    Thank you for verifying, you can close this tab now.
+                    Thank you for verifying.<br />
+                    You can now close this tab or window.
                 </h4>
             </div>
         </div>

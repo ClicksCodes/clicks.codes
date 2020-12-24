@@ -9,7 +9,7 @@
 
 .headerImage {
   width: 100%;
-  height: 50em;
+  height: max(100vh, 450px);
   object-fit: cover;
   background-image: url("/background.svg");
   background-size: cover;
@@ -37,7 +37,7 @@
 .headerImageTitle {
   color: #000;
   text-align: center;
-  font-size: 99px;
+  font-size: max(min(7vw, 100px), 50px);
   font-weight: normal;
   margin: 0;
   padding-top: 2em;
@@ -47,7 +47,7 @@
   color: #000;
   text-align: center;
   font-weight: 200;
-  font-size: 77px;
+  font-size: max(77px, 5vh);
   margin-top: 0
 }
 

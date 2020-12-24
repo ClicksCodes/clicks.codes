@@ -8,15 +8,19 @@
 }
 
 .ServerHeader {
-    width: 50%;
-    left: 25%;
+    width: 80%;
+    align-content: center;
+    margin-right: 10%;
+    margin-left: 10%;
     position: relative;
 }
 
-.BottomText {
-    width: 30%;
-    left: 35%;
+.BottomText p {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
     position: relative;
+    font-size: 10px;
 }
 
 .ServerHeader * {
@@ -29,6 +33,7 @@
     text-align:center;
     height:auto;
     width:100%;
+    margin-bottom: 0;
 }
 
 .ServerHeaderImage {
@@ -41,6 +46,9 @@
     width: 100%;
     position: relative;
     display: inline-block;
+}
+.ServerHeader h4 {
+    height: auto;
 }
 .ServerHeaderCenter h1 {
     margin-bottom: 0;

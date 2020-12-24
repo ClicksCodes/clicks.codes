@@ -19,7 +19,7 @@
   font-weight: 450;
 }
 
-.navRight {
+.navRightMain {
   width: calc(100% - 400px - 5%);
   height: 100%;
   float: right;
@@ -27,8 +27,11 @@
   justify-content: space-between;
   align-items: center;  
   margin-right: 5%;
+  @media (max-width:900px) {
+    display: none;
+  }
 }
-.navRight a {
+.navRightMain a {
   color: #000;
   font-size: 26px;
   font-weight: 300;
@@ -41,3 +44,15 @@
   padding: 5px 10px;
 }
 
+.navRightBurger {
+  margin-top: 10px;
+  position: absolute;
+  right: 0px;
+  font-size: 20px;
+  @media (min-width:900px) {
+    display: none;
+  }
+}
+.navRightBurger Menu {
+  background-color: #222;
+}

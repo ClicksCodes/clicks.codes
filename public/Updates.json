@@ -1,0 +1,24 @@
+[
+    
+    {
+        "title": "Castaway",
+        "color":"lblue",
+        "strapline": "Stranded once again",
+        "description": "Work with your server to escape the island. The bot was rewritten from scratch to make way for more core functions like skills.",
+        "more":false
+    },
+    {
+        "title": "RSM",
+        "color":"red",
+        "strapline": "1.2 Released",
+        "description": "RSM 1.2 Has been released, with many more features than before. With new commands like `m!verify`, moderating your server is easier than before.",
+        "more":false
+    },
+    {
+        "title": "GPS",
+        "color":"blue",
+        "strapline": "Rewire Started",
+        "description": "A full rewrite of the bot - Every feature is being remade with new ui, fancy new commands, and all new cards.",
+        "more":false
+    } 
+]

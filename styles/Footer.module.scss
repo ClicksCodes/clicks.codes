@@ -11,17 +11,23 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    @media (max-width:500px) {
+        flex-direction: column;
+    }
     padding-bottom: 50px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    padding-left:100px;
-    padding-right:100px;
+    margin-left: auto;
+    margin-right: auto;
     float: left;
     width: auto;
     text-align: center;
+    @media (max-width:800px) {
+        width: 100%;
+    }
 }
 
 .h1Title {
@@ -37,22 +43,13 @@
     padding: 0px;
     align-self: center;
 
-    left: 37.45%;
-    right: 37.45%;
-    top: 80.44%;
-    bottom: 4.17%;
 }
 
 .social {
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin-left:  50px;
-    margin-right: 50px;
-
-    position: static;
-    left: 31.4%;
-    right: 61.96%;
-    top: 22.41%;
-    bottom: 22.41%;
+    
+    margin-left: 10vw;
+    margin-right: 10vw;
 }

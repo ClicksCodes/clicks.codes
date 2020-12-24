@@ -16,14 +16,17 @@
     border-radius: 7px;
     transition: box-shadow 0.5s;
     width: 17.5vw;
-    height: 15vw;
+    height: 17vw;
     max-height: 25vw;
+    min-width: 200px;
+    min-height: 200px;
     left: 0px;
     top: 0px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 0;
     overflow: scroll;
+    color: black;
 }
 
 .BoxContainer:hover {
@@ -42,6 +45,10 @@
     border: 1px solid #6576CC;  
 }
 
+.BoxContainer.lblue {
+    border: 1px solid #78ECF2;
+}
+
 .BoxContainer code {
     font-family: "Source Code Pro", monospace;
     font-size: 15px;
@@ -51,7 +58,6 @@
     padding-right: 5px;
     border-radius: 5px;
 }
-
 
 .h3 {
     color: #000;
@@ -74,6 +80,10 @@
 .hr.blue {
     border-top: 1px solid #6576CC;
 }
+.hr.lblue {
+    border-top: 1px solid #78ECF2;
+}
+
 .title {
     text-transform: capitalize;
     font-size: 1.3em;

@@ -2,14 +2,12 @@ import { Component } from 'react';
 import Link from 'next/link';
 import Styles from '../styles/Box.module.scss';
 import Modal from 'react-modal';
-//import data from 'datafile.json';
 
 
 class Box extends Component {
 
     constructor(props) {
         super(props);
-        //this.info = data[`${props.aid}`];
     }
 
     render () {
@@ -24,6 +22,9 @@ class Box extends Component {
             case "new":
                 color = Styles.green;
                 break;
+            case "lblue":
+                color = Styles.lblue
+                break
             default:
                 color = Styles.blue;
         }
@@ -33,17 +34,23 @@ class Box extends Component {
                 <h2>{this.props.title}</h2>
                 <hr className={Styles.hr + " " + color} />
                 {(() => {
-                    let desc = this.props.children;
-                    if (desc.length < 3) return null;
-                    if (desc[1].type !== "br") return null;
+                    let desc = this.props.children.split("`")
                     return (
                         <>
-                            <h3 className={Styles.h3}>{desc[0]}</h3>
-                            <p className={Styles.description}>{desc.slice(2)}</p>
+                            <h3 className={Styles.h3}>{this.props.strapline}</h3>
+                            <p className={Styles.description}>{
+                                desc.map((item, index) => { 
+                                    if (index % 2 == 0) {
+                                        return item;
+                                    } else {
+                                        return <code>{item}</code>;
+                                    }
+                                })
+                            }</p>
                         </>
                     )
                 })()}<br/>
-                <button>More &gt;</button>
+                {this.props.more ? <button>More &gt;</button> : null}
             </div>
         );
     }

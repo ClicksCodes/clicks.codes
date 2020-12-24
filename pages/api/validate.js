@@ -19,8 +19,9 @@ export default async function(req, res) {
             return res.status(404).end();
         } else {
             let gid = v.substr(0,18);
-            let uid = v.substring(18);
-            return res.send({ user: uid, guild:gid });
+            let uid = v.substr(18,18);
+            let rid = v.substring(36);
+            return res.send({ user: uid, guild:gid, role:rid });
         }
     }
 

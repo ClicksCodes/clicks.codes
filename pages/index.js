@@ -3,8 +3,7 @@ import HeaderImage from '../sections/Header.js';
 import Socials from '../sections/Socials.js';
 import Box from '../components/Box.js';
 import Styles from '../styles/index.module.scss'; 
-import Head from 'next/head';
-
+import Updates from '../public/Updates.json';
 
 class Page extends Component {
   render() {
@@ -12,40 +11,22 @@ class Page extends Component {
       <>
         <HeaderImage />
         <div className={Styles.content}>
-          <div className={Styles.WhatsNew}>
             <span className={Styles.purpleText}>WHAT'S NEW</span>
+        </div>
             <div className={Styles.WNFlex}>
-              <div className={Styles.new + " " + Styles.red}>
-                <h2>RSM</h2>
-                <hr className={Styles.RedHR} />
-                <h3 className={Styles.NewH4}>1.2 Released</h3>
-                <p className={Styles.NewP}>
-                  RSM 1.2 Has been released, with many more features than before.<br />
-                  With new commands like <code>m!report</code>, moderating your server is easier than before.<br />
-                </p>
-                <a className={Styles.readmore}> Read More &gt;</a>
-              </div>
-              <Box title="Test Title">Test Test<br/>TestTest <code>Test</code></Box>
-              <div className={Styles.new + " " + Styles.blue}>
-                <h2>GPS</h2>
-                <hr className={Styles.BlueHR} />
-                <h3 className={Styles.NewH4}>Rewire</h3>
-                <p className={Styles.NewP}>
-                  The GPS Rewire is in progress, adding options to your games like shuffling, hand sizes, and much more.
-                </p>
-                <a className={Styles.readmore}> Read More &gt;</a>
-              </div>
-              <div className={Styles.new + " " + Styles.red}>
-                <h2>This section</h2>
-                <hr className={Styles.RedHR} />
-                <h3 className={Styles.NewH4}>Is not</h3>
-                <p className={Styles.NewP}>
-                  C o m p l e t e d
-                </p>
-                <a className={Styles.readmore}> Read More &gt;</a>
-              </div>
+              {
+                Updates.reverse().map((u) => <Box title={u.title} color={u.color} more={u.more} strapline={u.strapline}>{u.description}</Box>)
+              }
             </div>
-          </div>
+        <br />
+        <div className={Styles.content}>
+          <span className={Styles.purpleText}>Projects</span>
+        </div>
+        <div className={Styles.WNFlex}>
+          <a href="https://discord.com/oauth2/authorize?client_id=715989276382462053&permissions=499510486&scope=bot" target="_blank"><Box title="RSM" color="red" strapline="Moderation Redefined">Our custom made moderation bot with many features including raid protection, user verification, and much more.</Box></a>
+          <a href="https://discord.com/api/oauth2/authorize?client_id=679361555732627476&permissions=322624&scope=bot" target="_blank"><Box title="Gone Pair Shaped" strapline="Connecting pairs">Card matching on Discord - Play a game similar to Cards Against Humanity or Apples to Apples with all your friends, completely free of charge.</Box></a>
+          <a href="https://discord.com/api/oauth2/authorize?client_id=757225562816118895&permissions=322624&scope=bot" target="_blank"><Box title="Castaway" color="lblue" strapline="Island Life">Castaway is a idle game bot that takes you and your entire server onto a remote island full of resources. Your goal? Get off the island by building a boat</Box></a>
+          <a href="https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176" target="_blank"><Box title="Hooks Gone Hooky" strapline="Webhook Moderation">Protect yourself from webhook raids with Hooks Gone Hooky. As soon as we detect a webhook pinging people we'll delete it, stopping most webhook raiders in their tracks</Box></a>
         </div>
         <br />
         <div className={Styles.content}>

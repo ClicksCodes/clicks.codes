@@ -27,7 +27,8 @@ class RSMV extends Component {
 
         const vfy = await Axios.post('https://api.beta.clicksminuteper.net/verify', {
             gid: cls.props.serverInfo.id,
-            uid: cls.props.userid
+            uid: cls.props.userid,
+            rid: cls.props.role.id
         }).catch(function(error) {
             if (!error.status) {
                 console.log(error)
@@ -72,9 +73,9 @@ class RSMV extends Component {
                 <div className={Styles.BottomText}>
                     <p>This is an automatic check performed by RSM.<br/>
                         <br/>
-                        By clicking Proceed, you will be given the <highlight>Member</highlight> role in <highlight>{this.props.serverInfo.name}</highlight>.<br/>
-                        <br/>
-                        By Proceeding, you consent to our use of cookies described in our <highlight>policy</highlight>.
+                        By clicking Proceed, you will be given the <highlight>{this.props.role.name}</highlight> role in <highlight>{this.props.serverInfo.name}</highlight>.<br/>
+                        {/* <br/>
+                        By Proceeding, you consent to our use of cookies described in our <highlight>policy</highlight>. */}
                     </p>
                 </div>
             </div>
@@ -87,9 +88,11 @@ export async function getServerSideProps(ctx) {
     const req = ctx.query
     const ids = await Axios.put('https://beta.clicksminuteper.net/api/validate', {code: req.code})
     const guild = await Axios(`http://localhost:3001/guilds/${ids.data["guild"]}`)
+    const role = await Axios(`http://localhost:3001/roles/${ids.data["guild"]}/${ids.data["role"]}`)
     return {
         props: { serverInfo: guild.data,
-                 userid: ids.data["user"]
+                 userid: ids.data["user"],
+                 role: role.data
         }
     }
 }
