@@ -3,15 +3,30 @@ const client = new Discord.Client();
 const express = require('express');
 const app = express();
 const cors = require('cors')
+const kv = require('keyv')
+
+const kvdb = new kv('mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.1.30:27017/rsm')
+
 
 const allowedOrigins = ['https://beta.clicksminuteper.net',
-                        'https://clicksminuteper.net'
+                        'https://clicksminuteper.net',
+                        'http://192.168.1.24'
 ]
 
 app.use(express.json())
 app.use(cors({
     origin: allowedOrigins
 }));
+
+app.post('/validate', async function (req, res) {
+    let chk = await kvdb.get(req.body.code);
+    if(chk) {
+        return res.send(400).send('exists')
+    } else {
+        await kvdb.set(req.body.code,req.body.ids,1800000)
+        return res.status(200).send('created')
+    }
+})
 
 app.get('/guilds/:id', async function (req, res) {
     const guild = await client.guilds.fetch(req.params.id)

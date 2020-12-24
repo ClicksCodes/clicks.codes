@@ -15,14 +15,14 @@ const newNum = () => {
 }
 
 const randomExps = (object) => {
-    if(clicks === 9) {
+    /*if(clicks === 9) {
         clicks++;
         return "Coded, Minion, Pineapple";
     }
     if(clicks >= 10) {
         clicks++;
         return;
-    }
+    }*/
     let i = newNum();
     let chosen = exts.texts[i];
     console.log(chosen);
@@ -43,8 +43,8 @@ class HeaderImage extends Component {
                 <h2 className={styles.headerImageTitle}>Clicks Minute Per</h2>
                     <hr className={styles.hr} />
                     {
-                        clicks >= 11 ? 
-                            (() => {window.location.href = "../newphrase"; return null})() :
+                        /*clicks >= 11 ? 
+                            (() => {window.location.href = "../newphrase"; return null})() : */
                             <h2 onClick={() => this.setState({phrase: randomExps(this)})} className={styles.headerImageTagline}><Typed>{this.state.phrase}</Typed></h2>
                     }
             </div>
