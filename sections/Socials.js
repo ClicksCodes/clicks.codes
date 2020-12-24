@@ -23,8 +23,8 @@ class SocialsBlock extends Component {
                         <h1 className={Styles.title}>Socials</h1>
                         <hr className={Styles.hr} />
                         <div className={Styles.AutoLayout}>
-                            <Social title="discord.gg/bPaNnxe" url="https://discord.gg/bPaNnxe" image="/socials/colour/Discord.svg"/>
-                            <Social title="@ClicksMinutePer" url="https://twitter.com/clicksminuteper" image="/socials/colour/Twitter.svg"/>
+                            <Social title="discord.gg/bPaNnxe" url="https://discord.gg/bPaNnxe" image="/socials/colour/discord.svg"/>
+                            <Social title="@ClicksMinutePer" url="https://twitter.com/clicksminuteper" image="/socials/colour/twitter.svg"/>
                             <Social title="@ClicksMinutePer" url="https://www.instagram.com/clicksminuteper/" image="/socials/colour/insta.svg"/>
                         </div>
                     </div>

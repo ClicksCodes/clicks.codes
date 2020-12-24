@@ -19,7 +19,7 @@ class Page extends Component {
               }
             </div>
         <br />
-        <div className={Styles.content}>
+        <div id="projects" className={Styles.content}>
           <span className={Styles.purpleText}>Projects</span>
         </div>
         <div className={Styles.WNFlex}>

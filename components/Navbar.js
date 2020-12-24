@@ -25,6 +25,7 @@ class Navbar extends Component {
                         <a href="/faq">FAQ</a>
                         <a href="mailto:staff@clicksminuteper.net" target="_blank">Contact Us</a>
                     </div>
+{/*
                     <button className={styles.navRightBurger}>
                     <Menu customBurgerIcon={ <img src="/burger.svg" /> } right>
                         <a href="/#projects">Projects</a>
@@ -33,6 +34,7 @@ class Navbar extends Component {
                         <a href="mailto:staff@clicksminuteper.net" target="_blank">Contact Us</a>
                     </Menu>
                     </button>
+*/}
                 </div>
             </>
         );
