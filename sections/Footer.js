@@ -11,24 +11,24 @@ class Footer extends Component {
                 <div className={Styles.block}>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>Projects</h1>
-                        <Link href=""className={Styles.aColor}>RSM</Link>
+                        <Link href="/projects/rsm"className={Styles.aColor}>RSM</Link>
                         <br />
-                        <Link href="" className={Styles.aColor}>Gone Pair Shaped</Link>
+                        <Link href="/projects/gps" className={Styles.aColor}>Gone Pair Shaped</Link>
                         <br />
                     </div>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>About</h1>
-                        <Link href="" className={Styles.aColor}>About Us</Link>
+                        <Link href="/about" className={Styles.aColor}>About Us</Link>
                         <br />
-                        <Link href="" className={Styles.aColor}>Status</Link>
+                        <Link href="https://status.clicksminuteper.net" className={Styles.aColor}>Status</Link>
                         <br />
-                        <Link href="" className={Styles.aColor}>FAQ</Link>
+                        <Link href="/faq" className={Styles.aColor}>FAQ</Link>
                     </div>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>Contact</h1>
-                        <Link href=""className={Styles.aColor}>Email</Link>
+                        <Link href="mailto:staff@clicksminuteper.net"className={Styles.aColor}>Email</Link>
                         <br />
-                        <Link href="" className={Styles.aColor}>Discord</Link>
+                        <Link href="https://discord.gg/bPaNnxe" className={Styles.aColor}>Discord</Link>
                         <br />
                     </div>
                 </div>
