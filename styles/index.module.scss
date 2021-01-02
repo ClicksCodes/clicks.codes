@@ -1,5 +1,5 @@
 .purpleText {
-  font-size: min(5vw, 75px);
+  font-size: max(min(5vw, 75px), 50px);
   color: #775ebf;
   font-weight: 500;
   line-height: 84px;
@@ -24,12 +24,17 @@
 .WNFlex {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: flex-start;
   padding-left: 20px;
   padding-right: 20px;
-  width: 100%;
+  width: auto;
   overflow: scroll;
+  @media (max-width:1500px) {
+    justify-content: left;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
 }
 
 .content {

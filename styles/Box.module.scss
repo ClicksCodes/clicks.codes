@@ -1,17 +1,16 @@
 .BoxContainer {
     box-shadow: 2px 2px 10px #00000010;
-  
     display: flex;
     flex-direction: column;
 
     flex: none;
     order: 0;
+
     margin: 47px 0px;
     margin-right: 20px;
     margin-left: 20px;
-  
     background-color: #f6f6f6b0;
-  
+
     box-sizing: border-box;
     border-radius: 7px;
     transition: box-shadow 0.5s;
@@ -27,6 +26,13 @@
     padding-bottom: 0;
     overflow: scroll;
     color: black;
+    max-height: 300px;
+    
+    @media (max-width: 1500px) {
+        max-height: 500px;
+        width: 300px;
+        height: 250px;
+    }
 }
 
 .BoxContainer:hover {
@@ -36,17 +42,17 @@
 .BoxContainer.red {
     border: 1px solid #F27878;  
 }
-
 .BoxContainer.green {
     border: 1px solid #65CC76;  
 }
-
 .BoxContainer.blue {
     border: 1px solid #6576CC;  
 }
-
 .BoxContainer.lblue {
     border: 1px solid #78ECF2;
+}
+.BoxContainer.orange {
+    border: 1px solid #E5AB71;
 }
 
 .BoxContainer code {
@@ -72,16 +78,19 @@
 }
 
 .hr.red {
-    border-top: 1px solid #F27878;
+    border: 1px solid #F27878;
 }
 .hr.green {
-    border-top: 1px solid #65CC76;
+    border: 1px solid #65CC76;
 }
 .hr.blue {
-    border-top: 1px solid #6576CC;
+    border: 1px solid #6576CC;
 }
 .hr.lblue {
-    border-top: 1px solid #78ECF2;
+    border: 1px solid #78ECF2;
+}
+.hr.orange {
+    border: 1px solid #E5AB71;
 }
 
 .title {

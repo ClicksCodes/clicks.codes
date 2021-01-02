@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import Link from 'next/link';
 import Styles from '../styles/Box.module.scss';
-import Modal from 'react-modal';
-
+//import Modal from 'react-modal';
 
 class Box extends Component {
 
@@ -15,15 +14,19 @@ class Box extends Component {
         let color;
         switch (this.props.color) {
             case "red":
-            case "important":
                 color = Styles.red;
                 break;
             case "green":
-            case "new":
                 color = Styles.green;
                 break;
+            case "blue":
+                    color = Styles.blue;
+                    break;
             case "lblue":
                 color = Styles.lblue
+                break
+            case "orange":
+                color = Styles.orange
                 break
             default:
                 color = Styles.blue;
