@@ -35,7 +35,7 @@ class Header extends Component {
                 <h1>{this.props.title}</h1>
                 <h2>{this.props.sub}</h2>
                 <div className={Styles.buttons}>
-                    <a className={Styles.button} href="#about">About</a>
+                    <a className={Styles.button} href="#features">Features</a>
                     <a className={Styles.button} href="#commands">Commands</a>
                     <a className={Styles.button} href={this.props.inviteURL}>Invite</a>
                 </div>

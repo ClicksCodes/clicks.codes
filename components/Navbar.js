@@ -34,6 +34,7 @@ class Navbar extends Component {
                                 <div className={styles.modal + " " + styles.hiddenmodal} id="modal">
                                     <a href="/projects/rsm">RSM</a>
                                     <a href="/projects/gps">GPS</a>
+                                    <a href="/projects/castaway">Castaway</a>
                                 </div>
                             </a>
                             <a href="/about">About us</a>
@@ -50,6 +51,7 @@ class Navbar extends Component {
                         <div className={styles.SubSection}>
                             <a href="/projects/gps">GPS</a>
                             <a href="/projects/rsm">RSM</a>
+                            <a href="/projects/castaway">Castaway</a>
                         </div>
                         <a href="/about">About us</a>
                         <a href="/faq">FAQ</a>

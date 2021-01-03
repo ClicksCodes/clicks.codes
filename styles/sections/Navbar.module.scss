@@ -42,6 +42,8 @@
   color: #000;
   font-size: 26px;
   font-weight: 300;
+  user-select: none;
+  cursor: pointer;
   :hover {
     color: #222;
   }
@@ -92,10 +94,14 @@
   margin-left: 10%;
   margin-top: 10px;
   color: #6576CC;
+  user-select: none;
+  cursor: hand;
 }
 .menu .SubSection a {
   margin-left: 15%;
   color: #775EBF;
+  user-select: none;
+  cursor: hand;
 }
 
 .projectPopout {
@@ -156,5 +162,5 @@
 }
 
 .hiddenmodal {
-  top: -100px;
+  top: -1000px;
 }

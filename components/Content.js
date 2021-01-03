@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import Typed from './effects/Typed'
-import hstyles from '../styles/Header.module.css';
-import wnstyles from '../styles/pages/WhatsNew.module.css';
-import styles from '../styles/components/Content.module.css';
+import hstyles from '../styles/Header.module.scss';
+import wnstyles from '../styles/pages/WhatsNew.module.scss';
+import styles from '../styles/components/Content.module.scss';
 import exts from '../public/expansions.json';
 
 var clicks = 1;

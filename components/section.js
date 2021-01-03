@@ -32,8 +32,8 @@ class Section extends Component {
         }
 
         return (
-            <div aria-label={this.props.title}>
-                <h1 className={Styles.sectionHeader + " " + color}>{this.props.title}</h1>
+            <div id={this.props.title}>
+                <h1 className={Styles.sectionHeader + " " + color} id={this.props.title}>{this.props.title}</h1>
             </div>
         );
     }
