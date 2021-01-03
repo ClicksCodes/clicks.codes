@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Styles from '../../styles/rsmv.module.scss'
+import Styles from '../../styles/pages/rsmv.module.scss'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import Axios from 'axios';
 import Router from 'next/router'

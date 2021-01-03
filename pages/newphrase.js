@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Input from '../components/Input'
-import Styles from '../styles/newphrase.module.scss'
+import Styles from '../styles/pages/newphrase.module.scss'
 
 class Page extends Component {
   render() {

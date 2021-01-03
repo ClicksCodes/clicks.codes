@@ -17,15 +17,17 @@
   background-clip: content-box;
   background-color: #D3D3D3;
   margin-top: -5px;
+  padding: 0;
 }
 
 .headerImageContent {
   filter: blur(0);
-  width: 100%;
+  width: 75%;
   height: 100%;
   position: absolute;
   z-index: 1;
   top: 33%;
+  left: 12.5%;
 }
 
 .headerImageContent hr {
@@ -38,18 +40,25 @@
 .headerImageTitle {
   color: #000;
   text-align: center;
-  font-size: max(min(7vw, 100px), 50px);
+  font-size: 7vw;
   font-weight: normal;
   margin: 0;
   padding-top: 2em;
+
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
 
 .headerImageTagline {
   color: #000;
   text-align: center;
   font-weight: 200;
-  font-size: max(77px, 5vh);
-  margin-top: 0
+  font-size: max(min(77px, 7vw), 5vh);
+  margin-top: 0;
+  width: 80%;
+  position: absolute;
+  left: 12.5%;
 }
 
 .hr {

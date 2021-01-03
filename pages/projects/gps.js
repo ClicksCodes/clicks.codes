@@ -1,5 +1,5 @@
 import { Component } from 'react'
-//import Styles from '../../styles/projects.module.scss'
+import Styles from '../../styles/pages/projects.module.scss'
 import Header from '../../components/Projects.js';
 
 class Success extends Component {

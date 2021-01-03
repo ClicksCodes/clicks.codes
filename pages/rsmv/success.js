@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import Styles from '../../styles/rsmv.module.scss'
+import Styles from '../../styles/pages/rsmv.module.scss'
 
 class Success extends Component {
     constructor(props) {

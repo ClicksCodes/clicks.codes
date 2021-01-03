@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import Styles from '../styles/errors.module.scss'
+import Styles from '../styles/pages/errors.module.scss'
 
 class Success extends Component {
     constructor(props) {

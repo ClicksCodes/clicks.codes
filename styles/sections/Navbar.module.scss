@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;  
-  margin-right: 10px;
+  margin-right: 30px;
   @media (max-width:900px) {
     display: none;
   }
@@ -65,11 +65,12 @@
 .BurgerSVG {
   top: 10px;
   outline: none !important;
+  margin-right: 20px;
 }
 .menu {
   position: absolute;
   height: 100vh;
-  width:50%;
+  width:75%;
   background-color: rgba(255,255,255, 50%);
   backdrop-filter: blur(8px);
   float: right;
@@ -82,17 +83,19 @@
   left: 100%;
 }
 .menuOpen {
-  left: 50%;
+  left: 25%;
 }
 .menu a {
   width: 100%;
   display: list-item;
   list-style-type: none;
   margin-left: 10%;
-  margin-top: 10px;;
+  margin-top: 10px;
+  color: #6576CC;
 }
 .menu .SubSection a {
   margin-left: 15%;
+  color: #775EBF;
 }
 
 .projectPopout {
@@ -108,4 +111,50 @@
 
 .hidden {
   display: none !important;
+}
+
+.modal {
+  position: absolute;
+  top: 60px;
+  transition: 0.3s;
+  z-index: 0;
+  width: auto;
+  margin-left: -20px;
+
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+  padding-right: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal a {
+  display: list-item;
+  list-style-type: none;
+  z-index: 1;
+
+  position: static;
+  width: 251px;
+  height: 33px;
+  left: 10px;
+  top: 121px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.hiddenmodal {
+  top: -100px;
 }

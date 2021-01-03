@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Link from 'next/link';
-import Styles from '../styles/Box.module.scss';
+import Styles from '../styles/components/Box.module.scss';
 //import Modal from 'react-modal';
 
 class Box extends Component {

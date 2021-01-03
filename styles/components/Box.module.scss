@@ -121,3 +121,27 @@
     margin-bottom: 10px;
     align-self: flex-end;
 }
+
+.sectionHeader {
+    text-transform: uppercase;
+    left: 20%;
+    position: relative;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+h1.tred {
+    color: #F27878;
+}
+h1.tgreen {
+    color: #65CC76;
+}
+h1.tblue {
+    color: #6576CC;
+}
+h1.tlblue {
+    color: #78ECF2;
+}
+h1.torange {
+    color: #E5AB71;
+}
