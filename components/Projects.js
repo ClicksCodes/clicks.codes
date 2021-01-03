@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Link from 'next/link';
-import Styles from '../styles/Gh.module.scss';
+import Styles from '../styles/components/Gh.module.scss';
 
 class Header extends Component {
 

@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Styles from '../styles/Socials.module.scss'
+import Styles from '../styles/sections/Socials.module.scss'
 import Link from 'next/link'
 
 const Social = (props) => {

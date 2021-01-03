@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Link from 'next/link';
-import Styles from '../styles/Footer.module.scss';
+import Styles from '../styles/sections/Footer.module.scss';
 
 class Footer extends Component {
 

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Box from '../components/Box.js';
-import Styles from '../styles/index.module.scss'
+import Styles from '../styles/pages/index.module.scss'
 
 class About extends Component {
 

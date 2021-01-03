@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Styles from '../styles/Faq.module.scss';
+import Styles from '../styles/pages/Faq.module.scss';
 
 class FAQ extends Component {
 

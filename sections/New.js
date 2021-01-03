@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import styles from '../styles/WhatsNew.module.scss';
+import styles from '../styles/sections/WhatsNew.module.scss';
 
 class WhatsNew extends Component {
     constructor(props) {
