@@ -26,18 +26,24 @@ class Header extends Component {
             case "orange":
                 color = Styles.orange
                 break
+            
+            case "castaway":
+                color = Styles.castaway
+                break
+
             default:
                 color = Styles.blue;
         }
 
         return (
             <div role="main" aria-label={this.props.title} className={Styles.main + " " + color}>
-                <h1>{this.props.title}</h1>
-                <h2>{this.props.sub}</h2>
+                <h1 className={Styles.title}>{this.props.title}</h1>
+                <h2 className={Styles.title}>{this.props.sub}</h2>
                 <div className={Styles.buttons}>
                     <a className={Styles.button} href="#features">Features</a>
                     <a className={Styles.button} href="#commands">Commands</a>
                     <a className={Styles.button} href={this.props.inviteURL}>Invite</a>
+                    {(this.props.sourceURL) && <a className={Styles.button} href={this.props.sourceURL}>Source</a>}
                 </div>
             </div>
         );

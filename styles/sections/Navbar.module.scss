@@ -4,8 +4,9 @@
   position: fixed;
   width:100%;
   top:0;
-  box-shadow: 0px 4px 4px 0px #00000025;
+  box-shadow: 0px 4px 4px 0px #00000010;
   z-index: 100;
+  backdrop-filter: blur(3px);
 }
 .navLeft {
   width:399px;
@@ -162,5 +163,5 @@
 }
 
 .hiddenmodal {
-  top: -1000px;
+  top: -500px;
 }

@@ -128,6 +128,9 @@
     position: relative;
     font-size: 50px;
     margin-bottom: 0;
+    @media (max-width: 1000px) {
+        left: 0;
+    }
 }
 
 h1.tred {
@@ -144,4 +147,12 @@ h1.tlblue {
 }
 h1.torange {
     color: #E5AB71;
+}
+
+.sectionHeader {
+    @media (max-width: 1000px) {
+        width: 100%;
+        float: left;
+        left: 25px;
+    }
 }

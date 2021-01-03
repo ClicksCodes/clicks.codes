@@ -15,6 +15,8 @@ class Footer extends Component {
                         <br />
                         <Link href="/projects/gps" className={Styles.aColor}>Gone Pair Shaped</Link>
                         <br />
+                        <Link href="/projects/castaway" className={Styles.aColor}>Castaway</Link>
+                        <br />
                     </div>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>About</h1>
