@@ -11,7 +11,7 @@ const kvdb = new kv('mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.1.30
 const allowedOrigins = ['https://beta.clicksminuteper.net',
                         'https://clicksminuteper.net',
                         'http://192.168.1.28',
-			'https://192.168.1.28'
+			'https://192.168.1.28',
                         'http://192.168.1.24'
 ]
 
@@ -21,6 +21,9 @@ app.use(cors({
 }));
 
 app.post('/validate', async function (req, res) {
+    if (req.body.secret != "coded is bad at security lol -3665") {
+        return res.send(403).send('don\'t break me lol')
+    }
     let chk = await kvdb.get(req.body.code);
     if(chk) {
         return res.send(400).send('exists')

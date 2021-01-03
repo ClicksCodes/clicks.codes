@@ -8,10 +8,8 @@ export default async function(req, res) {
     if(!v) {
         return res.status(404).end();
     } else {
-        let gid = v.substr(0,18);
-        let uid = v.substr(18,18);
-        let rid = v.substring(36);
-        return res.send({ user: uid, guild:gid, role:rid });
+        var spl = v.split(".")
+        return res.send({ user: spl[1], guild:spl[0], role:spl[2] });
     }
 
 }

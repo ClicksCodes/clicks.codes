@@ -86,7 +86,7 @@ class RSMV extends Component {
 export default RSMV;
 export async function getServerSideProps(ctx) {
     const req = ctx.query
-    const ids = await Axios.put('https://clicksminuteper.net/api/validate', {code: req.code})
+    const ids = await Axios.put('http://localhost:3000/api/validate', {code: req.code})
     const guild = await Axios(`http://localhost:3001/guilds/${ids.data["guild"]}`)
     const role = await Axios(`http://localhost:3001/roles/${ids.data["guild"]}/${ids.data["role"]}`)
     return {
