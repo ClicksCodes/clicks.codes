@@ -38,7 +38,7 @@
     width: calc(100vw + 20px);
     height: 500px;
     position: static;
-    margin-top: -50px;
+    margin-top: -5px;
     padding: 50px;
     text-align: center;
     @media (max-width: 1000px) {
@@ -47,7 +47,7 @@
 }
 
 .red   {background: linear-gradient(254.06deg, rgba(242, 120, 120, 0.75) 0%, rgba(217, 107, 107, 0.75) 99.99%)}
-.blue  {background: linear-gradient(254.06deg, rgba(120, 236, 242, 0.75) 0%, rgba(113, 175, 229, 0.75) 99.99%)}
+.blue  {background: linear-gradient(254.06deg, rgba(113, 175, 229, 0.75) 0%, rgba(120, 236, 242, 0.75) 99.99%)}
 .lblue {background: linear-gradient(254.06deg, rgba(120, 236, 242, 0.75) 0%, rgba(113, 175, 229, 0.75) 99.99%)}
 .castaway {
     background-image: url(../../public/Cast1.svg), url(../../public/Cast2.svg), linear-gradient(254.06deg, rgba(120, 236, 242, 0.75) 0%, rgba(113, 175, 229, 0.75) 99.99%);

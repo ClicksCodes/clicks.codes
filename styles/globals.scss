@@ -5,13 +5,15 @@ body {
     padding: 0;
     padding-top: 20px;
     margin: 0;
-    margin-right: -10px;
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
     min-height: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
+}
+body {
+    margin-right: -15px;
 }
 
 code {

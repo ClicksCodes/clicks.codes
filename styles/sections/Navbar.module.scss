@@ -1,12 +1,12 @@
 .Container {
   height:55px;
-  background-color: #fffffff8;
+  background-color: #ffffffdd;
   position: fixed;
   width:100%;
   top:0;
   box-shadow: 0px 4px 4px 0px #00000010;
   z-index: 100;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
 }
 .navLeft {
   width:399px;
@@ -153,7 +153,7 @@
 
   font-family: Roboto;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 350 !important;
   font-size: 26px;
   line-height: 30px;
   display: flex;
@@ -163,5 +163,5 @@
 }
 
 .hiddenmodal {
-  top: -500px;
+  top: -250px;
 }

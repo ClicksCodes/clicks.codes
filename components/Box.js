@@ -33,7 +33,7 @@ class Box extends Component {
         }
 
         return (
-            <div role="main" aria-label={this.props.title} className={Styles.BoxContainer + " " + color}>
+            <div role="main" aria-label={this.props.title} className={Styles.BoxContainer + " " + color} key={Math.random()}>
                 <h2>{this.props.title}</h2>
                 <hr className={Styles.hr + " " + color} />
                 {(() => {

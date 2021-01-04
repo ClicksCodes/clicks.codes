@@ -30,7 +30,7 @@
     
     @media (max-width: 1500px) {
         max-height: 500px;
-        width: 300px;
+        width: 80vw;
         height: 250px;
     }
 }
@@ -124,11 +124,11 @@
 
 .sectionHeader {
     text-transform: uppercase;
-    left: 20%;
+    left: min(20%, 200px);
     position: relative;
     font-size: 50px;
     margin-bottom: 0;
-    @media (max-width: 1000px) {
+    @media (max-width: 1500px) {
         left: 0;
     }
 }
@@ -150,7 +150,7 @@ h1.torange {
 }
 
 .sectionHeader {
-    @media (max-width: 1000px) {
+    @media (max-width: 1500px) {
         width: 100%;
         float: left;
         left: 25px;

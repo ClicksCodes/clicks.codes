@@ -36,14 +36,15 @@ class Header extends Component {
         }
 
         return (
-            <div role="main" aria-label={this.props.title} className={Styles.main + " " + color}>
+            <div role="main" aria-label={this.props.title} className={Styles.main + " " + color + " " + (this.props.addToDiscord && "invite")}>
                 <h1 className={Styles.title}>{this.props.title}</h1>
                 <h2 className={Styles.title}>{this.props.sub}</h2>
                 <div className={Styles.buttons}>
-                    <a className={Styles.button} href="#features">Features</a>
-                    <a className={Styles.button} href="#commands">Commands</a>
-                    <a className={Styles.button} href={this.props.inviteURL}>Invite</a>
-                    {(this.props.sourceURL) && <a className={Styles.button} href={this.props.sourceURL}>Source</a>}
+                    {(!this.props.addToDiscord) && <a className={Styles.button} href="#features">Features</a>}
+                    {(!this.props.addToDiscord) && <a className={Styles.button} href="#commands">Commands</a>}
+                    {(!this.props.addToDiscord) && <a className={Styles.button} href={this.props.inviteURL}>Invite</a>}
+                    {(this.props.sourceURL && !this.props.addToDiscord) && <a className={Styles.button} href={this.props.sourceURL}>Source</a>}
+                    {(this.props.addToDiscord) && <a className={Styles.button} href={this.props.addToDiscord}>Add to Discord</a>}
                 </div>
             </div>
         );

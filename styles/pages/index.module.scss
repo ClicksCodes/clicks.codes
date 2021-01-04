@@ -31,9 +31,10 @@
   width: auto;
   overflow: scroll;
   @media (max-width:1500px) {
-    justify-content: left;
-    margin-right: 20px;
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    flex-direction: column;
   }
 }
 
@@ -41,6 +42,9 @@
   padding-left: 5em;
   padding-right: 5em;
   padding-top: 3em;
+  @media (max-width:1500px) {
+    padding-left: 1em;
+  }
 }
 
 .NewP {

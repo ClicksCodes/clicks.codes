@@ -11,7 +11,7 @@ const kvdb = new kv('mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.1.30
 const allowedOrigins = ['https://beta.clicksminuteper.net',
                         'https://clicksminuteper.net',
                         'http://192.168.1.28',
-			'https://192.168.1.28',
+                        'https://192.168.1.28',
                         'http://192.168.1.24'
 ]
 

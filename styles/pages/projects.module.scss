@@ -7,7 +7,7 @@
     padding-right: 20px;
     width: 100%;
     overflow: scroll;
-    @media (max-width:1000px) {
+    @media (max-width:1500px) {
         margin-left: auto;
         margin-right: auto;
         display: inline-block;
@@ -17,4 +17,19 @@
 .Content p.p {
     width: 80vw;
     margin-left: 10vw;
+}
+.container {
+    margin-bottom: 0 !important;
+}
+
+.bottomBar {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+    background-color: #bbb;
+}
+
+.hidden {
+    display: none;
 }
