@@ -20,6 +20,7 @@ class Castaway extends Component {
                 inviteURL="https://discord.com/oauth2/authorize?client_id=757225562816118895&permissions=322624&scope=bot"
                 sourceURL="https://github.com"
             />
+            <div className={Styles.bottomBar} />
             <div className={Styles.Content}>
                 <Section title="features" color="lblue" className={Styles.boxes} />
                 <div className={Styles.boxes}>

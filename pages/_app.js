@@ -14,7 +14,7 @@ function App({ Component, pageProps }) {
                     <meta name="author" content="Clicks Minute Per" />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <title>Clicks Minute Per</title>
-                    <link rel="icon" href="/mouse.svg" />
+                    <link rel="icon" href="/favicon.png" />
                 </Head>
                 <Navbar />
                 <Component {...pageProps} />

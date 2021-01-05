@@ -27,6 +27,7 @@ class GPS extends Component {
                     sub="Card matching over Discord"
                     inviteURL="https://discord.com/oauth2/authorize?client_id=679361555732627476&permissions=322624&scope=bot"
                 />
+                <div className={Styles.bottomBar} />
                 <Section title="features" color="blue" />
                 <div className={Styles.boxes}>
                     <Box title="Low latency" color="blue" strapline="Quick responses">We try to keep the response time of GPS as low as possible, so you get the best possible playing experience.</Box>

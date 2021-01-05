@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Styles from '../../styles/pages/rsmv.module.scss'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import Axios from 'axios';
-import Router from 'next/router'
+import Router from 'next/router';
 
 class RSMV extends Component {    
 
@@ -23,18 +23,8 @@ class RSMV extends Component {
     }
 
     async submitForm(cls) {
-        if(!cls.v) return;
-
-        const vfy = await Axios.post('https://api.clicksminuteper.net/verify', {
-            gid: cls.props.serverInfo.id,
-            uid: cls.props.userid,
-            rid: cls.props.role.id
-        }).catch(function(error) {
-            if (!error.status) {
-                console.log(error)
-            }
-        });
-        if(vfy.status === 200) {
+        
+        if(w === 200) {
             return Router.push('/rsmv/success','/rsmv')
         } else if(vfy.status === 500) {
             return Router.push('/rsmv/failure','/rsmv')
@@ -73,7 +63,7 @@ class RSMV extends Component {
                 <div className={Styles.BottomText}>
                     <p>This is an automatic check performed by RSM.<br/>
                         <br/>
-                        By clicking Proceed, you will be given the <highlight>{this.props.role.name}</highlight> role in <highlight>{this.props.serverInfo.name}</highlight>.<br/>
+                        By clicking Proceed, you ({this.props.user.name}) will be given the <highlight>{this.props.role.name}</highlight> role in <highlight>{this.props.serverInfo.name}</highlight>.<br/>
                         {/* <br/>
                         By Proceeding, you consent to our use of cookies described in our <highlight>policy</highlight>. */}
                     </p>
@@ -85,14 +75,31 @@ class RSMV extends Component {
 
 export default RSMV;
 export async function getServerSideProps(ctx) {
-    const req = ctx.query
-    const ids = await Axios.put('http://localhost:3000/api/validate', {code: req.code})
-    const guild = await Axios(`http://localhost:3001/guilds/${ids.data["guild"]}`)
-    const role = await Axios(`http://localhost:3001/roles/${ids.data["guild"]}/${ids.data["role"]}`)
+    if(!ctx.query.code) {
+        return {
+            redirect: {
+                destination: '/404',
+                permanent: true
+            }
+        }
+    }
+    let code = await Axios.post('http://localhost:3000/api/validate', {data:{jwt:ctx.query.code}});
     return {
-        props: { serverInfo: guild.data,
-                 userid: ids.data["user"],
-                 role: role.data
+        props: {
+            roleID:code.data.roleID,
+            guildID:code.data.guildID,
+            userID:code.data.userID,
+            role: {
+                name:code.data.roleName
+            },
+            user: {
+                name:code.data.userName
+            },
+            serverInfo: {
+                iconURL: code.data.guildAvatar,
+                name:code.data.guildName,
+                memberCount:code.data.guildSize
+            }
         }
     }
 }

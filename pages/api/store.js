@@ -1,3 +1,3 @@
-export default async function(req, res) {
+export default async (req, res) => {
     res.redirect('/').end();
 }
