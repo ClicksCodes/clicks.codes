@@ -1,0 +1,15 @@
+{
+    "connection": "upgrade",
+    "host": "192.168.1.31:3000",
+    "sec-ch-ua": "\"Google Chrome\";v=\"87\", \" Not;A Brand\";v=\"99\", \"Chromium\";v=\"87\"",
+    "sec-ch-ua-mobile": "?0",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+    "accept": "*/*",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "referer": "https://beta.clicksminuteper.net/rsmv?code=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiIyNjE5MDA2NTEyMzAwMDMyMDEiLCJndWlsZElEIjoiNjg0NDkyOTI2NTI4NjUxMzM2Iiwicm9sZUlEIjoiNzYwOTAxNTUxNDk2NjI2MTg3IiwiZ3VpbGRBdmF0YXIiOiJodHRwczovL2Nkbi5kaXNjb3JkYXBwLmNvbS9pY29ucy82ODQ0OTI5MjY1Mjg2NTEzMzYvNjYyNmU1ZDMyMWFkN2MwNTUwYTU4YjM1NzZiNGFlMjEud2VicD9zaXplPTEwMjQiLCJndWlsZE5hbWUiOiJDbGlja3MgTWludXRlIFBlciBIdWIiLCJndWlsZFNpemUiOiIyMjgiLCJyb2xlTmFtZSI6Ik1lbWJlciIsInVzZXJOYW1lIjoiVGhlQ29kZWRQcm9mIn0.Y__JJkkcQLIzdQbpvG4FnolOsR320UgRGSw_OfPCQJXy6wLtvG7LXoEAyfObDWmaD0b1s5vr5NS6bQwD-62bJglkGdbiyirtdV9g0h_HK1wF11nqnB0q1E0rgvYDEnNYC16idHd1846vvD0kgKipGNcWX6aUW_yrJ3u8gFa93YYdrz3NWVR-VnYXW_byNQySDc0AMi7WH_AoYKVXO-GxYhinYXeaAXy5WMCmH7Lir0JH2wDVwBQFHsAJG6WHgXrpACOXSKly_Jh6rFZ-0IpN2rRkM3KBqPHWv18wynVsTwYlQyrnm-YNrYp04Oli3P1Nq4AoY3APM7ubJZ1FtjodLAsp6_8_IUzPOsyB41Vz3oZEA5aBUZGNPuXtuIu10n7h0gnfqHMRYlhsEs10uLCZTBv0sfdewLqeH3OLtXiHvIDvb04v3wRptFLRCKRQ0htqwfQzkny4Anagfi_jtGA3wnrlarbQojccKBmr4xj2ofrAtNhcfB6-zUqOg0lMCiB2TgN1rATGuYjYTsncwkOsgbd6s0GZ29jJ5gbnZjYLsIhRZITUFdGeJdYHKMqumR-eIGmgBWnbyDZ12A-QAqDSSSNSY5tHGnM5ilYo_2g4FW21jsVummydxcdAu_f5KfmWjHYnhpHPH0bnXsT_zKkPvzHpYckID7RYtFGhlVZR5YY",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "en-US,en;q=0.9,fr;q=0.8",
+    "cookie": "_ga=GA1.2.1230158530.1586348784; __gads=ID=9ffb4f8804141323:T=1589629618:S=ALNI_MbrTOgoP979DcYN2GxnZdG8TWTVBQ; __stripe_mid=004c292c-c574-4b49-a999-3c231ba2ffc9f3f2ba; __cfduid=d286ecf670a7b9c4374c94eefc4675fd51609697726"
+}

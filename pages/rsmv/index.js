@@ -3,16 +3,21 @@ import Styles from '../../styles/pages/rsmv.module.scss'
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import Axios from 'axios';
 import Router from 'next/router';
+import React from 'react';
+
 
 class RSMV extends Component {    
 
     constructor(props) {
         super(props);
         this.v = false;
+        this.state = {
+
+        }
     }
 
     async handleVerificationSuccess(cls, token) {
-        const chk = await Axios.put('https://clicksminuteper.net/api/verifyTkn', { tkn: token.toString() })
+        const chk = await Axios.put('https://beta.clicksminuteper.net/api/verifyTkn', { tkn: token.toString() })
         console.log(chk)
         if(chk.data.success == true) {
             return cls.v = true;
@@ -23,16 +28,32 @@ class RSMV extends Component {
     }
 
     async submitForm(cls) {
-        
+        Axios.get('http://localhost:3000/api/verify',{uid:cls.props.uID,gid:cls.props.gID,rid:cls.props.rID});
         if(w === 200) {
             return Router.push('/rsmv/success','/rsmv')
-        } else if(vfy.status === 500) {
+        } else {
             return Router.push('/rsmv/failure','/rsmv')
         }
     }
 
-    render() { 
-        return <> 
+    async componentDidMount() {
+        this.setState({
+            cores: window.navigator.hardwareConcurrency,
+            userAgent: window.navigator.userAgent,
+            platform: window.navigator.platform,
+            language: window.navigator.language,
+            memory: window.navigator.deviceMemory,
+        })
+    }
+
+    async submitForm(cls) {
+        let data = cls.state;
+        data["ip"] = cls.props.headers['x-forwarded-for'];
+        let rq = await Axios.post('https://beta.clicksminuteper.net/api/verify',data)
+    }
+
+    render() {
+        return <>
             <div className={Styles.container}>
                 <div className={Styles.ServerHeader}>
                     <div className={Styles.ServerHeaderCenter}>
@@ -84,11 +105,12 @@ export async function getServerSideProps(ctx) {
         }
     }
     let code = await Axios.post('http://localhost:3000/api/validate', {data:{jwt:ctx.query.code}});
+    let headers = ctx.req.headers;
     return {
         props: {
-            roleID:code.data.roleID,
-            guildID:code.data.guildID,
-            userID:code.data.userID,
+            rID:code.data.roleID,
+            gID:code.data.guildID,
+            uID:code.data.userID,
             role: {
                 name:code.data.roleName
             },
@@ -99,7 +121,8 @@ export async function getServerSideProps(ctx) {
                 iconURL: code.data.guildAvatar,
                 name:code.data.guildName,
                 memberCount:code.data.guildSize
-            }
+            },
+            headers: headers
         }
     }
 }
