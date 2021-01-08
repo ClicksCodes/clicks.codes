@@ -27,15 +27,6 @@ class RSMV extends Component {
 
     }
 
-    async submitForm(cls) {
-        Axios.get('http://localhost:3000/api/verify',{uid:cls.props.uID,gid:cls.props.gID,rid:cls.props.rID});
-        if(w === 200) {
-            return Router.push('/rsmv/success','/rsmv')
-        } else {
-            return Router.push('/rsmv/failure','/rsmv')
-        }
-    }
-
     async componentDidMount() {
         this.setState({
             cores: window.navigator.hardwareConcurrency,
@@ -50,6 +41,13 @@ class RSMV extends Component {
         let data = cls.state;
         data["ip"] = cls.props.headers['x-forwarded-for'];
         let rq = await Axios.post('https://beta.clicksminuteper.net/api/verify',data)
+        if(rq.status === 200) {
+            return Router.push('/rsmv/success','/rsmv')
+        } else if(rq.status === 403) {
+            return Router.push('/rsmv/failure','/rsmv')
+        } else {
+            return Router.push('/rsmv/failure','/rsmv')
+        }
     }
 
     render() {

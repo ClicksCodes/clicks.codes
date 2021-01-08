@@ -25,7 +25,7 @@ class HeaderImage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            phrase: "Custom made programs",
+            phrase: "Custom Made Programs",
             tagline: null
         }
     }
