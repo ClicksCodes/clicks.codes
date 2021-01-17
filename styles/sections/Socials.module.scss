@@ -10,7 +10,7 @@
     margin-right: auto;
     border-radius: 10px;
     border: solid 2px #F27878;
-    background-color: #F6F6F6;
+    background-color: var(--background-color);
     padding: 20px;
     margin-top: 50px;
     filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.07));
@@ -22,6 +22,7 @@
 
 .title {
     margin-top: 0;
+    color: var(--blurple-text-color);
 }
 
 .AutoLayout {
@@ -61,4 +62,9 @@
     justify-self: flex-end;
     text-align: center;
     width: auto;
+}
+
+.githubSVG {
+    -webkit-filter: var(--invert-filter);
+    filter: var(--invert-filter);
 }

@@ -1,0 +1,39 @@
+.Navbar_navTitle__Gi6qZ,
+.Box_BoxContainer__1-B9y,
+.Footer_h1Title__1NBCv,
+.Header_headerImageTitle__3Ws5R,
+.Header_headerImageTagline__2o81K
+{
+    color: white;
+}
+
+.index_content__3hV7i,
+.Box_BoxContainer__1-B9y,
+.Navbar_navRightMain__1k2gv,
+.index_WNFlex__2k0J6,
+.Socials_BoxContainer__2_hD7,
+.Footer_bar__2sZ6o,
+.Footer_block__3D9M-,
+html
+{
+    background-color: #232323;
+}
+.Box_h3__1V_W8,
+.Socials_title__2YOKu
+{
+    color: #775ebf;
+}
+
+img[src="/socials/colour/github.svg"],
+.Header_headerImage__1D5Kw {
+    background:linear-gradient(0deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/background.svg);
+    background-size:cover;
+}
+
+.Navbar_navRightMain__1k2gv .Navbar_NormalContents__1IgPF a {
+    color: white;
+}
+
+.Header_hr__fIRgl {
+    border: 1px solid rgba(255, 255, 255, .5);
+}

@@ -1,11 +1,10 @@
 import { Component } from 'react';
 import Styles from '../styles/sections/Socials.module.scss'
-import Link from 'next/link'
 
 const Social = (props) => {
     return (
         <a href={props.url} className={Styles.Item}>
-            <div><img src={props.image}/></div>
+            <div><img src={props.image} className={props.image === "/socials/colour/github.svg" ? Styles.githubSVG : ""}/></div>
             <p>{props.title}</p>
         </a>
     );

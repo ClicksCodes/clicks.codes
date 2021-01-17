@@ -11,11 +11,12 @@
   height: max(100vh, 450px);
   object-fit: cover;
   position: static;
+  background: var(--header-image-background);
   background-image: url("/background.svg");
   background-size: cover;
   background-repeat:no-repeat;
   background-clip: content-box;
-  background-color: #D3D3D3;
+  //background-color: #D3D3D3;
   margin-top: -5px;
   padding: 0;
 }
@@ -38,7 +39,7 @@
 }
 
 .headerImageTitle {
-  color: #000;
+  color: var(--text-color);
   text-align: center;
   font-size: max(min(7vw, 100px), 3vw);
   font-weight: normal;
@@ -46,13 +47,11 @@
   padding-top: 2em;
   margin-bottom: 0;
 
-  width: 100%;
   position: relative;
-  text-align: center;
 }
 
 .headerImageTagline {
-  color: #000;
+  color: var(--text-color);
   text-align: center;
   font-weight: 200;
   font-size: max(min(77px, 7vw), 5vh);
@@ -61,10 +60,10 @@
   padding-left: 10%;
   padding-right: 10%;
   position: absolute;
-  text-transform: capitalise;
+  text-transform: capitalize;
 }
 
 .hr {
-  border: solid rgba(0, 0, 0, 50%) 1px;
+  border: var(--header-image-text-seperator-border);
   width: 45%;
 }

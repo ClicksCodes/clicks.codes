@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import Link from 'next/link';
 import Styles from '../styles/sections/Footer.module.scss';
+import Toggle from "../components/Toggle";
 
 class Footer extends Component {
 
@@ -42,6 +43,7 @@ class Footer extends Component {
                         <a href="https://www.instagram.com/clicksminuteper/"><img src="/socials/mono/Insta.svg" height="75%" className={Styles.social}/></a>
                     </div>
                 </div>
+                <Toggle mode={true}/>
             </div>
         )
     }

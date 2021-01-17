@@ -9,7 +9,7 @@ function App({ Component, pageProps }) {
         <>
             <html lang="en">
                 <Head>
-                    <meta charset="UTF-8" />
+                    <meta charSet="UTF-8" />
                     <meta name="keywords" content="clicks, minute, per, clicksminuteper, software, development, software development, discord, bot, chatbot, custom" />
                     <meta name="author" content="Clicks Minute Per" />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
