@@ -6,16 +6,17 @@ class Toggle extends Component {
         console.log(props)
         super(props);
         this.state = {mode: props.mode}
+        this.toggleMode = this.toggleMode.bind(this);
     }
     toggleMode() {
-        // const root = document.documentElement
-        // root.
+        this.state.mode = (typeof this.state.mode === 'undefined') ? true : this.state.mode;
+        this.state.mode = !this.state.mode
     }
     render() {
         return (
             <>
                 <div role="theme-toggle" aria-label="theme toggle" className={styles.Container}>
-                    <button onClick={this.toggleMode} id="toggle-theme-btn">test</button>
+                    <img onClick={this.toggleMode} id="toggle-theme-btn" className={styles.toggle}/>
                 </div>
             </>
         );

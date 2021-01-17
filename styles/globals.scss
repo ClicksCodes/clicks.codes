@@ -2,13 +2,16 @@ $light-mode: true;
 
 :root {
     --background-color: #232323;
+    --bars: #111111;
     --text-color: white;
+    --text-color-hover: rgb(179, 179, 179);
     --blurple-text-color: #775ebf;
     --header-image-background: linear-gradient(0deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/background.svg);
     --header-image-background-size: cover;
     --header-image-text-seperator-border: 1px solid rgba(255, 255, 255, .5);
     --invert-filter: invert(1);
     --navbar-menu-background: hsla(0, 0%, 0%, .5);
+    --theme-icon: url("../public/Night.svg");
 }
 
 html {
@@ -54,7 +57,7 @@ code {
 //@if $light-mode {
 
     body {
-        background-color: #fff;
+        background-color: var(--background-color);
     }
 
     a {

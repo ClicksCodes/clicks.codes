@@ -47,7 +47,7 @@
   user-select: none;
   cursor: pointer;
   :hover {
-    color: #222;
+    color: var(--text-color-hover);
   }
 }
 
@@ -77,8 +77,8 @@
   position: absolute;
   height: 100vh;
   width:75%;
-  background-color: var(--navbar-menu-background);
-  backdrop-filter: blur(8px);
+  background-color:rgba(0, 0, 0, 0.411);
+  backdrop-filter: blur(5px) ;
   float: right;
   transition: 0.3s;
   overflow: hidden;
@@ -131,7 +131,7 @@
   width: auto;
   margin-left: -20px;
 
-  background: #FFFFFF;
+  background: var(--background-color);
   border: 1px solid #C4C4C4;
   box-sizing: border-box;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
