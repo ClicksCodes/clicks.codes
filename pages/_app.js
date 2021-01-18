@@ -1,9 +1,7 @@
 import Footer from '../sections/Footer'
 import Navbar from '../components/Navbar'
-import Toggle from '../components/Toggle'
 import Head from 'next/head';
-require('../styles/globals.scss');  
-
+require('../styles/globals.scss');
 
 function App({ Component, pageProps }) {  
     return (
@@ -19,7 +17,6 @@ function App({ Component, pageProps }) {
             <Navbar />
             <Component {...pageProps} />
             <Footer />
-            <Toggle />
         </>
     );
 }

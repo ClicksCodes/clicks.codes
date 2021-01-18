@@ -9,6 +9,11 @@
     width: 100vw;
     height: 100vh;
     background:none;
+    pointer-events: none;
+
+    :hover {
+        cursor: pointer;
+    }
 }
 .toggle {
     height: 35px;
@@ -18,5 +23,6 @@
 
     bottom: 20px;
     right: 20px;
-    background-image: var(--theme-icon)
+    content: var(--theme-icon);
+    pointer-events: all;
 }

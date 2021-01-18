@@ -12,7 +12,7 @@ class Footer extends Component {
                 <div className={Styles.block}>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>Projects</h1>
-                        <Link href="/projects/rsm"className={Styles.aColor}>RSM</Link>
+                        <Link href="/projects/rsm" className={Styles.aColor}>RSM</Link>
                         <br />
                         <Link href="/projects/gps" className={Styles.aColor}>Gone Pair Shaped</Link>
                         <br />
@@ -29,7 +29,7 @@ class Footer extends Component {
                     </div>
                     <div className={Styles.column}>
                         <h1 className={Styles.h1Title}>Contact</h1>
-                        <Link href="mailto:staff@clicksminuteper.net"className={Styles.aColor}>Email</Link>
+                        <Link href="mailto:staff@clicksminuteper.net" className={Styles.aColor}>Email</Link>
                         <br />
                         <Link href="https://discord.gg/bPaNnxe" className={Styles.aColor}>Discord</Link>
                         <br />
@@ -43,7 +43,7 @@ class Footer extends Component {
                         <a href="https://www.instagram.com/clicksminuteper/"><img src="/socials/mono/Insta.svg" height="75%" className={Styles.social}/></a>
                     </div>
                 </div>
-                <Toggle mode={true}/>
+                <Toggle mode={false}/>
             </div>
         )
     }

@@ -11,6 +11,9 @@
   height: max(100vh, 450px);
   object-fit: cover;
   position: static;
+  @if var(--header-image-background) != null {
+
+  }
   background: var(--header-image-background);
   background-image: url("/background.svg");
   background-size: cover;
