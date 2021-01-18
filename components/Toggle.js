@@ -42,8 +42,41 @@ class Toggle extends Component {
             }
         }
     }
+    hasBrowserDarkMode() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
     componentDidMount() {
-        window.addEventListener('load', () => this.setVars(false));
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            this.setVars(e.matches)
+        });
+        window.addEventListener('load', () => {
+            const savedTheme = window.sessionStorage.getItem("theme")
+            if (savedTheme !== undefined) {
+                switch (savedTheme) {
+                    case "dark": {
+                        this.setVars(true)
+                        this.state.mode = true
+                        break
+                    }
+                    case "light": {
+                        this.setVars(false)
+                        this.state.mode = false
+                        break
+                    }
+                    default: {
+                        // Saved theme was invalid value, use browser default
+                        const browserTheme = this.hasBrowserDarkMode()
+                        this.setVars(browserTheme)
+                        this.state.mode = browserTheme
+                    }
+                }
+            } else {
+                // No saved theme, browser default
+                const browserTheme = this.hasBrowserDarkMode()
+                this.setVars(browserTheme)
+                this.state.mode = browserTheme
+            }
+        });
     }
     toggleMode() {
         // True: dark mode
@@ -51,6 +84,7 @@ class Toggle extends Component {
         this.state.mode = (typeof this.state.mode === 'undefined') ? true : this.state.mode;
         this.state.mode = !this.state.mode
         this.setVars()
+        window.sessionStorage.setItem("theme", this.state.mode ? "dark" : "light")
     }
     render() {
         return (
