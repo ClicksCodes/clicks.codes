@@ -2,7 +2,7 @@ import { Component } from 'react';
 import HeaderImage from '../sections/Header.js';
 import Socials from '../sections/Socials.js';
 import Box from '../components/Box.js';
-import Styles from '../styles/pages/index.module.scss'; 
+import Styles from '../styles/pages/index.module.scss';
 import Updates from '../public/Updates.json';
 
 class Page extends Component {

@@ -15,7 +15,6 @@ class About extends Component {
                 <Box title="ENTHUSIASTS">We love what we do: we wouldn’t be doing it otherwise</Box>
                 <Box title="FRIENDS" color="green">A group of people who usually get along working with each other with some mild banter in between</Box>
         </div>
-        <div style={{"height":"65px"}}/>
         </>)
     }
 

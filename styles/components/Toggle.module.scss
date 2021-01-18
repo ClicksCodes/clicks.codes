@@ -1,0 +1,28 @@
+.Container {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100vw;
+    height: 100vh;
+    background:none;
+    pointer-events: none;
+
+    :hover {
+        cursor: pointer;
+    }
+}
+.toggle {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background-repeat: no-repeat;
+
+    bottom: 20px;
+    right: 20px;
+    content: var(--theme-icon);
+    pointer-events: all;
+}
