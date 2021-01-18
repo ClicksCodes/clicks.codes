@@ -1,5 +1,26 @@
 $light-mode: true;
 
+:root {
+    --background-color: #232323;
+    --bars: #232323;
+    --text-color: white;
+    --text-color-hover: rgb(179, 179, 179);
+    --blurple-text-color: #775ebf;
+    --header-image-background: linear-gradient(0deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(/background.svg);
+    --header-image-text-seperator-border: 1px solid rgba(255, 255, 255, .5);
+    --invert-filter: invert(1);
+    --navbar-menu-background: hsla(0, 0%, 0%, .5);
+    --theme-icon: url("/Night.svg");
+}
+
+html {
+    background-color: var(--background-color);
+}
+
+body {
+    margin-right: -15px;
+}
+
 html,
 body {
     padding: 0;
@@ -11,9 +32,6 @@ body {
     min-height: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
-}
-body {
-    margin-right: -15px;
 }
 
 code {
@@ -35,22 +53,22 @@ code {
     display: none;
 }
 
-@if $light-mode {
+//@if $light-mode {
 
-    html,
     body {
-        background-color: #fff;
+        background-color: var(--background-color);
     }
 
     a {
-    color: #6576CC;
+    color: var(--blurple-text-color);
     text-decoration: none;
     }
 
     * {
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-    } 
+    transition: 0.2s;
+    }
     button {
     border: none;
     display: inline-block;
@@ -64,26 +82,26 @@ code {
         border-radius: 20px;
     }
 
-} @else {
-    html,
-    body {
-    color: #424242;
-    }
-
-    a {
-    color: #6576CC;
-    text-decoration: none;
-    }
-
-    * {
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-    } 
-    button {
-    border: none;
-    display: inline-block;
-    }
-    button:hover {
-    background-color: transparent;
-    }
-}
+//} @else {
+//    html,
+//    body {
+//    color: #424242;
+//    }
+//
+//    a {
+//    color: #6576CC;
+//    text-decoration: none;
+//    }
+//
+//    * {
+//    box-sizing: border-box;
+//    font-family: Roboto, sans-serif;
+//    }
+//    button {
+//    border: none;
+//    display: inline-block;
+//    }
+//    button:hover {
+//    background-color: transparent;
+//    }
+//}
