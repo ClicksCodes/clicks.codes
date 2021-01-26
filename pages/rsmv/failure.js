@@ -12,7 +12,8 @@ class Failed extends Component {
 
             <div className={Styles.ServerHeader}>
                 <h4>
-                    Verification failed<br />Please try again, and if the error persists please contact us at <a href="mailto:verification@clicksminuteper.net" target="_blank">verification@clicksminuteper.net</a>
+                    Verification failed<br />
+                    Please try again, and if the error persists please contact us at <a href="mailto:verification@clicksminuteper.net" target="_blank">verification@clicksminuteper.net</a>
                 </h4> 
             </div>
         </div>

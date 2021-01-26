@@ -17,7 +17,7 @@ class RSMV extends Component {
     }
 
     async handleVerificationSuccess(cls, token) {
-        const chk = await Axios.put('https://beta.clicksminuteper.net/api/verifyTkn', { tkn: token.toString() })
+        const chk = await Axios.put('http://localhost:3000/api/verifyTkn', { tkn: token.toString() })
         console.log(chk)
         if(chk.data.success == true) {
             return cls.v = true;
@@ -40,7 +40,7 @@ class RSMV extends Component {
     async submitForm(cls) {
         let data = cls.state;
         data["ip"] = cls.props.headers['x-forwarded-for'];
-        let rq = await Axios.post('https://beta.clicksminuteper.net/api/verify',data)
+        let rq = await Axios.post('http://localhost:3000/api/verify',data)
         if(rq.status === 200) {
             return Router.push('/rsmv/success','/rsmv')
         } else if(rq.status === 403) {
