@@ -40,7 +40,7 @@ export default async (req, res) => {
     let language = data["language"]
     let platform = data["platform"]
     let useragent = data["userAgent"]
-    blackbox([1,100,0.5])
+    
     let privatekey = fs.readFileSync('./keys/rsmv');
     var encoded = JWT.sign(req.body.ids,privatekey)
     Axios.post('https://rsm-api.clcks.dev/verify', encoded)
