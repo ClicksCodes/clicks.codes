@@ -6,7 +6,7 @@ import Router from 'next/router';
 import React from 'react';
 
 
-class RSMV extends Component {    
+class RSMV extends Component {
 
     constructor(props) {
         super(props);
@@ -55,18 +55,18 @@ class RSMV extends Component {
             <div className={Styles.container}>
                 <div className={Styles.ServerHeader}>
                     <div className={Styles.ServerHeaderCenter}>
-                        <img src={this.props.serverInfo.iconURL} className={Styles.ServerHeaderImage}/>
+                        <img src={this.props.guild_icon_url} className={Styles.ServerHeaderImage}/>
                     </div>
                 </div>
                 <div className={Styles.ServerHeader}>
                     <div className={Styles.ServerHeaderCenter}>
-                        <h1>{this.props.serverInfo.name}</h1>
-                        <h3>{this.props.serverInfo.memberCount} members</h3>
+                        <h1>{this.props.guild_name}</h1>
+                        <h3>{this.props.memberCount} members</h3>
                     </div>
                 </div>
                 <div className={Styles.ServerHeader}>
                     <h4>
-                        Complete the check below to join {this.props.serverInfo.name}.
+                        Complete the check below to join {this.props.guild_name}.
                     </h4>
                 </div>
                 <div className={Styles.form}>
@@ -82,7 +82,7 @@ class RSMV extends Component {
                 <div className={Styles.BottomText}>
                     <p>This is an automatic check performed by RSM.<br/>
                         <br/>
-                        By clicking Proceed, you ({this.props.user.name}) will be given the <highlight>{this.props.role.name}</highlight> role in <highlight>{this.props.serverInfo.name}</highlight>.<br/>
+                        By clicking Proceed, you will be given the <highlight>{this.props.role_name}</highlight> role in <highlight>{this.props.guild_name}</highlight>.<br/>
                         {/* <br/>
                         By Proceeding, you consent to our use of cookies described in our <highlight>policy</highlight>. */}
                     </p>
@@ -97,29 +97,30 @@ export async function getServerSideProps(ctx) {
     if(!ctx.query.code) {
         return {
             redirect: {
-                destination: '/404',
+                destination: '/rsmv/faliure',
                 permanent: true
             }
         }
     }
-    let code = await Axios.post('http://localhost:3000/api/validate', {data:{jwt:ctx.query.code}});
+    let code = await Axios.post('http://localhost:3000/api/validate', {code:ctx.query.code});
     let headers = ctx.req.headers;
+    if (code.status != 200 ) {
+        return {
+            redirect: {
+                destination: '/rsmv/faliure',
+                permanent: true
+            }
+        }
+    }
     return {
         props: {
-            rID:code.data.roleID,
-            gID:code.data.guildID,
-            uID:code.data.userID,
-            role: {
-                name:code.data.roleName
-            },
-            user: {
-                name:code.data.userName
-            },
-            serverInfo: {
-                iconURL: code.data.guildAvatar,
-                name:code.data.guildName,
-                memberCount:code.data.guildSize
-            },
+            uID:code.user,
+            rID:code.role,
+            role_name:code.role_name,
+            gID:code.guild,
+            guild_name:code.guild_name,
+            guild_icon:code.guild_icon_url,
+            memberCount:code.guild_size,
             headers: headers
         }
     }
