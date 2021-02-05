@@ -1,7 +1,7 @@
 import MongoClient from 'mongodb';
 
 
-const url = 'mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.1.30:27017/rsm';
+const url = 'mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.101.2:27017/rsm';
 const db = 'rsm';
 const collection = 'rsmv-tokens'
 
