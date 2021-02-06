@@ -112,6 +112,7 @@ export async function getServerSideProps(ctx) {
             }
         }
     }
+    console.log(code)
     return {
         props: {
             uID:code.data.user,
