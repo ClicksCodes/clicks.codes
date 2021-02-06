@@ -94,14 +94,14 @@ class RSMV extends Component {
 
 export default RSMV;
 export async function getServerSideProps(ctx) {
-    if(!ctx.query.code) {
-        return {
-            redirect: {
-                destination: '/rsmv/faliure',
-                permanent: true
-            }
-        }
-    }
+    // if(!ctx.query.code) {
+    //     return {
+    //         redirect: {
+    //             destination: '/rsmv/faliure',
+    //             permanent: true
+    //         }
+    //     }
+    // }
     // let code = await Axios.post('http://localhost:3000/api/validate', {code:ctx.query.code});
     // let headers = ctx.req.headers;
     // if (code.status != 200 ) {
