@@ -11,6 +11,7 @@ export default (req, res) => {
         // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb  ^
 
         if (!db_response) return Promise.resolve(res.status(404).send({}));
+        console.log(db_response)
         props = {
             user: db_response.user,
             role: db_response.role,
