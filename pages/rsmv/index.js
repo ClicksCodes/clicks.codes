@@ -17,7 +17,9 @@ class RSMV extends Component {
     }
 
     async handleVerificationSuccess(cls, token) {
+        console.log("verifying token")
         const chk = await Axios.put('http://localhost:3000/api/verifyTkn', { tkn: token.toString() })
+        console.log("checked")
         console.log(chk)
         if(chk.data.success == true) {
             return cls.v = true;
@@ -84,7 +86,7 @@ class RSMV extends Component {
                         onVerify={token => this.handleVerificationSuccess(this, token)}
                     />
                     <div className={Styles.buttonContainer}>
-                        <button type="button" className={Styles.button} onClick={() => this.submitForm(this)}>Proceed</button>
+                        <button type="button" className={Styles.button} onClick={(success) => this.submitForm(this)}>Proceed</button>
                     </div>
                 </div>
                 <div className={Styles.BottomText}>
