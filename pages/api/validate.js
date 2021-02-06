@@ -6,22 +6,24 @@ const db = 'rsm';
 const collection = 'rsmv-tokens'
 
 export default (req, res) => {
-    MongoClient.connect(url, function(err, client) {
-        let db_response = client.db(db).collection(collection).findOne({code: req.body.code, timestamp: {$gte: new Date().getTime() - (30 * 60 * 1000)}});
-        // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb  ^
+    return new Promise((resolve, reject) => {
+        MongoClient.connect(url, function(err, client) {
+            let db_response = client.db(db).collection(collection).findOne({code: req.body.code, timestamp: {$gte: new Date().getTime() - (30 * 60 * 1000)}});
+            // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb  ^
 
-        if (!db_response) return Promise.resolve(res.status(404).end());
-        let props = {
-            user: db_response.user,
-            role: db_response.role,
-            role_name: db_response.role_name,
-            guild: db_response.guild,
-            guild_name: db_response.guild_name,
-            guild_icon_url: db_response.guild_icon_url,
-            guild_size: db_response.guild_size
-        }
+            if (!db_response) return resolve(res.status(404).end());
+            let props = {
+                user: db_response.user,
+                role: db_response.role,
+                role_name: db_response.role_name,
+                guild: db_response.guild,
+                guild_name: db_response.guild_name,
+                guild_icon_url: db_response.guild_icon_url,
+                guild_size: db_response.guild_size
+            }
 
-        return Promise.resolve(res.status(200).send(props));
+            return resolve(res.status(200).send(props));
+        })
     })
 }
 
