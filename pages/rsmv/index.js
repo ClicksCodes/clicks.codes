@@ -38,6 +38,7 @@ class RSMV extends Component {
     }
 
     async submitForm(cls) {
+        console.log("submitted")
         // let data = cls.state;
         // data["ip"] = cls.props.headers['x-forwarded-for'];
         // let rq = await Axios.post('http://localhost:3000/api/verify',data)
