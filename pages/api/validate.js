@@ -10,7 +10,7 @@ export default (req, res) => {
         let db_response = client.db(db).collection(collection).findOne({code: req.body.code, timestamp: {$gte: new Date().getTime() - (30 * 60 * 1000)}});
         // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb  ^
 
-        if (!db_response) return res.status(404).end();
+        if (!db_response) return Promise.resolve(res.status(404).end());
         let props = {
             user: db_response.user,
             role: db_response.role,
@@ -21,7 +21,7 @@ export default (req, res) => {
             guild_size: db_response.guild_size
         }
 
-        return res.status(200).send(props);
+        return Promise.resolve(res.status(200).send(props));
     })
 }
 
