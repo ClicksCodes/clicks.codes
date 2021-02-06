@@ -38,16 +38,17 @@ class RSMV extends Component {
     }
 
     async submitForm(cls) {
-        let data = cls.state;
-        data["ip"] = cls.props.headers['x-forwarded-for'];
-        let rq = await Axios.post('http://localhost:3000/api/verify',data)
-        if(rq.status === 200) {
-            return Router.push('/rsmv/success','/rsmv')
-        } else if(rq.status === 403) {
-            return Router.push('/rsmv/failure','/rsmv')
-        } else {
-            return Router.push('/rsmv/failure','/rsmv')
-        }
+        // let data = cls.state;
+        // data["ip"] = cls.props.headers['x-forwarded-for'];
+        // let rq = await Axios.post('http://localhost:3000/api/verify',data)
+        // if(rq.status === 200) {
+        //     return Router.push('/rsmv/success','/rsmv')
+        // } else if(rq.status === 403) {
+        //     return Router.push('/rsmv/failure','/rsmv')
+        // } else {
+        //     return Router.push('/rsmv/failure','/rsmv')
+        // }
+        return Router.push('/rsmv/success','/rsmv')
     }
 
     render() {
