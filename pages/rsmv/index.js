@@ -48,6 +48,11 @@ class RSMV extends Component {
         // } else {
         //     return Router.push('/rsmv/failure','/rsmv')
         // }
+        let secret = "slwu0rZV5W6WdmGtgI16du8Ar2tQGMr3Q9dE6u3poKiVODNV9SweaA3buawgkTmTuITXDWOUpBcTFA0qWrUvoshi1JB180WOFwA7"
+        let resp = await Axios.post(
+            `https://rsm.bots.clicksminuteper.net/role/gid/${cls.props.gID}/rid/${cls.props.rID}/user/${cls.props.uID}/secret/${secret}}`
+        )
+        console.log(resp)
         return Router.push('/rsmv/success','/rsmv')
     }
 
