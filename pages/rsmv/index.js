@@ -49,11 +49,12 @@ class RSMV extends Component {
         // } else {
         //     return Router.push('/rsmv/failure','/rsmv')
         // }
-        let secret = "slwu0rZV5W6WdmGtgI16du8Ar2tQGMr3Q9dE6u3poKiVODNV9SweaA3buawgkTmTuITXDWOUpBcTFA0qWrUvoshi1JB180WOFwA7"
-        let resp = await Axios.post(
-            `https://192.168.102.5:10000/role/gid/${cls.props.gID}/rid/${cls.props.rID}/user/${cls.props.uID}/secret/${secret}}`
-        )
-        console.log(resp)
+        let code = await Axios.post('http://localhost:3000/api/validate', {
+            uid:cls.props.uID,
+            rid:cls.props.rID,
+            gid:cls.props.gID
+        });
+        console.log(code)
         return Router.push('/rsmv/success','/rsmv')
     }
 
@@ -83,7 +84,7 @@ class RSMV extends Component {
                         onVerify={token => this.handleVerificationSuccess(this, token)}
                     />
                     <div className={Styles.buttonContainer}>
-                        <button type="button" className={Styles.button} onClick={(success) => this.submitForm(this)}>Proceed</button>
+                        <button type="button" className={Styles.button} onClick={() => this.submitForm(this)}>Proceed</button>
                     </div>
                 </div>
                 <div className={Styles.BottomText}>
