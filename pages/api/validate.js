@@ -13,7 +13,7 @@ export default (req, res) => {
             let db_response = await client.db(db).collection(collection).find({code: req.body.code});
             // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb         ^
 
-            console.log(db_response)
+            console.log(db_response.body.user)
             if (!db_response) return resolve(res.status(404).end());
             let props = {
                 user: db_response.user,
