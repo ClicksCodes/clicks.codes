@@ -94,45 +94,34 @@ class RSMV extends Component {
 
 export default RSMV;
 export async function getServerSideProps(ctx) {
-    // if(!ctx.query.code) {
-    //     return {
-    //         redirect: {
-    //             destination: '/rsmv/faliure',
-    //             permanent: true
-    //         }
-    //     }
-    // }
-    // let code = await Axios.post('http://localhost:3000/api/validate', {code:ctx.query.code});
-    // let headers = ctx.req.headers;
-    // if (code.status != 200 ) {
-    //     return {
-    //         redirect: {
-    //             destination: '/rsmv/faliure',
-    //             permanent: true
-    //         }
-    //     }
-    // }
-    // return {
-    //     props: {
-    //         uID:code.user,
-    //         rID:code.role,
-    //         role_name:code.role_name,
-    //         gID:code.guild,
-    //         guild_name:code.guild_name,
-    //         guild_icon:code.guild_icon_url,
-    //         memberCount:code.guild_size,
-    //         headers: headers
-    //     }
-    // }
+    if(!ctx.query.code) {
+        return {
+            redirect: {
+                destination: '/rsmv/faliure',
+                permanent: true
+            }
+        }
+    }
+    let code = await Axios.post('http://localhost:3000/api/validate', {code:ctx.query.code});
+    let headers = ctx.req.headers;
+    if (code.status != 200 ) {
+        return {
+            redirect: {
+                destination: '/rsmv/faliure',
+                permanent: true
+            }
+        }
+    }
     return {
         props: {
-            uID:438733159748599813,
-            rID:760901551496626187,
-            role_name:"Member",
-            gID:684492926528651336,
-            guild_name:"Clicks Minute Per Hub",
-            guild_icon:"https://cdn.discordapp.com/icons/684492926528651336/30729f5bc70d57f735403c7e3364b900.webp?size=128",
-            memberCount:228
+            uID:code.user,
+            rID:code.role,
+            role_name:code.role_name,
+            gID:code.guild,
+            guild_name:code.guild_name,
+            guild_icon_url:code.guild_icon_url,
+            memberCount:code.guild_size,
+            headers: headers
         }
     }
 }
