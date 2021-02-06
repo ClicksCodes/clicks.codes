@@ -114,13 +114,13 @@ export async function getServerSideProps(ctx) {
     }
     return {
         props: {
-            uID:code.user,
-            rID:code.role,
-            role_name:code.role_name,
-            gID:code.guild,
-            guild_name:code.guild_name,
-            guild_icon_url:code.guild_icon_url,
-            memberCount:code.guild_size,
+            uID:code.data.user,
+            rID:code.data.role,
+            role_name:code.data.role_name,
+            gID:code.data.guild,
+            guild_name:code.data.guild_name,
+            guild_icon_url:code.data.guild_icon_url,
+            memberCount:code.data.guild_size,
             headers: headers
         }
     }
