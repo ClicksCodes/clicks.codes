@@ -11,7 +11,7 @@ export default (req, res) => {
         // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb  ^
 
         if (!db_response) return res.status(404).end();
-        props = {
+        let props = {
             user: db_response.user,
             role: db_response.role,
             role_name: db_response.role_name,
