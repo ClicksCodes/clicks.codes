@@ -7,7 +7,7 @@ const collection = 'rsmv-tokens'
 
 export default (req, res) => {
     MongoClient.connect(url, function(err, client) {
-        db_response = client.db(db).collection(collection).findOne({code: req.body.code, timestamp: {$gte: new Date().getTime() - (30 * 60 * 1000)}});
+        let db_response = client.db(db).collection(collection).findOne({code: req.body.code, timestamp: {$gte: new Date().getTime() - (30 * 60 * 1000)}});
         // https://stackoverflow.com/questions/18233945/query-to-get-last-x-minutes-data-with-mongodb  ^
 
         if (!db_response) return res.status(404).end();
