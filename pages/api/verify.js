@@ -17,7 +17,6 @@ const blackbox = (datapoints) => {
             )
         console.log(out)
     });
-    
     return out;
 }
 
