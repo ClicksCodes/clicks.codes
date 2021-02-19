@@ -54,7 +54,8 @@ class RSMV extends Component {
         let code = await Axios.post('/api/complete', {
             uid:cls.props.uID,
             rid:cls.props.rID,
-            gid:cls.props.gID
+            gid:cls.props.gID,
+            code:cls.props.code
         });
         console.log(code.status)
         if (code.status === 200 ) return Router.push('/rsmv/success','/rsmv')
@@ -133,7 +134,8 @@ export async function getServerSideProps(ctx) {
             guild_name:code.data.guild_name,
             guild_icon_url:code.data.guild_icon_url,
             memberCount:code.data.guild_size,
-            headers: headers
+            headers: headers,
+            code: ctx.query.code
         }
     }
 }
