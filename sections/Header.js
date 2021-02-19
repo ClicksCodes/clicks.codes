@@ -17,7 +17,6 @@ const newNum = () => {
 const randomExps = (object) => {
     let i = newNum();
     let chosen = exts.texts[i];
-    console.log(chosen);
     clicks++;
     return chosen
 }

@@ -15,7 +15,6 @@ const blackbox = (datapoints) => {
                     (datapoint[0] + 1) / (datapoint[1] + 1)
                 ) * (1 - datapoint[2]) * 0.1)
             )
-        console.log(out)
     });
     return out;
 }

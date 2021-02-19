@@ -17,10 +17,7 @@ class RSMV extends Component {
     }
 
     async handleVerificationSuccess(cls, token) {
-        console.log("verifying token")
         const chk = await Axios.put('/api/verifyTkn', { tkn: token.toString() })
-        console.log("checked")
-        console.log(chk)
         if(chk.data.success == true) {
             return cls.v = true;
         } else {
@@ -40,7 +37,6 @@ class RSMV extends Component {
     }
 
     async submitForm(cls) {
-        console.log("submitted")
         // let data = cls.state;
         // data["ip"] = cls.props.headers['x-forwarded-for'];
         // let rq = await Axios.post('/api/verify',data)
@@ -124,7 +120,6 @@ export async function getServerSideProps(ctx) {
             }
         }
     }
-    console.log(code)
     return {
         props: {
             uID:code.data.user,
