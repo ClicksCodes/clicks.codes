@@ -47,6 +47,11 @@ class RSMV extends Component {
         // } else {
         //     return Router.push('/rsmv/failure','/rsmv')
         // }
+        if (!cls.v) {
+            console.log("failed")
+            return
+        }
+        console.log("success")
         let code = await Axios.post('/api/complete', {
             uid:cls.props.uID,
             rid:cls.props.rID,
