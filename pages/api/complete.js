@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 export default async (req, res) => {
-    let code = await Axios.post('localhost:3000/api/validate', {code:req.body.code});
+    let code = await Axios.post('http://localhost:3000/api/validate', {code:req.body.code});
     console.log(code)
     if (code.status != 200) {
         return
