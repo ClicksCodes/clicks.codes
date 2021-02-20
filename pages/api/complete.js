@@ -2,10 +2,12 @@ import Axios from 'axios';
 
 export default async (req, res) => {
     let code = await Axios.post('http://localhost:3000/api/validate', {code:req.body.code});
-    console.log(code)
     if (code.status != 200) {
-        return
+        return res.send(400);
     }
+    if (code.data.uid != req.body.uid) return res.send(400)
+    if (code.data.gid != req.body.gid) return res.send(400)
+    if (code.data.rid != req.body.rid) return res.send(400)
 
     let secret = "slwu0rZV5W6WdmGtgI16du8Ar2tQGMr3Q9dE6u3poKiVODNV9SweaA3buawgkTmTuITXDWOUpBcTFA0qWrUvoshi1JB180WOFwA7"
     let resp = await Axios.get(
