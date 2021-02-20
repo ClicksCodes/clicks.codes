@@ -6,7 +6,13 @@ export default async (req, res) => {
         console.log(code.status)
         return res.send(404);
     }
-    console.log(code)
+    console.log(code.data)
+    console.log(code.data.user)
+    console.log(code.data.guild)
+    console.log(code.data.role)
+    console.log(req.body.uid)
+    console.log(req.body.gid)
+    console.log(req.body.rid)
     if (code.data.user  != req.body.uid) return res.send(400)
     if (code.data.guild != req.body.gid) return res.send(400)
     if (code.data.role  != req.body.rid) return res.send(400)
