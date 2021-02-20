@@ -7,7 +7,6 @@ const collection = 'rsmv-tokens'
 
 export default (req, res) => {
     return new Promise((resolve, reject) => {
-        console.log("starting /validate")
         MongoClient.connect(url, async function(err, client) {
             let db_response = await client.db(db).collection(collection).findOne({code: req.body.code});
 
@@ -23,7 +22,6 @@ export default (req, res) => {
                 guild_icon_url: db_response.guild_icon_url,
                 guild_size: db_response.guild_size
             }
-            console.log("completed api/validate")
             return resolve(res.status(200).send(props));
         })
     })
