@@ -9,6 +9,8 @@ export default (req, res) => {
     return new Promise((resolve, reject) => {
         MongoClient.connect(url, async function(err, client) {
             let db_response = await client.db(db).collection(collection).findOne({code: req.body.code});
+            console.log("V DB RESPONSE V")
+            console.log(db_response)
 
             if (!db_response) return resolve(res.status(404).end());
             if (db_response.timestamp + (1800) >= Date.now()) return resolve(res.status(410));
@@ -26,21 +28,3 @@ export default (req, res) => {
         })
     })
 }
-
-/*
-    let code = await Axios.post('http://localhost:3000/api/validate', {code:ctx.query.code});
-    let headers = ctx.req.headers;
-    return {
-        props: {
-            "user" : NumberLong("438733159748599813"),
-            "role" : NumberLong("760901551496626187"),
-            "role_name" : "Member",
-            "guild" : NumberLong("684492926528651336"),
-            "guild_name" : "Clicks Minute Per Hub",
-            "guild_icon_url" : "https://cdn.discordapp.com/icons/684492926528651336/30729f5bc70d57f735403c7e3364b900.webp?size=1024",
-            "guild_size" : 228
-        }
-    }
-}
-
-*/
