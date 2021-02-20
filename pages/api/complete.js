@@ -7,9 +7,9 @@ export default async (req, res) => {
         return res.send(404);
     }
     console.log(code)
-    if (code.data.uid != req.body.uid) return res.send(400)
-    if (code.data.gid != req.body.gid) return res.send(400)
-    if (code.data.rid != req.body.rid) return res.send(400)
+    if (code.data.user  != req.body.uid) return res.send(400)
+    if (code.data.guild != req.body.gid) return res.send(400)
+    if (code.data.role  != req.body.rid) return res.send(400)
 
     let secret = "slwu0rZV5W6WdmGtgI16du8Ar2tQGMr3Q9dE6u3poKiVODNV9SweaA3buawgkTmTuITXDWOUpBcTFA0qWrUvoshi1JB180WOFwA7"
     let resp = await Axios.get(
