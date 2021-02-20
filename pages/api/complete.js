@@ -3,8 +3,10 @@ import Axios from 'axios';
 export default async (req, res) => {
     let code = await Axios.post('http://localhost:3000/api/validate', {code:req.body.code});
     if (code.status != 200) {
+        console.log(code.status)
         return res.send(400);
     }
+    console.log(code.data.uid)
     if (code.data.uid != req.body.uid) return res.send(400)
     if (code.data.gid != req.body.gid) return res.send(400)
     if (code.data.rid != req.body.rid) return res.send(400)
