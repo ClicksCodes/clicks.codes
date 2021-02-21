@@ -1,14 +1,14 @@
 .Container {
-    position:fixed;
-    padding:0;
-    margin:0;
+    position: fixed;
+    padding: 0;
+    margin: 0;
 
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 
     width: 100vw;
     height: 100vh;
-    background:none;
+    background: none;
     pointer-events: none;
 
     :hover {
@@ -18,7 +18,7 @@
 .toggle {
     height: 35px;
     width: 35px;
-    position: absolute;
+    position: fixed;
     background-repeat: no-repeat;
 
     bottom: 20px;
