@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/pineapplefan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://clicksminuteper.net
+  * I am pineapplefan (https://keybase.io/pineapplefan) on keybase.
+  * I have a public key ASDyZDZFUvk0uJFeMUsGWgn8h1UGqBdIzQvn2Dk51BaNMQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d62fb115e856d119042adfced1a0126f33556b9ca554c5d89af3be728aada2990a",
+      "host": "keybase.io",
+      "kid": "0120f264364552f934b8915e314b065a09fc875506a81748cd0be7d83939d4168d310a",
+      "uid": "5bc63b20c745eb6dcf6694550785ec19",
+      "username": "pineapplefan"
+    },
+    "merkle_root": {
+      "ctime": 1614852029,
+      "hash": "8951587b9661fe4407e6ac30878f1a56385dc35b4f66dd28ffbdc69a7b0a58de7e36ae46bea3784185efa80b84b3838f44f814569b0a5b6a598fb8fa9d64d328",
+      "hash_meta": "50f0756807e61df9e098ca2e352c460fb0540573e59719721d2310b14d4950f2",
+      "seqno": 19287725
+    },
+    "service": {
+      "entropy": "WuM8LoaVqQnGJgSYrNX/bv1c",
+      "hostname": "clicksminuteper.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.1"
+  },
+  "ctime": 1614852015,
+  "expire_in": 504576000,
+  "prev": "32b71348f9f51c3944f1efe0e04c720e20781d7935b35f0d481ec0cae6942721",
+  "seqno": 49,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8mQ2RVL5NLiRXjFLBloJ/IdVBqgXSM0L59g5OdQWjTEKp3BheWxvYWTESpcCMcQgMrcTSPn1HDlE8e/g4ExyDiB4HXk1s18NSB7AyuaUJyHEIIwVg01qKLXoJTrdIlREe4jyzqvYziVex4YXP1WIhhkmAgHCo3NpZ8RAac0QLXo6hSbqknSBuA/SSQe5vLPUeNjoF9N2gP/5gov0jVpLf9U0zUa1lSCiYN5gnbi6Nrl3ysZq88HIYn5VBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFa6k1RC37IBivnoZSjBGcy/7MyvWqcyMGl3pIrWMTu4o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pineapplefan
+
+==================================================================
