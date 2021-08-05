@@ -9,7 +9,7 @@ class Redirect extends Component {
         return (
         <>
             {
-                window.location.replace('https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands')
+                this.window.location.replace('https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands')
             }
         </>
         )
