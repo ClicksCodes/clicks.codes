@@ -1,6 +1,6 @@
 import { Component } from 'react'
 
-class Redirect extends Component {
+class RSM extends Component {
     constructor(props) {
         super(props)
     }
@@ -15,4 +15,4 @@ class Redirect extends Component {
 
 }
 
-export default Redirect;
+export default RSM;
