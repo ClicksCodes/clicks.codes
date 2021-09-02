@@ -1,7 +1,7 @@
 import { Component } from "react";
-import Styles from '../styles/card.module.css';
+import Styles from '../styles/header.module.css';
 
-class Card extends Component {
+class Header extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -9,32 +9,34 @@ class Card extends Component {
 
 	render() {
 		return (
-            <div className={Styles.card} style={{
+            <div className={Styles.header} style={{
                 backgroundImage:`linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
                 margin: "0"
-            }}>
-                <img className={Styles.backgroundImage} src={`/Waves/${this.props.wave}.svg`} />
+            }} id={this.props.id ? this.props.id : null}>
+                <img className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
-                        <img className={Styles.image} src={"/Icons/" + this.props.wave + ".svg"} />
-                        <h1 className={Styles.title}>{this.props.title}</h1>
+                        <h1 className={Styles.title}>{this.props.name}</h1>
                     </div>
-                    <p className={Styles.subtext}>{this.props.subtext}</p>
+                    <p className={Styles.subtext + " " + (this.props.buttons.length ? Styles.subtextExtra : null)}>{this.props.subtext}</p>
                     <div className={Styles.buttonLayout}>
                         {
                             this.props.buttons ? this.props.buttons.map(button => {
                                 return <a
                                     className={Styles.button}
-                                    style={{backgroundColor:`#${button.color}`, color:`#${this.props.buttonText}`}}
+                                    style={{backgroundColor:`#${button.color}`, color:`#${button.buttonText}`}}
                                     href={button.link}>{button.text}
                                 </a>
                             }) : null
                         }
                     </div>
                 </div>
+                <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)}>
+                    <img src="/Arrow.svg" className={Styles.arrow} />
+                </span>
             </div>
 		)
 	}
 }
 
-export default Card;
+export default Header;
