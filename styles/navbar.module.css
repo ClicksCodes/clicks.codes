@@ -39,6 +39,8 @@
     margin-bottom: 20px;
     margin-right: 0;
     margin-top: -7px;
+
+    cursor: pointer;
 }
 
 .icon {

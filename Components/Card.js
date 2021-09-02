@@ -4,13 +4,6 @@ import Styles from '../styles/card.module.css';
 class Card extends Component {
 	constructor(props) {
 		super(props);
-        this.keys = []
-    }
-
-    nextKey() {
-        let n = this.keys.length
-        this.keys.push(n);
-        return n
     }
 
 	render() {
@@ -28,9 +21,9 @@ class Card extends Component {
                     <p className={Styles.subtext}>{this.props.subtext}</p>
                     <div className={Styles.buttonLayout}>
                         {
-                            this.props.buttons ? this.props.buttons.map(button => {
+                            this.props.buttons ? this.props.buttons.map((button, i) => {
                                 return <a
-                                    key={this.nextKey()}
+                                    key={i}
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${this.props.buttonText}`}}
                                     href={button.link}

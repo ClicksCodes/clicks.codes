@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Styles from '../styles/cardrow.module.css';
+import Styles from '../styles/tilerow.module.css';
 
 class CardRow extends Component {
 	constructor(props) {

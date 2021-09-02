@@ -4,8 +4,8 @@ import Styles from '../styles/header.module.css';
 class Header extends Component {
 	constructor(props) {
 		super(props);
+        this.keys = []
 	}
-
 
 	render() {
 		return (
@@ -21,8 +21,9 @@ class Header extends Component {
                     <p className={Styles.subtext + " " + (this.props.buttons.length ? Styles.subtextExtra : null)}>{this.props.subtext}</p>
                     <div className={Styles.buttonLayout}>
                         {
-                            this.props.buttons ? this.props.buttons.map(button => {
+                            this.props.buttons ? this.props.buttons.map((button, index) => {
                                 return <a
+                                    key={index}
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${button.buttonText}`}}
                                     href={button.link}>{button.text}
@@ -32,7 +33,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)}>
-                    <img src="/Arrow.svg" className={Styles.arrow} />
+                    <a href="#start"><img src="/Arrow.svg" className={Styles.arrow} /></a>
                 </span>
             </div>
 		)

@@ -26,17 +26,22 @@
 	background-color: var(--card-background-color);
 	backdrop-filter: blur(7px);
 	filter: var(--card-filter);
+	padding-top: 30px;
+	padding-bottom: 40px;
 }
 
 .title {
     width: 100%;
     text-align: center;
     font-weight: 100;
+	margin-top: 0px;
+	margin-bottom: -20px;
     font-size: max(2em, 4vw);
     color: var(--card-text-color)
 }
 
 .subtext {
+	margin-bottom: 0px;
     width: 100%;
     text-align: center;
     font-weight: 100;
@@ -83,6 +88,7 @@
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
+	flex-wrap: wrap;
 	padding: 0px;
 	position: absolute;
 	bottom: 5px;
