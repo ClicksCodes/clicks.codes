@@ -13,7 +13,6 @@
     width: 64px;
     max-height: 64px;
     height: auto;
-    border-radius: 32px;
 
     border-radius: 32px;
     transition: 0.5s ease-in-out;
@@ -26,8 +25,7 @@
     align-items: center;
 
     background-color: var(--card-background-color);
-    filter: var(--card-filter);
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px), brightness(0.1);
     border-radius: 32px;
 
     width: 64px;
@@ -78,11 +76,13 @@
         margin-bottom: 0;
         padding-top: 7px;
         margin-right: 20px;
+        padding-left: 3px;
     }
     .headerIcon {
         height: 64px;
         width: 64px;
         margin-top: 12px;
+        margin-left: -3px;
     }
     .containerOpen {
         max-width: 550px;

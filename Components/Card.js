@@ -4,8 +4,14 @@ import Styles from '../styles/card.module.css';
 class Card extends Component {
 	constructor(props) {
 		super(props);
-	}
+        this.keys = []
+    }
 
+    nextKey() {
+        let n = this.keys.length
+        this.keys.push(n);
+        return n
+    }
 
 	render() {
 		return (
@@ -24,9 +30,11 @@ class Card extends Component {
                         {
                             this.props.buttons ? this.props.buttons.map(button => {
                                 return <a
+                                    key={this.nextKey()}
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${this.props.buttonText}`}}
-                                    href={button.link}>{button.text}
+                                    href={button.link}
+                                    target={button.newTab ? "_blank" : undefined}>{button.text}
                                 </a>
                             }) : null
                         }

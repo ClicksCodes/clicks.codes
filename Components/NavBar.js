@@ -25,6 +25,8 @@ class NavBar extends Component {
                         <a href="/gps"><img className={Styles.icon} src="/Icons/GS.svg"/></a>
                         <a href="/rsm"><img className={Styles.icon} src="/Icons/RM.svg"/></a>
                         <a href="/clicksforms"><img className={Styles.icon} src="/Icons/CF.svg"/></a>
+                        {/* <a href="/castaway"><img className={Styles.icon} src="/Icons/CA.svg"/></a> */}
+                        {/* <a href="https://clcks.dev"><img className={Styles.icon} src="/Icons/CL.svg"/></a> */}
                     </div>
                     <div className={Styles.group}>
                         <a href="/"><img className={Styles.icon} src="/Icons/CMP.svg"/></a>
