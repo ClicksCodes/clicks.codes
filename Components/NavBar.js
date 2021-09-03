@@ -1,15 +1,16 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Styles from '../styles/navbar.module.css';
 
 class NavBar extends Component {
 	constructor(props) {
 		super(props);
         this.state = {
-            isOpen: false
+            isOpen: false  // true
         }
         this.isTouchDevice = false
+        this.hoverSensor = React.createRef();
 	}
-    
+
     componentDidMount() {
         let hasTouchScreen = false;
         if ("maxTouchPoints" in navigator) {
@@ -59,7 +60,7 @@ class NavBar extends Component {
 	render() {
 		return (
             <>
-                <div className={Styles.container + " " + (this.state.isOpen ? Styles.containerOpen : null)} onMouseLeave={() => {this.onLeave()}}>
+                <div ref={this.hoverSensor} className={(Styles.container + " " + (this.state.isOpen ? Styles.containerOpen : null))} onMouseLeave={() => {this.onLeave()}}>
                     <div className={Styles.group}>
                         <img className={Styles.headerIcon} src="/Icons/CMP.svg" onMouseEnter={() => {this.onEnter()}} onClick={() => {this.onClick()}}/>
                         <a href="/#"><img className={Styles.icon} src="/Icons/CMP.svg"/></a>
