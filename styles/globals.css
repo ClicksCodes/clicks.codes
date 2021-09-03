@@ -7,11 +7,16 @@ html, body {
   --card-overlay-color: rgba(0, 0, 0, 0);
   --card-filter: drop-shadow(0px 0px 5px #00000080);
   --page-background: #ffffff;
+  --link-color: #6576CC;
+  --hint-color: #f1f1f1;
   /* --card-background-color: rgba(0, 0, 0, 0.65);
   --card-text-color: #ffffff;
   --card-overlay-filter: brightness(0.75);
   --card-filter: drop-shadow(0px 0px 5px #42424280);
-  --page-background: #252525; */
+  --page-background: #252525;
+  --link-color: #6576CC;
+  --hint-color: #10;
+  */
 
   background-color: var(--page-background);
 
@@ -19,12 +24,24 @@ html, body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  transition: 0.5s ease-in-out;
+  color: var(--link-color)
 }
 
 * {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+}
+
+code {
+  font-family: monospace;
+  font-weight: bold;
+  color: #F27878;
+  background-color: var(--hint-color);
+  padding: 2px;
+  font-size: 105%;
+  border-radius: 5px;
+  padding-left: 5px;
 }

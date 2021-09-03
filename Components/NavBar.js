@@ -35,7 +35,7 @@ class NavBar extends Component {
         }
     }
 
-    onEnter() {
+ /*   onEnter() {
         if ( !this.isTouchDevice ) {
             return this.toggleVertical(this, true)
         }
@@ -44,7 +44,7 @@ class NavBar extends Component {
     onLeave() {
         return this.toggleVertical(this, false)
     }
-
+*/
     onClick() {
         if ( this.isTouchDevice ) {
             return this.toggleVertical(this)
@@ -60,10 +60,10 @@ class NavBar extends Component {
 	render() {
 		return (
             <>
-                <div ref={this.hoverSensor} className={(Styles.container + " " + (this.state.isOpen ? Styles.containerOpen : null))} onMouseLeave={() => {this.onLeave()}}>
+                <div ref={this.hoverSensor} className={this.isTouchDevice ? (Styles.container + " " + (this.state.isOpen ? Styles.containerOpen : null)) : Styles.containerDesktop + " " + Styles.container}>
                     <div className={Styles.group}>
-                        <img className={Styles.headerIcon} src="/Icons/CMP.svg" onMouseEnter={() => {this.onEnter()}} onClick={() => {this.onClick()}}/>
-                        <a href="/#"><img className={Styles.icon} src="/Icons/CMP.svg"/></a>
+                        <img className={Styles.headerIcon} src="/Icons/CMP.svg" onClick={() => {this.onClick()}}/>
+                        <a href="/#"><img className={Styles.icon} src="/Icons/Homepage.svg"/></a>
                         <a href="/gps#"><img className={Styles.icon} src="/Icons/GS.svg"/></a>
                         <a href="/rsm#"><img className={Styles.icon} src="/Icons/RM.svg"/></a>
                         <a href="/clicksforms#"><img className={Styles.icon} src="/Icons/CF.svg"/></a>

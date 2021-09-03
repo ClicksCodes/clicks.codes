@@ -17,7 +17,6 @@
     border-radius: 32px;
     transition: 0.5s ease-in-out;
 }
-
 .group {
     display: flex;
     flex-direction: column;
@@ -50,10 +49,27 @@
 }
 
 .containerOpen {
-    max-height: 550px;
+    max-height: 460px;
 }
 
-@media screen and (min-width: 550px) {
+.containerDesktop {
+    animation-name: containerCloseOnStart;
+    animation-duration: 0.5s;
+    animation-direction: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes containerCloseOnStart {
+    from { max-height: 460px; }
+    to { max-height: 64px ; }
+}
+
+.containerDesktop:hover {
+    max-height: 460px;
+    animation-name: none;
+}
+
+@media screen and (min-width: 450px) {
     .container {
         flex-direction: row;
         justify-content: left;
@@ -87,12 +103,20 @@
         margin-left: -3px;
     }
     .containerOpen {
-        max-width: 550px;
+        max-width: 460px;
+        max-height: 64px;
+    }
+    .containerDesktop:hover {
+        max-width: 460px;
         max-height: 64px;
     }
     .icon {
         height: 50px;
         width: 50px;
         margin-left: 5px;
+    }
+    @keyframes containerCloseOnStart {
+        from { max-width: 460px; }
+        to { max-width: 64px ; }
     }
 }

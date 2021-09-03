@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Header
         name="Clicks Minute Per"
-        subtext="We do cool stuff"
+        subtext="Custom Made Programs"
         gradient={["6576CC", "4B5899"]}
         wave="Main"
         buttons={[]}
