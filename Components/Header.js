@@ -26,7 +26,9 @@ class Header extends Component {
                                     key={index}
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${button.buttonText}`}}
-                                    href={button.link}>{button.text}
+                                    href={button.link}
+                                    target={button.target ? "_blank" : null}>
+                                        {button.text}
                                 </a>
                             }) : null
                         }

@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import Styles from '../../styles/rsmv/rsmv.module.css'
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import HCaptcha from 'react-hcaptcha';
 import Axios from 'axios';
 import Router from 'next/router';
 import React from 'react';
-
+import Header from '../../Components/Header'
 
 class RSMV extends Component {
 
@@ -53,40 +53,28 @@ class RSMV extends Component {
 
     render() {
         return <>
-            <div className={Styles.container}>
-                <div className={Styles.ServerHeader}>
-                    <div className={Styles.ServerHeaderCenter}>
-                        <img src={this.props.guild_icon_url} className={Styles.ServerHeaderImage}/>
-                    </div>
-                </div>
-                <div className={Styles.ServerHeader}>
-                    <div className={Styles.ServerHeaderCenter}>
-                        <h1>{this.props.guild_name}</h1>
-                        <h3>{this.props.memberCount} members</h3>
-                    </div>
-                </div>
-                <div className={Styles.ServerHeader}>
-                    <h4>
-                        Complete the check below to join {this.props.guild_name}.
-                    </h4>
-                </div>
-                <div className={Styles.form}>
+            <Header
+                name={<><img style={{borderRadius: "50%"}} src={this.props.guild_icon_url} /><br />{this.props.guild_name}</>}
+                subtext={` ${this.props.memberCount} members`}
+                gradient={["F27878", "D96B6B"]}
+                wave="RM"
+                buttons={[]}
+            />
+            <div id="start">
+                <div className={Styles.center}>
+                    <p className={Styles.text}>Complete the check below to join {this.props.guild_name}</p>
                     <HCaptcha
                         id="Captchas mitigate problems"
                         sitekey="85074411-fa13-4d9b-b901-53095c6d1fc6"
                         onVerify={token => this.handleVerificationSuccess(this, token)}
                     />
-                    <div className={Styles.buttonContainer}>
-                        <button type="button" className={Styles.button} onClick={(success) => this.submitForm(this)}>Proceed</button>
-                    </div>
-                </div>
-                <div className={Styles.BottomText}>
-                    <p>This is an automatic check performed by RSM.<br/>
-                        <br/>
-                        By clicking Proceed, you will be given the <highlight>{this.props.role_name}</highlight> role in <highlight>{this.props.guild_name}</highlight>.<br/>
-                        {/* <br/>
-                        By Proceeding, you consent to our use of cookies described in our <highlight>policy</highlight>. */}
+                    <button type="button" className={Styles.button} onClick={(success) => this.submitForm(this)}>Proceed</button>
+                    <p className={Styles.text}>
+                        This is an automatic check performed by RSM.
+                        By clicking Proceed, you will be given the <code>{this.props.role_name}</code> role in <code>{this.props.guild_name}</code>.
                     </p>
+                    <br />
+                    <p>You can add RSM to your server by inviting it <a href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</a>.</p>
                 </div>
             </div>
         </>

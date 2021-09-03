@@ -1,0 +1,26 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.center * {
+    margin-bottom: 20px;
+}
+
+.text {
+	color: var(--card-text-color);
+	font-size: 18px;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: transparent;
+    border: 3px solid #F27878;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -40px;
+}

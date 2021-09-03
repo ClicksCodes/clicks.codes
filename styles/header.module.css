@@ -37,7 +37,8 @@
 	margin-top: 0px;
 	margin-bottom: -20px;
     font-size: max(2em, 4vw);
-    color: var(--card-text-color)
+    color: var(--card-text-color);
+	word-break: break-word;
 }
 
 .subtext {
