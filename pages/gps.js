@@ -22,19 +22,19 @@ export default function Home() {
       />
       <AutoSpacing>
         <SectionHeading id="commands">Commands</SectionHeading>
-        <Paragraph><code>m!getprefix</code>: Shows the bots prefix in the current guild.</Paragraph>
-        <Paragraph><code>m!info</code>: View some information about the bot's owners.</Paragraph>
-        <Paragraph><code>m!stats</code>: Shows the bot's current statistics.</Paragraph>
-        <Paragraph><code>m!ping</code>: Gets the current response time of the bot.</Paragraph>
-        <Paragraph><code>m!terms</code>: List all the terms and conditions for the bot.</Paragraph>
-        <Paragraph><code>m!setlanguage</code>: Set what language you want to use for your packs.</Paragraph>
-        <Paragraph><code>m!packs</code>: Shows a list of packs available in your language.</Paragraph>
-        <Paragraph><code>m!play</code>: Starts the game.</Paragraph>
-        <Paragraph><code>m!join</code>: Joins an active game in the channel. This can be during the 1m period when starting a game, or midway through.</Paragraph>
-        <Paragraph><code>m!leave</code>: Removes the player who ran it from the current game in that channel.</Paragraph>
-        <Paragraph><code>m!shuffle</code>: Reshuffles your cards.</Paragraph>
-        <Paragraph><code>m!end</code>: Ends the current game in that channel.</Paragraph>
-        <Paragraph><code>m!help</code>: Shows all commands</Paragraph>
+        <Paragraph><code>$getprefix</code>: Shows the bots prefix in the current guild.</Paragraph>
+        <Paragraph><code>$info</code>: View some information about the bot&apos;s owners.</Paragraph>
+        <Paragraph><code>$stats</code>: Shows the bot&apos;s current statistics.</Paragraph>
+        <Paragraph><code>$ping</code>: Gets the current response time of the bot.</Paragraph>
+        <Paragraph><code>$terms</code>: List all the terms and conditions for the bot.</Paragraph>
+        <Paragraph><code>$setlanguage</code>: Set what language you want to use for your packs.</Paragraph>
+        <Paragraph><code>$packs</code>: Shows a list of packs available in your language.</Paragraph>
+        <Paragraph><code>$play</code>: Starts the game.</Paragraph>
+        <Paragraph><code>$join</code>: Joins an active game in the channel. This can be during the 1m period when starting a game, or midway through.</Paragraph>
+        <Paragraph><code>$leave</code>: Removes the player who ran it from the current game in that channel.</Paragraph>
+        <Paragraph><code>$shuffle</code>: Reshuffles your cards.</Paragraph>
+        <Paragraph><code>$end</code>: Ends the current game in that channel.</Paragraph>
+        <Paragraph><code>$help</code>: Shows all commands</Paragraph>
         <SectionHeading id="invite">Invite</SectionHeading>
         <CardRow>
           <Card
