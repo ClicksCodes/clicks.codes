@@ -1,4 +1,4 @@
-import MongoClient from 'mongodb';
+import { MongoClient } from 'mongodb';
 
 
 const url = 'mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.101.2:27017/rsm';
