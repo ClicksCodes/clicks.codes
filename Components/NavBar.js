@@ -88,7 +88,7 @@ class NavBar extends Component {
                         <a onClick={this.updateCookie(this)}><img
                             alt="Theme"
                             className={Styles.icon}
-                            src={this.state.cookie + ".svg"}
+                            src={"light.svg"}
                         /></a>
                     </div>
                 </div>
