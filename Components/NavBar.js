@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Styles from '../styles/navbar.module.css';
 import Cookies from 'js-cookie';
 // import { setInfo } from "../redux/actions/main"
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 // import { makeStore } from "../redux/store";
 
 // const store = makeStore();
