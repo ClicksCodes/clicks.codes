@@ -20,10 +20,24 @@
 
 .button {
     border-radius: 5px;
-    background-color: transparent;
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
     border: 3px solid #F27878;
     font-size: 20px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: -40px;
+    transition: 0.3s;
+}
+
+.buttonComplete {
+    border: 3px solid #65CC76;
+}
+
+.button:active {
+    color: #F27878
+}
+
+.buttonComplete:active {
+    color: #65CC76
 }

@@ -12,13 +12,16 @@ class RSMV extends Component {
         super(props);
         this.v = false;
         this.state = {
-
+            captchaComplete: false
         }
     }
 
     async handleVerificationSuccess(cls, token) {
         const chk = await Axios.put('/api/rsmv/verifyTkn', { tkn: token.toString() })
         if(chk.data.success == true) {
+            this.setState({
+                captchaComplete: true
+            })
             return cls.v = true;
         } else {
             return;
@@ -68,7 +71,7 @@ class RSMV extends Component {
                         sitekey="85074411-fa13-4d9b-b901-53095c6d1fc6"
                         onVerify={token => this.handleVerificationSuccess(this, token)}
                     />
-                    <button type="button" className={Styles.button} onClick={(success) => this.submitForm(this)}>Proceed</button>
+                    <button type="button" className={Styles.button + " " + (this.state.captchaComplete ? Styles.buttonComplete : null)} onClick={(success) => this.submitForm(this)}>Proceed</button>
                     <p className={Styles.text}>
                         This is an automatic check performed by RSM.
                         By clicking Proceed, you will be given the <code>{this.props.role_name}</code> role in <code>{this.props.guild_name}</code>.
