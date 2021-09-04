@@ -86,7 +86,7 @@ export async function getServerSideProps(ctx) {
     if(!ctx.query.code) {
         return {
             redirect: {
-                destination: '/rsmv/faliure',
+                destination: '/rsmv/failure',
                 permanent: true
             }
         }
@@ -96,7 +96,7 @@ export async function getServerSideProps(ctx) {
     if (code.status != 200 ) {
         return {
             redirect: {
-                destination: '/rsmv/faliure',
+                destination: '/rsmv/failure',
                 permanent: true
             }
         }
