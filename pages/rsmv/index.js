@@ -12,7 +12,8 @@ class RSMV extends Component {
         super(props);
         this.v = false;
         this.state = {
-            captchaComplete: false
+            captchaComplete: false,
+            clicked: false
         }
     }
 
@@ -40,6 +41,12 @@ class RSMV extends Component {
     }
 
     async submitForm(cls) {
+        if ( cls.state.clicked ) {
+            return
+        }
+        cls.setState({
+            clicked: true
+        })
         if (!cls.v) {
             return Router.push('/rsmv/failure','/rsmv')
         }

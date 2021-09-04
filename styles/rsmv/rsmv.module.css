@@ -34,10 +34,10 @@
     border: 3px solid #65CC76;
 }
 
-.button:active {
-    color: #F27878
+.button.clicked {
+    color: #F27878;
 }
 
-.buttonComplete:active {
-    color: #65CC76
+.buttonComplete.clicked {
+    color: #65CC76;
 }
