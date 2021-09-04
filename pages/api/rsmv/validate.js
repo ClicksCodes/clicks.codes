@@ -5,7 +5,7 @@ const url = 'mongodb://rsm:LJMy*orVFAATQ5PaX7EKXq74&HCDFaLE@192.168.101.2:27017/
 const db = 'rsm';
 const collection = 'rsmv-tokens'
 
-export default (req, res) => {
+const Validate = (req, res) => {
     return new Promise((resolve, reject) => {
         MongoClient.connect(url, async function(err, client) {
             let db_response = await client.db(db).collection(collection).findOne({code: req.body.code});
@@ -26,3 +26,5 @@ export default (req, res) => {
         })
     })
 }
+
+export default Validate;

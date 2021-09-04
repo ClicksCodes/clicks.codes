@@ -1,4 +1,4 @@
-import { Component } from "react";
+import react, { Component } from "react";
 import Styles from '../styles/cardrow.module.css';
 
 class CardRow extends Component {
@@ -11,7 +11,7 @@ class CardRow extends Component {
 		return (
             <div className={Styles.container}>
 				{
-					this.props.tiles.map((item, index) => {
+					react.Children.toArray(this.props.children).map((item, index) => {
 						return <div className={Styles.item} key={index}>{item}</div>
 					})
 				}

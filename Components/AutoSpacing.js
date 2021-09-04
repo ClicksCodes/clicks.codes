@@ -1,7 +1,7 @@
-import { Component } from "react";
+import react, { Component } from "react";
 import Styles from '../styles/autospacing.module.css';
 
-class CardRow extends Component {
+class AutoSpacing extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -11,7 +11,7 @@ class CardRow extends Component {
 		return (
             <div className={Styles.container}>
 				{
-					this.props.elements.map((item, index) => {
+					react.Children.toArray(this.props.children).map((item, index) => {
 						return <div className={Styles.item} key={index}>{item}</div>
 					})
 				}
@@ -20,4 +20,4 @@ class CardRow extends Component {
 	}
 }
 
-export default CardRow;
+export default AutoSpacing;

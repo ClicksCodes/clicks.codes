@@ -22,24 +22,23 @@ export default function Home() {
         ]}
         hideArrow={true}
       />
-      <AutoSpacing
-        elements={[
-          <SectionHeading title="Features" id="features"/>,
-          <TileRow tiles={[
-            <img src="/Features/RSM/Images.svg" />,
-            <img src="/Features/RSM/Automate.svg" />,
-            <img src="/Features/RSM/CAPTCHA.svg" />,
-            <img src="/Features/RSM/Developed.svg" />,
-            <img src="/Features/RSM/Logging.svg" />,
-            <img src="/Features/RSM/NSFW.svg" />,
-            <img src="/Features/RSM/Punish.svg" />,
-            <img src="/Features/RSM/Raids.svg" />,
-            <img src="/Features/RSM/Statistics.svg" />,
-            <img src="/Features/RSM/Tags.svg" />
-          ]} />,
-          <SectionHeading title="Commands" id="commands"/>,
+      <AutoSpacing>
+          <SectionHeading title="Features" id="features"/>
+          <TileRow>
+            <img alt="Moderate images"      src="/Features/RSM/Images.svg" />
+            <img alt="Automate your server" src="/Features/RSM/Automate.svg" />
+            <img alt="CAPTCHA verification" src="/Features/RSM/CAPTCHA.svg" />
+            <img alt="Actively developed"   src="/Features/RSM/Developed.svg" />
+            <img alt="Advanced logging"     src="/Features/RSM/Logging.svg" />
+            <img alt="NSFW Moderation"      src="/Features/RSM/NSFW.svg" />
+            <img alt="Eaily punish users"   src="/Features/RSM/Punish.svg" />
+            <img alt="Stop raids quickly"   src="/Features/RSM/Raids.svg" />
+            <img alt="Track statistics"     src="/Features/RSM/Statistics.svg" />
+            <img alt="Custom tags"          src="/Features/RSM/Tags.svg" />
+          </TileRow>
+          <SectionHeading title="Commands" id="commands"/>
           <SectionHeading title="Invite" id="invite"/>
-      ]}/>
+      </AutoSpacing>
     </>
   )
 }

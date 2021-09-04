@@ -13,7 +13,7 @@ class Header extends Component {
                 backgroundImage:`linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
                 margin: "0"
             }} id={this.props.id ? this.props.id : null}>
-                <img className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
+                <img alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
                         <h1 className={Styles.title}>{this.props.name}</h1>
@@ -27,7 +27,8 @@ class Header extends Component {
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${button.buttonText}`}}
                                     href={button.link}
-                                    target={button.target ? "_blank" : null}>
+                                    target={button.target ? "_blank" : null}
+                                    rel="noreferror">
                                         {button.text}
                                 </a>
                             }) : null
@@ -35,7 +36,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)}>
-                    <a href="#start"><img src="/Arrow.svg" className={Styles.arrow} /></a>
+                    <a href="#start"><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} /></a>
                 </span>
             </div>
 		)

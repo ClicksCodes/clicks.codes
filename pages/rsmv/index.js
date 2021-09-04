@@ -54,7 +54,7 @@ class RSMV extends Component {
     render() {
         return <>
             <Header
-                name={<><img style={{borderRadius: "50%"}} src={this.props.guild_icon_url} /><br />{this.props.guild_name}</>}
+                name={<><img alt="Server icon" style={{borderRadius: "50%"}} src={this.props.guild_icon_url} /><br />{this.props.guild_name}</>}
                 subtext={` ${this.props.memberCount} members`}
                 gradient={["F27878", "D96B6B"]}
                 wave="RM"

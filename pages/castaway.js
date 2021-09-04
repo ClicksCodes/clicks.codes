@@ -22,12 +22,11 @@ export default function Home() {
         ]}
         hideArrow={true}
       />
-      <AutoSpacing
-        elements={[
-          <SectionHeading title="Features" id="features"/>,
-          <SectionHeading title="Commands" id="commands"/>,
+      <AutoSpacing>
+          <SectionHeading title="Features" id="features"/>
+          <SectionHeading title="Commands" id="commands"/>
           <SectionHeading title="Invite" id="invite"/>
-      ]}/>
+          </AutoSpacing>
     </>
   )
 }

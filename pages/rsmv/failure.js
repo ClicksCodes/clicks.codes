@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import Styles from '../../styles/rsmv/rsmv.module.scss'
+import Header from '../../Components/Header'
 
 class Failed extends Component {
     constructor(props) {
@@ -8,15 +8,14 @@ class Failed extends Component {
 
     render() {
         return (
-        <div className={Styles.container}>
-
-            <div className={Styles.ServerHeader}>
-                <h4>
-                    Verification failed<br />
-                    Please try again, and if the error persists please contact us at <a href="mailto:verification@clicksminuteper.net" target="_blank">verification@clicksminuteper.net</a>
-                </h4> 
-            </div>
-        </div>
+            <Header
+                name="Verification failed"
+                subtext={<p>Please try again, and if the error persists please contact us at <a href="mailto:verification@clicksminuteper.net" target="_blank" rel="noopener noreferrer">verification@clicksminuteper.net</a></p>}
+                gradient={["F27878", "D96B6B"]}
+                wave="RM"
+                buttons={[]}
+                hideArrow={true}
+            />
         )
     }
 

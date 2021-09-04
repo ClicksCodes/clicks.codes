@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-export default async (req, res) => {
+const Complete = async (req, res) => {
     let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:req.body.code});
     if (code.status != 200) {
         return res.send(404);
@@ -15,3 +15,5 @@ export default async (req, res) => {
     )
     return res.send(resp.status);
 }
+
+export default Complete;

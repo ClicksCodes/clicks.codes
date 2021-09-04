@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Styles from '../styles/sectionheading.module.css';
 
-class CardRow extends Component {
+class SectionHeading extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -14,4 +14,4 @@ class CardRow extends Component {
 	}
 }
 
-export default CardRow;
+export default SectionHeading;
