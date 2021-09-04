@@ -6,6 +6,7 @@ import CardRow from '../Components/CardRow'
 import Header from '../Components/Header'
 import AutoSpacing from '../Components/AutoSpacing'
 import SectionHeading from '../Components/SectionHeading'
+import Paragraph from '../Components/Paragraph'
 
 export default function Home() {
   return (
@@ -16,17 +17,14 @@ export default function Home() {
         gradient={["71AFE5", "78ECF2"]}
         wave="CA"
         buttons={[
-          {color: "EDC575", buttonText: "000000", link: "#features", text: "Features"},
-          {color: "EDC575", buttonText: "000000", link: "#commands", text: "Commands"},
-          {color: "78ECF2", buttonText: "000000", link: "#invite", text: "Invite"}
+          {color: "78ECF2", buttonText: "000000", link: "#timeline", text: "Timeline"}
         ]}
         hideArrow={true}
       />
       <AutoSpacing>
-          <SectionHeading title="Features" id="features"/>
-          <SectionHeading title="Commands" id="commands"/>
-          <SectionHeading title="Invite" id="invite"/>
-          </AutoSpacing>
+        <SectionHeading id="timeline">Development Timeline</SectionHeading>
+        <Paragraph>Under construction</Paragraph>
+      </AutoSpacing>
     </>
   )
 }

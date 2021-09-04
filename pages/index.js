@@ -19,7 +19,7 @@ export default function Home() {
       />
       <p id="start" />
       <AutoSpacing>
-        <SectionHeading title="Projects" />
+        <SectionHeading>Projects</SectionHeading>
         <CardRow>
           <Card
             wave="GS" title="GPS" subtext="Cards Against Humanity on Discord"
@@ -49,7 +49,6 @@ export default function Home() {
           <Card
             wave="CA" title="Castaway" subtext="Stranded on Discord"
             buttons={[
-              {color: "F2D478", link: "/", text: "Invite"},
               {color: "F2D478", link: "/castaway", text: "About"}
             ]}
             buttonText={"000000"} gradient={["71AFE5", "78ECF2"]}
@@ -70,7 +69,7 @@ export default function Home() {
             buttonText={"000000"} gradient={["C4C4C4", "8D8D8D"]}
           />
         </CardRow>
-        <SectionHeading title="Code Bases" />
+        <SectionHeading>Code Bases</SectionHeading>
         <CardRow>
           <Card
             wave="GH" title="GitHub" subtext="View our open source projects"
@@ -87,7 +86,7 @@ export default function Home() {
             buttonText={"000000"} gradient={["2F6490", "3775A8"]}
           />
         </CardRow>
-        <SectionHeading title="Socials" />
+        <SectionHeading>Socials</SectionHeading>
         <CardRow>
           <Card
             wave="DS" title="Discord" subtext="Join our Discord server to talk with the community"

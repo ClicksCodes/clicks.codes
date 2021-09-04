@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 import Styles from '../styles/navbar.module.css';
+import Cookies from 'js-cookie';
+// import { setInfo } from "../redux/actions/main"
+import { connect } from "react-redux";
+// import { makeStore } from "../redux/store";
+
+// const store = makeStore();
 
 class NavBar extends Component {
 	constructor(props) {
 		super(props);
         this.state = {
-            isOpen: false  // true
+            isOpen: false,
+            cookie: 'light'
         }
         this.isTouchDevice = false
         this.hoverSensor = React.createRef();
@@ -33,18 +40,11 @@ class NavBar extends Component {
         } else {
             this.isTouchDevice = false
         }
+        this.setState({
+            cookie: Cookies.get('theme')
+        })
     }
 
- /*   onEnter() {
-        if ( !this.isTouchDevice ) {
-            return this.toggleVertical(this, true)
-        }
-    }
-
-    onLeave() {
-        return this.toggleVertical(this, false)
-    }
-*/
     onClick() {
         if ( this.isTouchDevice ) {
             return this.toggleVertical(this)
@@ -55,6 +55,20 @@ class NavBar extends Component {
         this.setState(prevState => ({
             isOpen: (force === null) ? !prevState.isOpen : force
         }));
+    }
+
+    updateCookie(that) {
+        // return () => {
+        //     if (that.props.theme == "light") {
+        //         that.props.setInfo('dark')
+        //     } else {
+        //         that.props.setInfo('light')
+        //     }
+        //     this.setState({
+        //         cookie: that.props.theme
+        //     })
+        //     // store.dispatch();
+        // }
     }
 
 	render() {
@@ -71,12 +85,28 @@ class NavBar extends Component {
                         {/* <a href="https://clcks.dev"><img className={Styles.icon} src="/Icons/CL.svg"/></a> */}
                     </div>
                     <div className={Styles.group}>
-                        <a href="/#"><img alt="Theme" className={Styles.icon} src="/Icons/CMP.svg"/></a>
+                        <a onClick={this.updateCookie(this)}><img
+                            alt="Theme"
+                            className={Styles.icon}
+                            src={this.state.cookie + ".svg"}
+                        /></a>
                     </div>
                 </div>
             </>
 		)
 	}
 }
+
+
+// const mapStateToProps = state => {
+//     return { theme: state.main.theme }
+// }
+
+// const mapDispatchToProps = {
+//     setInfo
+// }
+
+// const nav = connect(mapStateToProps, mapDispatchToProps)(NavBar);
+// export default nav;
 
 export default NavBar;

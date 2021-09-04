@@ -9,7 +9,7 @@ class SectionHeading extends Component {
 
 	render() {
 		return (
-            <h1 className={Styles.title} id={this.props.id}>{this.props.title}</h1>
+            <h1 className={Styles.title} id={this.props.id}>{this.props.children}</h1>
         )
 	}
 }
