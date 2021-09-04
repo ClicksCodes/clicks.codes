@@ -56,7 +56,7 @@ export default function Home() {
           <Card
             wave="HY" title="Hooky" subtext="Webhook protection for Discord"
             buttons={[
-              {color: "EDC575", link: "/", text: "Invite"},
+              {color: "EDC575", link: "https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176", text: "Invite"},
               {color: "EDC575", link: "/hooky", text: "About"}
             ]}
             buttonText={"000000"} gradient={["424242", "8D8D8D"]}
