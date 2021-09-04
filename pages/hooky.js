@@ -25,7 +25,7 @@ export default function Home() {
         <SectionHeading id="invite">Invite</SectionHeading>
         <CardRow>
           <Card
-            wave="CF"
+            wave="HY"
             buttonText={"000000"} gradient={["424242", "8D8D8D"]}
             title="Invite"
             subtext="Invite Hooky to your server"
