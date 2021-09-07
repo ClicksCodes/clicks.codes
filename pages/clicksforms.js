@@ -44,7 +44,7 @@ export default function Home() {
         <Paragraph><code>/manage</code>: Lets you manage your servers forms</Paragraph>
         <SectionHeading id="services">Services</SectionHeading>
         <Paragraph>ClicksForms support services like <a href="https://forms.google.com">Google Forms</a> through our Add-on (Awaiting approval)</Paragraph>
-        <Paragraph>Our API is public. You can view it on <a href="https://clicksminuteper.giuthub.io/docs/clicksforms">GitHub</a></Paragraph>
+        <Paragraph>Our API is public. You can view it on <a href="https://clicksminuteper.github.io/docs/clicksforms">GitHub</a></Paragraph>
         <SectionHeading id="invite">Invite</SectionHeading>
         <CardRow>
           <Card
