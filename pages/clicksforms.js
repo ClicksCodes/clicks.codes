@@ -58,7 +58,7 @@ export default function Home() {
           />
         </CardRow>
         <SectionHeading>Legal</SectionHeading>
-        <Paragraph>Our privacy policy can be viewed on <a href="https://clicksminuteper.github.io/policies/clicksforms">GitHub</a></Paragraph>
+        <Paragraph>Our privacy policy can be viewed on <a href="https://clicksminuteper.net/clicksforms/privacy">GitHub</a></Paragraph>
       </AutoSpacing>
     </>
   )
