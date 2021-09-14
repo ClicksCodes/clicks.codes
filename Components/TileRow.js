@@ -10,7 +10,7 @@ class TileRow extends Component {
 		<div className={Styles.container}>
 		{
 		    react.Children.toArray(this.props.children).map((item, index) => {
-			if (this.props.divless === false) { // Intentional comparison to false, initially had a default of false, now has a default of true
+			if (this.props.divless !== false) { // Intentional comparison to false, initially had a default of false, now has a default of true
 			    const className = (item.props.className ? item.props.className + " " : "") + Styles.item
 
 			    const key = index;
