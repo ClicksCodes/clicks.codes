@@ -10,7 +10,10 @@
 .item {
     display: flex;
     height: 35vmin;
-    width: fit-content;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.fitItemWidth {
+    width: fit-content;
 }
