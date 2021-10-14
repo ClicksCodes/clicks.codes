@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Styles from '../styles/header.module.css';
+import Head from 'next/head';
 
 class Header extends Component {
 	constructor(props) {
@@ -13,6 +14,13 @@ class Header extends Component {
                 backgroundImage:`linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
                 margin: "0"
             }} id={this.props.id ? this.props.id : null}>
+                <Head>
+                    <title>{this.props.name} - Clicks Minute Per</title>
+                    <meta name="description" content={this.props.subtext} />
+                    <meta name="og:description" content={this.props.subtext} />
+                    <meta name="theme-color" content={this.props.gradient[0]} />
+                    <meta name="og:theme-color" content={this.props.gradient[0]} />
+                </Head>
                 <img alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
