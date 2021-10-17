@@ -16,10 +16,14 @@ class Header extends Component {
             }} id={this.props.id ? this.props.id : null}>
                 <Head>
                     <title>{this.props.name} - Clicks Minute Per</title>
+                    <meta name="title" content={this.props.name} />
+                    <meta name="og:title" content={this.props.name} />
                     <meta name="description" content={this.props.subtext} />
                     <meta name="og:description" content={this.props.subtext} />
-                    <meta name="theme-color" content={this.props.gradient[0]} />
-                    <meta name="og:theme-color" content={this.props.gradient[0]} />
+                    <meta name="theme-color" content={"#" + this.props.gradient[1]} />
+                    <meta name="og:theme-color" content={"#" + this.props.gradient[1]} />
+                    <meta name="author" content="Clicks Minute Per" />
+                    <meta name="og:author" content="Clicks Minute Per" />
                 </Head>
                 <img alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
