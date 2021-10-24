@@ -15,7 +15,7 @@ class Header extends Component {
                 margin: "0"
             }} id={this.props.id ? this.props.id : null}>
                 <Head>
-                    <title>{this.props.name} - Clicks Minute Per</title>
+                    <title>{this.props.nameOverwrite ? this.props.nameOverwrite : this.props.name} - Clicks Minute Per</title>
                     <meta name="title" content={this.props.name} />
                     <meta name="og:title" content={this.props.name} />
                     <meta name="description" content={this.props.subtext} />

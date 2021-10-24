@@ -27,7 +27,6 @@ class RSMV extends Component {
         } else {
             return;
         }
-
     }
 
     async componentDidMount() {
@@ -65,6 +64,7 @@ class RSMV extends Component {
         return <>
             <Header
                 name={<><img alt="Server icon" style={{borderRadius: "50%", height: "128px", width: "auto"}} src={this.props.guild_icon_url} /><br />{this.props.guild_name}</>}
+                nameOverwrite="Verify"
                 subtext={` ${this.props.memberCount} members`}
                 gradient={["F27878", "D96B6B"]}
                 wave="RM"
@@ -113,13 +113,13 @@ export async function getServerSideProps(ctx) {
     }
     return {
         props: {
-            uID:code.data.user,
-            rID:code.data.role,
-            role_name:code.data.role_name,
-            gID:code.data.guild,
-            guild_name:code.data.guild_name,
-            guild_icon_url:code.data.guild_icon_url,
-            memberCount:code.data.guild_size,
+            uID: code.data.user,
+            rID: code.data.role,
+            role_name: code.data.role_name,
+            gID: code.data.guild,
+            guild_name: code.data.guild_name,
+            guild_icon_url: code.data.guild_icon_url,
+            memberCount: code.data.guild_size,
             headers: headers,
             code: ctx.query.code
         }
