@@ -30,7 +30,7 @@ export default function Home() {
             title="Invite"
             subtext="Invite Hooky to your server"
             buttons={[
-              {color: "775EBF", link: "https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176", text: "Invite"}
+              {color: "EDC575", link: "https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176", text: "Invite"}
             ]}
           />
         </CardRow>
