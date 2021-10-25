@@ -15,7 +15,7 @@ class Card extends Component {
                 <img alt="" className={Styles.backgroundImage} src={`/Waves/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
-                        <img alt="Project icon" className={Styles.image} src={"/Icons/" + this.props.wave + ".svg"} />
+                        <img alt="Project icon" className={Styles.image} src={"/Icons/" + (this.props.icon ? this.props.icon : this.props.wave) + ".svg"} />
                         <h1 className={Styles.title}>{this.props.title}</h1>
                     </div>
                     <p className={Styles.subtext}>{this.props.subtext}</p>

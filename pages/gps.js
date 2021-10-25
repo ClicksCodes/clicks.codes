@@ -2,7 +2,6 @@ import Card from '../Components/Card'
 import Header from '../Components/Header'
 import AutoSpacing from '../Components/AutoSpacing'
 import SectionHeading from '../Components/SectionHeading'
-import Subheading from '../Components/Subheading'
 import Paragraph from '../Components/Paragraph'
 import CardRow from '../Components/CardRow'
 
@@ -15,12 +14,52 @@ export default function Home() {
         gradient={["78ECF2", "71AFE5"]}
         wave="GS"
         buttons={[
+          {color: "71AFE5", buttonText: "FFFFFF", link: "#features", text: "Features"},
           {color: "71AFE5", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
           {color: "6576CC", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
         hideArrow={true}
       />
       <AutoSpacing>
+        <SectionHeading id="features">Features</SectionHeading>
+        <CardRow>
+          <Card
+            icon="GPS/players"
+            title="Lots of friends?"
+            subtext="You probably don't have 50 friends - But if you did, you can play with every one of them at the same time"
+            wave="GS"
+            gradient={["78ECF2", "71AFE5"]}
+          />
+          <Card
+            icon="GPS/cards"
+            title="2000+ cards"
+            subtext="Enjoy games with over 2000 cards, written for you to insult others"
+            wave="CF"
+            gradient={["71AFE5", "6576CC"]}
+          />
+          <Card
+            icon="GPS/customisation"
+            title="Customisation."
+            subtext="Customise every setting of your game and be as pedantic as you wish"
+            wave="HY"
+            gradient={["424242", "8D8D8D"]}
+          />
+          <Card
+            icon="GPS/time"
+            title="Patience is a virtue"
+            subtext="But you don't have a lot of it - Your friends may be slow at picking cards, but you don't have to live with it"
+            wave="RM"
+            gradient={["F27878", "D96B6B"]}
+          />
+          <Card
+            icon="GPS/shuffles"
+            title="Shuffles"
+            subtext={`Replace your worst cards with new ones because \"The bot is unfair
+            and always gives me the worst cards and everyone else is better at the game than me\"`}
+            wave="CL"
+            gradient={["C4C4C4", "8D8D8D"]}
+          />
+        </CardRow>
         <SectionHeading id="commands">Commands</SectionHeading>
         <Paragraph><code>$getprefix</code>: Shows the bots prefix in the current guild.</Paragraph>
         <Paragraph><code>$info</code>: View some information about the bot&apos;s owners.</Paragraph>
