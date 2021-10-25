@@ -25,42 +25,42 @@ export default function Home() {
       <AutoSpacing>
           <SectionHeading id="features">Features</SectionHeading>
           <TileRow divless={true}>
-	  <img alt="Moderate images"      src="/Features/RSM/Images.svg" />
-	  <img alt="Automate your server" src="/Features/RSM/Automate.svg" />
-	  <img alt="CAPTCHA verification" src="/Features/RSM/CAPTCHA.svg" />
-	  <img alt="Actively developed"   src="/Features/RSM/Developed.svg" />
-	  <img alt="Advanced logging"     src="/Features/RSM/Logging.svg" />
-	  <img alt="NSFW Moderation"      src="/Features/RSM/NSFW.svg" />
-	  <img alt="Eaily punish users"   src="/Features/RSM/Punish.svg" />
-	  <img alt="Stop raids quickly"   src="/Features/RSM/Raids.svg" />
-	  <img alt="Track statistics"     src="/Features/RSM/Statistics.svg" />
-	  <img alt="Custom tags"          src="/Features/RSM/Tags.svg" />
-	  </TileRow>
-	  <SectionHeading id="commands">Commands</SectionHeading>
-	  <Paragraph><code>m!info</code>: Shows all commands and info.</Paragraph>
-	  <Paragraph><code>m!stats</code>: Shows the bot statistics</Paragraph>
-	  <Paragraph><code>m!settings</code>: Shows your servers log settings.</Paragraph>
-	  <Paragraph><code>m!user</code>: Shows information about a user.</Paragraph>
-	  <Paragraph><code>m!avatar</code>: Shows a users avatar.</Paragraph>
-	  <Paragraph><code>m!roleall</code>: Role all humans or bots in the server.</Paragraph>
-	  <Paragraph><code>m!suggest</code>: Sends a suggestion to add to the bot for voting.</Paragraph>
-	  <Paragraph><code>m!ping</code>: Checks the bots ping time.</Paragraph>
-	  <Paragraph><code>m!server</code>: Shows all information about your server.</Paragraph>
-	  <Paragraph><code>m!tag</code>: m!tag create/delete title text, or m!tag title</Paragraph>
-	  <Paragraph><code>m!role</code>: With Role: Shows information about a role.</Paragraph>
-	  <Paragraph><code>m!role</code>: With Mention: Lets you edit or view a users roles.</Paragraph>
-	  <Paragraph><code>m!viewas</code>: Shows the channels that a member can see.</Paragraph>
-	  <Paragraph><code>m!verify</code>: Lets users verify in your server.</Paragraph>
-	  <Paragraph><code>m!setverify</code>: Sets the role given when you m!verify. Name or ID.</Paragraph>
-	  <Paragraph><code>m!mail</code>: Creates a modmail ticket if set up.</Paragraph>
-	  <Paragraph><code>m!prefix</code>: Shows the bots prefix. Use @ if unknown.</Paragraph>
-	  <Paragraph><code>m!setprefix</code>: Sets the bots prefix. You can always @ the bot.</Paragraph>
-	  <Subheading>Moderation</Subheading>
-	  <Paragraph><code>m!warn</code>: Warns a member.</Paragraph>
-	  <Paragraph><code>m!clear</code>: Clears messages from a channel</Paragraph>
-	  <Paragraph><code>m!kick</code>: Kicks a member.</Paragraph>
-	  <Paragraph><code>m!softban</code>: Soft bans a member.</Paragraph>
-	  <Paragraph><code>m!ban</code>: Bans a member.</Paragraph>
+          <img alt="Moderate images"      src="/Features/RSM/Images.svg" />
+          <img alt="Automate your server" src="/Features/RSM/Automate.svg" />
+          <img alt="CAPTCHA verification" src="/Features/RSM/CAPTCHA.svg" />
+          <img alt="Actively developed"   src="/Features/RSM/Developed.svg" />
+          <img alt="Advanced logging"     src="/Features/RSM/Logging.svg" />
+          <img alt="NSFW Moderation"      src="/Features/RSM/NSFW.svg" />
+          <img alt="Eaily punish users"   src="/Features/RSM/Punish.svg" />
+          <img alt="Stop raids quickly"   src="/Features/RSM/Raids.svg" />
+          <img alt="Track statistics"     src="/Features/RSM/Statistics.svg" />
+          <img alt="Custom tags"          src="/Features/RSM/Tags.svg" />
+          </TileRow>
+          <SectionHeading id="commands">Commands</SectionHeading>
+          <Paragraph><code>m!info</code>: Shows all commands and info.</Paragraph>
+          <Paragraph><code>m!stats</code>: Shows the bot statistics</Paragraph>
+          <Paragraph><code>m!settings</code>: Shows your servers log settings.</Paragraph>
+          <Paragraph><code>m!user</code>: Shows information about a user.</Paragraph>
+          <Paragraph><code>m!avatar</code>: Shows a users avatar.</Paragraph>
+          <Paragraph><code>m!roleall</code>: Role all humans or bots in the server.</Paragraph>
+          <Paragraph><code>m!suggest</code>: Sends a suggestion to add to the bot for voting.</Paragraph>
+          <Paragraph><code>m!ping</code>: Checks the bots ping time.</Paragraph>
+          <Paragraph><code>m!server</code>: Shows all information about your server.</Paragraph>
+          <Paragraph><code>m!tag</code>: m!tag create/delete title text, or m!tag title</Paragraph>
+          <Paragraph><code>m!role</code>: With Role: Shows information about a role.</Paragraph>
+          <Paragraph><code>m!role</code>: With Mention: Lets you edit or view a users roles.</Paragraph>
+          <Paragraph><code>m!viewas</code>: Shows the channels that a member can see.</Paragraph>
+          <Paragraph><code>m!verify</code>: Lets users verify in your server.</Paragraph>
+          <Paragraph><code>m!setverify</code>: Sets the role given when you m!verify. Name or ID.</Paragraph>
+          <Paragraph><code>m!mail</code>: Creates a modmail ticket if set up.</Paragraph>
+          <Paragraph><code>m!prefix</code>: Shows the bots prefix. Use @ if unknown.</Paragraph>
+          <Paragraph><code>m!setprefix</code>: Sets the bots prefix. You can always @ the bot.</Paragraph>
+          <Subheading>Moderation</Subheading>
+          <Paragraph><code>m!warn</code>: Warns a member.</Paragraph>
+          <Paragraph><code>m!clear</code>: Clears messages from a channel</Paragraph>
+          <Paragraph><code>m!kick</code>: Kicks a member.</Paragraph>
+          <Paragraph><code>m!softban</code>: Soft bans a member.</Paragraph>
+          <Paragraph><code>m!ban</code>: Bans a member.</Paragraph>
           <Paragraph><code>m!unban</code>: Unbans a member.</Paragraph>
           <Paragraph><code>m!purge</code>: Deletes messages in the channel.</Paragraph>
           <Paragraph><code>m!punish</code>: Punishes a user.</Paragraph>
@@ -82,7 +82,7 @@ export default function Home() {
       title="Invite"
       subtext="Invite RSM to your server"
       buttons={[
-          {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
+          {color: "F27878", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
       ]}
           />
         </CardRow>

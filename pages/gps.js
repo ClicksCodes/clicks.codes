@@ -82,7 +82,7 @@ export default function Home() {
             title="Invite"
             subtext="Invite GPS to your server"
             buttons={[
-              {color: "424242", link: "https://discordapp.com/oauth2/authorize?client_id=679361555732627476&scope=bot&permissions=130048", text: "Invite"}
+              {color: "6576CC", link: "https://discordapp.com/oauth2/authorize?client_id=679361555732627476&scope=bot&permissions=130048", text: "Invite"}
             ]}
           />
         </CardRow>
