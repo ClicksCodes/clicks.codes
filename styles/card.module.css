@@ -25,7 +25,7 @@
 .panel {
 	position: absolute;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	width: 88%;
 	height: 76%;
 	top: 12%;
