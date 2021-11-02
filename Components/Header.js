@@ -48,7 +48,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)}>
-                    <a href="#start"><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} /></a>
+                    <a href="#start"><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} draggable={false} /></a>
                 </span>
             </div>
 		)

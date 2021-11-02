@@ -16,6 +16,7 @@ html {
   --page-background: #ffffff;
   --link-color: #6576CC;
   --hint-color: #f1f1f1;
+  --card-border-color: #C4C4C4;
 
   background-color: var(--page-background);
 }
@@ -29,6 +30,7 @@ html {
     --page-background: #252525;
     --link-color: #6576CC;
     --hint-color: #101010;
+    --card-border-color: #424242;
   }
 }
 
@@ -41,6 +43,7 @@ html {
   --page-background: #ffffff;
   --link-color: #6576CC;
   --hint-color: #f1f1f1;
+  --card-border-color: #C4C4C4;
 }
 
 .dark {
@@ -51,6 +54,7 @@ html {
   --page-background: #252525;
   --link-color: #6576CC;
   --hint-color: #101010;
+  --card-border-color: #424242;
 }
 
 
