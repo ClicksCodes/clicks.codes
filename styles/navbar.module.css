@@ -23,7 +23,7 @@
     justify-content: top;
     align-items: center;
 
-    background-color: var(--card-background-color);
+    background-color: var(--theme-ui-colors-cardBackground);
     backdrop-filter: blur(7px), brightness(0.1);
     border-radius: 32px;
 
