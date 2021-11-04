@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import Styles from '../styles/navbar.module.css';
-import Cookies from 'js-cookie';
 import ThemeChangeButton from './ThemeChangeButton';
-// import { setInfo } from "../redux/actions/main"
-// import { connect } from "react-redux";
-// import { makeStore } from "../redux/store";
 
-// const store = makeStore();
 
 class NavBar extends Component {
 	constructor(props) {
 		super(props);
         this.state = {
             isOpen: false,
-            cookie: 'light'
         }
         this.isTouchDevice = false
         this.hoverSensor = React.createRef();
@@ -41,9 +35,6 @@ class NavBar extends Component {
         } else {
             this.isTouchDevice = false
         }
-        this.setState({
-            cookie: Cookies.get('theme')
-        })
     }
 
     onClick() {
@@ -79,17 +70,5 @@ class NavBar extends Component {
 		)
 	}
 }
-
-
-// const mapStateToProps = state => {
-//     return { theme: state.main.theme }
-// }
-
-// const mapDispatchToProps = {
-//     setInfo
-// }
-
-// const nav = connect(mapStateToProps, mapDispatchToProps)(NavBar);
-// export default nav;
 
 export default NavBar;

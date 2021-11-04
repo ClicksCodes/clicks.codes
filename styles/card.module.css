@@ -7,6 +7,7 @@
 	scale: stretch;
 	border-radius: 0;
 	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
 }
 
 .card {
@@ -19,6 +20,7 @@
 	overflow: hidden;
 	margin: 100px;
 	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
 }
 
 
@@ -34,6 +36,7 @@
 	padding-bottom: 10px;
 	border-radius: 17px;
 	background-color: var(--theme-ui-colors-cardBackground);
+	transition: background-color 0.3s ease-in-out;
 	backdrop-filter: blur(7px);
 }
 
@@ -55,6 +58,7 @@
 	line-height: 24px;
 	max-lines: 2;
 	color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
 }
 
 .image {
@@ -67,6 +71,7 @@
 	padding-inline: 10px;
 	text-align: center;
 	color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
 }
 
 

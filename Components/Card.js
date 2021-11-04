@@ -12,7 +12,7 @@ class Card extends Component {
                 backgroundImage:`linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
                 margin: "0"
             }}>
-                <img alt="" className={Styles.backgroundImage} src={`/Waves/${this.props.wave}.svg`} />
+                <img alt="" className={Styles.backgroundImage} src={`/Waves/${this.props.wave}.svg`} draggable={false} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
                         <img alt="Project icon" className={Styles.image} src={"/Icons/" + (this.props.icon ? this.props.icon : this.props.wave) + ".svg"} />

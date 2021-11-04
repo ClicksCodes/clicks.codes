@@ -10,13 +10,15 @@ html, body {
 
 html {
   background-color: var(--theme-ui-colors-background);
+	transition: background-color 0.3s ease-in-out;
 }
 
 
 a {
   text-decoration: none;
   transition: 0.5s ease-in-out;
-  color: var(--theme-ui-colors-primary)
+  color: var(--theme-ui-colors-primary);
+	transition: color 0.3s ease-in-out;
 }
 
 * {
@@ -30,6 +32,7 @@ code {
   font-weight: bold;
   color: #F27878;
   background-color: var(--theme-ui-colors-hint);
+	transition: background-color 0.3s ease-in-out;
   padding: 2px;
   font-size: 105%;
   border-radius: 5px;
