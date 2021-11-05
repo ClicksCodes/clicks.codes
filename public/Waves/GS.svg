@@ -1,9 +1,1 @@
-<svg width="528" height="191" viewBox="0 0 528 191" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 110.962L21.8625 94.875C44.1375 79.2 87.8625 47.4375 132 52.8C176.137 58.1625 219.862 100.237 264 118.8C308.137 137.362 351.862 132 396 108.075C440.137 84.5625 483.862 42.075 506.137 21.0375L528 0V190.575H506.137C483.862 190.575 440.137 190.575 396 190.575C351.862 190.575 308.137 190.575 264 190.575C219.862 190.575 176.137 190.575 132 190.575C87.8625 190.575 44.1375 190.575 21.8625 190.575H0V110.962Z" fill="url(#paint0_linear_2629:5540)"/>
-<defs>
-<linearGradient id="paint0_linear_2629:5540" x1="0" y1="190.575" x2="528" y2="190.575" gradientUnits="userSpaceOnUse">
-<stop stop-color="#71AFE5"/>
-<stop offset="1" stop-color="#6576CC"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="528" height="191" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m0 110.963 21.863-16.088C44.138 79.2 87.862 47.437 132 52.8c44.137 5.363 87.863 47.437 132 66 44.137 18.563 87.862 13.2 132-10.725 44.137-23.513 87.862-66 110.137-87.037L528 0v190.575H0v-79.612Z" fill="url(#a)"/><defs><linearGradient id="a" x1="0" y1="190.575" x2="528" y2="190.575" gradientUnits="userSpaceOnUse"><stop stop-color="#71AFE5"/><stop offset="1" stop-color="#6576CC"/></linearGradient></defs></svg>

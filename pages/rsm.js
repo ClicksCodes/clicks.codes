@@ -37,16 +37,16 @@ export default function Home() {
           <SectionHeading id="features">Features</SectionHeading>
           <Paragraph>For a full list of features, check our commands</Paragraph>
           {/* <TileRow divless={false}>
-          <FeatureImages />
-          <FeatureAutomate />
-          <FeatureCAPTCHA />
-          <FeatureDeveloped />
-          <FeatureLogging />
-          <FeatureNSFW />
-          <FeaturePunish />
-          <FeatureRaids />
-          <FeatureStatistics />
-          <FeatureTags />
+            <FeatureImages />
+            <FeatureAutomate />
+            <FeatureCAPTCHA />
+            <FeatureDeveloped />
+            <FeatureLogging />
+            <FeatureNSFW />
+            <FeaturePunish />
+            <FeatureRaids />
+            <FeatureStatistics />
+            <FeatureTags />
           </TileRow> */}
           <SectionHeading id="commands">Commands</SectionHeading>
           <Paragraph><code>m!info</code>: Shows all commands and info.</Paragraph>

@@ -33,7 +33,7 @@ export default function Home() {
             <img alt="Up to 25 questions"    src="/Features/ClicksForms/Questions.svg" />
             <img alt="Many question types"   src="/Features/ClicksForms/Types.svg" />
             <img alt="Easily view responses" src="/Features/ClicksForms/Responses.svg" />
-            </TileRow>
+          </TileRow>
             <SectionHeading id="commands">Commands</SectionHeading>
             <Paragraph><code>/accept</code>: Completes a form you are asked to fill in</Paragraph>
             <Paragraph><code>/apply</code>: Apply to a form</Paragraph>
@@ -43,7 +43,7 @@ export default function Home() {
             <Paragraph><code>/responses</code>: Lets you view responses to your servers form</Paragraph>
             <Paragraph><code>/manage</code>: Lets you manage your servers forms</Paragraph>
             <SectionHeading id="services">Services</SectionHeading>
-            <Paragraph>ClicksForms support services like <a href="https://forms.google.com">Google Forms</a> through our Add-on (Awaiting approval)</Paragraph>
+            <Paragraph>ClicksForms support services like <a href="https://forms.google.com">Google Forms</a> through our Add-on</Paragraph>
             <Paragraph>Our API is public. You can view it on <a href="https://clicksminuteper.github.io/docs/clicksforms">GitHub</a></Paragraph>
             <SectionHeading id="invite">Invite</SectionHeading>
             <CardRow>

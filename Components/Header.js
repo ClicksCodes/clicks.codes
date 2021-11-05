@@ -3,15 +3,15 @@ import Styles from '../styles/header.module.css';
 import Head from 'next/head';
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
+    constructor(props) {
+        super(props);
         this.keys = []
-	}
+    }
 
-	render() {
-		return (
+    render() {
+        return (
             <div className={Styles.header} style={{
-                backgroundImage:`linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
+                backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
                 margin: "0"
             }} id={this.props.id ? this.props.id : null}>
                 <Head>
@@ -25,7 +25,7 @@ class Header extends Component {
                     <meta name="author" content="Clicks Minute Per" />
                     <meta name="og:author" content="Clicks Minute Per" />
                 </Head>
-                <img draggable={false} alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
+                <img draggable={false} className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
                         <h1 className={Styles.title}>{this.props.name}</h1>
@@ -37,11 +37,11 @@ class Header extends Component {
                                 return <a
                                     key={index}
                                     className={Styles.button}
-                                    style={{backgroundColor:`#${button.color}`, color:`#${button.buttonText}`}}
+                                    style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
                                     href={button.link}
                                     target={button.target ? "_blank" : null}
                                     rel="noreferror">
-                                        {button.text}
+                                    {button.text}
                                 </a>
                             }) : null
                         }
@@ -51,8 +51,8 @@ class Header extends Component {
                     <a href="#start" draggable={false}><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} draggable={false} /></a>
                 </span>
             </div>
-		)
-	}
+        )
+    }
 }
 
 export default Header;
