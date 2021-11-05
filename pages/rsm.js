@@ -36,18 +36,18 @@ export default function Home() {
       <AutoSpacing>
           <SectionHeading id="features">Features</SectionHeading>
           <Paragraph>For a full list of features, check our commands</Paragraph>
-          {/* <TileRow divless={false}>
-          <FeatureImages />
-          <FeatureAutomate />
-          <FeatureCAPTCHA />
-          <FeatureDeveloped />
-          <FeatureLogging />
-          <FeatureNSFW />
-          <FeaturePunish />
-          <FeatureRaids />
-          <FeatureStatistics />
-          <FeatureTags />
-          </TileRow> */}
+          <TileRow divless={false}>
+            <FeatureImages />
+            <FeatureAutomate />
+            <FeatureCAPTCHA />
+            <FeatureDeveloped />
+            <FeatureLogging />
+            <FeatureNSFW />
+            <FeaturePunish />
+            <FeatureRaids />
+            <FeatureStatistics />
+            <FeatureTags />
+          </TileRow>
           <SectionHeading id="commands">Commands</SectionHeading>
           <Paragraph><code>m!info</code>: Shows all commands and info.</Paragraph>
           <Paragraph><code>m!stats</code>: Shows the bot statistics</Paragraph>
