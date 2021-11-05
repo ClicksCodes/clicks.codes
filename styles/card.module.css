@@ -6,7 +6,8 @@
 	height: auto;
 	scale: stretch;
 	border-radius: 0;
-	filter: var(--card-overlay-filter);
+	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
 }
 
 .card {
@@ -18,7 +19,8 @@
 	position: relative;
 	overflow: hidden;
 	margin: 100px;
-	filter: var(--card-overlay-filter);
+	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
 }
 
 
@@ -33,9 +35,9 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 17px;
-	background-color: var(--card-background-color);
+	background-color: var(--theme-ui-colors-cardBackground);
+	transition: background-color 0.3s ease-in-out;
 	backdrop-filter: blur(7px);
-	filter: var(--card-filter);
 }
 
 .titleContainer {
@@ -55,7 +57,8 @@
 	margin-left: 1vw;
 	line-height: 24px;
 	max-lines: 2;
-	color: var(--card-text-color);
+	color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
 }
 
 .image {
@@ -67,7 +70,8 @@
 	width: 100%;
 	padding-inline: 10px;
 	text-align: center;
-	color: var(--card-text-color);
+	color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
 }
 
 

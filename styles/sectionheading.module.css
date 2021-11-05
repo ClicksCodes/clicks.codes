@@ -1,7 +1,8 @@
 .title {
     width: 100%;
     font-size: max(2em, 4vw);
-    color: var(--card-text-color);
+    color: var(--theme-ui-colors-text);
+    transition: color 0.3s ease-in-out;
     font-weight: lighter;
     text-align: center;
     word-break: break-all;

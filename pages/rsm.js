@@ -7,6 +7,17 @@ import Subheading from '../Components/Subheading'
 import Paragraph from '../Components/Paragraph'
 import CardRow from '../Components/CardRow'
 
+import FeatureImages from '../public/Features/RSM/Images.svg';
+import FeatureAutomate from '../public/Features/RSM/Automate.svg';
+import FeatureCAPTCHA from '../public/Features/RSM/CAPTCHA.svg';
+import FeatureDeveloped from '../public/Features/RSM/Developed.svg';
+import FeatureLogging from '../public/Features/RSM/Logging.svg';
+import FeatureNSFW from '../public/Features/RSM/NSFW.svg';
+import FeaturePunish from '../public/Features/RSM/Punish.svg';
+import FeatureRaids from '../public/Features/RSM/Raids.svg';
+import FeatureStatistics from '../public/Features/RSM/Statistics.svg';
+import FeatureTags from '../public/Features/RSM/Tags.svg';
+
 export default function Home() {
   return (
     <>
@@ -24,18 +35,19 @@ export default function Home() {
       />
       <AutoSpacing>
           <SectionHeading id="features">Features</SectionHeading>
-          <TileRow divless={true}>
-          <img alt="Moderate images"      src="/Features/RSM/Images.svg" />
-          <img alt="Automate your server" src="/Features/RSM/Automate.svg" />
-          <img alt="CAPTCHA verification" src="/Features/RSM/CAPTCHA.svg" />
-          <img alt="Actively developed"   src="/Features/RSM/Developed.svg" />
-          <img alt="Advanced logging"     src="/Features/RSM/Logging.svg" />
-          <img alt="NSFW Moderation"      src="/Features/RSM/NSFW.svg" />
-          <img alt="Eaily punish users"   src="/Features/RSM/Punish.svg" />
-          <img alt="Stop raids quickly"   src="/Features/RSM/Raids.svg" />
-          <img alt="Track statistics"     src="/Features/RSM/Statistics.svg" />
-          <img alt="Custom tags"          src="/Features/RSM/Tags.svg" />
-          </TileRow>
+          <Paragraph>For a full list of features, check our commands</Paragraph>
+          {/* <TileRow divless={false}>
+          <FeatureImages />
+          <FeatureAutomate />
+          <FeatureCAPTCHA />
+          <FeatureDeveloped />
+          <FeatureLogging />
+          <FeatureNSFW />
+          <FeaturePunish />
+          <FeatureRaids />
+          <FeatureStatistics />
+          <FeatureTags />
+          </TileRow> */}
           <SectionHeading id="commands">Commands</SectionHeading>
           <Paragraph><code>m!info</code>: Shows all commands and info.</Paragraph>
           <Paragraph><code>m!stats</code>: Shows the bot statistics</Paragraph>

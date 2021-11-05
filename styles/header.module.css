@@ -4,7 +4,8 @@
 	left: -3px;
 	width: calc(100% + 6px);
 	border-radius: 0 0 16.5px 16.5px;
-	filter: var(--card-overlay-filter);
+	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
 }
 
 .header {
@@ -12,7 +13,12 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	filter: var(--card-overlay-filter);
+	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .panel {
@@ -20,16 +26,15 @@
 	overflow: hidden;
 	width: min(76%, 800px);
 	height: auto;
-	top: calc((100% - min(76%, 800px)) / 1.5 );
-	left: calc((100% - min(76%, 800px)) / 2 );
 	border-radius: 16.5px;
-	background-color: var(--card-background-color);
+	background-color: var(--theme-ui-colors-cardBackground);
+	transition: background-color 0.3s ease-in-out;
 	backdrop-filter: blur(7px);
-	filter: var(--card-filter);
 	padding-top: 30px;
 	padding-bottom: 40px;
 	padding-left: 10px;
 	padding-right: 10px;
+	margin-bottom: 10%;
 }
 
 .title {
@@ -39,7 +44,8 @@
 	margin-top: 0px;
 	margin-bottom: -20px;
     font-size: max(2em, 4vw);
-    color: var(--card-text-color);
+    color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
 	word-break: break-word;
 }
 
@@ -49,7 +55,8 @@
     text-align: center;
     font-weight: 100;
     font-size: max(1.5em, 1.5vw);
-    color: var(--card-text-color);
+    color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
 }
 
 .subtextExtra {

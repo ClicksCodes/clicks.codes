@@ -9,55 +9,16 @@ html, body {
 }
 
 html {
-  --card-background-color: rgba(255, 255, 255, 0.65);
-  --card-text-color: #424242;
-  --card-overlay-color: rgba(0, 0, 0, 0);
-  --card-filter: drop-shadow(0px 0px 5px #00000080);
-  --page-background: #ffffff;
-  --link-color: #6576CC;
-  --hint-color: #f1f1f1;
-
-  background-color: var(--page-background);
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    --card-background-color: rgba(0, 0, 0, 0.65);
-    --card-text-color: #ffffff;
-    --card-overlay-filter: brightness(0.75);
-    --card-filter: drop-shadow(0px 0px 5px #42424280);
-    --page-background: #252525;
-    --link-color: #6576CC;
-    --hint-color: #101010;
-  }
-}
-
-
-.light {
-  --card-background-color: rgba(255, 255, 255, 0.65);
-  --card-text-color: #424242;
-  --card-overlay-color: rgba(0, 0, 0, 0);
-  --card-filter: drop-shadow(0px 0px 5px #00000080);
-  --page-background: #ffffff;
-  --link-color: #6576CC;
-  --hint-color: #f1f1f1;
-}
-
-.dark {
-  --card-background-color: rgba(0, 0, 0, 0.65);
-  --card-text-color: #ffffff;
-  --card-overlay-filter: brightness(0.75);
-  --card-filter: drop-shadow(0px 0px 5px #42424280);
-  --page-background: #252525;
-  --link-color: #6576CC;
-  --hint-color: #101010;
+  background-color: var(--theme-ui-colors-background);
+	transition: background-color 0.3s ease-in-out;
 }
 
 
 a {
   text-decoration: none;
   transition: 0.5s ease-in-out;
-  color: var(--link-color)
+  color: var(--theme-ui-colors-primary);
+	transition: color 0.3s ease-in-out;
 }
 
 * {
@@ -70,7 +31,8 @@ code {
   font-family: monospace;
   font-weight: bold;
   color: #F27878;
-  background-color: var(--hint-color);
+  background-color: var(--theme-ui-colors-hint);
+	transition: background-color 0.3s ease-in-out;
   padding: 2px;
   font-size: 105%;
   border-radius: 5px;

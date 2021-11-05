@@ -25,7 +25,7 @@ class Header extends Component {
                     <meta name="author" content="Clicks Minute Per" />
                     <meta name="og:author" content="Clicks Minute Per" />
                 </Head>
-                <img alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
+                <img draggable={false} alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
                         <h1 className={Styles.title}>{this.props.name}</h1>
@@ -47,8 +47,8 @@ class Header extends Component {
                         }
                     </div>
                 </div>
-                <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)}>
-                    <a href="#start"><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} /></a>
+                <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)} draggable={false}>
+                    <a href="#start" draggable={false}><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} draggable={false} /></a>
                 </span>
             </div>
 		)

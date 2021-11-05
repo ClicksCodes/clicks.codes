@@ -23,7 +23,8 @@
     justify-content: top;
     align-items: center;
 
-    background-color: var(--card-background-color);
+    background-color: var(--theme-ui-colors-cardBackground);
+    transition: background-color 0.3s ease-in-out;
     backdrop-filter: blur(7px), brightness(0.1);
     border-radius: 32px;
 
@@ -47,6 +48,13 @@
     width: 50px;
     margin-bottom: 5px;
     cursor: pointer;
+    display: block;
+}
+
+.ThemeChangeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerOpen {
