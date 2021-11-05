@@ -1,9 +1,1 @@
-<svg width="1920" height="794" viewBox="0 0 1920 794" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1919 11L1840.04 77.5912C1760.08 144.591 1600.17 279.591 1440.25 317.591C1280.33 355.591 1120.42 298.591 960.5 211.591C800.583 125.591 640.666 10.5912 480.75 0.591217C320.833 -8.40878 160.916 87.5912 80.9578 135.591L0 183.5V794H140.427C220.385 794 380.302 794 540.219 794C700.135 794 860.052 794 1019.97 794C1179.89 794 1339.8 794 1499.72 794C1659.64 794 1819.55 794 1899.51 794H1920L1919 11Z" fill="url(#paint0_linear_2656:5178)"/>
-<defs>
-<linearGradient id="paint0_linear_2656:5178" x1="1920" y1="976.589" x2="0.000556337" y2="976.589" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F2D478"/>
-<stop offset="1" stop-color="#EDC575"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="1920" height="794" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m1919 11-78.96 66.591c-79.96 67-239.87 202-399.79 240-159.92 38-319.83-19-479.75-106-159.917-86-319.834-201-479.75-211-159.917-9-319.834 87-399.792 135L0 183.5V794H1920l-1-783Z" fill="url(#a)"/><defs><linearGradient id="a" x1="1920" y1="976.589" x2=".001" y2="976.589" gradientUnits="userSpaceOnUse"><stop stop-color="#F2D478"/><stop offset="1" stop-color="#EDC575"/></linearGradient></defs></svg>
