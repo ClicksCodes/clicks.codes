@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import NavBar from '../Components/NavBar';
 import { ThemeProvider } from 'theme-ui';
+import { Helmet } from 'react-helmet';
 
 const theme = {
     config: {
@@ -37,6 +38,12 @@ const theme = {
 
 function App({ Component, pageProps }) {
   return <>
+    <Helmet>
+      <html lang="en" />
+    </Helmet>
+    <head>
+      <meta charSet="utf-8" />
+    </head>
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
       <NavBar />

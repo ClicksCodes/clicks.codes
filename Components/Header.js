@@ -25,7 +25,7 @@ class Header extends Component {
                     <meta name="author" content="Clicks Minute Per" />
                     <meta name="og:author" content="Clicks Minute Per" />
                 </Head>
-                <img draggable={false} className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
+                <img draggable={false} alt="" className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
                         <h1 className={Styles.title}>{this.props.name}</h1>
@@ -40,7 +40,7 @@ class Header extends Component {
                                     style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
                                     href={button.link}
                                     target={button.target ? "_blank" : null}
-                                    rel="noreferror">
+                                    rel="noopener">
                                     {button.text}
                                 </a>
                             }) : null
@@ -48,7 +48,9 @@ class Header extends Component {
                     </div>
                 </div>
                 <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)} draggable={false}>
-                    <a href="#start" draggable={false}><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} draggable={false} /></a>
+                    <a href="#start" draggable={false}><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} draggable={false} style={{
+                        height: "49px", width: "87px"
+                    }}/></a>
                 </span>
             </div>
         )
