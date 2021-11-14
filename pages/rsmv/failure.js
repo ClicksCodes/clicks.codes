@@ -12,7 +12,7 @@ class Failed extends Component {
                 name="Verification failed"
                 subtext={<p>Please try again, and if the error persists please contact us at <a href="mailto:verification@clicksminuteper.net" target="_blank" rel="noopener noreferrer">verification@clicksminuteper.net</a></p>}
                 gradient={["F27878", "D96B6B"]}
-                wave="RM"
+                wave="web/waves/header/rsm"
                 buttons={[]}
                 hideArrow={true}
             />

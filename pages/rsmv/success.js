@@ -13,7 +13,7 @@ class Success extends Component {
                 name="Verified"
                 subtext="You can now close this tab or window."
                 gradient={["65CC76", "60B258"]}
-                wave="RM"
+                wave="web/waves/header/rsm"
                 buttons={[]}
                 hideArrow={true}
             />

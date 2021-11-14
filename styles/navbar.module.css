@@ -12,6 +12,7 @@
 
     width: 64px;
     max-height: 64px;
+    padding-bottom: -1px;
     height: auto;
 
     border-radius: 32px;

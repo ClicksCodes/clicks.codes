@@ -1,8 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { useColorMode } from 'theme-ui';
 import Styles from '../styles/navbar.module.css';
-import Light from '../public/light.svg';
-import Dark from '../public/dark.svg';
 import { useState, useEffect } from 'react';
 
 
@@ -21,7 +19,7 @@ const ThemeChangeButton = () => {
                 setColorMode(colorMode === 'light' ? 'dark' : 'light');
             }}>
             {
-                !render ? null : (colorMode == 'light' ? <Light /> : <Dark />)
+                !render ? null : (colorMode == 'light' ? <img src="https://assets.clicksminuteper.net/web/icons/light.svg" /> : <img src="https://assets.clicksminuteper.net/web/icons/dark.svg" />)
             }
             </a>
         </header>

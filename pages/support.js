@@ -12,7 +12,7 @@ export default function Home() {
         name="Support"
         subtext="Get support for ClicksMinutePer products"
         gradient={["71AFE5", "6576CC"]}
-        wave="CF"
+        wave="web/waves/header/clicksforms"
         buttons={[]}
       />
       <AutoSpacing>

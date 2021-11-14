@@ -15,7 +15,7 @@ export default function Home() {
         name="Hooky"
         subtext="Webhook protection for Discord"
         gradient={["424242", "8D8D8D"]}
-        wave="CA"
+        wave="web/waves/header/hooky"
         buttons={[
           {color: "EDC575", buttonText: "000000", link: "#invite", text: "Invite"}
         ]}
@@ -25,7 +25,8 @@ export default function Home() {
         <SectionHeading id="invite">Invite</SectionHeading>
         <CardRow>
           <Card
-            wave="HY"
+            wave="hooky"
+            icon="bots/hooky/normal"
             buttonText={"000000"} gradient={["424242", "8D8D8D"]}
             title="Invite"
             subtext="Invite Hooky to your server"

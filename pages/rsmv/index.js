@@ -67,7 +67,7 @@ class RSMV extends Component {
                 nameOverwrite="Verify"
                 subtext={` ${this.props.memberCount} members`}
                 gradient={["F27878", "D96B6B"]}
-                wave="RM"
+                wave="web/waves/header/rsm"
                 buttons={[]}
             />
             <div id="start">
