@@ -11,9 +11,11 @@ class Header extends Component {
     render() {
         return (
             <div className={Styles.header} style={{
-                backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
                 margin: "0"
             }} id={this.props.id ? this.props.id : null}>
+                <div className={Styles.backgroundGradient} style={{
+                    backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
+                }} />
                 <Head>
                     <title>{this.props.nameOverwrite ? this.props.nameOverwrite : this.props.name} - Clicks Minute Per</title>
                     <meta name="title" content={this.props.name} />
@@ -25,7 +27,7 @@ class Header extends Component {
                     <meta name="author" content="Clicks Minute Per" />
                     <meta name="og:author" content="Clicks Minute Per" />
                 </Head>
-                <img draggable={false} className={Styles.backgroundImage} src={`/Headers/${this.props.wave}.svg`} />
+                <img draggable={false} alt="" className={Styles.backgroundImage} src={`https://assets.clicksminuteper.net/${this.props.wave}.svg`} />
                 <div className={Styles.panel}>
                     <div className={Styles.titleContainer}>
                         <h1 className={Styles.title}>{this.props.name}</h1>
@@ -40,7 +42,7 @@ class Header extends Component {
                                     style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
                                     href={button.link}
                                     target={button.target ? "_blank" : null}
-                                    rel="noreferror">
+                                    rel="noopener">
                                     {button.text}
                                 </a>
                             }) : null
@@ -48,7 +50,9 @@ class Header extends Component {
                     </div>
                 </div>
                 <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)} draggable={false}>
-                    <a href="#start" draggable={false}><img alt="Down arrow" src="/Arrow.svg" className={Styles.arrow} draggable={false} /></a>
+                    <a href="#start" draggable={false}><img alt="Down arrow" src="https://assets.clicksminuteper.net/web/icons/arrow.svg" className={Styles.arrow} draggable={false} style={{
+                        height: "49px", width: "87px"
+                    }}/></a>
                 </span>
             </div>
         )

@@ -25,7 +25,7 @@ export default function Home() {
         name="RSM"
         subtext="Moderation Redefined"
         gradient={["F27878", "D96B6B"]}
-        wave="RM"
+        wave="web/waves/header/rsm"
         buttons={[
           {color: "424242", buttonText: "FFFFFF", link: "#features", text: "Features"},
           {color: "424242", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
@@ -88,14 +88,15 @@ export default function Home() {
         <Paragraph><code>m!unlock</code>: Unlocks the channel. Slowmode is removed and messages can be sent.</Paragraph>
         <SectionHeading id="invite">Invite</SectionHeading>
         <CardRow>
-        <Card
-      wave="RM"
-      buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
-      title="Invite"
-      subtext="Invite RSM to your server"
-      buttons={[
-          {color: "F27878", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
-      ]}
+          <Card
+            wave="rsm"
+            icon="bots/rsm/normal"
+            buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
+            title="Invite"
+            subtext="Invite RSM to your server"
+            buttons={[
+                {color: "F27878", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
+            ]}
           />
         </CardRow>
       </AutoSpacing>

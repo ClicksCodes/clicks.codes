@@ -46,7 +46,7 @@ export default class Form extends Component {
                     name={this.form.name}
                     subtext={this.form.description + (this.form.active ? '' : <><br />This form is not accepting responses. Please check back later</>)}
                     gradient={["71AFE5", "6576CC"]}
-                    wave="CF"
+                    wave="web/waves/header/clicksforms"
                     buttons={[]}
                 />
                 <div id="start" />

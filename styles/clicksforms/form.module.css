@@ -63,6 +63,7 @@
 .input {
     background-color: var(--card-background-color);
     border: solid 3px var(--card-border-color);
+    color: var(--card-text-color);
     padding-block: 5px;
     padding-inline: 5px;
     border-radius: 7px;

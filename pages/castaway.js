@@ -15,7 +15,7 @@ export default function Home() {
         name="Castaway"
         subtext="Stranded on Discord"
         gradient={["71AFE5", "78ECF2"]}
-        wave="CA"
+        wave="web/waves/header/castaway"
         buttons={[
           {color: "78ECF2", buttonText: "000000", link: "#timeline", text: "Timeline"}
         ]}

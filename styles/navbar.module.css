@@ -12,6 +12,7 @@
 
     width: 64px;
     max-height: 64px;
+    padding-bottom: -1px;
     height: auto;
 
     border-radius: 32px;
@@ -46,6 +47,7 @@
 .icon {
     height: 50px;
     width: 50px;
+    border-radius: 50vw;
     margin-bottom: 5px;
     cursor: pointer;
     display: block;

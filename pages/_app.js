@@ -26,7 +26,7 @@ const theme = {
                 cardText: '#424242',
                 cardBackground: 'rgba(0, 0, 0, 0.65)',
                 cardBorder: '#424242',
-                cardFilter: 'brightness(0.7)',
+                cardFilter: 'brightness(0.5)',
                 cardOverlay: '#42424280',
                 hint: '#101010',
             }

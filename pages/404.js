@@ -14,7 +14,7 @@ export default class Home extends Component {
 				name="404"
 				subtext="Not Found"
 				gradient={["6576CC", "4B5899"]}
-				wave="Main"
+				wave="web/waves/header/cmp"
 				buttons={[
 					{color: "6576CC", buttonText: "ffffff", text: "Go Home", link: "/#"},
 					{color: "6576CC", buttonText: "ffffff", text: "Send Error",
