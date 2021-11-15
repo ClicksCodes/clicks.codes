@@ -7,16 +7,16 @@ import Subheading from '../Components/Subheading'
 import Paragraph from '../Components/Paragraph'
 import CardRow from '../Components/CardRow'
 
-import FeatureImages from '../public/Features/RSM/Images.svg';
-import FeatureAutomate from '../public/Features/RSM/Automate.svg';
-import FeatureCAPTCHA from '../public/Features/RSM/CAPTCHA.svg';
-import FeatureDeveloped from '../public/Features/RSM/Developed.svg';
-import FeatureLogging from '../public/Features/RSM/Logging.svg';
-import FeatureNSFW from '../public/Features/RSM/NSFW.svg';
-import FeaturePunish from '../public/Features/RSM/Punish.svg';
-import FeatureRaids from '../public/Features/RSM/Raids.svg';
-import FeatureStatistics from '../public/Features/RSM/Statistics.svg';
-import FeatureTags from '../public/Features/RSM/Tags.svg';
+// import FeatureImages from '../public/Features/RSM/Images.svg';
+// import FeatureAutomate from '../public/Features/RSM/Automate.svg';
+// import FeatureCAPTCHA from '../public/Features/RSM/CAPTCHA.svg';
+// import FeatureDeveloped from '../public/Features/RSM/Developed.svg';
+// import FeatureLogging from '../public/Features/RSM/Logging.svg';
+// import FeatureNSFW from '../public/Features/RSM/NSFW.svg';
+// import FeaturePunish from '../public/Features/RSM/Punish.svg';
+// import FeatureRaids from '../public/Features/RSM/Raids.svg';
+// import FeatureStatistics from '../public/Features/RSM/Statistics.svg';
+// import FeatureTags from '../public/Features/RSM/Tags.svg';
 
 export default function Home() {
   return (
