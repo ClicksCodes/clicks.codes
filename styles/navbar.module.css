@@ -47,6 +47,7 @@
 .icon {
     height: 50px;
     width: 50px;
+    border-radius: 50vw;
     margin-bottom: 5px;
     cursor: pointer;
     display: block;
