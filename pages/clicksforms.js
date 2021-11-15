@@ -25,14 +25,14 @@ export default function Home() {
       <AutoSpacing>
         <SectionHeading id="features">Features</SectionHeading>
           <TileRow divless={true}>
-            <img alt="Anonymous forms"       src="/Features/ClicksForms/Anonymous.svg" />
-            <img alt="Discord buttons"       src="/Features/ClicksForms/Buttons.svg" />
-            <img alt="Export formats"        src="/Features/ClicksForms/Export.svg" />
-            <img alt="Up to 25 Forms"        src="/Features/ClicksForms/Forms.svg" />
-            <img alt="Multiple Choice"       src="/Features/ClicksForms/Multichoice.svg" />
-            <img alt="Up to 25 questions"    src="/Features/ClicksForms/Questions.svg" />
-            <img alt="Many question types"   src="/Features/ClicksForms/Types.svg" />
-            <img alt="Easily view responses" src="/Features/ClicksForms/Responses.svg" />
+            <img alt="Anonymous forms"       src="https://assets.clicksminuteper.net/web/features/clicksforms/Anonymous.svg" />
+            <img alt="Discord buttons"       src="https://assets.clicksminuteper.net/web/features/clicksforms/Buttons.svg" />
+            <img alt="Export formats"        src="https://assets.clicksminuteper.net/web/features/clicksforms/Export.svg" />
+            <img alt="Up to 25 Forms"        src="https://assets.clicksminuteper.net/web/features/clicksforms/Forms.svg" />
+            <img alt="Multiple Choice"       src="https://assets.clicksminuteper.net/web/features/clicksforms/Multichoice.svg" />
+            <img alt="Up to 25 questions"    src="https://assets.clicksminuteper.net/web/features/clicksforms/Questions.svg" />
+            <img alt="Many question types"   src="https://assets.clicksminuteper.net/web/features/clicksforms/Types.svg" />
+            <img alt="Easily view responses" src="https://assets.clicksminuteper.net/web/features/clicksforms/Responses.svg" />
           </TileRow>
           <SectionHeading id="commands">Commands</SectionHeading>
           <Paragraph><code>/accept</code>: Completes a form you are asked to fill in</Paragraph>
