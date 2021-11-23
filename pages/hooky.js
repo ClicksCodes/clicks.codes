@@ -26,7 +26,7 @@ export default function Home() {
         <CardRow>
           <Card
             wave="hooky"
-            icon="bots/hooky/normal"
+            icon="bots/hooky/circle"
             buttonText={"000000"} gradient={["424242", "8D8D8D"]}
             title="Invite"
             subtext="Invite Hooky to your server"

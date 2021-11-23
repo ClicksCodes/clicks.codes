@@ -32,7 +32,7 @@
 .panel {
     position: absolute;
 	overflow: hidden;
-	width: min(76%, 800px);
+	width: min(75vw, calc(auto + 50vw));
 	height: auto;
 	border-radius: 16.5px;
 	background-color: var(--theme-ui-colors-cardBackground);

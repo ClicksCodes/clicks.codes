@@ -9,10 +9,10 @@ const Validate = (req, res) => {
     return new Promise((resolve, reject) => {
         MongoClient.connect(url, async function(err, client) {
             let db_response = await client.db(db).collection(collection).findOne({code: req.body.code});
-            
+
             if (!db_response) return resolve(res.status(404).end());
             if (db_response.timestamp + (1800) >= Date.now()) return resolve(res.status(410));
-            
+
             let props = {
                 user: db_response.user,
                 role: db_response.role,

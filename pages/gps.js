@@ -78,7 +78,7 @@ export default function Home() {
         <CardRow>
           <Card
             wave="gps"
-            icon="bots/gps/normal"
+            icon="bots/gps/circle"
             buttonText={"FFFFFF"} gradient={["78ECF2", "71AFE5"]}
             title="Invite"
             subtext="Invite GPS to your server"

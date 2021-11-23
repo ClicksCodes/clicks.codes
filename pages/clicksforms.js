@@ -49,7 +49,7 @@ export default function Home() {
           <CardRow>
           <Card
             wave="clicksforms"
-            icon="bots/clicksforms/normal"
+            icon="bots/clicksforms/circle"
             buttonText={"FFFFFF"} gradient={["71AFE5", "6576CC"]}
             title="Invite"
             subtext="Invite ClicksForms to your server"
