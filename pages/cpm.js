@@ -3,6 +3,7 @@ import CardRow from '../Components/CardRow'
 import Header from '../Components/Header'
 import AutoSpacing from '../Components/AutoSpacing'
 import SectionHeading from '../Components/SectionHeading'
+import Paragraph from '../Components/Paragraph'
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       />
       <p id="start" />
       <AutoSpacing>
+        <SectionHeading>This page is a joke</SectionHeading>
+        <Paragraph>This website is a joke. Our main homepage is <a href="/">here</a>.</Paragraph>
         <SectionHeading>OUr stuff</SectionHeading>
         <CardRow>
           <Card
