@@ -54,11 +54,11 @@ class NavBar extends Component {
             <>
                 <div ref={this.hoverSensor} className={this.isTouchDevice ? (Styles.container + " " + (this.state.isOpen ? Styles.containerOpen : null)) : Styles.containerDesktop + " " + Styles.container}>
                     <div className={Styles.group}>
-                        <img alt="CMP" className={Styles.headerIcon} src="https://assets.clicksminuteper.net/company/logo/normal.svg" onClick={() => {this.onClick()}}/>
+                        <img alt="CMP" className={Styles.headerIcon} src="https://assets.clicksminuteper.net/company/logo/circle.svg" onClick={() => {this.onClick()}}/>
                         <a href="/#"><img alt="Home" className={Styles.icon} src="https://assets.clicksminuteper.net/web/icons/home.svg"/></a>
-                        <a href="/gps#"><img alt="GPS" className={Styles.icon} src="https://assets.clicksminuteper.net/bots/gps/normal.svg"/></a>
-                        <a href="/rsm#"><img alt="RSM" className={Styles.icon} src="https://assets.clicksminuteper.net/bots/rsm/normal.svg"/></a>
-                        <a href="/clicksforms#"><img alt="ClicksForms" className={Styles.icon} src="https://assets.clicksminuteper.net/bots/clicksforms/normal.svg"/></a>
+                        <a href="/gps#"><img alt="GPS" className={Styles.icon} src="https://assets.clicksminuteper.net/bots/gps/circle.svg"/></a>
+                        <a href="/rsm#"><img alt="RSM" className={Styles.icon} src="https://assets.clicksminuteper.net/bots/rsm/circle.svg"/></a>
+                        <a href="/clicksforms#"><img alt="ClicksForms" className={Styles.icon} src="https://assets.clicksminuteper.net/bots/clicksforms/circle.svg"/></a>
                         {/* <a href="/castaway#"><img className={Styles.icon} src="/Icons/CA.svg"/></a> */}
                         {/* <a href="https://clcks.dev"><img className={Styles.icon} src="/Icons/CL.svg"/></a> */}
                     </div>

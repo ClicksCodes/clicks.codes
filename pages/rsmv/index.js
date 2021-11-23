@@ -63,7 +63,13 @@ class RSMV extends Component {
     render() {
         return <>
             <Header
-                name={<><img alt="Server icon" style={{borderRadius: "50%", height: "128px", width: "auto"}} src={this.props.guild_icon_url} /><br />{this.props.guild_name}</>}
+                name={
+                    <>
+                        <img alt="Server icon" style={{borderRadius: "50%", height: "64px", width: "auto"}} src={this.props.guild_icon_url} />
+                        <br />
+                        {this.props.guild_name}
+                    </>
+                }
                 nameOverwrite="Verify"
                 subtext={` ${this.props.memberCount} members`}
                 gradient={["F27878", "D96B6B"]}
@@ -77,6 +83,7 @@ class RSMV extends Component {
                         id="Captchas mitigate problems"
                         sitekey="85074411-fa13-4d9b-b901-53095c6d1fc6"
                         onVerify={token => this.handleVerificationSuccess(this, token)}
+                        theme={this.theme ? "light" : "dark"}
                     />
                     <button type="button" className={Styles.button + " " + (this.state.captchaComplete ? Styles.buttonComplete : null)} onClick={(success) => this.submitForm(this)}>Proceed</button>
                     <p className={Styles.text}>

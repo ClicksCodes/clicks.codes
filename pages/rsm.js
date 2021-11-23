@@ -90,12 +90,12 @@ export default function Home() {
         <CardRow>
           <Card
             wave="rsm"
-            icon="bots/rsm/normal"
+            icon="bots/rsm/circle"
             buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
             title="Invite"
             subtext="Invite RSM to your server"
             buttons={[
-                {color: "F27878", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
+                {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
             ]}
           />
         </CardRow>
