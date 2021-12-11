@@ -1,7 +1,6 @@
 .backgroundImage {
 	position: absolute;
 	bottom: -10px;
-	left: -3px;
 	width: calc(100% + 6px);
 	border-radius: 0 0 16.5px 16.5px;
 	filter: var(--theme-ui-colors-cardFilter);
@@ -19,7 +18,7 @@
 
 .header {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 	overflow: hidden;
 	transition: filter 0.3s ease-in-out;
@@ -30,10 +29,9 @@
 }
 
 .panel {
-    position: absolute;
+    position: relative;
 	overflow: hidden;
-	width: min(75vw, calc(auto + 50vw));
-	height: auto;
+	width: min(calc(100vw - 40px), 1000px);
 	border-radius: 16.5px;
 	background-color: var(--theme-ui-colors-cardBackground);
 	transition: background-color 0.3s ease-in-out;
@@ -42,7 +40,8 @@
 	padding-bottom: 40px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 10%;
+	margin-top: 20px;
+	margin-bottom: 20vh;
 }
 
 .title {
@@ -51,7 +50,7 @@
     font-weight: 100;
 	margin-top: 0px;
 	margin-bottom: -20px;
-    font-size: max(2em, 4vw);
+    font-size: 3em;
     color: var(--theme-ui-colors-text);
 	transition: color 0.3s ease-in-out;
 	word-break: break-word;
@@ -62,13 +61,14 @@
     width: 100%;
     text-align: center;
     font-weight: 100;
-    font-size: max(1.5em, 1.5vw);
+    font-size: 1.5em;
+	margin-top: 50px;
     color: var(--theme-ui-colors-text);
 	transition: color 0.3s ease-in-out;
 }
 
 .subtextExtra {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 @keyframes arrow-slide {
@@ -92,7 +92,7 @@
 
 .arrowSpan {
     position: absolute;
-    bottom: 100px;
+    bottom: min(10vh, 1em);
     width: 100%;
     text-align: center;
 }

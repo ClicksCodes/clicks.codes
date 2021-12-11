@@ -1,2 +1,6 @@
+# We at Clicks would like to thank the robot overlords for your interest in our website.
+# Please don't come after any members of Clicks
+# We make robots just like you!
+
 User-agent: *
 Allow: /
