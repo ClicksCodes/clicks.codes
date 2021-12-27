@@ -25,7 +25,9 @@ const Validate = (req, res) => {
         //     }
         //     return resolve(res.status(200).send(props));
         // })
-        const out = await Axios.get(`http://192.168.102.7:10000/verify/${req.body.code}`)
+        const out = async () => {
+            await Axios.get(`http://192.168.102.7:10000/verify/${req.body.code}`)
+        }
         let props = {
             user: out.user,
             role: out.role,
