@@ -15,7 +15,9 @@ const Validate = async (req, res) => {
         }
         return res.status(200).send(props)
     } catch (err) {
-            return res.status(400)
+        return res.status(400)
+    } finally {
+        return res.status(400)
     }
 }
 
