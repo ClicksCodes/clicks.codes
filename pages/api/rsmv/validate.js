@@ -18,10 +18,10 @@ const Validate = async (req, res) => {
         return res.status(200).send(props)
     } catch (err) {
         console.log(4001)
-        return res.status(400)
+        return res.sendstatus(400)
     } finally {
         console.log(4002)
-        return res.status(400)
+        return res.sendstatus(400)
     }
 }
 
