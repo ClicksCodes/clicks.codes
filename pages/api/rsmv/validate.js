@@ -19,9 +19,6 @@ const Validate = async (req, res) => {
     } catch (err) {
         console.log(4001)
         return res.status(400).end()
-    } finally {
-        console.log(4002)
-        return res.status(400).end()
     }
 }
 
