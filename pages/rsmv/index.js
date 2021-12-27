@@ -110,26 +110,24 @@ export async function getServerSideProps(ctx) {
     }
     try {
         let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:ctx.query.code});
-        let headers = ctx.req.headers;
+        return {
+            props: {
+                uID: code.data.user,
+                rID: code.data.role,
+                role_name: code.data.role_name,
+                gID: code.data.guild,
+                guild_name: code.data.guild_name,
+                guild_icon_url: code.data.guild_icon_url,
+                memberCount: code.data.guild_size,
+                code: ctx.query.code
+            }
+        }
     } catch (err) {
         return {
             redirect: {
                 destination: '/rsmv/failure',
                 permanent: true
             }
-        }
-    }
-    return {
-        props: {
-            uID: code.data.user,
-            rID: code.data.role,
-            role_name: code.data.role_name,
-            gID: code.data.guild,
-            guild_name: code.data.guild_name,
-            guild_icon_url: code.data.guild_icon_url,
-            memberCount: code.data.guild_size,
-            headers: headers,
-            code: ctx.query.code
         }
     }
 }
