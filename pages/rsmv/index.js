@@ -108,9 +108,10 @@ export async function getServerSideProps(ctx) {
             }
         }
     }
-    let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:ctx.query.code});
-    let headers = ctx.req.headers;
-    if (code.status != 200 ) {
+    try {
+        let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:ctx.query.code});
+        let headers = ctx.req.headers;
+    } catch (err) {
         return {
             redirect: {
                 destination: '/rsmv/failure',
