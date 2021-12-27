@@ -1,11 +1,8 @@
 import Axios from 'axios';
 
 const Validate = async (req, res) => {
+    try {
         var out = await Axios.get(`http://192.168.102.7:10000/verify/${req.body.code}`)
-        console.log(out.status)
-        if ( out.status !== 200 ) {
-            return res.status(400)
-        }
         out = out.data
         let props = {
             user: out.user,
@@ -17,6 +14,9 @@ const Validate = async (req, res) => {
             guild_size: out.guild_size
         }
         return res.status(200).send(props)
+    } catch (err) {
+            return res.status(400)
+    }
 }
 
 export default Validate;
