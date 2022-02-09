@@ -19,7 +19,7 @@ const ThemeChangeButton = () => {
                 setColorMode(colorMode === 'light' ? 'dark' : 'light');
             }}>
             {
-                !render ? null : (colorMode == 'light' ? <img src="https://assets.clicksminuteper.net/web/icons/light.svg" /> : <img src="https://assets.clicksminuteper.net/web/icons/dark.svg" />)
+                !render ? null : (colorMode == 'light' ? <img alt="Light" src="https://assets.clicksminuteper.net/web/icons/light.svg" /> : <img alt="Dark" src="https://assets.clicksminuteper.net/web/icons/dark.svg" />)
             }
             </a>
         </header>

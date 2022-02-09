@@ -42,7 +42,7 @@ class Header extends Component {
                                     style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
                                     href={button.link}
                                     target={button.target ? "_blank" : null}
-                                    rel="noopener">
+                                    rel="noreferrer">
                                     {button.text}
                                 </a>
                             }) : null

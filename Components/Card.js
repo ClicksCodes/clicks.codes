@@ -30,7 +30,7 @@ class Card extends Component {
                                     style={{backgroundColor:`#${button.color}`, color:`#${this.props.buttonText}`}}
                                     href={button.link}
                                     target={button.newTab ? "_blank" : undefined}
-                                    rel="noopener">{button.text}
+                                    rel="noreferrer">{button.text}
                                 </a>
                             }) : null
                         }
