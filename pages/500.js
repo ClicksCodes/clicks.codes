@@ -22,6 +22,7 @@ export default class Home extends Component {
 						target: true
 				}]}
         		hideArrow={true}
+				fullscreen={true}
 			/>
 			</>
 		)

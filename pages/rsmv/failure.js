@@ -15,6 +15,7 @@ class Failed extends Component {
                 wave="web/waves/header/rsm"
                 buttons={[]}
                 hideArrow={true}
+                fullscreen={true}
             />
         )
     }

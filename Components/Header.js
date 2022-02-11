@@ -11,7 +11,8 @@ class Header extends Component {
     render() {
         return (
             <div className={Styles.header} style={{
-                margin: "0"
+                margin: "0",
+                minHeight: this.props.fullscreen ? "100vh" : "90vh"
             }} id={this.props.id ? this.props.id : null}>
                 <div className={Styles.backgroundGradient} style={{
                     backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,

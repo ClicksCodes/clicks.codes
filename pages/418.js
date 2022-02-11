@@ -17,6 +17,7 @@ export default class Home extends Component {
 				wave="web/waves/header/rsm"
 				buttons={[{color: "F27878", buttonText: "ffffff", text: "Go Home", link: "/#"}]}
         		hideArrow={true}
+				fullscreen={true}
 			/>
 			</>
 		)
