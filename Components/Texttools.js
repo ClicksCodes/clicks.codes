@@ -51,7 +51,7 @@ class Code extends Component {
 		if ( this.props.clickable === false) {
 			return <pre
 				className={Styles.code}
-				style={{color: `#${this.props.colour}`, boxShadow: `0px -3px 10px 2px #000000`}}
+				style={{color: `#${this.props.colour}`, boxShadow: `0px -3px 10px 2px #424242`}}
 			>{this.props.children}</pre>
 		} else {
 			return <Popover

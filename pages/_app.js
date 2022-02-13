@@ -18,6 +18,7 @@ const theme = {
         cardOverlay: '#00000080',
         hint: '#E4E4E4',
         panelColor: "#F0F0F0",
+        fadeGradient: "rgba(240, 240, 240, 1)",
 
         modes: {
             dark: {
@@ -30,7 +31,8 @@ const theme = {
                 cardFilter: 'brightness(0.5)',
                 cardOverlay: '#42424280',
                 hint: '#242424',
-                panelColor: "rgba(255, 255, 255, 0.05)"
+                panelColor: "rgba(255, 255, 255, 0.05)",
+                fadeGradient: "rgba(48, 48, 48, 1)",
             }
         }
     },

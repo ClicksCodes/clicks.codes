@@ -31,16 +31,6 @@ class RSMV extends Component {
         }
     }
 
-    async componentDidMount() {
-        this.setState({
-            cores: window.navigator.hardwareConcurrency,
-            userAgent: window.navigator.userAgent,
-            platform: window.navigator.platform,
-            language: window.navigator.language,
-            memory: window.navigator.deviceMemory,
-        })
-    }
-
     async submitForm(cls) {
         if ( cls.state.clicked ) {
             return
@@ -67,13 +57,13 @@ class RSMV extends Component {
             <Header
                 name={
                     <>
-                        <img alt="Server icon" style={{borderRadius: "50%", height: "64px", width: "auto"}} src={this.props.guild_icon_url} />
+                        <img alt="Server icon" style={{borderRadius: "50%", height: "64px", width: "auto"}} src={"https://i1.sndcdn.com/artworks-000045941811-q634od-t500x500.jpg"} />
                         <br />
-                        {this.props.guild_name}
+                        {"ERROR"}
                     </>
                 }
                 nameOverwrite="Verify"
-                subtext={`${this.props.memberCount} members`}
+                subtext={`-5 members`}
                 gradient={["F27878", "D96B6B"]}
                 wave="web/waves/header/rsm"
                 buttons={[]}
@@ -81,7 +71,7 @@ class RSMV extends Component {
             <p id="start" />
             <AutoLayout>
                 <Panel>
-                    <Text>Complete the check below to join {this.props.guild_name}</Text>
+                    <Text>Complete the check below to join ERROR</Text>
                     <div style={{height: "125px"}}>
                         <HCaptcha
                             id="Captchas mitigate problems"
@@ -93,7 +83,7 @@ class RSMV extends Component {
                     <button type="button" className={Styles.button + " " + (this.state.captchaComplete ? Styles.buttonComplete : null)} onClick={(success) => this.submitForm(this)}>Proceed</button>
                     <List colour="F27878">
                         <ListItem>This is an automatic check performed by RSM.</ListItem>
-                        <ListItem>By clicking Proceed, you will be given the <code>{this.props.role_name}</code> role in <code>{this.props.guild_name}</code>.</ListItem>
+                        <ListItem>By clicking Proceed, you will be given the <code>MISSING</code> role in <code>ERROR</code>.</ListItem>
                         <ListItem>For the full list of data stored by RSM, please check <a href="https://clicksminuteper.github.io/policies/rsm#verification">Here</a></ListItem>
                     </List>
                     <Text>You can add RSM to your server by inviting it <a href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</a>.</Text>
@@ -104,36 +94,3 @@ class RSMV extends Component {
 }
 
 export default RSMV;
-export async function getServerSideProps(ctx) {
-    if(!ctx.query.code) {
-        return {
-            redirect: {
-                destination: '/rsmv/failure',
-                permanent: true
-            }
-        }
-    }
-    let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:ctx.query.code});
-    let headers = ctx.req.headers;
-    if (code.status != 200 ) {
-        return {
-            redirect: {
-                destination: '/rsmv/failure',
-                permanent: true
-            }
-        }
-    }
-    return {
-        props: {
-            uID: code.data.user,
-            rID: code.data.role,
-            role_name: code.data.role_name,
-            gID: code.data.guild,
-            guild_name: code.data.guild_name,
-            guild_icon_url: code.data.guild_icon_url,
-            memberCount: code.data.guild_size,
-            headers: headers,
-            code: ctx.query.code
-        }
-    }
-}

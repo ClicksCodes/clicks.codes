@@ -16,8 +16,8 @@ export default function Home() {
       />
       <AutoLayout>
         <Panel halfSize={false} id="timeline">
-          <Divider />
           <Title>Under Development</Title>
+          <Divider />
           <Text>This bot is still in development, please check back later</Text>
         </Panel>
       </AutoLayout>
