@@ -1,10 +1,9 @@
 import Card from '../Components/Card'
-import TileRow from '../Components/TileRow'
+import CardRow from '../Components/CardRow';
 import Header from '../Components/Header'
-import AutoSpacing from '../Components/AutoSpacing'
-import SectionHeading from '../Components/SectionHeading'
-import Paragraph from '../Components/Paragraph'
-import CardRow from '../Components/CardRow'
+import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
+import { List, ListItem, Code } from '../Components/Texttools';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -15,39 +14,38 @@ export default function Home() {
         gradient={["71AFE5", "6576CC"]}
         wave="web/waves/header/clicksforms"
         buttons={[
-          {color: "6576CC", buttonText: "FFFFFF", link: "#features", text: "Features"},
+          // {color: "6576CC", buttonText: "FFFFFF", link: "#features", text: "Features"},
           {color: "6576CC", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
           {color: "6576CC", buttonText: "FFFFFF", link: "#services", text: "Services"},
           {color: "775EBF", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
         hideArrow={true}
       />
-      <AutoSpacing>
-        <SectionHeading id="features">Features</SectionHeading>
-          <TileRow divless={true}>
-            <img alt="Anonymous forms"       src="https://assets.clicksminuteper.net/web/features/clicksforms/Anonymous.svg" />
-            <img alt="Discord buttons"       src="https://assets.clicksminuteper.net/web/features/clicksforms/Buttons.svg" />
-            <img alt="Export formats"        src="https://assets.clicksminuteper.net/web/features/clicksforms/Export.svg" />
-            <img alt="Up to 25 Forms"        src="https://assets.clicksminuteper.net/web/features/clicksforms/Forms.svg" />
-            <img alt="Multiple Choice"       src="https://assets.clicksminuteper.net/web/features/clicksforms/Multichoice.svg" />
-            <img alt="Up to 25 questions"    src="https://assets.clicksminuteper.net/web/features/clicksforms/Questions.svg" />
-            <img alt="Many question types"   src="https://assets.clicksminuteper.net/web/features/clicksforms/Types.svg" />
-            <img alt="Easily view responses" src="https://assets.clicksminuteper.net/web/features/clicksforms/Responses.svg" />
-          </TileRow>
-          <SectionHeading id="commands">Commands</SectionHeading>
-          <Paragraph><code>/accept</code>: Completes a form you are asked to fill in</Paragraph>
-          <Paragraph><code>/apply</code>: Apply to a form</Paragraph>
-          <Paragraph><code>/create</code>: Creates a new form</Paragraph>
-          <Paragraph><code>/download</code>: Downloads a form from a service e.g. Google Forms</Paragraph>
-          <Paragraph><code>/help</code>: Lists all commands</Paragraph>
-          <Paragraph><code>/responses</code>: Lets you view responses to your servers form</Paragraph>
-          <Paragraph><code>/manage</code>: Lets you manage your servers forms</Paragraph>
-          <SectionHeading id="services">Services</SectionHeading>
-          <Paragraph>ClicksForms support services like <a href="https://forms.google.com">Google Forms</a> through our Add-on</Paragraph>
-          <Paragraph>Our API is public. You can view it on <a href="https://clicksminuteper.github.io/docs/clicksforms">GitHub</a></Paragraph>
-          <SectionHeading id="invite">Invite</SectionHeading>
-          <CardRow>
-          <Card
+      <AutoLayout>
+        <Panel halfSize={true} id="commands">
+          <Title>Commands</Title>
+          <Divider />
+          <Text>Standard commands to use ClicksForms</Text>
+          <List colour="6576CC">
+            <ListItem><Code colour="6576CC">/accept</Code> Completes a form you are asked to fill in.</ListItem>
+            <ListItem><Code colour="6576CC">/apply</Code> Apply to a form.</ListItem>
+            <ListItem><Code colour="6576CC">/create</Code> Creates a new form.</ListItem>
+            <ListItem><Code colour="6576CC">/download</Code> Downloads a form from a service e.g. Google Forms.</ListItem>
+            <ListItem><Code colour="6576CC">/help</Code> Lists all commands.</ListItem>
+            <ListItem><Code colour="6576CC">/responses</Code> Lets you view responses to your servers form.</ListItem>
+            <ListItem><Code colour="6576CC">/manage</Code> Lets you manage your servers forms.</ListItem>
+          </List>
+        </Panel>
+        <Panel halfSize={true} id="services">
+          <Title>Services</Title>
+          <Divider />
+          <Text>ClicksForms supports services such as <a href="https://docs.google.com/forms">Google Forms</a> through our Add-on.</Text>
+          <Text>Our API is public. You can view it <Link href="/clicksforms/privacy">GitHub</Link>.</Text>
+        </Panel>
+        <Panel halfSize={true} id="invite">
+          <Title>Invite</Title>
+          <Divider />
+          <CardRow><Card
             wave="clicksforms"
             icon="bots/clicksforms/circle"
             buttonText={"FFFFFF"} gradient={["71AFE5", "6576CC"]}
@@ -56,11 +54,9 @@ export default function Home() {
             buttons={[
               {color: "775EBF", link: "https://discord.com/api/oauth2/authorize?client_id=805392054678192169&permissions=2416307200&scope=bot%20applications.commands", text: "Invite"}
             ]}
-          />
-          </CardRow>
-        <SectionHeading>Legal</SectionHeading>
-        <Paragraph>Our privacy policy can be viewed on <a href="https://clicksminuteper.net/clicksforms/privacy">GitHub</a></Paragraph>
-      </AutoSpacing>
+          /></CardRow>
+        </Panel>
+      </AutoLayout>
     </>
   )
 }

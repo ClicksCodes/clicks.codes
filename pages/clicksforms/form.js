@@ -1,7 +1,6 @@
 import Header from '../../Components/Header'
 import { Component } from 'react'
 import Styles from '../../styles/clicksforms/form.module.css';
-import Paragraph from '../../Components/Paragraph';
 import Question from '../../Components/ClicksForms/Question';
 
 export default class Form extends Component {

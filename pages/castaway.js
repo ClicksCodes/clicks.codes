@@ -1,12 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Card from '../Components/Card'
-import CardRow from '../Components/CardRow'
 import Header from '../Components/Header'
-import AutoSpacing from '../Components/AutoSpacing'
-import SectionHeading from '../Components/SectionHeading'
-import Paragraph from '../Components/Paragraph'
+import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
 export default function Home() {
   return (
@@ -21,10 +14,13 @@ export default function Home() {
         ]}
         hideArrow={true}
       />
-      <AutoSpacing>
-        <SectionHeading id="timeline">Development Timeline</SectionHeading>
-        <Paragraph>Under construction</Paragraph>
-      </AutoSpacing>
+      <AutoLayout>
+        <Panel halfSize={false} id="timeline">
+          <Divider />
+          <Title>Under Development</Title>
+          <Text>This bot is still in development, please check back later</Text>
+        </Panel>
+      </AutoLayout>
     </>
   )
 }

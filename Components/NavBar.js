@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Styles from '../styles/navbar.module.css';
+import Styles from '../styles/Components/navbar.module.css';
 import ThemeChangeButton from './ThemeChangeButton';
 
 

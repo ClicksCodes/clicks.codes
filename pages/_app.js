@@ -16,7 +16,8 @@ const theme = {
         cardBorder: '#C4C4C4',
         cardFilter: 'rgba(0, 0, 0, 0)',
         cardOverlay: '#00000080',
-        hint: '#f1f1f1',
+        hint: '#E4E4E4',
+        panelColor: "#F0F0F0",
 
         modes: {
             dark: {
@@ -28,7 +29,8 @@ const theme = {
                 cardBorder: '#424242',
                 cardFilter: 'brightness(0.5)',
                 cardOverlay: '#42424280',
-                hint: '#101010',
+                hint: '#242424',
+                panelColor: "rgba(255, 255, 255, 0.05)"
             }
         }
     },

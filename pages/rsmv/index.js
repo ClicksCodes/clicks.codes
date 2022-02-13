@@ -6,6 +6,8 @@ import Router from 'next/router';
 import React from 'react';
 import Header from '../../Components/Header'
 
+import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../../Components/Panels';
+import { List, ListItem, Code } from '../../Components/Texttools';
 class RSMV extends Component {
 
     constructor(props) {
@@ -76,9 +78,10 @@ class RSMV extends Component {
                 wave="web/waves/header/rsm"
                 buttons={[]}
             />
-            <div id="start">
-                <div className={Styles.center}>
-                    <p className={Styles.text}>Complete the check below to join {this.props.guild_name}</p>
+            <p id="start" />
+            <AutoLayout>
+                <Panel>
+                    <Text>Complete the check below to join {this.props.guild_name}</Text>
                     <HCaptcha
                         id="Captchas mitigate problems"
                         sitekey="85074411-fa13-4d9b-b901-53095c6d1fc6"
@@ -86,14 +89,14 @@ class RSMV extends Component {
                         theme={this.theme ? "light" : "dark"}
                     />
                     <button type="button" className={Styles.button + " " + (this.state.captchaComplete ? Styles.buttonComplete : null)} onClick={(success) => this.submitForm(this)}>Proceed</button>
-                    <p className={Styles.text}>
-                        This is an automatic check performed by RSM.
-                        By clicking Proceed, you will be given the <code>{this.props.role_name}</code> role in <code>{this.props.guild_name}</code>.
-                    </p>
-                    <br />
-                    <p>You can add RSM to your server by inviting it <a href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</a>.</p>
-                </div>
-            </div>
+                    <List>
+                        <ListItem>This is an automatic check performed by RSM.</ListItem>
+                        <ListItem>By clicking Proceed, you will be given the <code>{this.props.role_name}</code> role in <code>{this.props.guild_name}</code>.</ListItem>
+                        <ListItem>For the full list of data stored by RSM, please check <a href="https://clicksminuteper.github.io/policies/rsm#verification">Here</a></ListItem>
+                    </List>
+                    <Text>You can add RSM to your server by inviting it <a href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</a>.</Text>
+                </Panel>
+            </AutoLayout>
         </>
     }
 }

@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import { useColorMode } from 'theme-ui';
-import Styles from '../styles/navbar.module.css';
+import Styles from '../styles/Components/navbar.module.css';
 import { useState, useEffect } from 'react';
 
 

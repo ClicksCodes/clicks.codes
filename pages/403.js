@@ -10,15 +10,15 @@ export default class Home extends Component {
 	render() {
 		return (
 			<>
-			<Header
-				name="403"
-				subtext="Forbidden - You do not have the correct permissions to view this page"
-				gradient={["F27878", "D96B6B"]}
-				wave="web/waves/header/rsm"
-				buttons={[{color: "F27878", buttonText: "ffffff", text: "Go Home", link: "/#"}]}
-        		hideArrow={true}
-				fullscreen={true}
-			/>
+				<Header
+					name="403"
+					subtext="Forbidden - You do not have the correct permissions to view this page"
+					gradient={["F27878", "D96B6B"]}
+					wave="web/waves/header/rsm"
+					buttons={[{color: "F27878", buttonText: "ffffff", text: "Go Home", link: "/#"}]}
+					hideArrow={true}
+					fullscreen={true}
+				/>
 			</>
 		)
 	}

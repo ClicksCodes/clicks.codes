@@ -1,10 +1,7 @@
 import Card from '../Components/Card'
-import TileRow from '../Components/TileRow'
 import Header from '../Components/Header'
-import AutoSpacing from '../Components/AutoSpacing'
-import SectionHeading from '../Components/SectionHeading'
-import Subheading from '../Components/Subheading'
-import Paragraph from '../Components/Paragraph'
+import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
+import { List, ListItem, Code } from '../Components/Texttools';
 import CardRow from '../Components/CardRow'
 
 // import FeatureImages from '../public/Features/RSM/Images.svg';
@@ -27,79 +24,86 @@ export default function Home() {
         gradient={["F27878", "D96B6B"]}
         wave="web/waves/header/rsm"
         buttons={[
-          {color: "424242", buttonText: "FFFFFF", link: "#features", text: "Features"},
+          // {color: "424242", buttonText: "FFFFFF", link: "#features", text: "Features"},
           {color: "424242", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
           {color: "F27878", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
         hideArrow={true}
       />
-      <AutoSpacing>
-          <SectionHeading id="features">Features</SectionHeading>
-          <Paragraph>For a full list of features, check our commands</Paragraph>
-          {/* <TileRow divless={false}>
-            <FeatureImages />
-            <FeatureAutomate />
-            <FeatureCAPTCHA />
-            <FeatureDeveloped />
-            <FeatureLogging />
-            <FeatureNSFW />
-            <FeaturePunish />
-            <FeatureRaids />
-            <FeatureStatistics />
-            <FeatureTags />
-          </TileRow> */}
-          <SectionHeading id="commands">Commands</SectionHeading>
-          <Paragraph><code>m!info</code>: Shows all commands and info.</Paragraph>
-          <Paragraph><code>m!stats</code>: Shows the bot statistics</Paragraph>
-          <Paragraph><code>m!settings</code>: Shows your servers log settings.</Paragraph>
-          <Paragraph><code>m!user</code>: Shows information about a user.</Paragraph>
-          <Paragraph><code>m!avatar</code>: Shows a users avatar.</Paragraph>
-          <Paragraph><code>m!roleall</code>: Role all humans or bots in the server.</Paragraph>
-          <Paragraph><code>m!suggest</code>: Sends a suggestion to add to the bot for voting.</Paragraph>
-          <Paragraph><code>m!ping</code>: Checks the bots ping time.</Paragraph>
-          <Paragraph><code>m!server</code>: Shows all information about your server.</Paragraph>
-          <Paragraph><code>m!tag</code>: m!tag create/delete title text, or m!tag title</Paragraph>
-          <Paragraph><code>m!role</code>: With Role: Shows information about a role.</Paragraph>
-          <Paragraph><code>m!role</code>: With Mention: Lets you edit or view a users roles.</Paragraph>
-          <Paragraph><code>m!viewas</code>: Shows the channels that a member can see.</Paragraph>
-          <Paragraph><code>m!verify</code>: Lets users verify in your server.</Paragraph>
-          <Paragraph><code>m!setverify</code>: Sets the role given when you m!verify. Name or ID.</Paragraph>
-          <Paragraph><code>m!mail</code>: Creates a modmail ticket if set up.</Paragraph>
-          <Paragraph><code>m!prefix</code>: Shows the bots prefix. Use @ if unknown.</Paragraph>
-          <Paragraph><code>m!setprefix</code>: Sets the bots prefix. You can always @ the bot.</Paragraph>
-          <Subheading>Moderation</Subheading>
-          <Paragraph><code>m!warn</code>: Warns a member.</Paragraph>
-          <Paragraph><code>m!clear</code>: Clears messages from a channel</Paragraph>
-          <Paragraph><code>m!kick</code>: Kicks a member.</Paragraph>
-          <Paragraph><code>m!softban</code>: Soft bans a member.</Paragraph>
-          <Paragraph><code>m!ban</code>: Bans a member.</Paragraph>
-          <Paragraph><code>m!unban</code>: Unbans a member.</Paragraph>
-          <Paragraph><code>m!purge</code>: Deletes messages in the channel.</Paragraph>
-          <Paragraph><code>m!punish</code>: Punishes a user.</Paragraph>
-          <Paragraph><code>m!setlog</code>: Sets the servers log channel.</Paragraph>
-          <Paragraph><code>m!ignore</code>: Stops logging users, roles and channels provided.</Paragraph>
-        <Paragraph><code>m!ignored</code>: Shows the ignored users, roles and channels.</Paragraph>
-        <Paragraph><code>m!stafflog</code>: Sets the staff log channel for reports and messages.</Paragraph>
-        <Paragraph><code>m!auto</code>: Lets you edit your server automations.</Paragraph>
-        <Paragraph><code>m!modmail</code>: Shows the setup for the mail command.</Paragraph>
-        <Subheading>Emergency</Subheading>
-        <Paragraph><code>m!slowmode</code>: Sets the channel slowmode.</Paragraph>
-        <Paragraph><code>m!lock</code>: Locks the channel. Applies slowmode and stops messages being sent.</Paragraph>
-        <Paragraph><code>m!unlock</code>: Unlocks the channel. Slowmode is removed and messages can be sent.</Paragraph>
-        <SectionHeading id="invite">Invite</SectionHeading>
-        <CardRow>
-          <Card
-            wave="rsm"
-            icon="bots/rsm/circle"
-            buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
-            title="Invite"
-            subtext="Invite RSM to your server"
-            buttons={[
-                {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
-            ]}
-          />
-        </CardRow>
-      </AutoSpacing>
+      <AutoLayout>
+        <Panel halfSize={true} id="commands">
+          <Title>Commands</Title>
+          <Divider />
+          <Text>Standard commands to use RSM</Text>
+          <List colour="F27878">
+            <ListItem><Code colour="F27878">m!info</Code> Shows all commands and info.</ListItem>
+            <ListItem><Code colour="F27878">m!stats</Code> Shows the bot statistics</ListItem>
+            <ListItem><Code colour="F27878">m!settings</Code> Shows your servers log settings.</ListItem>
+            <ListItem><Code colour="F27878">m!user</Code> Shows information about a user.</ListItem>
+            <ListItem><Code colour="F27878">m!avatar</Code> Shows a users avatar.</ListItem>
+            <ListItem><Code colour="F27878">m!roleall</Code> Role all humans or bots in the server.</ListItem>
+            <ListItem><Code colour="F27878">m!suggest</Code> Sends a suggestion to add to the bot for voting.</ListItem>
+            <ListItem><Code colour="F27878">m!ping</Code> Checks the bots ping time.</ListItem>
+            <ListItem><Code colour="F27878">m!server</Code> Shows all information about your server.</ListItem>
+            <ListItem><Code colour="F27878">m!tag</Code> m!tag create/delete title text, or m!tag title</ListItem>
+            <ListItem><Code colour="F27878">m!role</Code> With Role: Shows information about a role.</ListItem>
+            <ListItem><Code colour="F27878">m!role</Code> With Mention: Lets you edit or view a users roles.</ListItem>
+            <ListItem><Code colour="F27878">m!viewas</Code> Shows the channels that a member can see.</ListItem>
+            <ListItem><Code colour="F27878">m!verify</Code> Lets users verify in your server.</ListItem>
+            <ListItem><Code colour="F27878">m!setverify</Code> Sets the role given when you m!verify. Name or ID.</ListItem>
+            <ListItem><Code colour="F27878">m!mail</Code> Creates a modmail ticket if set up.</ListItem>
+            <ListItem><Code colour="F27878">m!prefix</Code> Shows the bots prefix. Use @ if unknown.</ListItem>
+            <ListItem><Code colour="F27878">m!setprefix</Code> Sets the bots prefix. You can always @ the bot.</ListItem>
+          </List>
+        </Panel>
+        <Panel halfSize={true}>
+          <Title>Moderation Commands</Title>
+          <Divider />
+          <Text>Moderation commands to set up systems and moderate users</Text>
+          <List colour="F27878">
+            <ListItem><Code colour="F27878">m!warn</Code> Warns a member.</ListItem>
+            <ListItem><Code colour="F27878">m!clear</Code> Clears messages from a channel</ListItem>
+            <ListItem><Code colour="F27878">m!kick</Code> Kicks a member.</ListItem>
+            <ListItem><Code colour="F27878">m!softban</Code> Soft bans a member.</ListItem>
+            <ListItem><Code colour="F27878">m!ban</Code> Bans a member.</ListItem>
+            <ListItem><Code colour="F27878">m!unban</Code> Unbans a member.</ListItem>
+            <ListItem><Code colour="F27878">m!purge</Code> Deletes messages in the channel.</ListItem>
+            <ListItem><Code colour="F27878">m!punish</Code> Punishes a user.</ListItem>
+            <ListItem><Code colour="F27878">m!setlog</Code> Sets the servers log channel.</ListItem>
+            <ListItem><Code colour="F27878">m!ignore</Code> Stops logging users, roles and channels provided.</ListItem>
+            <ListItem><Code colour="F27878">m!ignored</Code> Shows the ignored users, roles and channels.</ListItem>
+            <ListItem><Code colour="F27878">m!stafflog</Code> Sets the staff log channel for reports and messages.</ListItem>
+            <ListItem><Code colour="F27878">m!auto</Code> Lets you edit your server automations.</ListItem>
+            <ListItem><Code colour="F27878">m!modmail</Code> Shows the setup for the mail command.</ListItem>
+          </List>
+        </Panel>
+        <Panel halfSize={true}>
+          <Title>Emergency Commands</Title>
+          <Divider />
+          <Text>Moderation commands to set up systems and moderate users</Text>
+          <List colour="F27878">
+            <ListItem><Code colour="F27878">m!slowmode</Code> Sets the channel slowmode.</ListItem>
+            <ListItem><Code colour="F27878">m!lock</Code> Locks the channel. Applies slowmode and stops messages being sent.</ListItem>
+            <ListItem><Code colour="F27878">m!unlock</Code> Unlocks the channel. Slowmode is removed and messages can be sent.</ListItem>
+          </List>
+        </Panel>
+        <Panel halfSize={true} id="invite">
+          <Title>Invite</Title>
+          <Divider />
+          <CardRow>
+            <Card
+              wave="rsm"
+              icon="bots/rsm/circle"
+              buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
+              title="Invite"
+              subtext="Invite RSM to your server"
+              buttons={[
+                  {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
+              ]}
+            />
+          </CardRow>
+        </Panel>
+      </AutoLayout>
     </>
   )
 }

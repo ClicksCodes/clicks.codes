@@ -1,5 +1,5 @@
-import { Component } from "react";
-import Styles from '../styles/header.module.css';
+import { Component, useRef } from "react";
+import Styles from '../styles/Components/header.module.css';
 import Head from 'next/head';
 
 class Header extends Component {
@@ -12,7 +12,7 @@ class Header extends Component {
         return (
             <div className={Styles.header} style={{
                 margin: "0",
-                minHeight: this.props.fullscreen ? "100vh" : "90vh"
+                minHeight: this.props.fullscreen ? "100vh" : "calc(100vh - (2 * max(2em, 4vw)) - 1em)",
             }} id={this.props.id ? this.props.id : null}>
                 <div className={Styles.backgroundGradient} style={{
                     backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
