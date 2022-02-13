@@ -56,7 +56,7 @@ export default class Home extends React.Component {
             <Title>Services</Title>
             <Divider  bound={this.state.toHighlight} name="services"/>
             <Text>ClicksForms supports services such as <a href="https://docs.google.com/forms">Google Forms</a> through our Add-on.</Text>
-            <Text>Our API is public. You can view it <Link href="/clicksforms/privacy">GitHub</Link>.</Text>
+            <Text>Our API is public. You can view it <Link href="/clicksforms/docs">here</Link>.</Text>
           </Panel>
           <Panel halfSize={true} id="privacy">
             <Title>Privacy</Title>
