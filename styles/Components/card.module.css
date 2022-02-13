@@ -1,0 +1,120 @@
+.backgroundImage {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: calc(100% + 5px);
+	height: auto;
+	scale: stretch;
+	border-radius: 0;
+	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
+}
+
+.backgroundGradient {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	scale: stretch;
+	border-radius: 0;
+	filter: var(--theme-ui-colors-cardFilter);
+	transition: filter 0.3s ease-in-out;
+}
+
+.card {
+	border-radius: 17px;
+	width: 100%;
+	height: 204px;
+	padding-inline: 5px;
+	padding-bottom: 5px;
+	position: relative;
+	overflow: hidden;
+	margin: 100px;
+	transition: filter 0.3s ease-in-out;
+}
+
+
+.panel {
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 88%;
+	height: 76%;
+	top: 12%;
+	left: 6%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 17px;
+	background-color: var(--theme-ui-colors-cardBackground);
+	transition: background-color 0.3s ease-in-out;
+	backdrop-filter: blur(7px);
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 32px;
+	padding-inline: 10px;
+	margin-top: 10px;
+}
+
+.title {
+	font-weight: 100;
+	font-size: 25px;
+	margin-left: 1vw;
+	line-height: 24px;
+	max-lines: 2;
+	color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
+}
+
+.image {
+	height: 40px;
+	width: 40px;
+}
+
+.subtext {
+	width: 100%;
+	padding-inline: 10px;
+	text-align: center;
+	color: var(--theme-ui-colors-text);
+	transition: color 0.3s ease-in-out;
+}
+
+
+.buttonLayout {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0px;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+.button {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: right;
+	position: static;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+
+	margin: 5px;
+	padding: 5px 10px;
+	border-radius: 8px;
+}
+
+@media (max-width: 500px) {
+	.card {
+		height: 254px;
+	}
+}
