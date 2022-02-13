@@ -26,6 +26,7 @@ export default function Home() {
         buttons={[
           // {color: "424242", buttonText: "FFFFFF", link: "#features", text: "Features"},
           {color: "424242", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
+          {color: "424242", buttonText: "FFFFFF", link: "#privacy", text: "Privacy"},
           {color: "F27878", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
         hideArrow={true}
@@ -77,7 +78,7 @@ export default function Home() {
             <ListItem><Code colour="F27878">m!modmail</Code> Shows the setup for the mail command.</ListItem>
           </List>
         </Panel>
-        <Panel halfSize={true}>
+        <Panel halfSize={false}>
           <Title>Emergency Commands</Title>
           <Divider />
           <Text>Moderation commands to set up systems and moderate users</Text>
@@ -86,6 +87,11 @@ export default function Home() {
             <ListItem><Code colour="F27878">m!lock</Code> Locks the channel. Applies slowmode and stops messages being sent.</ListItem>
             <ListItem><Code colour="F27878">m!unlock</Code> Unlocks the channel. Slowmode is removed and messages can be sent.</ListItem>
           </List>
+        </Panel>
+        <Panel halfSize={true} id="privacy">
+          <Title>Privacy</Title>
+          <Divider />
+          <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/rsm">here</a> is the complete list.</Text>
         </Panel>
         <Panel halfSize={true} id="invite">
           <Title>Invite</Title>

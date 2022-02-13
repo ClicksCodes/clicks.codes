@@ -96,7 +96,8 @@ class Text extends Component {
 
 class Divider extends Component {
 	render() {
-		return <div className={Styles.divider}></div>
+		// return <div className={Styles.divider} style={{ backgroundColor: this.props.bound == this.props.name ? "red" : "var(--theme-ui-colors-hint)"}}></div>
+		return <div className={Styles.divider} style={{ backgroundColor: "var(--theme-ui-colors-hint)"}}></div>
 	}
 }
 

@@ -42,6 +42,7 @@ class Header extends Component {
                                     className={Styles.button}
                                     style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
                                     href={button.link}
+                                    onClick={() => { if (button.id) { this.props.callback(this.props.that, button.id) } }}
                                     target={button.target ? "_blank" : null}
                                     rel="noreferrer">
                                     {button.text}

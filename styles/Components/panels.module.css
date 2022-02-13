@@ -87,6 +87,5 @@
     height: 4px;
     border-radius: 100vw;
     margin-block: 10px;
-    background-color: var(--theme-ui-colors-hint);
     transition: background-color 0.3s ease-in-out;
 }

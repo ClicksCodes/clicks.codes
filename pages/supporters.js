@@ -116,7 +116,7 @@ export default function Home() {
                             )
                         })
                     }
-                    <Image src="/heart.svg" width={100} height={100} />
+                    <Image src="/heart.svg" width={100} height={100} alt="<3"/>
                 </Panel>
             </AutoLayout>
         </>
