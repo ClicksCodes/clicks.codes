@@ -1,5 +1,5 @@
 import Header from '../Components/Header'
-import {Component} from 'react'
+import { Component } from 'react'
 
 export default class Home extends Component {
 	constructor(props) {

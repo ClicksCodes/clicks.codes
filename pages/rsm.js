@@ -1,8 +1,7 @@
-import Card from '../Components/Card'
+import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
-import CardRow from '../Components/CardRow'
 
 // import FeatureImages from '../public/Features/RSM/Images.svg';
 // import FeatureAutomate from '../public/Features/RSM/Automate.svg';

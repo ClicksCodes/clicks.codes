@@ -1,5 +1,4 @@
-import Card from '../Components/Card';
-import CardRow from '../Components/CardRow';
+import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header';
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
@@ -24,7 +23,6 @@ export default function Home() {
               icon="bots/gps/circle"
               buttons={[
                 {color: "6576CC", link: "https://discordapp.com/oauth2/authorize?client_id=679361555732627476&scope=bot&permissions=130048", text: "Invite"},
-                {color: "6576CC", link: "/gps", text: "About"}
               ]}
               buttonText={"FFFFFF"} gradient={["78ECF2", "71AFE5"]}
             />
@@ -33,7 +31,6 @@ export default function Home() {
               icon="bots/rsm/circle"
               buttons={[
                 {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands",text:"Invite"},
-                {color: "424242", link: "/rsm", text:"About"}
               ]}
               buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
             />
@@ -41,9 +38,7 @@ export default function Home() {
               wave="clicksforms" title="ClicksForms" subtext="Create custom forms for Discord"
               icon="bots/clicksforms/circle"
               buttons={[
-                {color: "775EBF", link: "https://clicksminuteper.github.io/docs/clicksforms", text:"API", newTab: true},
                 {color: "775EBF", link: "https://discord.com/api/oauth2/authorize?client_id=805392054678192169&permissions=2416307200&scope=bot%20applications.commands",text:"Invite"},
-                {color: "775EBF", link: "/clicksforms", text: "About"}
               ]}
               buttonText={"FFFFFF"} gradient={["71AFE5", "6576CC"]}
             />
@@ -51,7 +46,6 @@ export default function Home() {
               wave="castaway" title="Castaway" subtext="Stranded on Discord"
               icon="bots/castaway/circle"
               buttons={[
-                {color: "F2D478", link: "/castaway", text: "About"}
               ]}
               buttonText={"000000"} gradient={["71AFE5", "78ECF2"]}
             />
@@ -60,7 +54,6 @@ export default function Home() {
               icon="bots/hooky/circle"
               buttons={[
                 {color: "EDC575", link: "https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176", text: "Invite"},
-                {color: "EDC575", link: "/hooky", text: "About"}
               ]}
               buttonText={"000000"} gradient={["424242", "8D8D8D"]}
             />
@@ -68,8 +61,7 @@ export default function Home() {
               wave="clcks" title="Clcks" subtext="Clicks Minute Per web apps"
               icon="web/icons/clcks"
               buttons={[
-                {color: "78ECF2", link: "https://clcks.dev", text: "View Apps"
-              }]}
+              ]}
               buttonText={"000000"} gradient={["C4C4C4", "8D8D8D"]}
             />
           </CardRow>

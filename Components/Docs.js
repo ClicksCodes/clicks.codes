@@ -1,6 +1,3 @@
-import react, { Component } from "react";
-import Styles from '../styles/Components/cardrow.module.css';
-
 class Docs extends Component {
     /*
         Properties:
@@ -29,7 +26,3 @@ class Section extends Component {
         return "a"
     }
 }
-
-
-
-export default CardRow;

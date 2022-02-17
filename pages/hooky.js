@@ -1,5 +1,4 @@
-import Card from '../Components/Card'
-import CardRow from '../Components/CardRow';
+import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
