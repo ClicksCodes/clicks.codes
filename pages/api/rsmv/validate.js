@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 const Validate = async (req, res) => {
     try {
-        var out = await Axios.get(`http://192.168.102.7:10000/verify/${req.body.code}`)
+        var out = await Axios.get(`http://localhost:10000/verify/${req.body.code}`)
         out = out.data
         let props = {
             user: out.user,
