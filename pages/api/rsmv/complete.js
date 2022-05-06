@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const Complete = async (req, res) => {
-    let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:req.body.code});
+    let code = await Axios.post('http://127.0.0.1:3000/api/rsmv/validate', {code:req.body.code});
     if (code.status != 200) {
         return res.send(404);
     }
@@ -11,7 +11,7 @@ const Complete = async (req, res) => {
 
     let secret = "slwu0rZV5W6WdmGtgI16du8Ar2tQGMr3Q9dE6u3poKiVODNV9SweaA3buawgkTmTuITXDWOUpBcTFA0qWrUvoshi1JB180WOFwA7"
     let resp = await Axios.get(
-        `http://localhost:10000/role/gid/${req.body.gid}/rid/${req.body.rid}/user/${req.body.uid}/secret/${secret}/code/${req.body.code}`
+        `http://localhost:10000/verify/${req.body.gid}/${req.body.rid}/${req.body.uid}/${secret}/${req.body.code}`
     )
     return res.send(resp.status);
 }
