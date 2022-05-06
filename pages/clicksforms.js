@@ -13,16 +13,17 @@ export default class Home extends React.Component {
     };
   }
 
-  highlightSection(that, section) {
-    console.log(section);
-    that.setState({toHighlight: section});
+  highlightSection(section) {
+    this.setState({toHighlight: section});
   }
 
   render() {
     return (
       <>
         <Header
-          name="ClicksForms"
+          name={"Clicks​Forms"}
+          customImage={"https://assets.clicks.codes/web/logos/clicksforms.svg"}
+          embedImage="https://assets.clicks.codes/bots/clicksforms/normal.png"
           subtext="Custom forms on Discord"
           gradient={["71AFE5", "6576CC"]}
           wave="web/waves/header/clicksforms"
@@ -32,14 +33,12 @@ export default class Home extends React.Component {
             {id: "privacy", color: "6576CC", buttonText: "FFFFFF", link: "#privacy", text: "Privacy"},
             {id: "invite", color: "775EBF", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
           ]}
-          hideArrow={true}
-          that={this}
-          callback={this.highlightSection}
+          callback={() => this.highlightSection()}
         />
         <AutoLayout>
           <Panel halfSize={true} id="commands">
             <Title>Commands</Title>
-            <Divider bound={this.state.toHighlight} name="commands"/>
+            <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="commands"/>
             <Text>Standard commands to use ClicksForms</Text>
             <List colour="6576CC">
               <ListItem><Code colour="6576CC">/accept</Code> Completes a form you are asked to fill in.</ListItem>
@@ -51,30 +50,31 @@ export default class Home extends React.Component {
               <ListItem><Code colour="6576CC">/manage</Code> Lets you manage your servers forms.</ListItem>
             </List>
           </Panel>
-          <Panel halfSize={true} id="services">
+          <Panel halfSize={true} id="services" style={this.state.toHighlight == "services" ? {border: "solid 10px red"} : {}}>
             <Title>Services</Title>
-            <Divider  bound={this.state.toHighlight} name="services"/>
+            <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="services"/>
             <Text>ClicksForms supports services such as <a href="https://docs.google.com/forms">Google Forms</a> through our Add-on.</Text>
             <Text>Our API is public. You can view it <Link href="/clicksforms/docs">here</Link>.</Text>
           </Panel>
           <Panel halfSize={true} id="privacy">
             <Title>Privacy</Title>
-            <Divider  bound={this.state.toHighlight} name="privacy"/>
+            <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="privacy"/>
             <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/clicksforms">here</a> is the complete list.</Text>
             <Text>We also have a list of terms for using ClicksForms, it can be viewed <a href="https://clicksminuteper.github.io/policies/clicksformstos">here</a>.</Text>
           </Panel>
           <Panel halfSize={true} id="invite">
             <Title>Invite</Title>
-            <Divider  bound={this.state.toHighlight} name="invite"/>
+            <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="invite"/>
             <CardRow><Card
               wave="clicksforms"
               icon="bots/clicksforms/circle"
               buttonText={"FFFFFF"} gradient={["71AFE5", "6576CC"]}
-              title="Invite"
+              title="ClicksForms"
               subtext="Invite ClicksForms to your server"
               buttons={[
                 {color: "775EBF", link: "https://discord.com/api/oauth2/authorize?client_id=805392054678192169&permissions=2416307200&scope=bot%20applications.commands", text: "Invite"}
               ]}
+              url="https://discord.com/api/oauth2/authorize?client_id=805392054678192169&permissions=2416307200&scope=bot%20applications.commands"
             /></CardRow>
           </Panel>
         </AutoLayout>

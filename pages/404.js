@@ -18,10 +18,9 @@ export default class Home extends Component {
 					buttons={[
 						{color: "F27878", buttonText: "ffffff", text: "Go Home", link: "/#"},
 						{color: "F27878", buttonText: "ffffff", text: "Send Error",
-							link: `mailto:staff@clicksminuteper.net?subject=Website%20Error%20Report&body=I%20got%20a%20404%20on%20the%20page%20%5BPlease%20Copy%20Website%20Link%20Here%5D`,
+							link: `mailto:staff@clicks.codes?subject=Website%20Error%20Report&body=I%20got%20a%20404%20on%20the%20page%20%5BPlease%20Copy%20Website%20Link%20Here%5D`,
 							target: true
 					}]}
-					hideArrow={true}
 					fullscreen={true}
 				/>
 			</>

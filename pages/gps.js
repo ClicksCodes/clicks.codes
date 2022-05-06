@@ -16,7 +16,6 @@ export default function Home() {
           {color: "71AFE5", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
           {color: "6576CC", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
-        hideArrow={true}
       />
       <AutoLayout>
         <Panel halfSize={false} id="features">
@@ -88,11 +87,12 @@ export default function Home() {
               wave="gps"
               icon="bots/gps/circle"
               buttonText={"FFFFFF"} gradient={["78ECF2", "71AFE5"]}
-              title="Invite"
+              title="GPS"
               subtext="Invite GPS to your server"
               buttons={[
                 {color: "6576CC", link: "https://discordapp.com/oauth2/authorize?client_id=679361555732627476&scope=bot&permissions=130048", text: "Invite"}
               ]}
+              url="https://discordapp.com/oauth2/authorize?client_id=679361555732627476&scope=bot&permissions=130048"
             />
           </CardRow>
         </Panel>

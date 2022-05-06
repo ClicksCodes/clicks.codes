@@ -1,64 +1,123 @@
-import { Component, useRef } from "react";
+import React, { useRef } from "react";
 import Styles from '../styles/Components/header.module.css';
 import Head from 'next/head';
+import { useColorMode } from "theme-ui";
+import { useReward } from "react-rewards";
+import ScrollContainer from 'react-indiana-drag-scroll'
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.keys = []
+function Header(props) {
+    const [ clickTotal, setClickTotal ] = React.useState(0);
+
+    const { reward: reward, isAnimating: isAnimating } = useReward('headerConfetti', 'confetti', {
+        elementSize: 10,
+        elementCount: 150,
+        startVelocity: 35,
+        lifetime: 300,
+        decay: 0.95,
+        spread: 170,
+        position: "absolute",
+        colors: ["#F27878", "#E5AB71", "#E5DC71", "#A1CC65", "#68D49E", "#71AFE5", "#6576CC", "#8D58B2", "#BF5E9F"]
+    });
+    const { reward: disappointment, isAnimating: isDisappointmentAnimating } = useReward('disappointmentConfetti', 'confetti', {
+        elementSize: 25,
+        elementCount: 1,
+        startVelocity: 25,
+        lifetime: 350,
+        decay: 0.95,
+        spread: 0,
+        position: "absolute",
+        colors: ["#E5AB71"]
+    });
+
+    function confetti() {
+        if (!isAnimating && !isDisappointmentAnimating && props.index) {
+            setClickTotal(clickTotal + 1);
+            if (clickTotal > 0 && Math.floor(Math.random() * 3) == 0) {
+                disappointment();
+            } else {
+                reward();
+            }
+        }
     }
 
-    render() {
-        return (
-            <div className={Styles.header} style={{
-                margin: "0",
-                minHeight: this.props.fullscreen ? "100vh" : "calc(100vh - (2 * max(2em, 4vw)) - 1em)",
-            }} id={this.props.id ? this.props.id : null}>
-                <div className={Styles.backgroundGradient} style={{
-                    backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`,
-                }} />
-                <Head>
-                    <title>{this.props.nameOverwrite ? this.props.nameOverwrite : this.props.name} - Clicks Minute Per</title>
-                    <meta name="title" content={this.props.name} />
-                    <meta name="og:title" content={this.props.name} />
-                    <meta name="description" content={this.props.subtext} />
-                    <meta name="og:description" content={this.props.subtext} />
-                    <meta name="theme-color" content={"#" + this.props.gradient[1]} />
-                    <meta name="og:theme-color" content={"#" + this.props.gradient[1]} />
-                    <meta name="author" content="Clicks Minute Per" />
-                    <meta name="og:author" content="Clicks Minute Per" />
-                </Head>
-                <img draggable={false} alt="" className={Styles.backgroundImage} src={`https://assets.clicksminuteper.net/${this.props.wave}.svg`} />
-                <div className={Styles.panel}>
-                    <div className={Styles.titleContainer}>
-                        <h1 className={Styles.title}>{this.props.name}</h1>
-                    </div>
-                    <p className={Styles.subtext + " " + (this.props.buttons.length ? Styles.subtextExtra : null)}>{this.props.subtext}</p>
-                    <div className={Styles.buttonLayout}>
+    return (
+        <div className={Styles.header} style={{
+            margin: "0",
+            minHeight: props.fullscreen ? "calc(100vh - 42px)" : "calc(100vh - (4 * max(2em, 4vw)) - 1em)",
+        }} id={props.id ? props.id : null}>
+            <div className={Styles.backgroundGradient} style={{
+                backgroundImage: `linear-gradient(69.44deg, #${props.gradient[0]} 0%, #${props.gradient[1]} 100%)`,
+            }} />
+            <Head>
+                <title>{props.name}</title>
+
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="viewport" content="width=device-width, minimal-ui" />
+
+                <meta name="title" content={props.name} />
+                <meta name="og:title" content={props.name} />
+                <meta name="description" content={props.embedDescription ? props.embedDescription : props.subtext} />
+                <meta name="og:description" content={props.embedDescription ? props.embedDescription : props.subtext} />
+                <meta name="author" content="Clicks" />
+                <meta name="og:author" content="Clicks" />
+                <meta name="image" content={props.embedImage} />
+                <meta name="og:image" content={props.embedImage} />
+
+                <meta name="theme-color" content={"#000000"} />
+                <meta name="og-color" content={"#" + props.gradient[1]} />
+                <meta name="msapplication-TileColor" content={"#000000"} />
+            </Head>
+            <img draggable={false} alt="" className={Styles.backgroundImage} src={`https://assets.clicks.codes/${props.wave}.svg`} />
+            <div className={Styles.panel}>
+                <div className={Styles.titleContainer}>
+                    <div onClick={confetti}>
                         {
-                            this.props.buttons ? this.props.buttons.map((button, index) => {
-                                return <a
-                                    key={index}
-                                    className={Styles.button}
-                                    style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
-                                    href={button.link}
-                                    onClick={() => { if (button.id) { this.props.callback(this.props.that, button.id) } }}
-                                    target={button.target ? "_blank" : null}
-                                    rel="noreferrer">
-                                    {button.text}
-                                </a>
-                            }) : null
+                            props.customImage?
+                            <img height="64px" width="64px" alt={props.name} className={Styles.headerImage} style={{borderRadius: props.roundImage ? "100vw" : "0"}} src={props.customImage} />
+                            : <></>
                         }
                     </div>
+                    <h1 className={Styles.title}>{props.name}</h1>
                 </div>
-                <span className={Styles.arrowSpan + " " + (this.props.hideArrow ? Styles.arrowHidden : null)} draggable={false}>
-                    <a href="#start" draggable={false}><img alt="Down arrow" src="https://assets.clicksminuteper.net/web/icons/arrow.svg" className={Styles.arrow} draggable={false} style={{
-                        height: "49px", width: "87px"
-                    }}/></a>
-                </span>
+                <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{props.subtext}</p>
+                <a href="#skipNav" id="skipNav" style={{display: "none"}} />
+                { props.buttons.length ?
+                    <div className={Styles.buttonOverflow}>
+                        <img className={Styles.indicator + " " + Styles.leftArrow} draggable={false} alt="" src={`https://assets.clicks.codes/web/icons/arrow.svg`}/>
+                        <ScrollContainer
+                            vertical={false}
+                            horizontal={true}
+                            hideScrollbars={true}
+                            nativeMobileScroll={true}
+                            style={{borderRadius: "10px", height: "fit-content"}}
+                        >
+                            <div className={Styles.buttonLayout}>
+                                {
+                                    props.buttons ? props.buttons.map((button, index) => {
+                                        return <a
+                                            key={index}
+                                            className={Styles.button}
+                                            style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
+                                            href={button.link}
+                                            onClick={() => { if (button.id) { props.callback(button.id) } }}
+                                            target={button.target ? "_blank" : null}
+                                            draggable={false}
+                                            rel="noreferrer">
+                                            {button.text}
+                                        </a>
+                                    }) : null
+                                }
+                            </div>
+                        </ScrollContainer>
+                        <img className={Styles.indicator + " " + Styles.rightArrow} draggable={false} alt="" src={`https://assets.clicks.codes/web/icons/arrow.svg`}/>
+                    </div> : <></>
+                }
             </div>
-        )
-    }
+            <div id="headerConfetti" />
+            <div id="disappointmentConfetti" />
+        </div>
+    )
 }
 
 export default Header;

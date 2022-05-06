@@ -12,8 +12,6 @@
 
     background-color: var(--theme-ui-colors-panelColor);
     border-radius: 20px;
-    transition: background-color 0.3s ease-in-out;
-
 }
 
 .doublePanel {
@@ -51,7 +49,7 @@
 
 .title {
     width: 100%;
-    font-size: max(2em, 3.25vw);
+    font-size: min(max(2em, 3.25vw), 4em);
     margin: 0;
     color: var(--theme-ui-colors-text);
     transition: color 0.3s ease-in-out;

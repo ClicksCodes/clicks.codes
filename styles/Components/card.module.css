@@ -33,11 +33,9 @@
 	margin: 100px;
 	transition: filter 0.3s ease-in-out;
 	transition: transform 0.15s ease-in-out;
-
-	transition: all 10s ease-in-out;
 }
 .card:hover {
-	transform: scale(1.025);
+	transform: translateY(-5px);
 	cursor: pointer;
 }
 
@@ -121,9 +119,6 @@
 }
 
 @media (max-width: 500px) {
-	.card {
-		height: 254px;
-	}
 }
 
 

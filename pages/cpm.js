@@ -1,3 +1,5 @@
+/* This file has been kept as part of the easter egg. No domain will redirect to it. The page will not be updated in the future. */
+
 import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header';
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
@@ -12,7 +14,6 @@ export default function Home() {
         wave="web/waves/header/cmp"
         buttons={[]}
       />
-      <p id="start" />
       <AutoLayout>
         <Panel halfSize={false}>
           <Title>Projects</Title>

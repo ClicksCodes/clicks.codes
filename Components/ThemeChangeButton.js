@@ -13,16 +13,16 @@ const ThemeChangeButton = () => {
     });
 
     return (
-        <header>
+        <>
             <a className={Styles.icon + " " + Styles.ThemeChangeButton} onClick={(e) => {
                 e.preventDefault();
                 setColorMode(colorMode === 'light' ? 'dark' : 'light');
-            }}>
-            {
-                !render ? null : (colorMode == 'light' ? <img alt="Light" src="https://assets.clicksminuteper.net/web/icons/light.svg" /> : <img alt="Dark" src="https://assets.clicksminuteper.net/web/icons/dark.svg" />)
-            }
+            }} href="#">
+                <img className={Styles.icon} alt="Theme" src={"https://assets.clicks.codes/web/icons/" + (
+                    colorMode == 'light' ? "light-white" : "dark"
+                ) + ".svg"} />
             </a>
-        </header>
+        </>
     )
 }
 

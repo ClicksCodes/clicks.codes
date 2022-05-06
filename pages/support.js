@@ -16,7 +16,7 @@ export default function Home() {
         <Panel halfSize={true}>
           <Title>Email</Title>
           <Divider />
-          <Text>Send us an email at <a href="mailto:support@clicksminuteper.net">support@clicksminuteper.net</a> and we will get back to you as quick as possible.</Text>
+          <Text>Send us an email at <a href="mailto:support@clicks.codes">support@clicks.codes</a> and we will get back to you as quick as possible.</Text>
         </Panel>
         <Panel halfSize={true}>
           <Title>Discord</Title>

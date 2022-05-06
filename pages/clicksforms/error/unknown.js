@@ -14,7 +14,6 @@ class Failed extends Component {
                 gradient={["F27878", "D96B6B"]}
                 wave="web/waves/header/rsm"
                 buttons={[]}
-                hideArrow={true}
                 fullscreen={true}
             />
         )

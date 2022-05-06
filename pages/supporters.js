@@ -88,7 +88,6 @@ export default function Home() {
                 gradient={["71AFE5", "6576CC"]}
                 wave="web/waves/header/clicksforms"
                 buttons={[]}
-                hideArrow={true}
             />
             <AutoLayout>
                 <Panel halfSize={false}>

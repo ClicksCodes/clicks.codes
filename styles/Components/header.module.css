@@ -1,11 +1,13 @@
 .backgroundImage {
 	position: absolute;
-	bottom: -10px;
-	width: calc(100% + 6px);
-	border-radius: 0 0 16.5px 16.5px;
+	bottom: 0;
+	/* bottom: 50vh;
+	transform: translateY(50%); */
+	width: 100%;
 	filter: var(--theme-ui-colors-cardFilter);
 	transition: filter 0.3s ease-in-out;
 }
+
 .backgroundGradient {
 	position: absolute;
 	bottom: 0;
@@ -53,6 +55,7 @@
     color: var(--theme-ui-colors-text);
 	transition: color 0.3s ease-in-out;
 	word-break: break-word;
+	font-variant-ligatures: none;
 }
 
 .subtext {
@@ -70,52 +73,33 @@
     margin-bottom: 40px;
 }
 
-@keyframes arrow-slide {
-    0% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-    }
-    50% {
-        -webkit-transform: translateY(-1em);
-                transform: translateY(-1em);
-    }
-    100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-    }
-}
-.arrow {
-    -webkit-animation: arrow-slide 2s ease-in-out infinite both;
-            animation: arrow-slide 2s ease-in-out infinite both;
-}
-
-.arrowSpan {
-    position: absolute;
-    bottom: min(10vh, 1em);
-    width: 100%;
-    text-align: center;
-}
-
-.arrowHidden {
-    display: none;
-}
-
 .buttonLayout {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	height: fit-content;
+}
+.buttonOverflow {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
-	flex-wrap: wrap;
-	padding: 0px;
+	overflow-x: hidden;
+	flex-wrap: nowrap;
 	position: absolute;
 	bottom: 5px;
 	right: 5px;
+	width: calc(100% - 10px);
+	height: auto;
+	border-radius: 10px;
 }
 
 .button {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: flex-end;
 	justify-content: right;
 	position: static;
 	flex: none;
@@ -125,4 +109,36 @@
 	margin: 5px;
 	padding: 5px 10px;
 	border-radius: 8px;
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0px;
+}
+
+.headerImage {
+	width: auto;
+	height: 64px;
+	object-fit: cover;
+	object-position: center;
+	transition: filter 0.3s ease-in-out;
+	margin-bottom: 20px;
+}
+
+.indicator {
+	height: auto;
+	width: 24px;
+	margin-inline: 5px;
+	padding: 0;
+}
+
+.leftArrow {
+	transform: rotate(90deg);
+}
+.rightArrow {
+	transform: rotate(270deg);
 }

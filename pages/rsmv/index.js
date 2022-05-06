@@ -57,7 +57,6 @@ class RSMV extends Component {
             gid:cls.props.gID,
             code:cls.props.code
         });
-        console.log(code.status)
         if (code.status === 200 ) return Router.push('/rsmv/success','/rsmv')
         else return Router.push('/rsmv/failure','/rsmv')
     }
@@ -65,20 +64,13 @@ class RSMV extends Component {
     render() {
         return <>
             <Header
-                name={
-                    <>
-                        <img alt="Server icon" style={{borderRadius: "50%", height: "64px", width: "auto"}} src={this.props.guild_icon_url} />
-                        <br />
-                        {this.props.guild_name}
-                    </>
-                }
-                nameOverwrite="Verify"
+                name="Verify"
+                customImage={this.props.guild_icon_url}
                 subtext={`${this.props.memberCount} members`}
                 gradient={["F27878", "D96B6B"]}
                 wave="web/waves/header/rsm"
                 buttons={[]}
             />
-            <p id="start" />
             <AutoLayout>
                 <Panel>
                     <Text>Complete the check below to join {this.props.guild_name}</Text>

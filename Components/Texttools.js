@@ -44,28 +44,15 @@ class Code extends Component {
 		this.setState({isPopoverOpen: true})
 		setTimeout(() => {
 			this.setState({isPopoverOpen: false})
-		}, 1000)
+		}, 2000)
 	}
 
 	render() {
-		if ( this.props.clickable === false) {
-			return <pre
-				className={Styles.code}
-				style={{color: `#${this.props.colour}`, boxShadow: `0px -3px 10px 2px #424242`}}
-			>{this.props.children}</pre>
-		} else {
-			return <Popover
-				isOpen={this.state.isPopoverOpen}
-				positions={['top', 'bottom', 'left', 'right']} // preferred positions by priority
-				content={<Code colour={this.props.colour} clickable={false}>Copied!</Code>}
-			>
-				<pre
-					className={Styles.code}
-					style={{color: `#${this.props.colour}`}}
-					onClick={() => this.clicked()}
-				>{this.props.children}</pre>
-			</Popover>
-		}
+		return <pre
+			className={Styles.code}
+			style={{color: `#${this.props.colour}`}}
+			onClick={this.props.clickable ? () => this.clicked() : () => this.clicked()}
+		>{this.state.isPopoverOpen ? "Copied!" : this.props.children}</pre>
 	}
 }
 

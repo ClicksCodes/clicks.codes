@@ -9,7 +9,6 @@ export default class Form extends Component {
 }
 
 	render() {
-        console.log(this.props)
 		return (
 			<>
                 <Header
@@ -19,7 +18,6 @@ export default class Form extends Component {
                     wave="web/waves/header/clicksforms"
                     buttons={[]}
                 />
-                <div id="start" />
                 <div className={Styles.form}>
                     <div className={Styles.header}>
                         Once completing this.props, your response will be recorded
@@ -51,7 +49,6 @@ export default class Form extends Component {
 }
 
 export async function getServerSideProps(ctx) {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
     if(!ctx.query.code) {
         return {
             redirect: {
@@ -60,11 +57,10 @@ export async function getServerSideProps(ctx) {
             }
         }
     }
-    const code = fetch(`https://cf.bots.clicksminuteper.net/code/${ctx.query.code}/token/BkjTUmNPk8S1aPVIYBt8rAUGQF692C8BEscJS9jGDwEtDJcy78uCVsHgRI1dspseGFoatakhWPHTAmYH42zhPpOjoaN1N9eLU7hB`, {
+    const code = fetch(`https://cf.bots.clicks.codes/code/${ctx.query.code}/token/BkjTUmNPk8S1aPVIYBt8rAUGQF692C8BEscJS9jGDwEtDJcy78uCVsHgRI1dspseGFoatakhWPHTAmYH42zhPpOjoaN1N9eLU7hB`, {
         method: "GET",
         mode: "cors"
     })
-    console.log(code)
     if ( (await code).status == 404 ) {
         return {
             redirect: {
@@ -80,8 +76,6 @@ export async function getServerSideProps(ctx) {
             }
         }
     }
-
-    console.log(code.data)
 
     return {
         props: {

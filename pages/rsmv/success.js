@@ -14,7 +14,6 @@ class Success extends Component {
                 gradient={["65CC76", "60B258"]}
                 wave="web/waves/header/rsm"
                 buttons={[]}
-                hideArrow={true}
                 fullscreen={true}
             />
         )

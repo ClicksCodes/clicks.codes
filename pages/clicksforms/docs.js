@@ -18,7 +18,6 @@ export default function policy() {
 //           {color: "6576CC", buttonText: "FFFFFF", link: "#structures", text: "Structures"},
 //           {color: "775EBF", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
 //         ]}
-//         hideArrow={true}
 //       />
 //       <AutoLayout>
 //         <Panel halfSize={false} id="timeline">

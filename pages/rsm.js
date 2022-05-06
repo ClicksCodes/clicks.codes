@@ -28,7 +28,6 @@ export default function Home() {
           {color: "424242", buttonText: "FFFFFF", link: "#privacy", text: "Privacy"},
           {color: "F27878", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
-        hideArrow={true}
       />
       <AutoLayout>
         <Panel halfSize={true} id="commands">
@@ -100,11 +99,12 @@ export default function Home() {
               wave="rsm"
               icon="bots/rsm/circle"
               buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
-              title="Invite"
+              title="RSM"
               subtext="Invite RSM to your server"
               buttons={[
                   {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
               ]}
+              url="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands"
             />
           </CardRow>
         </Panel>

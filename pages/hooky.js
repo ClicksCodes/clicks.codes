@@ -13,7 +13,6 @@ export default function Home() {
         buttons={[
           {color: "EDC575", buttonText: "000000", link: "#invite", text: "Invite"}
         ]}
-        hideArrow={true}
       />
       <AutoLayout>
         <Panel halfSize={false} id="invite">
@@ -24,11 +23,12 @@ export default function Home() {
               wave="hooky"
               icon="bots/hooky/circle"
               buttonText={"000000"} gradient={["424242", "8D8D8D"]}
-              title="Invite"
+              title="Hooky"
               subtext="Invite Hooky to your server"
               buttons={[
                 {color: "EDC575", link: "https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176", text: "Invite"}
               ]}
+              url="https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176"
             />
           </CardRow>
         </Panel>

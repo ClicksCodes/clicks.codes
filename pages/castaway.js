@@ -12,7 +12,6 @@ export default function Home() {
         buttons={[
           {color: "78ECF2", buttonText: "000000", link: "#timeline", text: "Timeline"}
         ]}
-        hideArrow={true}
       />
       <AutoLayout>
         <Panel halfSize={false} id="timeline">

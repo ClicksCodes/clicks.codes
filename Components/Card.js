@@ -1,27 +1,25 @@
 import { Component } from "react";
 import Styles from '../styles/Components/card.module.css';
 import react from 'react'
+import { withRouter } from "next/router";
 
 class Card extends Component {
 	constructor(props) {
 		super(props);
-        this.state = {
-            clicked: false,
-        }
     }
 
 	render() {
 		return (
-            <div className={Styles.card + " " + (this.state.clicked ? Styles.clicked : "")} style={{
+            <div className={Styles.card} style={{
                 margin: "0"
-            }} onClick={() => { this.setState({clicked: !this.state.clicked}) }}>
-                <div className={Styles.backgroundGradient + " " + (this.state.clicked ? Styles.clicked : "")} style={{
+            }} onClick={this.props.url ? () => { this.props.router.push(this.props.url)} : null}>
+                <div className={Styles.backgroundGradient} style={{
                     backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`
                 }} />
-                <img alt="" className={Styles.backgroundImage} src={`https://assets.clicksminuteper.net/web/waves/card/${this.props.wave}.svg`} draggable={false} />
-                <div className={Styles.panel}>
+                <img alt="" className={Styles.backgroundImage} src={`https://assets.clicks.codes/web/waves/card/${this.props.wave}.svg`} draggable={false} />
+                <div className={Styles.panel} onClick={() => { this.props.url ? () => { this.props.router.push(this.props.url)} : null}}>
                     <div className={Styles.titleContainer}>
-                        <img alt="Project icon" className={Styles.image + " " + (this.state.clicked ? Styles.clicked : "")} src={"https://assets.clicksminuteper.net/" + (this.props.icon ? this.props.icon : this.props.wave) + ".svg"} />
+                        <img alt="Project icon" className={Styles.image} src={"https://assets.clicks.codes/" + (this.props.icon ? this.props.icon : this.props.wave) + ".svg"} />
                         <h1 className={Styles.title}>{this.props.title}</h1>
                     </div>
                     <p className={Styles.subtext}>{this.props.subtext}</p>
@@ -41,15 +39,14 @@ class Card extends Component {
                     </div>
                 </div>
             </div>
-		)
-	}
+        );
+    }
 }
 
 class CardRow extends Component {
 	constructor(props) {
 		super(props);
 	}
-
 
 	render() {
 		return (
@@ -63,5 +60,7 @@ class CardRow extends Component {
         )
 	}
 }
+
+Card = withRouter(Card);
 
 export { Card, CardRow };

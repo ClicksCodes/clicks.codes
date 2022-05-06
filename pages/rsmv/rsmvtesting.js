@@ -47,7 +47,6 @@ class RSMV extends Component {
             gid:cls.props.gID,
             code:cls.props.code
         });
-        console.log(code.status)
         if (code.status === 200 ) return Router.push('/rsmv/success','/rsmv')
         else return Router.push('/rsmv/failure','/rsmv')
     }
@@ -68,7 +67,6 @@ class RSMV extends Component {
                 wave="web/waves/header/rsm"
                 buttons={[]}
             />
-            <p id="start" />
             <AutoLayout>
                 <Panel>
                     <Text>Complete the check below to join ERROR</Text>

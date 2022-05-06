@@ -1,3 +1,31 @@
 {
-	"git.ignoreLimitWarning": true
+	"git.ignoreLimitWarning": true,
+	"cSpell.ignoreWords": [
+		"Captchas",
+		"Carrington",
+		"Cavendon",
+		"Customise",
+		"RSMV",
+		"Statethis",
+		"Texttools",
+		"Unbans",
+		"Unmutes",
+		"apos",
+		"autolayout",
+		"clcks",
+		"clicksforms",
+		"colour",
+		"customisation",
+		"getprefix",
+		"hcaptcha",
+		"noopener",
+		"noreferrer",
+		"parpart",
+		"pypi",
+		"setlanguage",
+		"slowmode",
+		"softban",
+		"unban",
+		"viewas"
+	]
 }

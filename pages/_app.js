@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import NavBar from '../Components/NavBar';
 import { ThemeProvider } from 'theme-ui';
+import Styles from '../styles/globals.module.css';
 
 const theme = {
     config: {
@@ -42,8 +43,9 @@ const theme = {
 function App({ Component, pageProps }) {
   return <>
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
       <NavBar />
+      <Component {...pageProps} />
+      <div className={Styles.container} />
     </ThemeProvider>
   </>
 }

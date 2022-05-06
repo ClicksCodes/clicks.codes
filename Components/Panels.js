@@ -16,7 +16,7 @@ class PanelClass extends Component {
 	}
 
 	render() {
-		return <div className={Styles.panel} style={this.getStyle()} id={this.props.id}>
+		return <div className={Styles.panel} style={this.getStyle()} id={this.props.id} tabIndex={0}>
 				{
 					react.Children.toArray(this.props.children).map((child, index) => {
 						return child;
@@ -95,9 +95,15 @@ class Text extends Component {
 }
 
 class Divider extends Component {
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
-		// return <div className={Styles.divider} style={{ backgroundColor: this.props.bound == this.props.name ? "red" : "var(--theme-ui-colors-hint)"}}></div>
-		return <div className={Styles.divider} style={{ backgroundColor: "var(--theme-ui-colors-hint)"}}></div>
+		let highlighted = this.props.toHighlight === this.props.name;
+		return <div className={Styles.divider} style={{
+				backgroundColor: (highlighted && this.props.highlightColour) ? ("#" + this.props.highlightColour) : "var(--theme-ui-colors-hint)"
+			}}>{this.props.forceHighlight}</div>
 	}
 }
 
