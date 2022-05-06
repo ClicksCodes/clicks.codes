@@ -4,7 +4,6 @@ import Head from 'next/head';
 import { useColorMode } from "theme-ui";
 import { useReward } from "react-rewards";
 import ScrollContainer from 'react-indiana-drag-scroll'
-import Link from 'next/link'
 
 function Header(props) {
     const [ clickTotal, setClickTotal ] = React.useState(0);
@@ -82,7 +81,7 @@ function Header(props) {
                     <h1 className={Styles.title}>{props.name}</h1>
                 </div>
                 <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{props.subtext}</p>
-                <Link href="#skipNav" id="skipNav" style={{display: "none"}} />
+                <a href="#skipNav" id="skipNav" style={{display: "none"}} />
                 { props.buttons.length ?
                     <div className={Styles.buttonOverflow}>
                         <img className={Styles.indicator + " " + Styles.leftArrow} draggable={false} alt="" src={`https://assets.clicks.codes/web/icons/arrow.svg`}/>
@@ -96,7 +95,7 @@ function Header(props) {
                             <div className={Styles.buttonLayout}>
                                 {
                                     props.buttons ? props.buttons.map((button, index) => {
-                                        return <Link
+                                        return <a
                                             key={index}
                                             className={Styles.button}
                                             style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
@@ -106,7 +105,7 @@ function Header(props) {
                                             draggable={false}
                                             rel="noreferrer">
                                             {button.text}
-                                        </Link>
+                                        </a>
                                     }) : null
                                 }
                             </div>

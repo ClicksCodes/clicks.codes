@@ -4,8 +4,7 @@ import Router from 'next/router';
 import React from 'react';
 import Header from '../../../Components/Header'
 import { useReward } from 'react-rewards';
-import { Card, CardRow } from '../../../Components/Card'
-import Link from 'next/link'
+import { Card, CardRow } from '../../../Components/Card';
 
 import { AutoLayout, Panel, Title, Text, Divider } from '../../../Components/Panels';
 import { List, ListItem } from '../../../Components/Texttools';
@@ -72,7 +71,7 @@ function Verify(props) {
                 <List colour="F27878">
                     <ListItem>This is an automatic check performed by Nucleus.</ListItem>
                     <ListItem>By clicking Proceed, you will be given the <code>{props.role_name}</code> role in <code>{props.guild_name}</code>.</ListItem>
-                    <ListItem>For the full list of data stored by Nucleus, please check <Link href="https://clicksminuteper.github.io/policies/nucleus#verification">here</Link></ListItem>
+                    <ListItem>For the full list of data stored by Nucleus, please check <a href="https://clicksminuteper.github.io/policies/nucleus#verification">here</a></ListItem>
                 </List>
                 <div id="confetti" />
             </Panel>

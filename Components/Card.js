@@ -2,7 +2,6 @@ import { Component } from "react";
 import Styles from '../styles/Components/card.module.css';
 import react from 'react'
 import { withRouter } from "next/router";
-import Link from 'next/link'
 
 class Card extends Component {
 	constructor(props) {
@@ -27,14 +26,14 @@ class Card extends Component {
                     <div className={Styles.buttonLayout}>
                         {
                             this.props.buttons ? this.props.buttons.map((button, i) => {
-                                return <Link
+                                return <a
                                     key={i}
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${this.props.buttonText}`}}
                                     href={button.link}
                                     target={button.newTab ? "_blank" : undefined}
                                     rel="noreferrer">{button.text}
-                                </Link>
+                                </a>
                             }) : null
                         }
                     </div>

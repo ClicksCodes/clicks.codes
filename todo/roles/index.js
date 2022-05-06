@@ -4,8 +4,7 @@ import HCaptcha from 'react-hcaptcha';
 import Axios from 'axios';
 import Router from 'next/router';
 import React from 'react';
-import Header from '../../../Components/Header'
-import Link from 'next/link'
+import Header from '../../../Components/Header';
 
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../../../Components/Panels';
 import { List, ListItem, Code } from '../../../Components/Texttools';
@@ -78,9 +77,9 @@ class Verify extends Component {
                     <List colour="F27878">
                         <ListItem>This is an automatic check performed by Nucleus.</ListItem>
                         <ListItem>By clicking Proceed, you will be given the <code>{this.props.role_name}</code> role in <code>{this.props.guild_name}</code>.</ListItem>
-                        <ListItem>For the full list of data stored by Nucleus, please check <Link href="https://clicksminuteper.github.io/policies/nucleus#verification">here</Link></ListItem>
+                        <ListItem>For the full list of data stored by Nucleus, please check <a href="https://clicksminuteper.github.io/policies/nucleus#verification">here</a></ListItem>
                     </List>
-                    <Text>You can add Nucleus to your server by inviting it <Link href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</Link>.</Text>
+                    <Text>You can add Nucleus to your server by inviting it <a href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</a>.</Text>
                     <div id="confetti" />
                 </Panel>
             </AutoLayout>

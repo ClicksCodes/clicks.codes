@@ -4,8 +4,7 @@ import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../../../Comp
 import { Code } from '../../../Components/Texttools'
 import { Card, CardRow } from '../../../Components/Card'
 import HCaptcha from 'react-hcaptcha';
-import { useReward } from 'react-rewards'
-import Link from 'next/link'
+import { useReward } from 'react-rewards';
 
 function About(props) {
     const { reward, isAnimating } = useReward('confetti', 'confetti', {
@@ -51,7 +50,7 @@ function About(props) {
                     <Divider />
                     <Text>Verification stores the smallest amount of data required to function, and is deleted automatically.</Text>
                     <Text>This includes the user&apos;s ID, the server ID, role name and server icon.</Text>
-                    <Text>The full list of data stored by Nucleus can be found <Link href="https://clicksminuteper.github.io/policies/nucleus">here</Link>.</Text>
+                    <Text>The full list of data stored by Nucleus can be found <a href="https://clicksminuteper.github.io/policies/nucleus">here</a>.</Text>
                 </Panel>
                 <Panel halfSize={true} id="invite">
                     <Title>Invite</Title>

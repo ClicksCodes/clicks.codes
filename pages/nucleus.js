@@ -3,7 +3,6 @@ import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
 import { useColorMode } from 'theme-ui';
-import Link from 'next/link';
 
 export default function Home() {
   const [theme, setTheme] = useColorMode()
@@ -86,13 +85,13 @@ export default function Home() {
             <Title>Verification</Title>
             <Divider />
             <Text>Verification ensures all members in your server are human, and prevents automated accounts from joining.</Text>
-            <Text>For more information, see the <Link href="/nucleus/verify/about">about</Link> page.</Text>
+            <Text>For more information, see the <a href="/nucleus/verify/about">about</a> page.</Text>
         </Panel>
         <Panel halfSize={true} id="privacy">
           <Title>Privacy</Title>
           <Divider />
           <Text>You can run <Code colour="F27878">/privacy</Code> to view and manage all data stored about your server</Text>
-          <Text>You should always know what we know and store about you, so <Link href="https://clicksminuteper.github.io/policies/nucleus">here</Link> is the complete list.</Text>
+          <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/nucleus">here</a> is the complete list.</Text>
         </Panel>
         <Panel halfSize={true} id="invite">
           <Title>Invite</Title>

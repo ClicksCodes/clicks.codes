@@ -9,7 +9,6 @@ import { Card, CardRow } from '../../../Components/Card'
 import { AutoLayout, Panel, Title, Text, Divider } from '../../../Components/Panels';
 import { List, ListItem } from '../../../Components/Texttools';
 import { useColorMode } from 'theme-ui';
-import Link from 'next/link'
 
 function Verify(props) {
     const [clicked, setClicked] = React.useState(false);
@@ -68,7 +67,7 @@ function Verify(props) {
                 <List colour="F27878">
                     <ListItem>This is an automatic check performed by Nucleus.</ListItem>
                     <ListItem>By completing the CAPTCHA, you will be given the <code>MISSING</code> role in <code>ERROR</code>.</ListItem>
-                    <ListItem>For the full list of data stored by Nucleus, please check <Link href="https://clicksminuteper.github.io/policies/nucleus#verification">here</Link></ListItem>
+                    <ListItem>For the full list of data stored by Nucleus, please check <a href="https://clicksminuteper.github.io/policies/nucleus#verification">here</a></ListItem>
                 </List>
                 <div id="confetti" />
             </Panel>

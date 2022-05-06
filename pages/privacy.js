@@ -1,7 +1,6 @@
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
-import Link from 'next/link';
 
 
 export default function Home() {
@@ -19,15 +18,15 @@ export default function Home() {
                     <Title>Transparency</Title>
                     <Text>Everything we store about you and your Discord servers will be listed.</Text>
                     <List colour={"6576CC"}>
-                        <ListItem><Link href="https://clicksminuteper.github.io/policies/rsm">RSM</Link></ListItem>
-                        <ListItem><Link href="https://clicksminuteper.github.io/policies/clicksforms">ClicksForms</Link></ListItem>
+                        <ListItem><a href="https://clicksminuteper.github.io/policies/rsm">RSM</a></ListItem>
+                        <ListItem><a href="https://clicksminuteper.github.io/policies/clicksforms">ClicksForms</a></ListItem>
                         <ListItem>GPS does not store any information</ListItem>
                     </List>
-                    <Text>Have any questions or concerns? <Link href="/support">Let us know</Link> and we can investigate if you believe there are any mistakes</Text>
+                    <Text>Have any questions or concerns? <a href="/support">Let us know</a> and we can investigate if you believe there are any mistakes</Text>
                 </Panel>
                 <Panel halfSize={true}>
                     <Title>Security</Title>
-                    <Text>We will do everything we can to protect user data, including high security. You can <Link href="/support">message us</Link> if you would like to learn more about how we do this</Text>
+                    <Text>We will do everything we can to protect user data, including high security. You can <a href="/support">message us</a> if you would like to learn more about how we do this</Text>
                 </Panel>
             </AutoLayout>
         </>
