@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header
         name="Clicks"
-        subtext="// TODO: Fix this massive security issue"
+        subtext="Creating projects that click"
         customImage="https://assets.clicks.codes/web/logos/clicks.svg"
         embedImage="https://assets.clicks.codes/web/logos/clicks.png"
         gradient={["6576CC", "4B5899"]}
