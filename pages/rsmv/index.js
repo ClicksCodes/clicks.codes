@@ -4,7 +4,7 @@ import HCaptcha from 'react-hcaptcha';
 import Axios from 'axios';
 import Router from 'next/router';
 import React from 'react';
-import Header from '../../Components/Header'
+import Header from '../../Components/Header';
 
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../../Components/Panels';
 import { List, ListItem, Code } from '../../Components/Texttools';

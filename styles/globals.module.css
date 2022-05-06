@@ -1,0 +1,19 @@
+.container {
+    position: fixed;
+    top: 42px;
+    height: calc(100vh - 42px);
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 0 100px black;
+    pointer-events: none;
+    background: transparent;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.container, .container * {
+    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+}

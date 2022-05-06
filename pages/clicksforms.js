@@ -2,7 +2,6 @@ import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
-import Link from 'next/link';
 import React from 'react';
 
 export default class Home extends React.Component {
@@ -54,7 +53,7 @@ export default class Home extends React.Component {
             <Title>Services</Title>
             <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="services"/>
             <Text>ClicksForms supports services such as <a href="https://docs.google.com/forms">Google Forms</a> through our Add-on.</Text>
-            <Text>Our API is public. You can view it <Link href="/clicksforms/docs">here</Link>.</Text>
+            <Text>Our API is public. You can view it <a href="/clicksforms/docs">here</a>.</Text>
           </Panel>
           <Panel halfSize={true} id="privacy">
             <Title>Privacy</Title>

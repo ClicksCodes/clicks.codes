@@ -1,0 +1,43 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.center * {
+    margin-bottom: 20px;
+}
+
+.text {
+	color: var(--card-text-color);
+	font-size: 18px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
+    border: 3px solid #F27878;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -40px;
+    transition: 0.3s;
+}
+
+.buttonComplete {
+    border: 3px solid #65CC76;
+}
+
+.button.clicked {
+    color: #F27878;
+}
+
+.buttonComplete.clicked {
+    color: #65CC76;
+}
