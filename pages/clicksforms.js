@@ -53,14 +53,14 @@ export default class Home extends React.Component {
           <Panel halfSize={true} id="services" style={this.state.toHighlight == "services" ? {border: "solid 10px red"} : {}}>
             <Title>Services</Title>
             <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="services"/>
-            <Text>ClicksForms supports services such as <a href="https://docs.google.com/forms">Google Forms</a> through our Add-on.</Text>
+            <Text>ClicksForms supports services such as <Link href="https://docs.google.com/forms">Google Forms</Link> through our Add-on.</Text>
             <Text>Our API is public. You can view it <Link href="/clicksforms/docs">here</Link>.</Text>
           </Panel>
           <Panel halfSize={true} id="privacy">
             <Title>Privacy</Title>
             <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="privacy"/>
-            <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/clicksforms">here</a> is the complete list.</Text>
-            <Text>We also have a list of terms for using ClicksForms, it can be viewed <a href="https://clicksminuteper.github.io/policies/clicksformstos">here</a>.</Text>
+            <Text>You should always know what we know and store about you, so <Link href="https://clicksminuteper.github.io/policies/clicksforms">here</Link> is the complete list.</Text>
+            <Text>We also have a list of terms for using ClicksForms, it can be viewed <Link href="https://clicksminuteper.github.io/policies/clicksformstos">here</Link>.</Text>
           </Panel>
           <Panel halfSize={true} id="invite">
             <Title>Invite</Title>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Styles from '../styles/Components/navbar.module.css';
 import ThemeChangeButton from './ThemeChangeButton';
+import Link from 'next/link'
 
 class Divider extends Component {
     render() {
@@ -21,14 +22,14 @@ class NavBar extends Component {
 		return (
             <>
                 <div className={Styles.container}>
-                    <a href="#skipNav" className={Styles.skipNav}>Skip navigation</a>
-                    <a className={Styles.icon} href="/"><img alt="Clicks" className={Styles.icon} src="https://assets.clicks.codes/web/logos/clicks.svg" /></a>
+                    <Link href="#skipNav" className={Styles.skipNav}><a>Skip navigation</a></Link>
+                    <Link className={Styles.icon} href="/"><img alt="Clicks" className={Styles.icon} src="https://assets.clicks.codes/web/logos/clicks.svg" /></Link>
                     <Divider />
-                    <a className={Styles.icon} href="/rsm"><img alt="RSM" className={Styles.icon} src="https://assets.clicks.codes/bots/rsm/circle.svg" /></a>
-                    {/* <a className={Styles.icon} href="/nucleus#"><img alt="Nucleus" className={Styles.icon} src="https://assets.clicks.codes/bots/nucleus/circle.svg" /></a> */}
-                    <a className={Styles.icon} href="/clicksforms"><img alt="ClicksForms" className={Styles.icon} src="https://assets.clicks.codes/bots/clicksforms/circle.svg" /></a>
-                    <a className={Styles.icon} href="/gps"><img alt="GPS" className={Styles.icon} src="https://assets.clicks.codes/bots/gps/circle.svg" /></a>
-                    <a className={Styles.icon} href="/hooky"><img alt="Hooky" className={Styles.icon} src="https://assets.clicks.codes/bots/hooky/circle.svg" /></a>
+                    <Link className={Styles.icon} href="/rsm"><img alt="RSM" className={Styles.icon} src="https://assets.clicks.codes/bots/rsm/circle.svg" /></Link>
+                    {/* <Link className={Styles.icon} href="/nucleus#"><img alt="Nucleus" className={Styles.icon} src="https://assets.clicks.codes/bots/nucleus/circle.svg" /></Link> */}
+                    <Link className={Styles.icon} href="/clicksforms"><img alt="ClicksForms" className={Styles.icon} src="https://assets.clicks.codes/bots/clicksforms/circle.svg" /></Link>
+                    <Link className={Styles.icon} href="/gps"><img alt="GPS" className={Styles.icon} src="https://assets.clicks.codes/bots/gps/circle.svg" /></Link>
+                    <Link className={Styles.icon} href="/hooky"><img alt="Hooky" className={Styles.icon} src="https://assets.clicks.codes/bots/hooky/circle.svg" /></Link>
                     <Divider />
                     <ThemeChangeButton/>
                 </div>

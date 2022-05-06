@@ -2,6 +2,7 @@ import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
+import Link from 'next/link'
 
 // import FeatureImages from '../public/Features/RSM/Images.svg';
 // import FeatureAutomate from '../public/Features/RSM/Automate.svg';
@@ -89,7 +90,7 @@ export default function Home() {
         <Panel halfSize={true} id="privacy">
           <Title>Privacy</Title>
           <Divider />
-          <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/rsm">here</a> is the complete list.</Text>
+          <Text>You should always know what we know and store about you, so <Link href="https://clicksminuteper.github.io/policies/rsm">here</Link> is the complete list.</Text>
         </Panel>
         <Panel halfSize={true} id="invite">
           <Title>Invite</Title>
