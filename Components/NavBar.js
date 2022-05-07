@@ -21,7 +21,7 @@ class NavBar extends Component {
 		return (
             <>
                 <div className={Styles.container}>
-                    <a href="#skipNav" className={Styles.skipNav}><a>Skip navigation</a></a>
+                    <a href="#skipNav" className={Styles.skipNav}>Skip navigation</a>
                     <a className={Styles.icon} href="/"><img alt="Clicks" className={Styles.icon} src="https://assets.clicks.codes/web/logos/clicks.svg" /></a>
                     <Divider />
                     <a className={Styles.icon} href="/rsm"><img alt="RSM" className={Styles.icon} src="https://assets.clicks.codes/bots/rsm/circle.svg" /></a>
