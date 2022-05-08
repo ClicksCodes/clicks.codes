@@ -8,7 +8,7 @@ export default function Error() {
 				subtext={<>
 					Dear Sir/Madam,<br />
 					Fire! Fire! Help me!<br />
-					123 Cavendon Road.<br />
+					123 Carenden Road.<br />
 					Looking forward to hearing from you,<br />
 					All the best, Maurice Moss
 				</>}
