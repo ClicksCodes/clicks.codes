@@ -1,72 +1,72 @@
 .backgroundImage {
-	position: absolute;
-	bottom: 0;
-	/* bottom: 50vh;
-	transform: translateY(50%); */
-	width: 100%;
-	filter: var(--theme-ui-colors-cardFilter);
-	transition: filter 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    /* bottom: 50vh;
+    transform: translateY(50%); */
+    width: 100%;
+    filter: var(--theme-ui-colors-cardFilter);
+    transition: filter 0.3s ease-in-out;
 }
 
 .backgroundGradient {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	filter: var(--theme-ui-colors-cardFilter);
-	transition: filter 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: var(--theme-ui-colors-cardFilter);
+    transition: filter 0.3s ease-in-out;
 }
 
 .header {
-	width: 100vw;
-	position: relative;
-	overflow: hidden;
-	transition: filter 0.3s ease-in-out;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .panel {
     position: relative;
-	overflow: hidden;
-	width: min(calc(100vw - 40px), 1000px);
-	border-radius: 16.5px;
-	background-color: var(--theme-ui-colors-cardBackground);
-	transition: background-color 0.3s ease-in-out;
-	backdrop-filter: blur(7px);
-	padding-top: 30px;
-	padding-bottom: 40px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-top: 20px;
-	margin-bottom: 20vh;
+    overflow: hidden;
+    width: min(calc(100vw - 40px), 1000px);
+    border-radius: 16.5px;
+    background-color: var(--theme-ui-colors-cardBackground);
+    transition: background-color 0.3s ease-in-out;
+    backdrop-filter: blur(7px);
+    padding-top: 30px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20vh;
 }
 
 .title {
     width: 100%;
     text-align: center;
     font-weight: 100;
-	margin-top: 0px;
-	margin-bottom: -20px;
+    margin-top: 0px;
+    margin-bottom: -20px;
     font-size: 3em;
     color: var(--theme-ui-colors-text);
-	transition: color 0.3s ease-in-out;
-	word-break: break-word;
-	font-variant-ligatures: none;
+    transition: color 0.3s ease-in-out;
+    word-break: break-word;
+    font-variant-ligatures: none;
 }
 
 .subtext {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
     width: 100%;
     text-align: center;
     font-weight: 100;
     font-size: 1.5em;
-	margin-top: 50px;
+    margin-top: 50px;
     color: var(--theme-ui-colors-text);
-	transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .subtextExtra {
@@ -74,71 +74,71 @@
 }
 
 .buttonLayout {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	flex-wrap: nowrap;
-	height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: fit-content;
 }
 .buttonOverflow {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-	overflow-x: hidden;
-	flex-wrap: nowrap;
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
-	width: calc(100% - 10px);
-	height: auto;
-	border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: calc(100% - 10px);
+    height: auto;
+    border-radius: 10px;
 }
 
 .button {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: right;
-	position: static;
-	flex: none;
-	order: 1;
-	flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: right;
+    position: static;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 
-	margin: 5px;
-	padding: 5px 10px;
-	border-radius: 8px;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
 }
 
 .titleContainer {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
 }
 
 .headerImage {
-	width: auto;
-	height: 64px;
-	object-fit: cover;
-	object-position: center;
-	transition: filter 0.3s ease-in-out;
-	margin-bottom: 20px;
+    width: auto;
+    height: 64px;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 .indicator {
-	height: auto;
-	width: 24px;
-	margin-inline: 5px;
-	padding: 0;
+    height: auto;
+    width: 24px;
+    margin-inline: 5px;
+    padding: 0;
 }
 
 .leftArrow {
-	transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .rightArrow {
-	transform: rotate(270deg);
+    transform: rotate(270deg);
 }

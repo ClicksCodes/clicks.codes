@@ -10,7 +10,7 @@ html, body {
 
 html {
   /* background-color: var(--theme-ui-colors-background); */
-	transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   background-color: #000000 !important;
   transition: 0.3s ease-in-out border-radius;
   border-radius: 0px;
@@ -43,7 +43,7 @@ a {
   text-decoration: none;
   transition: 0.5s ease-in-out;
   color: var(--theme-ui-colors-primary);
-	transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 * {
@@ -57,7 +57,7 @@ code {
   font-weight: bold;
   color: #F27878;
   background-color: var(--theme-ui-colors-hint);
-	transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
   padding: 2px;
   font-size: 105%;
   border-radius: 5px;

@@ -13,12 +13,12 @@ class Divider extends Component {
 }
 
 class NavBar extends Component {
-	constructor(props) {
-		super(props);
-	}
+    constructor(props) {
+        super(props);
+    }
 
-	render() {
-		return (
+    render() {
+        return (
             <>
                 <div className={Styles.container}>
                     <a href="#skipNav" className={Styles.skipNav}>Skip navigation</a>
@@ -33,8 +33,8 @@ class NavBar extends Component {
                     <ThemeChangeButton/>
                 </div>
             </>
-		)
-	}
+        )
+    }
 }
 
 export default NavBar;

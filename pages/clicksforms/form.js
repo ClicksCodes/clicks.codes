@@ -4,13 +4,13 @@ import Styles from '../../styles/clicksforms/form.module.css';
 import Question from '../../Components/ClicksForms/Question';
 
 export default class Form extends Component {
-	constructor(props) {
-		super(props);
+    constructor(props) {
+        super(props);
 }
 
-	render() {
-		return (
-			<>
+    render() {
+        return (
+            <>
                 <Header
                     name={this.props.name}
                     subtext={this.props.description + (this.props.active ? '' : <><br />this.props is not accepting responses. Please check back later</>)}
@@ -43,9 +43,9 @@ export default class Form extends Component {
                         }
                     </div>
                 </div>
-			</>
-		)
-	}
+            </>
+        )
+    }
 }
 
 export async function getServerSideProps(ctx) {

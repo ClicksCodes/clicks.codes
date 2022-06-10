@@ -4,12 +4,12 @@ import react from 'react'
 import { withRouter } from "next/router";
 
 class Card extends Component {
-	constructor(props) {
-		super(props);
+    constructor(props) {
+        super(props);
     }
 
-	render() {
-		return (
+    render() {
+        return (
             <div className={Styles.card} style={{
                 margin: "0"
             }} onClick={this.props.url ? () => { this.props.router.push(this.props.url)} : null}>
@@ -44,21 +44,21 @@ class Card extends Component {
 }
 
 class CardRow extends Component {
-	constructor(props) {
-		super(props);
-	}
+    constructor(props) {
+        super(props);
+    }
 
-	render() {
-		return (
+    render() {
+        return (
             <div className={Styles.container}>
-				{
-					react.Children.toArray(this.props.children).map((item, index) => {
-						return <div className={Styles.item} key={index}>{item}</div>
-					})
-				}
-			</div>
+                {
+                    react.Children.toArray(this.props.children).map((item, index) => {
+                        return <div className={Styles.item} key={index}>{item}</div>
+                    })
+                }
+            </div>
         )
-	}
+    }
 }
 
 Card = withRouter(Card);

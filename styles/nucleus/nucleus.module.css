@@ -11,8 +11,8 @@
 }
 
 .text {
-	color: var(--card-text-color);
-	font-size: 18px;
+    color: var(--card-text-color);
+    font-size: 18px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;

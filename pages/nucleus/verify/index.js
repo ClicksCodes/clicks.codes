@@ -14,10 +14,6 @@ function Verify(props) {
     const [clicked, setClicked] = React.useState(false);
     const [theme, setTheme] = useColorMode()
 
-    if (clicked) {
-        Router.push('/nucleus/verify/alreadyVerified', '/nucleus/verify/success');
-    }
-
     const { reward: reward, isAnimating: isAnimating } = useReward('confetti', 'confetti', {
         elementSize: 10,
         elementCount: 150,
@@ -31,7 +27,7 @@ function Verify(props) {
 
     async function submitForm(tkn) {
         if ( clicked ) {
-            return
+            Router.push('/nucleus/verify/alreadyVerified', '/nucleus/verify/success');
         }
         setClicked(true);
         reward();

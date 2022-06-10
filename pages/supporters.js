@@ -14,24 +14,24 @@ class Supporter extends Component {
     }
 
     clicked() {
-		let content = this.props.children
-		navigator.clipboard.writeText(content)
-		this.setState({isPopoverOpen: true})
-		setTimeout(() => {
-			this.setState({isPopoverOpen: false})
-		}, 2500)
-	}
+        let content = this.props.children
+        navigator.clipboard.writeText(content)
+        this.setState({isPopoverOpen: true})
+        setTimeout(() => {
+            this.setState({isPopoverOpen: false})
+        }, 2500)
+    }
 
     render() {
         if ( this.props.clickable === false) {
-			return <div style={{
+            return <div style={{
                 display: 'flex', flexDirection: 'column', alignItems: 'center',
                 justifyContent: 'center', backgroundColor: '#6576CC', color: '#FFFFFF',
                 paddingInline: '20px', paddingBlock: '0.25rem',
                 borderRadius: '10px', boxShadow: '0px -3px 10px 2px #424242'
             }}>{this.props.children}</div>
-		} else {
-			return <Popover
+        } else {
+            return <Popover
                 isOpen={this.state.isPopoverOpen}
                 positions={['top', 'bottom', 'left', 'right']} // preferred positions by priority
                 content={<Supporter colour={this.props.colour} clickable={false}>{this.props.sub}</Supporter>}
@@ -43,7 +43,7 @@ class Supporter extends Component {
                     borderRadius: '10px'
                 }}>{this.props.children}</div>
             </Popover>
-		}
+        }
     }
 }
 

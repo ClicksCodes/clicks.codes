@@ -5,13 +5,13 @@ class Docs extends Component {
         Children:
         - List of sections
     */
-	constructor(props) {
-		super(props);
-	}
+    constructor(props) {
+        super(props);
+    }
 
-	render() {
-		return "a"
-	}
+    render() {
+        return "a"
+    }
 }
 
 class Section extends Component {
