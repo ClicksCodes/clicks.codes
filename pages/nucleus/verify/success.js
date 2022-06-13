@@ -13,7 +13,14 @@ class Success extends Component {
                 subtext="You can now close this tab or window."
                 gradient={["65CC76", "60B258"]}
                 wave="web/waves/header/rsm"
-                buttons={[]}
+                buttons={[
+                    {
+                        text: "Add Nucleus to your server",
+                        buttonText: "ffffff",
+                        link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands",
+                        color: "65CC76",
+                    }
+                ]}
                 fullscreen={true}
             />
         )

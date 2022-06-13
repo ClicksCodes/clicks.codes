@@ -58,7 +58,7 @@ export default function Home() {
             "Eek": "Programmer",
             "Dilythion": "Programmer",
             "Tani": "Programmer",
-            "CocoboloDesk": "Legal",
+            "CocoboloDesk": "Clicks Team",
             "GenElectrovise": "Plugins"
         },
         { // Packages

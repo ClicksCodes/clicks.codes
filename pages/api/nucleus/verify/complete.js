@@ -10,10 +10,9 @@ const Complete = async (req, res) => {
     if ( !chk.data.success ) {
         return res.status(200).send({success: false})
     }
-    let secret = process.env.VERIFY_SECRET
     try {
-        await Axios.post(`http://192.168.0.18:10000/verify/${req.body.code}`, {
-            secret: secret
+        await Axios.post(`${process.env.VERIFY_CALLBACK}/verify/${req.body.code}`, {
+            secret: process.env.VERIFY_SECRET
         });
     } catch (e) {
         return res.status(200).send({success: false})

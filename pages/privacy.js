@@ -16,7 +16,7 @@ export default function Home() {
             <AutoLayout>
                 <Panel halfSize={true}>
                     <Title>Transparency</Title>
-                    <Text>Everything we store about you and your Discord servers will be listed.</Text>
+                    <Text>Everything we store about you and your Discord  will be listed.</Text>
                     <List colour={"6576CC"}>
                         <ListItem><a href="https://clicksminuteper.github.io/policies/rsm">RSM</a></ListItem>
                         <ListItem><a href="https://clicksminuteper.github.io/policies/clicksforms">ClicksForms</a></ListItem>

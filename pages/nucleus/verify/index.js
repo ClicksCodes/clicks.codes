@@ -71,23 +71,6 @@ function Verify(props) {
                 </List>
                 <div id="confetti" />
             </Panel>
-            <Panel halfSize={false} id="invite">
-            <Title>Invite</Title>
-            <Divider />
-            <CardRow>
-                <Card
-                    wave="nucleus"
-                    icon="bots/nucleus/circle"
-                    buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
-                    title="Nucleus"
-                    subtext="Invite Nucleus to your server"
-                    buttons={[
-                        {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands", text: "Invite"}
-                    ]}
-                    url="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands"
-                />
-            </CardRow>
-        </Panel>
         </AutoLayout>
     </>
 }
@@ -105,7 +88,7 @@ export async function getServerSideProps(ctx) {
     let code;
     try {
         await Axios.patch(`http://localhost:10000/verify/${ctx.query.code}`);
-        code = await Axios.get(`http://localhost:10000/verify/${ctx.query.code}`, {code:ctx.query.code});
+        code = await Axios.get(`http://localhost:10000/verify/${ctx.query.code}`, {code: ctx.query.code});
     } catch (e) {
         return {
             redirect: {
