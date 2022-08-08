@@ -76,7 +76,6 @@ export default function Home() {
         },
         { // Special thanks
             "InternetMetro": "Minecraft server building",
-            "RetroEvelyne": "Minecraft server command blocks",
             "Eddy": "Minecraft server building",
         }
     ]
