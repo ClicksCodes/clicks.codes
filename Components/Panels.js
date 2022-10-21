@@ -37,17 +37,17 @@ class AutoLayout extends Component {
 
     calculateValidity() {
         this.children.map((item, index) => {
-            if ( index > 0 && item.props.halfSize && this.validity[index - 1] == 'half1' ) {
+            if ( index > 0 && item.props.halfSize && this.validity[index - 1] === 'half1' ) {
                 this.validity[index] = 'half2';
-            } else if ( index > 0 && !item.props.halfSize && this.validity[index - 1] == 'half1' ) {
+            } else if ( index > 0 && !item.props.halfSize && this.validity[index - 1] === 'half1' ) {
                 this.validity[index] = 'full';
                 this.validity[index - 1] = 'full';
-            } else if ( item.props.halfSize && !(index == this.props.children.length - 1) ) {
+            } else if ( item.props.halfSize && !(index === this.props.children.length - 1) ) {
                 this.validity[index] = 'half1';
-            } else if ( index == this.props.children.length - 1 && this.validity[index - 1] == 'half1' ) {
+            } else if ( index === this.props.children.length - 1 && this.validity[index - 1] === 'half1' ) {
                 this.validity[index] = 'full';
                 this.validity[index - 1] = 'full';
-            } else if ( index == this.props.children.length - 1 && this.validity[index - 1] == 'half2' ) {
+            } else if ( index === this.props.children.length - 1 && this.validity[index - 1] === 'half2' ) {
                 this.validity[index] = 'full';
             } else {
                 this.validity[index] = 'full';
@@ -60,9 +60,9 @@ class AutoLayout extends Component {
             <div className={Styles.container}>
                 {
                     this.children.map((item, index) => {
-                        if ( this.validity[index] == 'full' ) {
+                        if ( this.validity[index] === 'full' ) {
                             return this.children[index]
-                        } else if ( this.validity[index] == 'half1' ) {
+                        } else if ( this.validity[index] === 'half1' ) {
                             return <div key={index} className={Styles.doublePanel}>
                                 {this.children[index]}
                                 {this.children[index + 1]}

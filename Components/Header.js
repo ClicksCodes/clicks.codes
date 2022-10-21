@@ -32,7 +32,7 @@ function Header(props) {
     function confetti() {
         if (!isAnimating && !isDisappointmentAnimating && props.index) {
             setClickTotal(clickTotal + 1);
-            if (clickTotal > 0 && Math.floor(Math.random() * 3) == 0) {
+            if (clickTotal > 0 && Math.floor(Math.random() * 3) === 0) {
                 disappointment();
             } else {
                 reward();

@@ -2,15 +2,25 @@ import { Component } from "react";
 import Styles from '../styles/Components/card.module.css';
 import react from 'react'
 import { withRouter } from "next/router";
+import handleViewport from 'react-in-viewport';
 
 class Card extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            shown: false
+        }
+    }
+
+    animateIn() {
+        setTimeout(() => {
+            this.setState({shown: true});
+        }, this.props.delay * 200);
     }
 
     render() {
         return (
-            <div className={Styles.card} style={{
+            <div className={Styles.card + " " + (this.state.shown ? Styles.shown : null)} style={{
                 margin: "0"
             }} onClick={this.props.url ? () => { this.props.router.push(this.props.url)} : null}>
                 <div className={Styles.backgroundGradient} style={{
@@ -43,16 +53,46 @@ class Card extends Component {
     }
 }
 
-class CardRow extends Component {
+class CardRowClass extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            shown: false
+        }
+    }
+
+    animate() {
+        const { inViewport } = this.props;
+        console.log(inViewport)
+        if (inViewport) {
+            this.setState({shown: true});
+            react.Children.toArray(
+                react.Children.toArray(this.props.children)[0]
+                .props.children).forEach((item) => {
+                    item.ref.current.animateIn();
+                }
+            );
+        }
     }
 
     render() {
+        if (!this.state.shown) this.animate()
+        else console.log("not animating")
         return (
             <div className={Styles.container}>
                 {
                     react.Children.toArray(this.props.children).map((item, index) => {
+                        item = <Card
+                            delay={index}
+                            title={item.props.title}
+                            subtext={item.props.subtext}
+                            wave={item.props.wave}
+                            gradient={item.props.gradient}
+                            icon={item.props.icon}
+                            buttons={item.props.buttons}
+                            buttonText={item.props.buttonText}
+                            url={item.props.url}
+                        />
                         return <div className={Styles.item} key={index}>{item}</div>
                     })
                 }
@@ -62,5 +102,6 @@ class CardRow extends Component {
 }
 
 Card = withRouter(Card);
+const CardRow = handleViewport(CardRowClass, { rootMargin: '-1.0px' });
 
 export { Card, CardRow };

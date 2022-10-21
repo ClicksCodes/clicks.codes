@@ -32,12 +32,19 @@
     overflow: hidden;
     margin: 100px;
     transition: filter 0.3s ease-in-out;
-    transition: transform 0.15s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease-in-out;
 }
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) !important;
     cursor: pointer;
 }
+.card.shown {
+    opacity: 1 !important;
+    transform: translateY(0px);
+}
+
 
 
 .panel {

@@ -21,7 +21,7 @@ class RSMV extends Component {
 
     async handleVerificationSuccess(cls, token) {
         const chk = await Axios.put('/api/rsmv/verifyTkn', { tkn: token.toString() })
-        if(chk.data.success == true) {
+        if(chk.data.success === true) {
             this.setState({
                 captchaComplete: true
             })
@@ -107,7 +107,7 @@ export async function getServerSideProps(ctx) {
     }
     let code = await Axios.post('http://localhost:3000/api/rsmv/validate', {code:ctx.query.code});
     let headers = ctx.req.headers;
-    if (code.status != 200 ) {
+    if (code.status !== 200 ) {
         return {
             redirect: {
                 destination: '/rsmv/failure',

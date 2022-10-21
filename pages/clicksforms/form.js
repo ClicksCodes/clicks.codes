@@ -61,14 +61,14 @@ export async function getServerSideProps(ctx) {
         method: "GET",
         mode: "cors"
     })
-    if ( (await code).status == 404 ) {
+    if ( (await code).status ===  404 ) {
         return {
             redirect: {
                 destination: '/clicksforms/error/deleted',
                 permanent: true
             }
         }
-    } else if ( code.status != 200 ) {
+    } else if ( code.status !== 200 ) {
         return {
             redirect: {
                 destination: '/clicksforms/error/unknown',

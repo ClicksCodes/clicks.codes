@@ -12,7 +12,6 @@ import { useColorMode } from 'theme-ui';
 
 function Verify(props) {
     const [clicked, setClicked] = React.useState(false);
-    const [theme, setTheme] = useColorMode()
 
     const { reward: reward, isAnimating: isAnimating } = useReward('confetti', 'confetti', {
         elementSize: 10,
@@ -46,7 +45,7 @@ function Verify(props) {
             name={props.guild_name}
             customImage={props.guild_icon_url}
             roundImage={true}
-            subtext={`${props.memberCount} members`}
+            subtext={`Welcome, ${props.username}`}
             gradient={["F27878", "D96B6B"]}
             wave="web/waves/header/nucleus"
             buttons={[]}
@@ -87,8 +86,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        await Axios.patch(`http://localhost:10000/verify/${ctx.query.code}`);
-        code = await Axios.get(`http://localhost:10000/verify/${ctx.query.code}`, {code: ctx.query.code});
+        code = await Axios.get(`http://localhost:10000/verify/${ctx.query.code}`);
     } catch (e) {
         return {
             redirect: {
@@ -105,7 +103,7 @@ export async function getServerSideProps(ctx) {
             gID: code.data.gID,
             guild_name: code.data.gName,
             guild_icon_url: code.data.gIcon,
-            memberCount: code.data.mCount,
+            username: code.data.uName,
             headers: headers,
             code: ctx.query.code
         }

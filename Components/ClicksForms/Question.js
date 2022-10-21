@@ -6,7 +6,7 @@ class Question extends Component {
         super(props)
         this.state = {
             status: null,
-            answer: this.props.type == "multichoice" ? [] : null,
+            answer: this.props.type === "multichoice" ? [] : null,
             errorString: null,
         }
     }
@@ -71,7 +71,7 @@ class Question extends Component {
                 }
                 break
             case 'multichoice':
-                if ( typeof answer != 'object' ) {
+                if ( typeof answer !== 'object' ) {
                     valid = null
                 } else if ( !answer.length ) {
                     valid = null
@@ -87,7 +87,7 @@ class Question extends Component {
                 }
                 break
             case 'fileupload', 'date', 'time':
-                valid = answer != null ? true : null
+                valid = answer !== null ? true : null
                 break
         }
         this.setState({
@@ -98,7 +98,7 @@ class Question extends Component {
     }
 
     render() {
-        let borderColor = this.state.status == false ? this.getCol("red") : this.getCol("default");
+        let borderColor = this.state.status === false ? this.getCol("red") : this.getCol("default");
         return (
             <div className={Styles.questionContainer} style={{
                 boxShadow: `0px 0px 10px ${borderColor}`,

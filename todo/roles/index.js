@@ -21,7 +21,7 @@ class Verify extends Component {
 
     async handleVerificationSuccess(cls, token) {
         const chk = await Axios.put('/api/nucleus/verifyTkn', { tkn: token.toString() })
-        if(chk.data.success == true) {
+        if(chk.data.success === true) {
             this.setState({
                 captchaComplete: true
             })

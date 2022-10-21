@@ -19,7 +19,7 @@ const ThemeChangeButton = () => {
                 setColorMode(colorMode === 'light' ? 'dark' : 'light');
             }} href="#">
                 <img className={Styles.icon} alt="Theme" src={"https://assets.clicks.codes/web/icons/" + (
-                    colorMode == 'light' ? "light-white" : "dark"
+                    colorMode === 'light' ? "light-white" : "dark"
                 ) + ".svg"} />
             </a>
         </>

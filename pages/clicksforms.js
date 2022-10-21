@@ -49,7 +49,7 @@ export default class Home extends React.Component {
               <ListItem><Code colour="6576CC">/manage</Code> Lets you manage your servers forms.</ListItem>
             </List>
           </Panel>
-          <Panel halfSize={true} id="services" style={this.state.toHighlight == "services" ? {border: "solid 10px red"} : {}}>
+          <Panel halfSize={true} id="services" style={this.state.toHighlight === "services" ? {border: "solid 10px red"} : {}}>
             <Title>Services</Title>
             <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="services"/>
             <Text>ClicksForms supports services such as <a href="https://docs.google.com/forms">Google Forms</a> through our Add-on.</Text>
