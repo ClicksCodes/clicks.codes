@@ -7,20 +7,11 @@ import handleViewport from 'react-in-viewport';
 class Card extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            shown: false
-        }
-    }
-
-    animateIn() {
-        setTimeout(() => {
-            this.setState({shown: true});
-        }, this.props.delay * 200);
     }
 
     render() {
         return (
-            <div className={Styles.card + " " + (this.state.shown ? Styles.shown : null)} style={{
+            <div className={Styles.card + " " + (this.props.shown ? Styles.shown : null)} style={{
                 margin: "0"
             }} onClick={this.props.url ? () => { this.props.router.push(this.props.url)} : null}>
                 <div className={Styles.backgroundGradient} style={{
@@ -57,33 +48,35 @@ class CardRowClass extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            shown: false
+            shown: false,
+            childrenShown: Array(this.props.children.length)
         }
     }
 
     animate() {
         const { inViewport } = this.props;
-        console.log(inViewport)
         if (inViewport) {
             this.setState({shown: true});
-            react.Children.toArray(
-                react.Children.toArray(this.props.children)[0]
-                .props.children).forEach((item) => {
-                    item.ref.current.animateIn();
-                }
-            );
+            for (let index = 0; index < this.state.childrenShown.length; index++) {
+                setTimeout(() => {
+                    this.setState(state => {
+                        let childrenShown = [...state.childrenShown];
+                        childrenShown[index] = true;
+                        return {childrenShown};
+                    })
+                }, 200 * index);
+            }
         }
     }
 
     render() {
-        if (!this.state.shown) this.animate()
-        else console.log("not animating")
+        if (!this.props.shown) this.animate()
         return (
             <div className={Styles.container}>
                 {
                     react.Children.toArray(this.props.children).map((item, index) => {
                         item = <Card
-                            delay={index}
+                            shown={this.state.childrenShown[index]}
                             title={item.props.title}
                             subtext={item.props.subtext}
                             wave={item.props.wave}
