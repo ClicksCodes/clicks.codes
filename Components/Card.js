@@ -7,18 +7,26 @@ import handleViewport from 'react-in-viewport';
 class Card extends Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(e) {
+        e.preventDefault();
+        if (this.props.url) {
+            this.props.router.push(this.props.url);
+        }
     }
 
     render() {
         return (
             <div className={Styles.card + " " + (this.props.shown ? Styles.shown : null)} style={{
                 margin: "0"
-            }} onClick={this.props.url ? () => { this.props.router.push(this.props.url)} : null}>
+            }} onClick={this.handleClick}>
                 <div className={Styles.backgroundGradient} style={{
                     backgroundImage: `linear-gradient(69.44deg, #${this.props.gradient[0]} 0%, #${this.props.gradient[1]} 100%)`
                 }} />
                 <img alt="" className={Styles.backgroundImage} src={`https://assets.clicks.codes/web/waves/card/${this.props.wave}.svg`} draggable={false} />
-                <div className={Styles.panel} onClick={() => { this.props.url ? () => { this.props.router.push(this.props.url)} : null}}>
+                <div className={Styles.panel} onClick={this.handleClick}>
                     <div className={Styles.titleContainer}>
                         <img alt="Project icon" className={Styles.image} src={"https://assets.clicks.codes/" + (this.props.icon ? this.props.icon : this.props.wave) + ".svg"} />
                         <h1 className={Styles.title}>{this.props.title}</h1>

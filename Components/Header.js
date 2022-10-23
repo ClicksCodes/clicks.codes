@@ -69,6 +69,8 @@ function Header(props) {
                 <meta name="msapplication-TileColor" content={"#000000"} />
             </Head>
             <img draggable={false} alt="" className={Styles.backgroundImage} src={`https://assets.clicks.codes/${props.wave}.svg`} />
+            <div id="headerConfetti" />
+            <div id="disappointmentConfetti" />
             <div className={Styles.panel}>
                 <div className={Styles.titleContainer}>
                     <div onClick={confetti}>
@@ -114,8 +116,6 @@ function Header(props) {
                     </div> : <></>
                 }
             </div>
-            <div id="headerConfetti" />
-            <div id="disappointmentConfetti" />
         </div>
     )
 }

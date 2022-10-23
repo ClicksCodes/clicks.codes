@@ -11,6 +11,8 @@
     gap: 10px;
 
     background-color: var(--theme-ui-colors-panelColor);
+    transition: background-color 0.3s ease-in-out !important;
+
     border-radius: 20px;
 }
 
@@ -46,6 +48,8 @@
     padding-block: 20px;
     padding-inline: 20px;
     background-color: var(--theme-ui-colors-background);
+
+    transition: 0.3s ease-in-out background-color;
 }
 
 .title {
@@ -83,7 +87,8 @@
 
 .divider {
     width: 75%;
-    height: 4px;
+    height: 6px;
+    min-height: 6px;
     border-radius: 100vw;
     margin-block: 10px;
     transition: background-color 0.3s ease-in-out;

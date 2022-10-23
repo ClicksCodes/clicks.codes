@@ -23,7 +23,7 @@
 }
 
 .card {
-    border-radius: 17px;
+    border-radius: 25px;
     width: 100%;
     height: 204px;
     padding-inline: 5px;
@@ -35,6 +35,8 @@
     opacity: 0;
     transform: translateY(10px);
     transition: 0.3s ease-in-out;
+
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
 }
 .card:hover {
     transform: translateY(-5px) !important;
@@ -44,8 +46,6 @@
     opacity: 1 !important;
     transform: translateY(0px);
 }
-
-
 
 .panel {
     position: absolute;
@@ -69,7 +69,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 32px;
+    height: 20%;
     padding-inline: 10px;
     margin-top: 10px;
 }
@@ -82,6 +82,7 @@
     max-lines: 2;
     color: var(--theme-ui-colors-text);
     transition: color 0.3s ease-in-out;
+    text-align: center;
 }
 
 .image {
@@ -91,8 +92,10 @@
 
 .subtext {
     width: 100%;
+    height: 35%;
     padding-inline: 10px;
     text-align: center;
+    overflow-y: auto;
     color: var(--theme-ui-colors-text);
     transition: color 0.3s ease-in-out;
 }
@@ -108,6 +111,7 @@
     position: absolute;
     bottom: 5px;
     right: 5px;
+    height: 25%
 }
 
 .button {
@@ -124,28 +128,6 @@
     padding: 5px 10px;
     border-radius: 8px;
 }
-
-@media (max-width: 500px) {
-}
-
-
-.card.clicked {
-    transform: scale(1) !important;
-    z-index: 9999;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.backgroundGradient.clicked {
-    background-image: red;
-}
-
-/* .image.clicked {
-    width: 1000px !important;
-} */
 
 .container {
     width: calc(100% - 20px);

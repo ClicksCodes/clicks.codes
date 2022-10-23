@@ -14,11 +14,13 @@ export default function Home() {
         wave="web/waves/header/cmp"
         buttons={[]}
         index={true}
+        fullscreen={true}
       />
       <AutoLayout>
         <Panel halfSize={false}>
           <Title>Projects</Title>
           <Divider />
+          <Text>{"Here's things we've released and are in the making"}</Text>
           <CardRow>
             <Card
               wave="gps" title="GPS" subtext="Cards Against Humanity on Discord"
@@ -31,7 +33,7 @@ export default function Home() {
               url="/gps"
             />
             <Card
-              wave="rsm" title="RSM" subtext="Moderation Redefined"
+              wave="rsm" title="RSM" subtext="Moderation RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration Redefined"
               icon="bots/rsm/circle"
               buttons={[
                 {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands",text:"Invite"},
@@ -75,7 +77,7 @@ export default function Home() {
         <Panel halfSize={true}>
           <Title>Code Bases</Title>
           <Divider />
-          <Text>View any open source projects by Clicks on the following sites:</Text>
+          <Text>We release open source projects in a few different places depending on the language and purpose</Text>
           <CardRow>
             <Card
               wave="github" title="GitHub" subtext="View our open source projects"
@@ -100,7 +102,7 @@ export default function Home() {
         <Panel halfSize={true}>
           <Title>Socials</Title>
           <Divider />
-          <Text>Talk to us and ask us anything!</Text>
+          <Text>{"We've got discord, feel free to ask us anything"}</Text>
           <CardRow>
             <Card
               wave="discord" title="Discord" subtext="Join our Discord server to talk with the community"
