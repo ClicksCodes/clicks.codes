@@ -16,7 +16,7 @@ html {
   border-radius: 0px;
 }
 body {
-  background-color: var(--theme-ui-colors-background);
+  background-color: #000000;
   overflow: hidden;
   overflow-y: auto;
   transition: 0.3s ease-in-out border-radius;
