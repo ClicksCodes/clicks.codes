@@ -54,7 +54,6 @@ export default function Home() {
               icon="web/icons/gps/shuffles"
               title="Shuffles"
               subtext={`Replace your worst cards with new ones because \"The bot is unfair
-              and always gives me the worst cards and everyone else is better at the game than me\"` + `Replace your worst cards with new ones because \"The bot is unfair
               and always gives me the worst cards and everyone else is better at the game than me\"`}
               wave="clcks"
               gradient={["C4C4C4", "8D8D8D"]}

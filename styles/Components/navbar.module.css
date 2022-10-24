@@ -3,6 +3,13 @@
     margin: 0;
     padding: 0;
     width: 32px;
+    user-select: none;
+}
+
+.themeChangeIcon {
+    margin-bottom: 10px;
+    transform: translateY(var(--theme-ui-colors-offset));
+    transition: transform 0.3s ease-in-out;
 }
 
 .container {
@@ -12,6 +19,7 @@
     justify-content: left;
     align-items: center;
     flex-direction: row;
+    overflow-y: hidden;
     gap: 10px;
 
     height: 42px;

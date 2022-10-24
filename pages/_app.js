@@ -20,6 +20,7 @@ const theme = {
         hint: '#E4E4E4',
         panelColor: "#F0F0F0",
         fadeGradient: "rgba(240, 240, 240, 1)",
+        offset: "1px",
 
         modes: {
             dark: {
@@ -34,6 +35,7 @@ const theme = {
                 hint: '#242424',
                 panelColor: "rgba(255, 255, 255, 0.05)",
                 fadeGradient: "rgba(48, 48, 48, 1)",
+                offset: "-45px"
             }
         }
     },

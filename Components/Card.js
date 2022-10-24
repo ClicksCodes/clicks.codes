@@ -13,7 +13,7 @@ class Card extends Component {
     handleClick(e) {
         e.preventDefault();
         if (this.props.url) {
-            this.props.router.push(this.props.url);
+            window.location = this.props.url;
         }
     }
 
@@ -31,7 +31,7 @@ class Card extends Component {
                         <img alt="Project icon" className={Styles.image} src={"https://assets.clicks.codes/" + (this.props.icon ? this.props.icon : this.props.wave) + ".svg"} />
                         <h1 className={Styles.title}>{this.props.title}</h1>
                     </div>
-                    <p className={Styles.subtext}>{this.props.subtext}</p>
+                    <p className={Styles.subtext + " " + (this.props.buttons ? null : Styles.longText)}>{this.props.subtext}</p>
                     <div className={Styles.buttonLayout}>
                         {
                             this.props.buttons ? this.props.buttons.map((button, i) => {

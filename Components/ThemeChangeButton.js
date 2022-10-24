@@ -10,7 +10,7 @@ const ThemeChangeButton = () => {
 
     useEffect(() => {
         setRender(true);
-    });
+    }, []);
 
     return (
         <>
@@ -18,9 +18,8 @@ const ThemeChangeButton = () => {
                 e.preventDefault();
                 setColorMode(colorMode === 'light' ? 'dark' : 'light');
             }} href="#">
-                <img className={Styles.icon} alt="Theme" src={"https://assets.clicks.codes/web/icons/" + (
-                    colorMode === 'light' ? "light-white" : "dark"
-                ) + ".svg"} />
+                <img className={Styles.icon + " " + Styles.themeChangeIcon} alt="Theme" src={"https://assets.clicks.codes/web/icons/light-white.svg"} />
+                <img className={Styles.icon + " " + Styles.themeChangeIcon} alt="Theme" src={"https://assets.clicks.codes/web/icons/dark.svg"} />
             </a>
         </>
     )

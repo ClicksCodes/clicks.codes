@@ -37,6 +37,8 @@
     transition: 0.3s ease-in-out;
 
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+
+    display: block;
 }
 .card:hover {
     transform: translateY(-5px) !important;
@@ -98,6 +100,10 @@
     overflow-y: auto;
     color: var(--theme-ui-colors-text);
     transition: color 0.3s ease-in-out;
+}
+
+.longText {
+    height: 60%;
 }
 
 

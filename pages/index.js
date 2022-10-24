@@ -33,7 +33,7 @@ export default function Home() {
               url="/gps"
             />
             <Card
-              wave="rsm" title="RSM" subtext="Moderation RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration RedefinedModeration Redefined"
+              wave="rsm" title="RSM" subtext="Moderation Redefined"
               icon="bots/rsm/circle"
               buttons={[
                 {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands",text:"Invite"},
