@@ -6,6 +6,7 @@
     width: 100%;
     filter: var(--theme-ui-colors-cardFilter);
     transition: filter 0.3s ease-in-out;
+    user-select: none;
 }
 
 .backgroundGradient {
@@ -127,6 +128,7 @@
     object-position: center;
     transition: filter 0.3s ease-in-out;
     margin-bottom: 20px;
+    user-select: none;
 }
 
 .indicator {
@@ -134,11 +136,4 @@
     width: 24px;
     margin-inline: 5px;
     padding: 0;
-}
-
-.leftArrow {
-    transform: rotate(90deg);
-}
-.rightArrow {
-    transform: rotate(270deg);
 }

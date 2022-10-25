@@ -8,6 +8,7 @@
     border-radius: 0;
     filter: var(--theme-ui-colors-cardFilter);
     transition: filter 0.3s ease-in-out;
+    user-select: none;
 }
 
 .backgroundGradient {
@@ -33,7 +34,7 @@
     margin: 100px;
     transition: filter 0.3s ease-in-out;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
     transition: 0.3s ease-in-out;
 
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
@@ -90,6 +91,7 @@
 .image {
     height: 40px;
     width: 40px;
+    user-select: none;
 }
 
 .subtext {
