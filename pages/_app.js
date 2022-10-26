@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import NavBar from '../Components/NavBar';
 import { ThemeProvider } from 'theme-ui';
+import React from 'react';
 import Styles from '../styles/globals.module.css';
 
 const theme = {
@@ -20,7 +21,7 @@ const theme = {
         hint: '#E4E4E4',
         panelColor: "#F0F0F0",
         fadeGradient: "rgba(240, 240, 240, 1)",
-        offset: "1px",
+        offset: "2.5px",
 
         modes: {
             dark: {
@@ -35,7 +36,7 @@ const theme = {
                 hint: '#242424',
                 panelColor: "rgba(255, 255, 255, 0.05)",
                 fadeGradient: "rgba(48, 48, 48, 1)",
-                offset: "-45px"
+                offset: "-20px"
             }
         }
     },
@@ -43,10 +44,20 @@ const theme = {
 
 
 function App({ Component, pageProps }) {
+  const ref = React.forwardRef(function Ref(props, ref) {
+    return <NavBar {...props} ref={ref} />
+  });
+
+  const navbar = React.useRef(ref);
+
   return <>
     <ThemeProvider theme={theme}>
-      <NavBar />
-      <Component {...pageProps} />
+      {navbar.current.render()}
+      <Component
+        {...pageProps}
+        navbar={navbar}
+        navRef={ref}
+      />
       <div className={Styles.container} />
     </ThemeProvider>
   </>

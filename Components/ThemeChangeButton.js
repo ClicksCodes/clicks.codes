@@ -14,7 +14,7 @@ const ThemeChangeButton = () => {
 
     return (
         <>
-            <a className={Styles.icon + " " + Styles.ThemeChangeButton} onClick={(e) => {
+            <a className={Styles.icon + " " + Styles.themeChangeIcon} onClick={(e) => {
                 e.preventDefault();
                 setColorMode(colorMode === 'light' ? 'dark' : 'light');
             }} href="#">

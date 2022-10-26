@@ -2,7 +2,8 @@ import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header';
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props)
   return (
     <>
       <Header
@@ -16,6 +17,7 @@ export default function Home() {
         index={true}
         fullscreen={true}
       />
+      <button onClick={() => props.navbar.showMessage("Welcome to Clicks! This is a test message. It will disappear in 5 seconds.")}>aaaAAAAa</button>
       <AutoLayout>
         <Panel halfSize={false}>
           <Title>Projects</Title>
