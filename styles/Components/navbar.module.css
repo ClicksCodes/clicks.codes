@@ -32,7 +32,8 @@
     height: 100%;
     width: 3px;
     border-radius: 100vh;
-    background-color: #424242;
+    background-color: var(--theme-ui-colors-borderHint);
+    transition: 0.3s ease-in-out;
 }
 
 .skipNav {
@@ -69,6 +70,6 @@
 .message {
     font-size: 1.2rem;
     padding-left: 10px;
-    color: white;
+    color: var(--theme-ui-colors-text);
     transition: color 0.3s ease-in-out;
 }

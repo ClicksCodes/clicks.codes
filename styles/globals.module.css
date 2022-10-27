@@ -5,7 +5,8 @@
     height: calc(100vh - 42px);
     width: 100%;
     border-radius: 25px;
-    box-shadow: 0 0 0 100px black;
+    box-shadow: 0 0 0 100px var(--theme-ui-colors-borders);
+    transition: 0.3s ease-in-out;
     pointer-events: none;
     background: transparent;
 }

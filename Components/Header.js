@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Styles from '../styles/Components/header.module.css';
+import NavStyles from '../styles/Components/navbar.module.css';
 import Head from 'next/head';
 import { useColorMode } from "theme-ui";
 import { useReward } from "react-rewards";
@@ -29,12 +30,44 @@ function Header(props) {
         colors: ["#E5AB71"]
     });
 
+    function showSubBarWithUrl(url) {
+        const screenWidth = window.innerWidth;
+        let amount = screenWidth - 50;
+        amount = Math.floor(amount / 42) - 1;
+        props.showSubBar(
+            <div className={NavStyles.container}>
+                {
+                    Array.from(Array(amount)).map((i, index) => {
+                        return (
+                            <a className={NavStyles.icon} key={index}><img alt="Clicks" className={NavStyles.icon} src={
+                                url[Math.floor(Math.random() * url.length)]
+                            } /></a>
+                        )
+                    })
+                }
+            </div>,
+            5
+        );
+    }
+
     function confetti() {
         if (!isAnimating && !isDisappointmentAnimating && props.index) {
             setClickTotal(clickTotal + 1);
             if (clickTotal > 0 && Math.floor(Math.random() * 3) === 0) {
+                showSubBarWithUrl([
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f614.svg",
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f61e.svg",
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f613.svg",
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f625.svg",
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f623.svg",
+                ]);
                 disappointment();
             } else {
+                showSubBarWithUrl([
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f389.svg",
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f388.svg",
+                    "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f973.svg",
+                ]);
                 reward();
             }
         }
@@ -75,7 +108,7 @@ function Header(props) {
                 <div className={Styles.titleContainer}>
                     <div onClick={confetti}>
                         {
-                            props.customImage?
+                            props.customImage ?
                             <img height="64px" width="64px" alt={props.name} className={Styles.headerImage} style={{borderRadius: props.roundImage ? "100vw" : "0"}} src={props.customImage} />
                             : <></>
                         }

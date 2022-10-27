@@ -32,7 +32,7 @@ class Card extends Component {
                         <h1 className={Styles.title}>{this.props.title}</h1>
                     </div>
                     <p className={Styles.subtext + " " + (this.props.buttons ? null : Styles.longText)}>{this.props.subtext}</p>
-                    <div className={Styles.buttonLayout}>
+                    <div className={Styles.buttonLayout} onClick={this.showMessage}>
                         {
                             this.props.buttons ? this.props.buttons.map((button, i) => {
                                 return <a
@@ -85,14 +85,7 @@ class CardRowClass extends Component {
                     react.Children.toArray(this.props.children).map((item, index) => {
                         item = <Card
                             shown={this.state.childrenShown[index]}
-                            title={item.props.title}
-                            subtext={item.props.subtext}
-                            wave={item.props.wave}
-                            gradient={item.props.gradient}
-                            icon={item.props.icon}
-                            buttons={item.props.buttons}
-                            buttonText={item.props.buttonText}
-                            url={item.props.url}
+                            {...item.props}
                         />
                         return <div className={Styles.item} key={index}>{item}</div>
                     })

@@ -138,3 +138,10 @@
     margin-inline: 5px;
     padding: 0;
 }
+
+.leftArrow {
+    transform: rotate(90deg);
+}
+.rightArrow {
+    transform: rotate(270deg);
+}

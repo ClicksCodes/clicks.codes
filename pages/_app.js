@@ -23,6 +23,9 @@ const theme = {
         fadeGradient: "rgba(240, 240, 240, 1)",
         offset: "2.5px",
 
+        borders: "#FFFFFF",
+        borderHint: "#E4E4E4",
+
         modes: {
             dark: {
                 text: '#ffffff',
@@ -36,7 +39,10 @@ const theme = {
                 hint: '#242424',
                 panelColor: "rgba(255, 255, 255, 0.05)",
                 fadeGradient: "rgba(48, 48, 48, 1)",
-                offset: "-20px"
+                offset: "-20px",
+
+                borders: "#000000",
+                borderHint: "#424242",
             }
         }
     },
@@ -44,23 +50,49 @@ const theme = {
 
 
 function App({ Component, pageProps }) {
-  const ref = React.forwardRef(function Ref(props, ref) {
-    return <NavBar {...props} ref={ref} />
-  });
+    const [subBar, setSubBar] = React.useState(false);
+    const [currentElement, setElement] = React.useState(<></>);
 
-  const navbar = React.useRef(ref);
+    const showSubBar = (element, timeout) => {
+        setSubBar(true);
+        setElement(element);
+        if (timeout) {
+            setTimeout(() => {
+                setSubBar(false);
+                setTimeout(() => {
+                    setElement(<></>);
+                }, 0.31 * 1000)
+            }, timeout * 1000)
+        }
+    }
 
-  return <>
-    <ThemeProvider theme={theme}>
-      {navbar.current.render()}
-      <Component
-        {...pageProps}
-        navbar={navbar}
-        navRef={ref}
-      />
-      <div className={Styles.container} />
-    </ThemeProvider>
-  </>
+    const hideSubBar = () => {
+        setSubBar(false);
+    }
+
+    const showMessage = (text) => {
+        showSubBar(<p className={Styles.message}>{text}</p>, 5);
+    }
+
+    return <>
+        <ThemeProvider theme={theme}>
+        <NavBar
+            subBar={subBar}
+            setSubBar={setSubBar}
+            element={currentElement}
+            setElement={setElement}
+            showMessage={showMessage}
+            showSubBar={showSubBar}
+        />
+        <Component
+            {...pageProps}
+            showSubBar={showSubBar}
+            hideSubBar={hideSubBar}
+            showMessage={showMessage}
+        />
+        <div className={Styles.container} />
+        </ThemeProvider>
+    </>
 }
 
 export default App

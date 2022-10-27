@@ -3,7 +3,6 @@ import Header from '../Components/Header';
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
 export default function Home(props) {
-  console.log(props)
   return (
     <>
       <Header
@@ -16,8 +15,8 @@ export default function Home(props) {
         buttons={[]}
         index={true}
         fullscreen={true}
+        showSubBar={props.showSubBar}
       />
-      <button onClick={() => props.navbar.showMessage("Welcome to Clicks! This is a test message. It will disappear in 5 seconds.")}>aaaAAAAa</button>
       <AutoLayout>
         <Panel halfSize={false}>
           <Title>Projects</Title>
@@ -33,6 +32,7 @@ export default function Home(props) {
               ]}
               buttonText={"FFFFFF"} gradient={["78ECF2", "71AFE5"]}
               url="/gps"
+              showMessage={props.showMessage}
             />
             <Card
               wave="rsm" title="RSM" subtext="Moderation Redefined"
@@ -43,6 +43,7 @@ export default function Home(props) {
               ]}
               buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
               url="/rsm"
+              showMessage={props.showMessage}
             />
             <Card
               wave="clicksforms" title="ClicksForms" subtext="Create custom forms for Discord"
