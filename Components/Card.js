@@ -39,7 +39,8 @@ class Card extends Component {
                                     key={i}
                                     className={Styles.button}
                                     style={{backgroundColor:`#${button.color}`, color:`#${this.props.buttonText}`}}
-                                    href={button.link}
+                                    href={button.link ? button.link : null}
+                                    onClick={button.onClick ? button.onClick : null}
                                     target={button.newTab ? "_blank" : undefined}
                                     rel="noreferrer">{button.text}
                                 </a>

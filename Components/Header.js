@@ -135,7 +135,8 @@ function Header(props) {
                                             className={Styles.button}
                                             style={{ backgroundColor: `#${button.color}`, color: `#${button.buttonText}` }}
                                             href={button.link}
-                                            onClick={() => { if (button.id) { props.callback(button.id) } }}
+                                            onClick={
+                                                button.onClick ? button.onClick : () => { if (button.id) { props.callback(button.id) } }}
                                             target={button.target ? "_blank" : null}
                                             draggable={false}
                                             rel="noreferrer">
