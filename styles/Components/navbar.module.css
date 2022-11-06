@@ -48,7 +48,7 @@
 }
 
 .skipNav:focus {
-    width: 100%;
+    width: 150px;
     overflow: auto;
 }
 

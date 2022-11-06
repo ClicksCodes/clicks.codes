@@ -67,13 +67,21 @@ export default function Home(props) {
             />
             <Card
               wave="hooky" title="Hooky" subtext="Webhook protection for Discord"
-              icon="bots/hooky/circle"
+              icon={"bots/hooky/circle"}
               buttons={[
                 {color: "EDC575", link: "https://discord.com/oauth2/authorize?client_id=752188923505279037&scope=bot&permissions=536882176", text: "Invite"},
                 {color: "EDC575", link: "/hooky", text: "About"}
               ]}
               buttonText={"000000"} gradient={["424242", "8D8D8D"]}
               url="/hooky"
+            />
+            <Card
+              title="New projects..." subtext="We're actively working on projects! You can join our Discord to find out more."
+              buttons={[
+                {color: "6576CC", link: "https://discord.gg/bPaNnxe", text:"Join our Discord"}
+              ]}
+              buttonText={"FFFFFF"} border={"C4C4C4"}
+              url="/" overwritePosition={"center"}
             />
           </CardRow>
         </Panel>
@@ -105,7 +113,7 @@ export default function Home(props) {
         <Panel halfSize={true}>
           <Title>Socials</Title>
           <Divider />
-          <Text>{"We've got discord, feel free to ask us anything"}</Text>
+          <Text>{"We've got Discord, feel free to ask us anything"}</Text>
           <CardRow>
             <Card
               wave="discord" title="Discord" subtext="Join our Discord server to talk with the community"

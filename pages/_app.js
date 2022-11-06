@@ -53,8 +53,11 @@ function App({ Component, pageProps }) {
     const [subBar, setSubBar] = React.useState(false);
     const [currentElement, setElement] = React.useState(<></>);
 
-    const showSubBar = (element, timeout) => {
+    const showSubBar = (element, timeout, positioning="left") => {
         setSubBar(true);
+        if (positioning === "center") {
+            element = <div className={Styles.centeredSubBar}>{element}</div>
+        }
         setElement(element);
         if (timeout) {
             setTimeout(() => {
@@ -70,8 +73,8 @@ function App({ Component, pageProps }) {
         setSubBar(false);
     }
 
-    const showMessage = (text) => {
-        showSubBar(<p className={Styles.message}>{text}</p>, 5);
+    const showMessage = (text, positioning="left") => {
+        showSubBar(<p className={Styles.message}>{text}</p>, 5, positioning);
     }
 
     return <>
