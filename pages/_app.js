@@ -29,7 +29,7 @@ const theme = {
         modes: {
             dark: {
                 text: '#ffffff',
-                background: '#252525',
+                background: '#000000',
                 primary: '#6576CC',
                 cardText: '#424242',
                 cardBackground: 'rgba(0, 0, 0, 0.65)',

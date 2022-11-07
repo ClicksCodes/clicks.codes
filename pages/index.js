@@ -2,12 +2,14 @@ import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header';
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
+const duplicate = (arr, numberOfRepetitions) => arr.flatMap(i => Array.from({ length: numberOfRepetitions }).fill(i));
+
 export default function Home(props) {
   return (
     <>
       <Header
         name="Clicks"
-        subtext="Creating projects that click"
+        subtext="We develop "
         customImage="https://assets.clicks.codes/web/logos/clicks.svg"
         embedImage="https://assets.clicks.codes/web/logos/clicks.png"
         gradient={["6576CC", "4B5899"]}
@@ -16,6 +18,11 @@ export default function Home(props) {
         index={true}
         fullscreen={true}
         showSubBar={props.showSubBar}
+        effects={{ type: 50, changingSubtext: {
+          common: [
+            "websites", "Discord bots", "utilities", "APIs"
+          ], rare: ["overly complicated header animations"]
+        }}}
       />
       <AutoLayout>
         <Panel halfSize={false}>

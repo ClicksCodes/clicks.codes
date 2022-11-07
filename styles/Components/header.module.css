@@ -15,12 +15,23 @@
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 0;
     filter: var(--theme-ui-colors-cardFilter);
     transition: filter 0.3s ease-in-out;
 }
 
 .header {
     width: 100vw;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+    background-color: var(--theme-ui-colors-background);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
     position: relative;
     overflow: hidden;
     transition: filter 0.3s ease-in-out;
@@ -61,12 +72,9 @@
 }
 
 .subtext {
-    margin-bottom: 0px;
-    width: 100%;
     text-align: center;
     font-weight: 100;
     font-size: 1.5em;
-    margin-top: 50px;
     color: var(--theme-ui-colors-text);
     transition: color 0.3s ease-in-out;
 }
@@ -144,4 +152,35 @@
 }
 .rightArrow {
     transform: rotate(270deg);
+}
+
+.textBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 76px;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.typedEffect {
+    animation: blink-caret 1s ease-in-out infinite;
+    border-right: 0.08em solid var(--theme-ui-colors-text);
+    margin-left: 5px;
+    background-color: var(--theme-ui-colors-text);
+    height: 1.5em;
+    width: 2px;
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
 }
