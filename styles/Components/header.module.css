@@ -165,22 +165,3 @@
     margin-bottom: 0px;
     margin-top: 25px;
 }
-
-.typedEffect {
-    animation: blink-caret 1s ease-in-out infinite;
-    border-right: 0.08em solid var(--theme-ui-colors-text);
-    margin-left: 5px;
-    background-color: var(--theme-ui-colors-text);
-    height: 1.5em;
-    width: 2px;
-}
-
-@keyframes blink-caret {
-    from,
-    to {
-        opacity: 0%;
-    }
-    50% {
-        opacity: 100%;
-    }
-}

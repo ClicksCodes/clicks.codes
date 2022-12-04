@@ -3,6 +3,8 @@ import NavBar from '../Components/NavBar';
 import { ThemeProvider } from 'theme-ui';
 import React from 'react';
 import Styles from '../styles/globals.module.css';
+import { getSeason } from './api/season';
+import Christmas from '../Components/overlays/christmas';
 
 const theme = {
     config: {
@@ -77,6 +79,15 @@ function App({ Component, pageProps }) {
         showSubBar(<p className={Styles.message}>{text}</p>, 5, positioning);
     }
 
+    const season = getSeason();
+    let Overlay = <></>;
+    switch (season.season) {
+        case "christmas": {
+            Overlay = <Christmas />;
+            break;
+        }
+    }
+
     return <>
         <ThemeProvider theme={theme}>
         <NavBar
@@ -92,7 +103,12 @@ function App({ Component, pageProps }) {
             showSubBar={showSubBar}
             hideSubBar={hideSubBar}
             showMessage={showMessage}
+            season={season}
+            randomSeed={new Date().getMinutes() / 60}  // FIXME: Janky hack mate
         />
+        <div className={Styles.container} style={{
+            pointerEvents: "none",
+        }}>{Overlay}</div>
         <div className={Styles.container} />
         </ThemeProvider>
     </>

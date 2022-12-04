@@ -34,76 +34,6 @@ function preloadImage (src) {
 
 function Header(props) {
     const keys = Object.keys(props.effects ?? {});
-    const changingSubtextEffect = keys.includes("changingSubtext");
-    const typedEffect = keys.includes("type") || changingSubtextEffect;
-
-
-    const [ clickTotal, setClickTotal ] = React.useState(0);
-    const [ currText, setCurrentText ] = React.useState(typedEffect ? "" : (props.subtext ?? ""));
-    const [ hasRendered, setHasRendered ] = React.useState(false);
-
-    function typeText(currentText, toType) {
-        let count = 0;
-        let interval = setInterval(() => {
-            setCurrentText(currentText + toType.substring(0, count));
-            count++;
-            if (count > toType.length) {
-                clearInterval(interval);
-            }
-        }, props.effects.type ?? 50);
-        return currentText + toType
-    }
-
-    function unTypeText(currentText, amount) {
-        let count = 0;
-        const permanentText = currentText.slice(0, currentText.length - amount);
-        let toRemove = currentText.slice(currentText.length - amount, currentText.length);
-        let interval = setInterval(() => {
-            toRemove = toRemove.slice(0, toRemove.length - 1);
-            setCurrentText(permanentText + toRemove);
-            count++;
-            if (count >= amount) {
-                clearInterval(interval);
-            }
-        }, 500 / amount);
-        return permanentText;
-    }
-
-    function startAnimations() {
-        setHasRendered(true);
-        if (!changingSubtextEffect && typedEffect) return typeText("", props.subtext);
-        if (changingSubtextEffect && typedEffect) {
-            let lastPicked = -1;
-            function selectNextString() {
-                if (Math.floor(Math.random() * 100) === 0) {
-                    return props.effects.changingSubtext.rare[Math.floor(Math.random() * props.effects.changingSubtext.rare.length)];
-                }
-                let selectedIndex = lastPicked
-                while (selectedIndex === lastPicked) {
-                    selectedIndex = Math.floor(Math.random() * props.effects.changingSubtext.common.length);
-                }
-                lastPicked = selectedIndex;
-                return props.effects.changingSubtext.common[selectedIndex];
-            }
-            let nextString = selectNextString();
-            let currentText = typeText("", props.subtext + nextString);
-            setTimeout(() => {
-                function next() {
-                    setTimeout(() => {
-                        setTimeout(() => {
-                            nextString = selectNextString();
-                            currentText = typeText(currentText, nextString);
-                        }, 1000);
-                        currentText = unTypeText(currentText, nextString.length);
-                    }, 4000);
-                }
-                next()
-                setInterval(() => {
-                    next()
-                }, 5000);
-            }, 3000);
-        }
-    }
 
     const { reward: reward, isAnimating: isAnimating } = useReward('headerConfetti', 'confetti', {
         elementSize: 10,
@@ -128,6 +58,7 @@ function Header(props) {
 
     const all = positive.concat(negative)
     const [imagesPreloaded, setImagesPreloaded] = useState(false)
+    const [clickTotal, setClickTotal] = useState(0)
     useEffect(() => {
         let isCancelled = false
         async function effect() {
@@ -175,8 +106,6 @@ function Header(props) {
         }
     }
 
-    if (!hasRendered) startAnimations();
-
     return (
         <div className={Styles.header}  style={{
             margin: "0",
@@ -222,8 +151,7 @@ function Header(props) {
                         <h1 className={Styles.title}>{props.name}</h1>
                     </div>
                     <div className={Styles.textBar}>
-                        <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{currText}</p>
-                        { typedEffect ? <div className={Styles.typedEffect} /> : <></> }
+                        <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{props.subtext}</p>
                     </div>
                     <a href="#skipNav" id="skipNav" style={{display: "none"}} />
                     { props.buttons.length ?
