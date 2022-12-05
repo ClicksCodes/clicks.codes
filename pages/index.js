@@ -4,10 +4,10 @@ import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components
 
 
 export default function Home(props) {
-  let subtext = “”
+  let subtext = ""
   switch (props.season.season) {
     case "christmas": {
-      subtext = “Merry Christmas!"
+      subtext = "Merry Christmas!"
       break;
     }
     case "halloween": {
@@ -15,7 +15,7 @@ export default function Home(props) {
       break;
     }
     default: {
-      subtext = “Creating projects that click"
+      subtext = "Creating projects that click"
     }
   }
 
