@@ -4,38 +4,26 @@ import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components
 
 
 export default function Home(props) {
-  let subtexts = []
+  let subtext = “”
   switch (props.season.season) {
     case "christmas": {
-      subtexts = [
-        "Merry Christmas!",
-        "Happy Holidays!",
-        "Season's Greetings!",
-        "Merry Clicksmas!",
-      ]
+      subtext = “Merry Christmas!"
       break;
     }
     case "halloween": {
-      subtexts = [
-        "Happy Halloween!",
-        "Trick or Treat!",
-        "boo"
-      ]
+      subtext = "Happy Halloween!"
+      break;
     }
     default: {
-      subtexts = [
-        "Creating projects that click"
-      ];
+      subtext = “Creating projects that click"
     }
   }
-
-  let currentSubtext = subtexts[Math.floor(props.randomSeed * subtexts.length)];
 
   return (
     <>
       <Header
         name="Clicks"
-        subtext={currentSubtext}
+        subtext={subtext}
         customImage="https://assets.clicks.codes/web/logos/clicks.svg"
         embedImage="https://assets.clicks.codes/web/logos/clicks.png"
         gradient={["6576CC", "4B5899"]}

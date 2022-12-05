@@ -104,7 +104,6 @@ function App({ Component, pageProps }) {
             hideSubBar={hideSubBar}
             showMessage={showMessage}
             season={season}
-            randomSeed={new Date().getMinutes() / 60}  // FIXME: Janky hack mate
         />
         <div className={Styles.container} style={{
             pointerEvents: "none",
