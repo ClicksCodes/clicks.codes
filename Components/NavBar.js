@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Styles from '../styles/Components/navbar.module.css';
 import ThemeChangeButton from './ThemeChangeButton';
-import { getSeason } from '../pages/api/season';
 
 class Divider extends Component {
     render() {
@@ -19,7 +18,7 @@ class NavBar extends Component {
     }
 
     render() {
-        const season = getSeason().filePath;
+        const season = this.props.season.filePath;
         return (
             <div className={Styles.cutoffContainer}>
                 <div className={Styles.container + " " + (this.props.subBar ? Styles.slideUp : null)}>

@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import NavBar from '../Components/NavBar';
 import { ThemeProvider } from 'theme-ui';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Styles from '../styles/globals.module.css';
 import { getSeason } from './api/season';
 import Christmas from '../Components/overlays/christmas';
@@ -55,6 +55,13 @@ function App({ Component, pageProps }) {
     const [subBar, setSubBar] = React.useState(false);
     const [currentElement, setElement] = React.useState(<></>);
 
+    const [season, setSeason] = React.useState({ season: "normal", filePath: "normal" });
+
+    useEffect(() => async () => {
+        let season = await (await fetch("/api/season")).json();
+        setSeason(season);
+    }, [season])
+
     const showSubBar = (element, timeout, positioning="left") => {
         setSubBar(true);
         if (positioning === "center") {
@@ -79,7 +86,6 @@ function App({ Component, pageProps }) {
         showSubBar(<p className={Styles.message}>{text}</p>, 5, positioning);
     }
 
-    const season = getSeason();
     let Overlay = <></>;
     switch (season.season) {
         case "christmas": {
@@ -97,6 +103,7 @@ function App({ Component, pageProps }) {
             setElement={setElement}
             showMessage={showMessage}
             showSubBar={showSubBar}
+            season={season}
         />
         <Component
             {...pageProps}
