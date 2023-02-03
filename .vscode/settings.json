@@ -31,5 +31,8 @@
         "tsparticles",
         "unban",
         "viewas"
+    ],
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "production"
     ]
 }
