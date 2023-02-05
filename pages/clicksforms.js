@@ -33,6 +33,7 @@ export default class Home extends React.Component {
             {id: "invite", color: "775EBF", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
           ]}
           callback={() => this.highlightSection()}
+          season={this.props.season}
         />
         <AutoLayout>
           <Panel halfSize={true} id="commands">

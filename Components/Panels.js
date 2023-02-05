@@ -6,6 +6,7 @@ import handleViewport from 'react-in-viewport';
 class PanelClass extends Component {
     constructor(props) {
         super(props);
+        this.panel = react.createRef();
     }
 
     getStyle() {
@@ -16,12 +17,20 @@ class PanelClass extends Component {
     }
 
     render() {
-        return <div className={Styles.panel} style={this.getStyle()} id={this.props.id} tabIndex={0}>
-                {
-                    react.Children.toArray(this.props.children).map((child, index) => {
-                        return child;
-                    })
-                }
+        let style = this.getStyle();
+        if (this.props.forceStyle) {
+            style = {...style, ...this.props.forceStyle};
+            if (this.props.forceStyle.transform) {
+                style = {...this.getStyle(), transition: "transform ease-in-out 0.5s"};
+                style.transform += " " + this.props.forceStyle.transform;
+            }
+        }
+        return <div className={Styles.panel} style={style} id={this.props.id} tabIndex={0}>
+            {
+                react.Children.toArray(this.props.children).map((child, index) => {
+                    return child;
+                })
+            }
         </div>
     }
 }
@@ -30,13 +39,12 @@ class PanelClass extends Component {
 class AutoLayout extends Component {
     constructor(props) {
         super(props);
-        this.children = react.Children.toArray(this.props.children)
         this.validity = []
         this.calculateValidity()
     }
 
     calculateValidity() {
-        this.children.map((item, index) => {
+        react.Children.toArray(this.props.children).map((item, index) => {
             if ( index > 0 && item.props.halfSize && this.validity[index - 1] === 'half1' ) {
                 this.validity[index] = 'half2';
             } else if ( index > 0 && !item.props.halfSize && this.validity[index - 1] === 'half1' ) {
@@ -56,16 +64,17 @@ class AutoLayout extends Component {
     }
 
     render() {
+        const children = react.Children.toArray(this.props.children)
         return (
-            <div className={Styles.container}>
+            <div className={Styles.container} ref={this.props.forwardedRef}>
                 {
-                    this.children.map((item, index) => {
+                    children.map((item, index) => {
                         if ( this.validity[index] === 'full' ) {
-                            return this.children[index]
+                            return children[index]
                         } else if ( this.validity[index] === 'half1' ) {
                             return <div key={index} className={Styles.doublePanel}>
-                                {this.children[index]}
-                                {this.children[index + 1]}
+                                {children[index]}
+                                {children[index + 1]}
                             </div>
                         }
                     })

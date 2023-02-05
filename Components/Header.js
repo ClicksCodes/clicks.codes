@@ -107,11 +107,13 @@ function Header(props) {
     }
 
     return (
-        <div className={Styles.header}  style={{
+        <div className={Styles.header} style={{
             margin: "0",
             minHeight: props.fullscreen ? "calc(100vh - 42px)" : "calc(100vh - (4 * max(2em, 4vw)) - 1em)",
+            transform: props.season.season === "aprilFools" ? "rotate(2.5deg)" : "none",
+            transition: "transform 1s cubic-bezier(.47,1.64,.41,.8), background-color 0.3s ease-in-out"
         }} id={props.id ? props.id : null}>
-            <div className={Styles.container} style={{minHeight: props.fullscreen ? "calc(100vh - 42px)" : "calc(100vh - (4 * max(2em, 4vw)) - 1em)",}}>
+            <div className={Styles.container} style={{minHeight: props.fullscreen ? "calc(100vh - 42px)" : "calc(100vh - (4 * max(2em, 4vw)) - 1em)"}}>
                 {imagesPreloaded}
                 <div className={Styles.backgroundGradient} style={{
                     backgroundImage: `linear-gradient(69.44deg, #${props.gradient[0]} 0%, #${props.gradient[1]} 100%)`,

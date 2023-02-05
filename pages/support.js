@@ -2,7 +2,7 @@ import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header
@@ -11,6 +11,7 @@ export default function Home() {
         gradient={["71AFE5", "6576CC"]}
         wave="web/waves/header/clicksforms"
         buttons={[]}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={true}>

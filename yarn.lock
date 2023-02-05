@@ -4543,10 +4543,10 @@ react-hcaptcha@^0.1.1:
   resolved "https://registry.yarnpkg.com/react-hcaptcha/-/react-hcaptcha-0.1.1.tgz#da21311166f0153054624caf5784cfd977ef31f5"
   integrity sha512-p0s7uDOZAh28dbcmP2bXsox2NmIwQ6OtDTgjCYwfe49kHeCU67Omma1DhzYiGWQJRC6eTUZEikjsm+WT7bmy2g==
 
-react-in-viewport@^1.0.0-alpha.20:
-  version "1.0.0-alpha.28"
-  resolved "https://registry.yarnpkg.com/react-in-viewport/-/react-in-viewport-1.0.0-alpha.28.tgz#3957cb7931ec26582497acd14f7c3941f020fe75"
-  integrity sha512-SjBVCPUIRfJb516BUev1u/dejBfI5jIcskDz4Irq2RezNG7D199eER8reRzZX+w/FLxz21rpdqRbJbagv5n37Q==
+react-in-viewport@^1.0.0-alpha.29:
+  version "1.0.0-alpha.29"
+  resolved "https://registry.yarnpkg.com/react-in-viewport/-/react-in-viewport-1.0.0-alpha.29.tgz#7550692dddbc2f129774d1cb3db40be7b27b9438"
+  integrity sha512-48woFq8EUWl3WWAPeyPu5T5KR26G3q8Gs64YXMRQq7aIP5YBzHIN2GvoFwdXDhT19pwcOPmlkSAYWMt0+d3ydw==
   dependencies:
     hoist-non-react-statics "^3.0.0"
 

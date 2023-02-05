@@ -2,8 +2,8 @@ import '../styles/globals.css';
 import NavBar from '../Components/NavBar';
 import { ThemeProvider } from 'theme-ui';
 import React, {useEffect} from 'react';
+import { useRouter } from 'next/router';
 import Styles from '../styles/globals.module.css';
-import { getSeason } from './api/season';
 import Christmas from '../Components/overlays/christmas';
 
 const theme = {
@@ -55,12 +55,21 @@ function App({ Component, pageProps }) {
     const [subBar, setSubBar] = React.useState(false);
     const [currentElement, setElement] = React.useState(<></>);
 
+    const router = useRouter();
     const [season, setSeason] = React.useState({ season: "normal", filePath: "normal" });
 
     useEffect(() => async () => {
-        let season = await (await fetch("/api/season")).json();
-        setSeason(season);
-    }, [season])
+        // const params = router.query["theme"];
+        // console.log(router.query["theme"])
+        // if (params) {
+        //     setSeason({season: params, filePath: "seasonal/" + params});
+        //     return;
+        // }
+        let newSeason = await (await fetch("/api/season")).json();
+        // newSeason = {season: "trans", filePath: "seasonal/trans"}
+        setSeason({...newSeason });
+        console.log("theme is now " + newSeason.season)
+    }, [season.season, router])
 
     const showSubBar = (element, timeout, positioning="left") => {
         setSubBar(true);
@@ -70,7 +79,7 @@ function App({ Component, pageProps }) {
         setElement(element);
         if (timeout) {
             setTimeout(() => {
-                setSubBar(false);
+            setSubBar(false);
                 setTimeout(() => {
                     setElement(<></>);
                 }, 0.31 * 1000)
@@ -114,10 +123,11 @@ function App({ Component, pageProps }) {
         />
         <div className={Styles.container} style={{
             pointerEvents: "none",
+            height: "1000vh"
         }}>{Overlay}</div>
         <div className={Styles.container} />
         </ThemeProvider>
     </>
 }
 
-export default App
+export default App;

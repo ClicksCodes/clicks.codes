@@ -4,7 +4,7 @@ import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components
 import { List, ListItem, Code } from '../Components/Texttools';
 import { useColorMode } from 'theme-ui';
 
-export default function Home() {
+export default function Home(props) {
   const [theme, setTheme] = useColorMode()
 
   return (
@@ -22,6 +22,7 @@ export default function Home() {
           {color: "424242", buttonText: "FFFFFF", link: "#privacy", text: "Privacy"},
           {color: "F27878", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={true} id="commands">

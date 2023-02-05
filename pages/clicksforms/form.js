@@ -6,7 +6,7 @@ import Question from '../../Components/ClicksForms/Question';
 export default class Form extends Component {
     constructor(props) {
         super(props);
-}
+    }
 
     render() {
         return (
@@ -17,6 +17,7 @@ export default class Form extends Component {
                     gradient={["71AFE5", "6576CC"]}
                     wave="web/waves/header/clicksforms"
                     buttons={[]}
+                    season={this.props.season}
                 />
                 <div className={Styles.form}>
                     <div className={Styles.header}>

@@ -15,6 +15,7 @@ class Success extends Component {
                 wave="web/waves/header/rsm"
                 buttons={[]}
                 fullscreen={true}
+                season={this.props.season}
             />
         )
     }

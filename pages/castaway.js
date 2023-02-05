@@ -1,7 +1,7 @@
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header
@@ -12,6 +12,7 @@ export default function Home() {
         buttons={[
           {color: "78ECF2", buttonText: "000000", link: "#timeline", text: "Timeline"}
         ]}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={false} id="timeline">

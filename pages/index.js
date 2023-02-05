@@ -18,6 +18,9 @@ export default function Home(props) {
       subtext = "Creating projects that click"
     }
   }
+  const aprilFoolsStyle = props.season.season === "aprilFools" ? {
+    transform: props.season.season === "aprilFools" ? "rotate(1deg)" : "none"
+  } : {};
 
   return (
     <>
@@ -32,9 +35,10 @@ export default function Home(props) {
         index={true}
         fullscreen={true}
         showSubBar={props.showSubBar}
+        season={props.season}
       />
       <AutoLayout>
-        <Panel halfSize={false}>
+        <Panel halfSize={false} forceStyle={aprilFoolsStyle}>
           <Title>Projects</Title>
           <Divider />
           <Text>{"Here's things we've released and are in the making"}</Text>
@@ -101,7 +105,7 @@ export default function Home(props) {
             />
           </CardRow>
         </Panel>
-        <Panel halfSize={true}>
+        <Panel halfSize={true} forceStyle={aprilFoolsStyle}>
           <Title>Code Bases</Title>
           <Divider />
           <Text>We release open source projects in a few different places depending on the language and purpose</Text>
@@ -126,7 +130,7 @@ export default function Home(props) {
             />
           </CardRow>
         </Panel>
-        <Panel halfSize={true}>
+        <Panel halfSize={true} forceStyle={aprilFoolsStyle}>
           <Title>Socials</Title>
           <Divider />
           <Text>{"We've got Discord, feel free to ask us anything"}</Text>

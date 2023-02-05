@@ -4,7 +4,7 @@ import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header';
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header
@@ -13,6 +13,10 @@ export default function Home() {
         gradient={["6576CC", "4B5899"]}
         wave="web/waves/header/cmp"
         buttons={[]}
+        index={true}
+        fullscreen={true}
+        showSubBar={props.showSubBar}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={false}>
@@ -103,7 +107,7 @@ export default function Home() {
           <Text>Your parents were right, this place is terrifying</Text>
           <CardRow>
           <Card
-            wave="discord" title="Discord" subtext="No, dat cord sorry for the confusion"
+            wave="discord" title="This cord" subtext="No, dat cord sorry for the confusion"
             icon="web/icons/discord"
             buttons={[
               {color: "404EED", link: "https://discord.gg/bPaNnxe", text: "Join"}

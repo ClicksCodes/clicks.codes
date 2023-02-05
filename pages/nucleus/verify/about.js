@@ -28,6 +28,7 @@ function About(props) {
                     {color: "424242", buttonText: "FFFFFF", link: "#privacy", text: "Privacy"},
                     {color: "F27878", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
                 ]}
+                season={props.season}
             />
             <AutoLayout>
                 <Panel halfSize={false} id="about">

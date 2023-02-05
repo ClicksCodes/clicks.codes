@@ -14,7 +14,7 @@ import { List, ListItem, Code } from '../Components/Texttools';
 // import FeatureStatistics from '../public/Features/RSM/Statistics.svg';
 // import FeatureTags from '../public/Features/RSM/Tags.svg';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header
@@ -28,6 +28,7 @@ export default function Home() {
           {color: "424242", buttonText: "FFFFFF", link: "#privacy", text: "Privacy"},
           {color: "F27878", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={true} id="commands">

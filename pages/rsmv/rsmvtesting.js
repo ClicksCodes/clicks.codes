@@ -66,6 +66,7 @@ class RSMV extends Component {
                 gradient={["F27878", "D96B6B"]}
                 wave="web/waves/header/rsm"
                 buttons={[]}
+                season={this.props.season}
             />
             <AutoLayout>
                 <Panel>

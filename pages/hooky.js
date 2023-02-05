@@ -2,7 +2,7 @@ import { Card, CardRow } from '../Components/Card';
 import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header
@@ -13,6 +13,7 @@ export default function Home() {
         buttons={[
           {color: "EDC575", buttonText: "000000", link: "#invite", text: "Invite"}
         ]}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={false} id="invite">

@@ -6,7 +6,6 @@ export default class Home extends Component {
         super(props);
     }
 
-
     render() {
         return (
             <>
@@ -22,6 +21,7 @@ export default class Home extends Component {
                             target: true
                     }]}
                     fullscreen={true}
+                    season={this.props.season}
                 />
             </>
         )

@@ -49,7 +49,7 @@ class Supporter extends Component {
 
 
 
-export default function Home() {
+export default function Home(props) {
     const groups = [
         { // Devs and testers
             "TheCodedProf": "Programmer",
@@ -87,6 +87,7 @@ export default function Home() {
                 gradient={["71AFE5", "6576CC"]}
                 wave="web/waves/header/clicksforms"
                 buttons={[]}
+                season={props.season}
             />
             <AutoLayout>
                 <Panel halfSize={false}>

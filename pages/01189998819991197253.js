@@ -28,6 +28,7 @@ export default function Error(props) {
                     props.showMessage(quotes[Math.floor(Math.random() * quotes.length)])
                 })}]}
                 fullscreen={true}
+                season={props.season}
             />
         </>
     )

@@ -49,6 +49,7 @@ function Verify(props) {
             gradient={["F27878", "D96B6B"]}
             wave="web/waves/header/nucleus"
             buttons={[]}
+            season={props.season}
         />
         <AutoLayout>
             <Panel>

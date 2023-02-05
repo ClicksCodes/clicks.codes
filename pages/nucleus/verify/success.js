@@ -22,6 +22,7 @@ class Success extends Component {
                     }
                 ]}
                 fullscreen={true}
+                season={this.props.season}
             />
         )
     }

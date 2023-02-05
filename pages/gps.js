@@ -3,7 +3,7 @@ import Header from '../Components/Header'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { List, ListItem, Code } from '../Components/Texttools';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <Header
@@ -16,6 +16,7 @@ export default function Home() {
           {color: "71AFE5", buttonText: "FFFFFF", link: "#commands", text: "Commands"},
           {color: "6576CC", buttonText: "FFFFFF", link: "#invite", text: "Invite"}
         ]}
+        season={props.season}
       />
       <AutoLayout>
         <Panel halfSize={false} id="features">
