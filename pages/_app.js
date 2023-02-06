@@ -60,15 +60,15 @@ function App({ Component, pageProps }) {
 
     useEffect(() => async () => {
         // const params = router.query["theme"];
-        // console.log(router.query["theme"])
         // if (params) {
-        //     setSeason({season: params, filePath: "seasonal/" + params});
+        // setSeason({season: params, filePath: "seasonal/" + params});
         //     return;
         // }
-        let newSeason = await (await fetch("/api/season")).json();
+        // let newSeason = await (await fetch("/api/season")).json();
         // newSeason = {season: "trans", filePath: "seasonal/trans"}
-        setSeason({...newSeason });
-        console.log("theme is now " + newSeason.season)
+        // setSeason({...newSeason });
+        const params = "aprilFools"
+        setSeason({season: params, filePath: "seasonal/" + params});
     }, [season.season, router])
 
     const showSubBar = (element, timeout, positioning="left") => {
