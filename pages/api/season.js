@@ -19,10 +19,15 @@ function getSeason() {
 
     let current = new Date();
     let currentSeason = Object.keys(dates).find((str) => current >= dates[str][0] && current <= dates[str][1]) || "normal";
+    let daysIntoSeason = 0;
+    if (currentSeason !== "normal") {
+        daysIntoSeason = Math.floor((new Date().getTime() - dates[currentSeason][0].getTime()) / (1000 * 60 * 60 * 24))
+    }
 
     return {
         season: currentSeason,
-        filePath: filePaths[currentSeason]
+        filePath: filePaths[currentSeason],
+        daysIntoSeason: daysIntoSeason
     }
 }
 
