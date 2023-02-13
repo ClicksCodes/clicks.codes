@@ -19,9 +19,13 @@ function getSeason() {
 
     let current = new Date();
     let currentSeason = Object.keys(dates).find((str) => current >= dates[str][0] && current <= dates[str][1]) || "normal";
-    let daysIntoSeason = 0;
+    let daysIntoSeason;
     if (currentSeason !== "normal") {
         daysIntoSeason = Math.floor((new Date().getTime() - dates[currentSeason][0].getTime()) / (1000 * 60 * 60 * 24))
+    } else {
+        // Calculate days past the most recent season
+        let mostRecentSeason = Object.keys(dates).reduce((a, b) => dates[a][1] > dates[b][1] ? a : b);
+        daysIntoSeason = Math.floor((new Date().getTime() - dates[mostRecentSeason][1].getTime()) / (1000 * 60 * 60 * 24))
     }
 
     return {
