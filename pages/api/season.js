@@ -1,3 +1,7 @@
+function daysIntoSeason(date) {
+    return Math.floor((new Date().getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
+}
+
 function getSeason() {
     let year = new Date().getFullYear();
 
@@ -21,11 +25,11 @@ function getSeason() {
     let currentSeason = Object.keys(dates).find((str) => current >= dates[str][0] && current <= dates[str][1]) || "normal";
     let daysIntoSeason;
     if (currentSeason !== "normal") {
-        daysIntoSeason = Math.floor((new Date().getTime() - dates[currentSeason][0].getTime()) / (1000 * 60 * 60 * 24))
+        daysIntoSeason = daysIntoSeason(dates[currentSeason][0])
     } else {
-        // Calculate days past the most recent season
-        let mostRecentSeason = Object.keys(dates).reduce((a, b) => dates[a][1] > dates[b][1] ? a : b);
-        daysIntoSeason = Math.floor((new Date().getTime() - dates[mostRecentSeason][1].getTime()) / (1000 * 60 * 60 * 24))
+        // Calculate the days from the end of each season
+        let days = Object.keys(dates).map((str) => daysIntoSeason(dates[str][1])).filter((num) => num > 0);
+        daysIntoSeason = Math.min(...days);
     }
 
     return {
