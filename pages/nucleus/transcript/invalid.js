@@ -10,10 +10,8 @@ class Failed extends Component {
     render() {
         return (
             <Header
-                name="Verification failed"
-                subtext={
-                    <p>Please try again, and if the error persists please contact us at <Link href="mailto:verification@clicks.codes" target="_blank" rel="noopener noreferrer">verification@clicks.codes</Link></p>
-                }
+                name="Transcript does not exist"
+                subtext={<p>No transcripts matched that code. If you believe this is a mistake, please submit a report in <Link href="https://discord.gg/bPaNnxe" target="_blank" rel="noopener noreferrer">our server</Link></p>}
                 gradient={["F27878", "D96B6B"]}
                 wave="web/waves/header/nucleus"
                 buttons={[]}

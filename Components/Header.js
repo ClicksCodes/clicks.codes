@@ -105,12 +105,13 @@ function Header(props) {
             }
         }
     }
+    const season = props.season ?? { season: "normal", filePath: "normal" };
 
     return (
         <div className={Styles.header} style={{
             margin: "0",
             minHeight: props.fullscreen ? "calc(100vh - 42px)" : "calc(100vh - (4 * max(2em, 4vw)) - 1em)",
-            transform: props.season.season === "aprilFools" ? "rotate(2.5deg)" : "none",
+            transform: season.season === "aprilFools" ? "rotate(2.5deg)" : "none",
             transition: "transform 1s cubic-bezier(.47,1.64,.41,.8), background-color 0.3s ease-in-out"
         }} id={props.id ? props.id : null}>
             <div className={Styles.container} style={{minHeight: props.fullscreen ? "calc(100vh - 42px)" : "calc(100vh - (4 * max(2em, 4vw)) - 1em)"}}>
@@ -153,7 +154,11 @@ function Header(props) {
                         <h1 className={Styles.title}>{props.name}</h1>
                     </div>
                     <div className={Styles.textBar}>
-                        <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{props.subtext}</p>
+                        {
+                            props.subtext instanceof String ?
+                            <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{props.subtext}</p> :
+                            props.subtext
+                        }
                     </div>
                     <a href="#skipNav" id="skipNav" style={{display: "none"}} />
                     { props.buttons.length ?

@@ -48,11 +48,11 @@ class Code extends Component {
     }
 
     render() {
-        return <pre
+        return <span
             className={Styles.code}
             style={{color: `#${this.props.colour}`}}
             onClick={this.props.clickable ? () => this.clicked() : () => this.clicked()}
-        >{this.state.isPopoverOpen ? "Copied!" : this.props.children}</pre>
+        >{this.state.isPopoverOpen ? "Copied!" : this.props.children}</span>
     }
 }
 

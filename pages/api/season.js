@@ -2,6 +2,14 @@ function daysIntoSeason(date) {
     return Math.floor((new Date().getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
 }
 
+function daysSinceDate(date) {
+    // If the date is after today, make it last year
+    if (date > new Date()) {
+        date.setFullYear(date.getFullYear() - 1);
+    }
+    return Math.floor((new Date().getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+}
+
 function getSeason() {
     let year = new Date().getFullYear();
 
@@ -10,7 +18,8 @@ function getSeason() {
         halloween: [new Date(`${year}-10-25`), new Date(`${year}-11-1`)],
         trans: [new Date(`${year}-11-13`), new Date(`${year}-11-19`)],
         christmas: [new Date(`${year}-12-1`), new Date(`${year}-12-26`)],
-        aprilFools: [new Date(`${year}-04-01`), new Date(`${year}-04-01`)]
+        aprilFools: [new Date(`${year}-04-01`), new Date(`${year}-04-01`)],
+        fake: [new Date(`${year}-01-01`), new Date(`${year}-01-01`)]
     }
     const filePaths = {
         normal: "normal",
@@ -23,19 +32,19 @@ function getSeason() {
 
     let current = new Date();
     let currentSeason = Object.keys(dates).find((str) => current >= dates[str][0] && current <= dates[str][1]) || "normal";
-    let daysIntoSeason;
+    let currentDaysIntoSeason;
     if (currentSeason !== "normal") {
-        daysIntoSeason = daysIntoSeason(dates[currentSeason][0])
+        currentDaysIntoSeason = daysIntoSeason(dates[currentSeason][0])
     } else {
-        // Calculate the days from the end of each season
-        let days = Object.keys(dates).map((str) => daysIntoSeason(dates[str][1])).filter((num) => num > 0);
-        daysIntoSeason = Math.min(...days);
+        // Calculate how many days it has been since each season ended
+        let days = Object.keys(dates).map((str) => daysSinceDate(dates[str][1]))
+        currentDaysIntoSeason = Math.min(...days);
     }
 
     return {
         season: currentSeason,
         filePath: filePaths[currentSeason],
-        daysIntoSeason: daysIntoSeason
+        daysIntoSeason: currentDaysIntoSeason
     }
 }
 
