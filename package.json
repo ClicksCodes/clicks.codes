@@ -7,7 +7,7 @@
     "build": "ANALYZE=true NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint",
-    "windev": "next dev",
+    "windev": "next dev -p 3030",
     "winbuild": "next build"
   },
   "dependencies": {

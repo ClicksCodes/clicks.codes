@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React from 'react';
+import Author from '../../../Components/Transcripts/Author';
 
 function Index(props) {
     return <>
@@ -13,7 +14,7 @@ function Index(props) {
         paddingLeft: "25px",
         color: "white",
         fontSize: "1.5em",
-    }}>Nucleus Transcripts</div>
+    }}>Transcript for: {props.data.for.username}#{props.data.for.discriminator} | In {<a href={`https://discord.com/channels/${props.data.guild}/${props.data.channel}`}>ChannelName</a>} | Type: {props.data.type}</div>
     <div style={{
         height: "100vw",
         width: "100vw",
@@ -23,7 +24,13 @@ function Index(props) {
         paddingTop: "10px",
         transition: "all 0.3s ease-in-out"
     }}>
-        <p>{props.humanReadable}</p>
+        <Author author={props.data.messages[0].author} />
+    {/* {
+        props.data.messages.map((message, index) => {
+            console.log(index, message)
+            return <Author key={index.toString()} author={message.author} />
+        })
+    } */}
     </div>
 </>
 }
@@ -40,7 +47,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        code = await Axios.get(`http://localhost:10000/transcript/${ctx.query.code}/human`);
+        code = (await Axios.get(`http://localhost:10000/transcript/${ctx.query.code}`))
     } catch (e) {
         return {
             redirect: {
@@ -51,7 +58,7 @@ export async function getServerSideProps(ctx) {
     }
     return {
         props: {
-            humanReadable: code.data
+            data: code.data
         }
     }
 }

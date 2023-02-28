@@ -22,7 +22,11 @@ function Testing(props) {
             paddingTop: "10px",
             transition: "all 0.3s ease-in-out"
         }}>
-            <p>{props.humanReadable}</p>
+            {
+                props.humanReadable.split("\n").map((s, i) => {
+                    return <p key={i}>{s}</p>
+                })
+            }
         </div>
     </>
 }
@@ -40,7 +44,7 @@ export async function getServerSideProps(ctx) {
     if (ctx.query.code === "test") {
         return {
             props: {
-                humanReadable: "This is a test string! It should render correctly on the page"
+                humanReadable: "This is a test string! It should render correctly on the page\nAnd a newline!"
             }
         }
     } else {
