@@ -4,6 +4,7 @@ import NavStyles from '../styles/Components/navbar.module.css';
 import Head from 'next/head';
 import { useReward } from "react-rewards";
 import ScrollContainer from 'react-indiana-drag-scroll'
+import { Paragraph } from "./Texttools.js"
 
 const positive = [
     "https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f389.svg",
@@ -155,7 +156,7 @@ function Header(props) {
                     </div>
                     <div className={Styles.textBar}>
                         {
-                            props.subtext instanceof String ?
+                            typeof props.subtext === "string" ?
                             <p className={Styles.subtext + " " + (props.buttons.length ? Styles.subtextExtra : null)}>{props.subtext}</p> :
                             props.subtext
                         }

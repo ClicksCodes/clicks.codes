@@ -8,10 +8,11 @@ const Complete = async (req, res) => {
     if (code.data.user  !== req.body.uid) return res.send(401)
     if (code.data.guild !== req.body.gid) return res.send(401)
     if (code.data.role  !== req.body.rid) return res.send(401)
+    console.log(req.body)
 
     let secret = process.env.VERIFY_SECRET;
     let resp = await Axios.get(
-        `http://localhost:10000/verify/${req.body.gid}/${req.body.rid}/${req.body.uid}/${secret}/${req.body.code}`
+        `http://127.0.0.1:10000/verify/${req.body.gid}/${req.body.rid}/${req.body.uid}/${secret}/${req.body.code}`
     )
     return res.send(resp.status);
 }
