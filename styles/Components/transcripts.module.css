@@ -8,13 +8,15 @@
 }
 
 .container {
-    width: 100vw;
+    width: calc(100vw - 20px);
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: top;
     gap: 10px;
     margin-top: 20px;
+    margin-right: 20px;
+    height: auto;
 }
 
 .verticalFlex {
@@ -36,4 +38,83 @@
     border-radius: 5px;
     padding: 2px 5px;
     font-size: 12px;
+}
+
+.messageContent {
+    width: 100%;
+    color: var(--theme-ui-colors-text);
+    margin-block: 0;
+    transition: color 0.3s ease-in-out;
+    font-size: 20px;
+}
+.authorText {
+    width: fit-content;
+    color: var(--theme-ui-colors-text);
+    margin-block: 0;
+    transition: color 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+/* Box for single attachment */
+.attachment {
+
+}
+/* Blue Link for attachmentURL */
+.attachmentLink {
+
+}
+
+/* Embed box */
+.embed {
+    border-left: solid 5px red;
+    border-radius: 5px 0 0 5px;
+    padding-left: 10px;
+}
+
+/* Embed Title*/
+.embedTitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Embed Description */
+.embedDescription {
+
+}
+
+/* Embed Thumbnail */
+.embedThumbnail {
+
+}
+
+/* Embed Image */
+.embedImage {
+
+}
+
+/* Embed Footer */
+.embedFooter {
+
+}
+
+/* Embed Author Box (IconURL, Username) */
+.embedAuthor {
+
+}
+
+.embedAuthor a {
+
+}
+
+.embedAuthor p {
+
+}
+
+.embedAuthor Image {
+
+}
+
+/* Embed Field */
+.embedField {
+
 }
