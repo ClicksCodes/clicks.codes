@@ -38,7 +38,7 @@ function getSeason() {
     } else {
         // Calculate how many days it has been since each season ended
         let days = Object.keys(dates).map((str) => daysSinceDate(dates[str][1]))
-        currentDaysIntoSeason = Math.min(...days);
+        currentDaysIntoSeason = Math.min(...days) - 1;
     }
 
     return {
