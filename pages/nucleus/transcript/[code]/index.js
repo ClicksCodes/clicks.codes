@@ -1,6 +1,6 @@
 import Axios from 'axios';
 import React from 'react';
-import Message from '../../../Components/Transcripts/Message';
+import Message from '../../../../Components/Transcripts/Message';
 
 function Index(props) {
     return <div style={{overflowY: "scroll", overflowX: "hidden"}}>
@@ -34,7 +34,7 @@ function Index(props) {
 
 export default Index;
 export async function getServerSideProps(ctx) {
-    if(!ctx.query.code) {
+    if(!ctx.params.code) {
         return {
             redirect: {
                 destination: '/nucleus/transcript/about',
@@ -44,7 +44,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        code = (await Axios.get(`http://localhost:10000/transcript/${ctx.query.code}`))
+        code = (await Axios.get(`http://localhost:10000/transcript/${ctx.params.code}`))
     } catch (e) {
         return {
             redirect: {
