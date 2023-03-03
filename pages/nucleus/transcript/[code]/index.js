@@ -134,13 +134,13 @@ export async function getServerSideProps(ctx) {
     }
     return {
         redirect: {
-            destination: `/nucleus/transcript/${ctx.params.code}/human`,
+            destination: `/nucleus/transcript/${ctx.params.code}/human?key=${ctx.query.key}`,
             permanent: true
         }
     }
     // let code;
     // try {
-    //     code = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/transcript/${ctx.params.code}`))
+    //     code = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/transcript/${ctx.params.code}?key=${ctx.query.key`))
     // } catch (e) {
     //     return {
     //         redirect: {
