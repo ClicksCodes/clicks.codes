@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 const Validate = async (req, res) => {
     try {
-        var out = await Axios.get(`http://localhost:10000/verify/${req.body.code}`)
+        var out = await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/verify/${req.body.code}`)
         out = out.data
         let props = {
             user: out.user,

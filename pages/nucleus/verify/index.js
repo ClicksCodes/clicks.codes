@@ -87,7 +87,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        code = await Axios.get(`http://localhost:10000/verify/${ctx.query.code}`);
+        code = await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/verify/${ctx.query.code}`);
     } catch (e) {
         return {
             redirect: {

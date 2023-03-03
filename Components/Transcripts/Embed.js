@@ -14,9 +14,7 @@ const code = /(\`.+\`)/g;
 const codeBlock = /(\`\`\`.+\`\`\`)/g;
 const spoiler = /(\`\`\`.+\`\`\`)/g;
 
-const regex = /(\*\*\*.+\*\*\*|\*\*.+\*\*|\*.+\*|\_.+\_|\_\_.+\_\_|\~\~.+\~\~|\`.+\`|\`\`\`.+\`\`\`|\`\`\`.+\`\`\`|<a?:.+:\D+>|<@!?\d+>)/g;
-
-const converter = new Showdown.Converter();
+const regex = /(\*\*\*.+\*\*\*|\*\*.+\*\*|\*.+\*|\_.+\_|\_\_.+\_\_|\~\~.+\~\~|\`.+\`|\`\`\`.+\`\`\`|\`\`\`.+\`\`\`|<a?:.+:\D+>|<@!?\d+>|<#\d+>)/g;
 
 async function parse(text) {
     const splitText = text.split(regex);
@@ -38,7 +36,7 @@ async function parse(text) {
             return <Image key={index} src={`https://cdn.discord.com/emojis/${item.replaceAll(/\D/g, '')}`} width={20} height={20} alt="" />
         }
         if (item.match(user)) {
-            const username = (await Axios.get(`http://localhost:10000/users/${item.replaceAll(/\D/g, '')}`)).data;
+            const username = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/users/${item.replaceAll(/\D/g, '')}`)).data;
             console.log(username)
             return <>{username}</>
 
@@ -55,16 +53,6 @@ function Embed(props) {
     if (description) {
         description = description.split("\n");
     }
-
-    const [newDesc, setNewDesc] = useState([]);
-
-    useEffect(() => {
-        async function stuff() {
-            const parsed = await parse(props.embed.description);
-            setNewDesc(newDesc => [...newDesc, parsed]);
-        }
-        stuff();
-    })
 
     return (
         <div className={Styles.embed} style={{borderColor: props.color ?? "#F27878"}}>
@@ -95,8 +83,8 @@ function Embed(props) {
                 props.embed.description ?
                 <div className={Styles.embedDescription}>
                     {
-                        newDesc.map((item) => {
-                            return item;
+                        description.map((item) => {
+                            return <>{item}<br /></>;
                         })
                     }
                 </div>

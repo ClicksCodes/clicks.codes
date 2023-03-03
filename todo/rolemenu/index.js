@@ -60,7 +60,7 @@ function RoleMenu(props) {
                         <Text>{item.description}</Text>
                         <div className={Styles.options}>
                             {
-                                item.options.map((props, optionIndex) => {return <div className={Styles.optionBox}>
+                                item.options.map((props, optionIndex) => {return <div key={optionIndex} className={Styles.optionBox}>
                                     <input
                                         type={item.max === 1 ? "radio" : "checkbox"}
                                         style={{borderRadius: item.max === 1 ? "50%" : "5px"}}
@@ -107,7 +107,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        code = (await Axios.get(`http://localhost:10000/rolemenu/${ctx.query.code}`)).data;
+        code = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/rolemenu/${ctx.query.code}`)).data;
     } catch (e) {
         return {
             redirect: {
