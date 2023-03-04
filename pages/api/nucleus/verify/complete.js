@@ -11,7 +11,7 @@ const Complete = async (req, res) => {
         return res.status(200).send({success: false})
     }
     try {
-        await Axios.post(`${process.env.NUCLEUS_CALLBACK}/verify/${req.body.code}`, {
+        await Axios.post(`http://${process.env.NUCLEUS_CALLBACK}/verify/${req.body.code}`, {
             secret: process.env.VERIFY_SECRET
         });
     } catch (e) {
