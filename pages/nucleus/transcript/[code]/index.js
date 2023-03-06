@@ -104,7 +104,7 @@ function Index(props) {
             paddingLeft: "25px",
             color: "white",
             fontSize: "1.5em",
-        }}>Transcript for: {props.data.for.username}#{props.data.for.discriminator} | In #{<a href={`https://discord.com/channels/${props.data.guild}/${props.data.channel}`}>{props.channelName}</a>} | Type: {props.data.type}</div>
+        }}>Transcript for: {props.data.for.username}#{props.data.for.discriminator} | In #{<a style={{color: "var(--theme-ui-colors-highlight)"}} href={`https://discord.com/channels/${props.data.guild}/${props.data.channel}`}>{props.channelName}</a>} | Type: {props.data.type}</div>
         <div style={{
             width: "100vw",
             backgroundColor: "var(--theme-ui-colors-background)", //Can we change this to be not black please. it's too contrast heavy
