@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   reactStrictMode: true,
   webpack(config) {
@@ -37,5 +39,8 @@ module.exports = {
   },
   images: {
     domains: ["picsum.photos", "cdn.discordapp.com"]
+  },
+  env: {
+    NUCLEUS_CALLBACK: process.env.NUCLEUS_CALLBACK,
   }
 };

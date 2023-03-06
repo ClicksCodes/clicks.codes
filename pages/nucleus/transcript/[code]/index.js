@@ -27,7 +27,7 @@ async function parseText(text) {
         for (let i = 0; i < users.length; i++) {
             const user = users[i];
             const userID = user.replaceAll(/\D/g, '');
-            const username = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/users/${userID}`)).data;
+            const username = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}users/${userID}`)).data;
             dict["users"][user.replaceAll(/<@|>/g, '')] = username;
         }
     }
@@ -36,7 +36,7 @@ async function parseText(text) {
         for (let i = 0; i < channels.length; i++) {
             const channel = channels[i];
             const channelID = channel.replaceAll(/\D/g, '');
-            const channelName = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/channels/${channelID}`)).data;
+            const channelName = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}channels/${channelID}`)).data;
             dict["channels"][channel] = channelName;
         }
     }
@@ -132,32 +132,35 @@ export async function getServerSideProps(ctx) {
             }
         }
     }
-    return {
+    /*return {
         redirect: {
             destination: `/nucleus/transcript/${ctx.params.code}/human?key=${ctx.query.key}&iv=${ctx.query.iv}`,
             permanent: true
         }
+    }*/
+    let code;
+    console.log("getting props")
+    try {
+        code = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}transcript/${ctx.params.code}?key=${ctx.query.key}&iv=${ctx.query.iv}`));
+    } catch (e) {
+	console.log(e)
+	console.log(`${process.env.NUCLEUS_CALLBACK}transcript/${ctx.params.code}?key=${ctx.query.key}&iv=${ctx.query.iv}`)
+        return {
+            redirect: {
+                destination: '/nucleus/transcript/invalid',
+                permanent: true
+            }
+        }
     }
-    // let code;
-    // try {
-    //     code = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/transcript/${ctx.params.code}?key=${ctx.query.key&iv=${ctx.query.iv}`))
-    // } catch (e) {
-    //     return {
-    //         redirect: {
-    //             destination: '/nucleus/transcript/invalid',
-    //             permanent: true
-    //         }
-    //     }
-    // }
-    // const linkedData = await parse(code.data.messages)
+    const linkedData = await parse(code.data.messages)
 
-    // const channelName = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/channels/${code.data.channel}`)).data;
+    const channelName = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}channels/${code.data.channel}`)).data;
 
-    // return {
-    //     props: {
-    //         data: code.data,
-    //         linkedData,
-    //         channelName
-    //     }
-    // }
+    return {
+        props: {
+            data: code.data,
+            linkedData,
+            channelName
+        }
+    }
 }

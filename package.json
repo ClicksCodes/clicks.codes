@@ -15,6 +15,7 @@
     "@next/bundle-analyzer": "^12.1.6",
     "@svgr/webpack": "^5.5.0",
     "axios": "^0.21.1",
+    "dotenv": "^16.0.3",
     "fs": "^0.0.1-security",
     "human-date": "^1.4.0",
     "js-cookie": "^3.0.1",

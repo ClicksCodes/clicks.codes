@@ -14,7 +14,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        code = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/transcript/${ctx.params.code}`))
+        code = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}transcript/${ctx.params.code}`))
     } catch (e) {
         return {
             redirect: {
@@ -25,7 +25,7 @@ export async function getServerSideProps(ctx) {
     }
     return {
         redirect: {
-            destination: `http://${process.env.NUCLEUS_CALLBACK}/transcript/${ctx.params.code}`,
+            destination: `${process.env.NUCLEUS_CALLBACK}transcript/${ctx.params.code}`,
             permanent: true
         }
     }

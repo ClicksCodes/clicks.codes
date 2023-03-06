@@ -36,7 +36,7 @@ async function parse(text) {
             return <Image key={index} src={`https://cdn.discord.com/emojis/${item.replaceAll(/\D/g, '')}`} width={20} height={20} alt="" />
         }
         if (item.match(user)) {
-            const username = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/users/${item.replaceAll(/\D/g, '')}`)).data;
+            const username = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}users/${item.replaceAll(/\D/g, '')}`)).data;
             console.log(username)
             return <>{username}</>
 

@@ -107,7 +107,7 @@ export async function getServerSideProps(ctx) {
     }
     let code;
     try {
-        code = (await Axios.get(`http://${process.env.NUCLEUS_CALLBACK}/rolemenu/${ctx.query.code}`)).data;
+        code = (await Axios.get(`${process.env.NUCLEUS_CALLBACK}rolemenu/${ctx.query.code}`)).data;
     } catch (e) {
         return {
             redirect: {
