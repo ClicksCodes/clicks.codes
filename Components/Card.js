@@ -40,7 +40,7 @@ class Card extends Component {
         } else if (this.props.icon) {
             icons = <img alt={this.props.title} className={Styles.image} src={`https://assets.clicks.codes/${this.props.icon}.svg`} />
         } else if (this.props.wave) {
-            icons = <img alt={this.props.title} className={Styles.image} src={`https://assets.clicks.codes//${this.props.wave}.svg`} />
+            icons = <img alt={this.props.title} className={Styles.image} src={`https://assets.clicks.codes/web/waves/card/${this.props.wave}.svg`} />
         }
         return <>{icons}</>;
     }

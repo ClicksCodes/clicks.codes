@@ -55,14 +55,14 @@ export default function Home(props) {
               showMessage={props.showMessage}
             />
             <Card
-              wave="rsm" title="RSM" subtext="Moderation Redefined"
-              icon="bots/rsm/circle"
+              wave="nucleus" title="Nucleus" subtext="The core of your server"
+              icon="bots/nucleus/circle"
               buttons={[
-                {color: "424242", link: "https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands",text:"Invite"},
-                {color: "424242", link: "/rsm", text:"About"}
+                {color: "424242", link: "https://discordapp.com/api/oauth2/authorize?client_id=715989276382462053&permissions=396173372662&scope=bot%20applications.commands",text:"Invite"},
+                {color: "424242", link: "/nucleus", text:"About"}
               ]}
               buttonText={"FFFFFF"} gradient={["F27878", "D96B6B"]}
-              url="/rsm"
+              url="/nucleus"
               showMessage={props.showMessage}
             />
             <Card
