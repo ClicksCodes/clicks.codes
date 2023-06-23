@@ -14,8 +14,13 @@ export default function Home(props) {
       subtext = "Happy Halloween!"
       break;
     }
+    case "aprilFools": {
+      subtext = "Professional programmers since 1970"
+      break;
+    }
     default: {
       subtext = "Creating projects that click"
+      break;
     }
   }
   const aprilFoolsStyle = props.season.season === "aprilFools" ? {
