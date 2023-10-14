@@ -3,80 +3,64 @@ import Marquee from 'react-fast-marquee'
 import { AutoLayout, Panel, Title, Subtitle, Text, Divider } from '../Components/Panels';
 import { Component } from 'react';
 import Image from 'next/image';
-import { Popover } from 'react-tiny-popover';
 
 class Supporter extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isPopoverOpen: false,
-        };
-    }
-
-    clicked() {
-        let content = this.props.children
-        navigator.clipboard.writeText(content)
-        this.setState({isPopoverOpen: true})
-        setTimeout(() => {
-            this.setState({isPopoverOpen: false})
-        }, 2500)
     }
 
     render() {
-        if ( this.props.clickable === false) {
-            return <div style={{
-                display: 'flex', flexDirection: 'column', alignItems: 'center',
-                justifyContent: 'center', backgroundColor: '#6576CC', color: '#FFFFFF',
-                paddingInline: '20px', paddingBlock: '0.25rem',
-                borderRadius: '10px', boxShadow: '0px -3px 10px 2px #424242'
-            }}>{this.props.children}</div>
-        } else {
-            return <Popover
-                isOpen={this.state.isPopoverOpen}
-                positions={['top', 'bottom', 'left', 'right']} // preferred positions by priority
-                content={<Supporter colour={this.props.colour} clickable={false}>{this.props.sub}</Supporter>}
-            >
-                <div onClick={() => this.clicked()} style={{
-                    display: 'flex', flexDirection: 'column', alignItems: 'center',
-                    justifyContent: 'center', backgroundColor: '#6576CC', color: '#FFFFFF',
-                    paddingInline: '20px', paddingBlock: '0.25rem', marginInline: '5px',
-                    borderRadius: '10px'
-                }}>{this.props.children}</div>
-            </Popover>
-        }
+        return <a style={{
+            display: 'flex', flexDirection: 'column', alignItems: 'center',
+            justifyContent: 'center', backgroundColor: '#6576CC', color: '#FFFFFF',
+            paddingInline: '20px', paddingBlock: '0.25rem',
+            borderRadius: '10px', boxShadow: '0px -3px 10px 2px #424242'
+        }}
+        href={this.props.sub.length > 1 ? this.props.sub[1] : "#"}
+        title={this.props.sub[0]}
+        >{this.props.children}</a>
     }
 }
-
 
 
 export default function Home(props) {
     const groups = [
         { // Devs and testers
-            "TheCodedProf": "Programmer",
-            "Minion3665": "Programmer",
-            "PineappleFan": "Programmer",
-            "Eek": "Programmer",
-            "Dilythion": "Programmer",
-            "Tani": "Programmer",
-            "CocoboloDesk": "Clicks Team",
-            "GenElectrovise": "Plugins"
+            "TheCodedProf": ["Programmer", "https://github.com/TheCodedProf"],
+            "Minion3665": ["Programmer", "https://a.starrysky.fyi"],
+            "PineappleFan": ["Programmer", "https://github.com/PineaFan"],
+            "Eek": ["Programmer", "https://nexy7574.co.uk"],
+            "Dilythion": ["Programmer"],
+            "Tani": ["Programmer"],
+            "CocoboloDesk": ["Clicks Team"],
+            "GenElectrovise": ["Plugins"],
+            "DOSmile": ["Mentoring"],
+            "Zanderp25": ["Programming and design", "https://zanderp25.com"]
         },
         { // Packages
-            "react-tiny-popover": "React popovers",
-            "react-in-viewport": "Scroll in effects",
-            "hcaptcha": "RSM Verify captchas",
-            "react-fast-marquee": "These scrolling sections",
-            "theme-ui": "Checked out the opposite theme?",
-            "Nextjs": "It's all built in Next"
+            "react-tiny-popover": ["React popovers (No longer used but we stil love you <3)", "https://www.npmjs.com/package/react-tiny-popover"],
+            "react-in-viewport": ["Scroll in effects", "https://www.npmjs.com/package/react-in-viewport"],
+            "hcaptcha": ["Nucleus Verify captchas", "https://www.hcaptcha.com"],
+            "react-fast-marquee": ["These scrolling sections", "https://www.npmjs.com/package/react-fast-marquee"],
+            "theme-ui": ["Checked out the opposite theme?", "https://www.npmjs.com/package/theme-ui"],
+            "Nextjs": ["It's all built in Next", "https://nextjs.org"],
+            "Discord.py": ["Wouldn't have started Clicks without you <3", "https://discordpy.readthedocs.io"],
+            "Discord.js": ["Thanks to the community of devs", "https://discord.js.org"]
         },
         { // Programs
-            "Figma": "Designing - Thanks for staying free <3",
-            "Discord": "Chatting",
-            "Flaticon": "Icons"
+            "Figma": ["Designing", "https://figma.com"],
+            "Discord": ["Chatting", "https://discord.com"],
+            "Flaticon": ["Icons", "https://flaticon.com"],
+            "GitHub": ["Code hosting and GH Pages", "https://github.com"],
+            "Gerrit": ["Code hosting", "https://gerritcodereview.com"],
+            "NextCloud": ["Self hosted cloud", "https://nextcloud.com"],
+            "Cloudflare": ["All DNS and domains - Thanks for staying free <3", "https://cloudflare.com"]
         },
         { // Special thanks
-            "InternetMetro": "Minecraft server building",
-            "Eddy": "Minecraft server building",
+            "InternetMetro": ["Minecraft server building", "https://kendalbentley85.wixsite.com/internetmetro"],
+            "Eddy": ["Minecraft server building"],
+            "Quantum": ["Thanks for all the suggestions"],
+            "LNGZL Development": ["Unscan was great while it lasted, thanks for keeping Nucleus alive", "https://v.lngzl.nl/ez"]
         }
     ]
     return (
@@ -106,7 +90,7 @@ export default function Home(props) {
                                         {
                                             Object.keys(groups[index]).map((supporter, index2) => {
                                                 return (
-                                                    <Supporter key={index} sub={groups[index][supporter]}>{supporter}</Supporter>
+                                                    <Supporter key={index2} sub={groups[index][supporter]}>{supporter}</Supporter>
                                                 )
                                             })
                                         }
