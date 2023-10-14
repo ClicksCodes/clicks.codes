@@ -28,7 +28,7 @@ export default function Home(props) {
         { // Devs and testers
             "TheCodedProf": ["Programmer", "https://github.com/TheCodedProf"],
             "Minion3665": ["Programmer", "https://a.starrysky.fyi"],
-            "PineappleFan": ["Programmer", "https://github.com/PineaFan"],
+            "PineaFan": ["Programmer", "https://github.com/PineaFan"],
             "Eek": ["Programmer", "https://nexy7574.co.uk"],
             "Dilythion": ["Programmer"],
             "Tani": ["Programmer"],
