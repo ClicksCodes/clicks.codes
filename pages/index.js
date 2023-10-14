@@ -74,7 +74,7 @@ export default function Home(props) {
               wave="clicksforms" title="ClicksForms" subtext="Create custom forms for Discord"
               icon="bots/clicksforms/circle"
               buttons={[
-                {color: "775EBF", link: "https://clicksminuteper.github.io/docs/clicksforms", text:"API", newTab: true},
+                {color: "775EBF", link: "https://clickscodes.github.io/docs/clicksforms", text:"API", newTab: true},
                 {color: "775EBF", link: "https://discord.com/api/oauth2/authorize?client_id=805392054678192169&permissions=2416307200&scope=bot%20applications.commands",text:"Invite"},
                 {color: "775EBF", link: "/clicksforms", text: "About"}
               ]}
@@ -119,10 +119,10 @@ export default function Home(props) {
               wave="github" title="GitHub" subtext="View our open source projects"
               icon="web/icons/github"
               buttons={[
-                {color: "424242", link: "https://github.com/clicksminuteper", text: "Visit"}
+                {color: "424242", link: "https://github.com/clickscodes", text: "Visit"}
               ]}
               buttonText={"FFFFFF"} gradient={["FFFFFF", "C4C4C4"]}
-              url="https://github.com/clicksminuteper"
+              url="https://github.com/clickscodes"
             />
             <Card
               wave="pypi" title="PyPi" subtext="View our modules for python"

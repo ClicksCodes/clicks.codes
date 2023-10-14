@@ -19,8 +19,8 @@ export default function Home(props) {
                     <Title>Transparency</Title>
                     <Text>Everything we store about you and your Discord  will be listed.</Text>
                     <List colour={"6576CC"}>
-                        <ListItem><a href="https://clicksminuteper.github.io/policies/rsm">RSM</a></ListItem>
-                        <ListItem><a href="https://clicksminuteper.github.io/policies/clicksforms">ClicksForms</a></ListItem>
+                        <ListItem><a href="https://clickscodes.github.io/policies/rsm">RSM</a></ListItem>
+                        <ListItem><a href="https://clickscodes.github.io/policies/clicksforms">ClicksForms</a></ListItem>
                         <ListItem>GPS does not store any information</ListItem>
                     </List>
                     <Text>Have any questions or concerns? <a href="/support">Let us know</a> and we can investigate if you believe there are any mistakes</Text>

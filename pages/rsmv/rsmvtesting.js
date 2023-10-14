@@ -83,7 +83,7 @@ class RSMV extends Component {
                     <List colour="F27878">
                         <ListItem>This is an automatic check performed by RSM.</ListItem>
                         <ListItem>By clicking Proceed, you will be given the <code>MISSING</code> role in <code>ERROR</code>.</ListItem>
-                        <ListItem>For the full list of data stored by RSM, please check <a href="https://clicksminuteper.github.io/policies/rsm#verification">Here</a></ListItem>
+                        <ListItem>For the full list of data stored by RSM, please check <a href="https://clickscodes.github.io/policies/rsm#verification">Here</a></ListItem>
                     </List>
                     <Text>You can add RSM to your server by inviting it <a href="https://discord.com/api/oauth2/authorize?client_id=715989276382462053&permissions=121295465718&scope=bot%20applications.commands">here</a>.</Text>
                 </Panel>

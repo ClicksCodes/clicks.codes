@@ -90,7 +90,7 @@ export default function Home(props) {
         <Panel halfSize={true} id="privacy">
           <Title>Privacy</Title>
           <Divider />
-          <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/rsm">here</a> is the complete list.</Text>
+          <Text>You should always know what we know and store about you, so <a href="https://clickscodes.github.io/policies/rsm">here</a> is the complete list.</Text>
         </Panel>
         <Panel halfSize={true} id="invite">
           <Title>Invite</Title>

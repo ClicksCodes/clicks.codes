@@ -51,7 +51,7 @@ function About(props) {
                     <Divider />
                     <Text>Verification stores the smallest amount of data required to function, and is deleted automatically.</Text>
                     <Text>This includes the user&apos;s ID, the server ID, role name and server icon.</Text>
-                    <Text>The full list of data stored by Nucleus can be found <a href="https://clicksminuteper.github.io/policies/nucleus">here</a>.</Text>
+                    <Text>The full list of data stored by Nucleus can be found <a href="https://clickscodes.github.io/policies/nucleus">here</a>.</Text>
                 </Panel>
                 <Panel halfSize={true} id="invite">
                     <Title>Invite</Title>

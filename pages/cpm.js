@@ -45,7 +45,7 @@ export default function Home(props) {
               wave="clicksforms" title="ClocksForms" subtext="Submit your data directly to us!"
               icon="bots/clicksforms/circle"
               buttons={[
-                {color: "775EBF", link: "https://clicksminuteper.github.io/docs/clicksforms", text:"APi", newTab: true},
+                {color: "775EBF", link: "https://clickscodes.github.io/docs/clicksforms", text:"APi", newTab: true},
                 {color: "775EBF", link: "https://discord.com/api/oauth2/authorize?client_id=805392054678192169&permissions=2416307200&scope=bot%20applications.commands",text:"Invite"},
                 {color: "775EBF", link: "/clicksforms", text: "About"}
               ]}
@@ -87,7 +87,7 @@ export default function Home(props) {
               wave="github" title="GitHub" subtext="Git clone someone's repo, and push to your own"
               icon="web/icons/github"
               buttons={[
-                {color: "424242", link: "https://github.com/clicksminuteper", text: "Sacrifice your soul"}
+                {color: "424242", link: "https://github.com/clickscodes", text: "Sacrifice your soul"}
               ]}
               buttonText={"FFFFFF"} gradient={["FFFFFF", "C4C4C4"]}
             />

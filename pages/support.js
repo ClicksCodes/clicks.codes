@@ -7,7 +7,7 @@ export default function Home(props) {
     <>
       <Header
         name="Support"
-        subtext="Get support for ClicksMinutePer products"
+        subtext="Get support for Clicks products"
         gradient={["71AFE5", "6576CC"]}
         wave="web/waves/header/clicksforms"
         buttons={[]}

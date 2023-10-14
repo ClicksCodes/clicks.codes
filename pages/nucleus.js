@@ -92,7 +92,7 @@ export default function Home(props) {
           <Title>Privacy</Title>
           <Divider />
           <Text>You can run <Code colour="F27878">/privacy</Code> to view and manage all data stored about your server</Text>
-          <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/nucleus">here</a> is the complete list.</Text>
+          <Text>You should always know what we know and store about you, so <a href="https://clickscodes.github.io/policies/nucleus">here</a> is the complete list.</Text>
         </Panel>
         <Panel halfSize={true} id="invite">
           <Title>Invite</Title>

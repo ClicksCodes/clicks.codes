@@ -59,8 +59,8 @@ export default class Home extends React.Component {
           <Panel halfSize={true} id="privacy">
             <Title>Privacy</Title>
             <Divider toHighlight={this.state.toHighlight} highlightColour="6576CC" name="privacy"/>
-            <Text>You should always know what we know and store about you, so <a href="https://clicksminuteper.github.io/policies/clicksforms">here</a> is the complete list.</Text>
-            <Text>We also have a list of terms for using ClicksForms, it can be viewed <a href="https://clicksminuteper.github.io/policies/clicksformstos">here</a>.</Text>
+            <Text>You should always know what we know and store about you, so <a href="https://clickscodes.github.io/policies/clicksforms">here</a> is the complete list.</Text>
+            <Text>We also have a list of terms for using ClicksForms, it can be viewed <a href="https://clickscodes.github.io/policies/clicksformstos">here</a>.</Text>
           </Panel>
           <Panel halfSize={true} id="invite">
             <Title>Invite</Title>
